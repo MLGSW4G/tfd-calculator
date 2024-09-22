@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/Noto_Sans/static/NotoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/Noto_Sans/static/NotoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Octin College";
+  src: url("../fonts/octin-college-rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/static/Teko-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/static/Teko-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(209, 209, 209);
+  margin: 0px;
+}
+
+.nav-tabs {
+  border-radius: 4px;
+  margin-bottom: 3%;
+}
+
+.nav-tabs .MuiTab-root {
+  /* min-width: 50%; */
+  /* font-size: 16px; */
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+}
+
+.grid-container {
+  padding: 2%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-item {
+  padding: 2%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row-standard {
+  background-color: #52b7f7;
+}
+
+.row-rare {
+  background-color: #d687f7;
+}
+
+.row-ultimate {
+  background-color: #f7db79;
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 251001001,
+    "moduleName": "Ironclad Defense",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 13,
+    "polarity": "Almandine",
+    "criticalHitResistance": 0.65
+  },
+  {
+    "id": 251001002,
+    "moduleName": "Nimble Fingers",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 13,
+    "polarity": "Malachite",
+    "skillCooldown": -0.2560
+  },
+  {
+    "id": 251001003,
+    "moduleName": "Strong Mentality",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 10,
+    "polarity": "Malachite",
+    "skillCost": -0.152
+  },
+  {
+    "id": 251001004,
+    "moduleName": "Technician",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": "Attack",
+    "capacity": 16,
+    "polarity": "Malachite",
+    "skillPowerModifier": 0.5080
+  },
+  {
+    "id": 251001009,
+    "moduleName": "Increased HP",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 16,
+    "polarity": "Cerulean",
+    "maxHp": 2.1850
+  },
+  {
+    "id": 251001010,
+    "moduleName": "Increased Shield",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 16,
+    "polarity": "Cerulean",
+    "maxShield": 1.5190
+  },
+  {
+    "id": 251001011,
+    "moduleName": "Increased DEF",
+    "tier": "standard",
+    "class": "Descendant",
+    "group": null,
+    "capacity": 16,
+    "polarity": "Rutile",
+    "def": 1.6040
+  }
+]
