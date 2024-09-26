@@ -1,3 +1,5 @@
+// components/ValueFormatters.js
+
 export const numberToPercents = (value) => {
   if (value == null) {
     return null;

@@ -1,7 +1,7 @@
-// Build.js
+// pages/Build.js
 import React, { useState, useEffect } from "react";
-import { sortedRows } from "../pages/SkillsList";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel } from "@mui/material";
+import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
 import "../styles/styles.css";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../components/ValueFormatters";
@@ -24,6 +24,20 @@ export default function BasicGrid() {
     const totalSkillPowerValue = skillPower * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower;
     setTotalSkillPower(totalSkillPowerValue);
   }, [skillPower, optimizationCondition, dropdownValue, element, skill]);
+
+  useEffect(() => {
+    if (selectedSkill) {
+      import(`../pages/skills/${selectedSkill.skillName.replaceAll(" ", "")}.js`)
+        .then((module) => {
+          setSkillStats(module.default);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
+      setSkillStats({}); // Reset skillStats to an empty object when selectedSkill is null
+    }
+  }, [selectedSkill]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);

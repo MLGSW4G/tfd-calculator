@@ -1,4 +1,5 @@
-import * as React from "react";
+// components/NavTabs.js
+import React from "react";
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";

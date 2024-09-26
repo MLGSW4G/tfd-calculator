@@ -34,7 +34,9 @@
 }
 
 body {
-  background-color: rgb(209, 209, 209);
+  background: rgb(161, 161, 161);
+  /* background: rgb(34,34,34);
+  background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(120,120,120,1) 50%, rgba(255,255,255,1) 75%); */
   margin: 0px;
 }
 
@@ -61,16 +63,4 @@ body {
   padding: 2%;
   padding-left: 0;
   padding-right: 0;
-}
-
-.row-standard {
-  background-color: #52b7f7;
-}
-
-.row-rare {
-  background-color: #d687f7;
-}
-
-.row-ultimate {
-  background-color: #f7db79;
 }

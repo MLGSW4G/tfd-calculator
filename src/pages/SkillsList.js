@@ -1,4 +1,5 @@
-import * as React from "react";
+// pages/SkillsList.js
+import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import jsonData from "./SkillsList.json";
 import { numberToMeters, numberToPercents, numberToSeconds } from "../components/ValueFormatters";
@@ -75,7 +76,7 @@ const rows = jsonData.map((item) => ({
   range2: item.range2,
   modifier1: item.modifier1,
   modifier2: item.modifier2,
-  modifier3: item.modifier3
+  modifier3: item.modifier3,
 }));
 
 // Sort the rows
