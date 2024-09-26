@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { Box, Grid } from "@mui/material";
 import "../styles/styles.css";
-import { Card } from "../components/Card";
-import { CardSlot } from "../components/CardSlot";
+import { Module } from "../components/Module";
+import { ModuleSlot } from "../components/ModuleSlot";
 import modulesData from "./Modules.json";
 
 const Modules = () => {
-  const [cardList, setCardList] = useState(modulesData);
+  const [moduleList, setModuleList] = useState(modulesData);
 
-  const [equippedCards, setEquippedCards] = useState([
+  const [equippedModules, setEquippedModules] = useState([
     { id: 1, moduleName: null },
     { id: 2, moduleName: null },
     { id: 3, moduleName: null },
@@ -60,22 +60,22 @@ const Modules = () => {
     };
   }, [isResizing]);
 
-  const handleDragStart = (e, card) => {
-    e.dataTransfer.setData("card", JSON.stringify(card));
+  const handleDragStart = (e, module) => {
+    e.dataTransfer.setData("module", JSON.stringify(module));
   };
 
   const handleDrop = (e, index) => {
     e.preventDefault();
-    const card = JSON.parse(e.dataTransfer.getData("card"));
-    const newEquippedCards = [...equippedCards];
-    newEquippedCards[index] = card;
-    setEquippedCards(newEquippedCards);
-    setCardList(cardList.filter((c) => c.id !== card.id));
+    const module = JSON.parse(e.dataTransfer.getData("module"));
+    const newequippedModules = [...equippedModules];
+    newequippedModules[index] = module;
+    setEquippedModules(newequippedModules);
+    setModuleList(moduleList.filter((c) => c.id !== module.id));
   };
 
   return (
     <>
-      <Box className="equippedCards" marginLeft="10%" marginRight="10%">
+      <Box className="equippedModules" marginLeft="10%" marginRight="10%">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           <Grid
             container
@@ -85,9 +85,9 @@ const Modules = () => {
               flex: 1,
             }}
           >
-            {equippedCards.map((equippedCard, index) => (
-              <Grid item margin={"40px"} marginBottom={"0px"} key={equippedCard.id}>
-                <CardSlot equippedCard={null} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} />
+            {equippedModules.map((equippedModule, index) => (
+              <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.id}>
+                <ModuleSlot equippedModule={null} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} />
               </Grid>
             ))}
           </Grid>
@@ -95,7 +95,7 @@ const Modules = () => {
       </Box>
 
       <Box
-        className="cardZone"
+        className="moduleZone"
         width="100%"
         height={height}
         sx={{
@@ -109,18 +109,18 @@ const Modules = () => {
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => {
           e.preventDefault();
-          const cardData = e.dataTransfer.getData("card");
-          if (cardData) {
-            const card = JSON.parse(cardData);
-            setCardList([...cardList, card]);
-            setEquippedCards(equippedCards.map((c) => (c.id === card.id ? { id: c.id, moduleName: "" } : c)));
+          const moduleData = e.dataTransfer.getData("module");
+          if (moduleData) {
+            const module = JSON.parse(moduleData);
+            setModuleList([...moduleList, module]);
+            setEquippedModules(equippedModules.map((c) => (c.id === module.id ? { id: c.id, moduleName: "" } : c)));
           }
         }}
       >
         <Grid container justifyContent="left" alignItems="center">
-          {cardList.map((card) => (
-            <Grid item key={card.id} padding={1.5} marginTop={2} marginBottom={1}>
-              <Card card={card} onDragStart={handleDragStart} />
+          {moduleList.map((module) => (
+            <Grid item key={module.id} padding={1.5} marginTop={2} marginBottom={1}>
+              <Module module={module} onDragStart={handleDragStart} />
             </Grid>
           ))}
         </Grid>

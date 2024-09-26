@@ -1,9 +1,9 @@
 // const.js
 
-export const CARD_WIDTH = 149,
-  CARD_HEIGHT = 202,
-  CARD_ICON_WIDTH = 72,
-  CARD_ICON_HEIGHT = 72,
+export const MODULE_WIDTH = 149,
+  MODULE_HEIGHT = 202,
+  MODULE_ICON_WIDTH = 72,
+  MODULE_ICON_HEIGHT = 72,
   colorStandard = "#52b7f7",
   colorRare = "#d687f7",
   colorUltimate = "#f7db79",

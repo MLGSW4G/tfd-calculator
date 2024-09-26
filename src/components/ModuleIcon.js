@@ -1,11 +1,11 @@
-// components/CardIcon.js
+// components/ModuleIcon.js
 import React from "react";
-import { CARD_ICON_WIDTH, CARD_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
+import { MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
 
-export const CardIcon = ({ card }) => {
+export const ModuleIcon = ({ module }) => {
   let moduleSocketType, moduleClass, moduleTier;
 
-  switch (card.moduleSocketType) {
+  switch (module.moduleSocketType) {
     case "Cerulean":
       moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_001.png";
       break;
@@ -23,7 +23,7 @@ export const CardIcon = ({ card }) => {
       break;
   }
 
-  switch (card.moduleClass) {
+  switch (module.moduleClass) {
     case "Descendant":
       moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_0_Color.png";
       break;
@@ -41,7 +41,7 @@ export const CardIcon = ({ card }) => {
       break;
   }
 
-  switch (card.moduleTier) {
+  switch (module.moduleTier) {
     case "Standard":
       moduleTier = filterStandard;
       break;
@@ -62,6 +62,7 @@ export const CardIcon = ({ card }) => {
           width: 78,
           height: 34,
           top: -12,
+          pointerEvents: "none",
         }}
       />
 
@@ -73,6 +74,7 @@ export const CardIcon = ({ card }) => {
           height: 24,
           top: -8, // Adjust this value to move vertically
           left: 50, // Adjust this value to move horizontally
+          pointerEvents: "none",
         }}
       />
 
@@ -84,6 +86,7 @@ export const CardIcon = ({ card }) => {
           height: 24,
           top: -1,
           left: 124,
+          pointerEvents: "none",
         }}
       />
 
@@ -95,35 +98,38 @@ export const CardIcon = ({ card }) => {
           fontFamily: "Teko",
           fontSize: 28,
           color: "white",
+          pointerEvents: "none",
         }}
       >
-        {card.moduleStat[5].moduleCapacity}
+        {module.moduleStat[5].moduleCapacity}
       </p>
 
       <img
-        src={card.moduleIcon}
-        alt={card.moduleName}
+        src={module.moduleIcon}
+        alt={module.moduleName}
         style={{
           position: "absolute",
-          width: CARD_ICON_WIDTH,
-          height: CARD_ICON_HEIGHT,
+          width: MODULE_ICON_WIDTH,
+          height: MODULE_ICON_HEIGHT,
           top: 24,
+          pointerEvents: "none",
         }}
       />
 
       <img
         src={"assets/Modules/UI_RuneSlot_Tier.png"}
-        alt={card.moduleName}
+        alt={module.moduleName}
         style={{
           position: "absolute",
           width: 74,
           height: 74,
           top: 24,
           filter: moduleTier,
+          pointerEvents: "none",
         }}
       />
 
-      <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14 }}>{card.moduleType}</p>
+      <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
     </>
   );
 };

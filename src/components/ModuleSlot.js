@@ -1,9 +1,9 @@
-// components/CardSlot.js
+// components/ModuleSlot.js
 import React from "react";
-import { CARD_WIDTH, CARD_HEIGHT } from "../const";
-import { Card } from "./Card";
+import { MODULE_WIDTH, MODULE_HEIGHT } from "../const";
+import { Module } from "./Module";
 
-export const CardSlot = ({ equippedCard, onDrop, index, onDragStart }) => {
+export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
   let backgroundImage;
   if (index === 0) {
     backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG01.png')`;
@@ -14,10 +14,10 @@ export const CardSlot = ({ equippedCard, onDrop, index, onDragStart }) => {
   }
   return (
     <div
-      className="equipped-card-slot"
+      className="equipped-module-slot"
       style={{
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT,
+        width: MODULE_WIDTH,
+        height: MODULE_HEIGHT,
         backgroundImage: `url('assets/Modules/UI_RuneSlot_EmptyBg.png')`,
         backgroundSize: "cover",
         display: "flex",
@@ -31,8 +31,8 @@ export const CardSlot = ({ equippedCard, onDrop, index, onDragStart }) => {
       <div
         style={{
           position: "absolute",
-          width: CARD_WIDTH,
-          height: CARD_HEIGHT,
+          width: MODULE_WIDTH,
+          height: MODULE_HEIGHT,
           backgroundImage: backgroundImage,
           backgroundSize: "cover",
           display: "flex",
@@ -41,13 +41,13 @@ export const CardSlot = ({ equippedCard, onDrop, index, onDragStart }) => {
           padding: 5,
         }}
       ></div>
-      {equippedCard ? (
-        <Card card={equippedCard} onDragStart={onDragStart} />
+      {equippedModule ? (
+        <Module module={equippedModule} onDragStart={onDragStart} />
       ) : (
         <div
           style={{
-            width: CARD_WIDTH,
-            height: CARD_HEIGHT,
+            width: MODULE_WIDTH,
+            height: MODULE_HEIGHT,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
