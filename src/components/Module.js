@@ -1,9 +1,15 @@
 // components/Module.js
-import React from "react";
+import { React, useState } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
 import "../styles/Module.css";
 
 export const Module = ({ module, onDragStart }) => {
+  const currentMaxLevel = Math.max(...module.moduleStat.map((stat) => stat.level), 0);
+
+  // State to hold the current module level and hover state
+  const [moduleLevel, setModuleLevel] = useState(0);
+  const [isHovered, setIsHovered] = useState(false); // New state for hover
+
   let moduleSocketType, moduleClass, moduleTier;
 
   switch (module.moduleSocketType) {
@@ -20,7 +26,7 @@ export const Module = ({ module, onDragStart }) => {
       moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
       break;
     case "Rutile":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
+      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_005.png";
       break;
   }
 
@@ -54,6 +60,20 @@ export const Module = ({ module, onDragStart }) => {
       break;
   }
 
+  // Functions for buttons
+  const incrementLevel = (e) => {
+    if (moduleLevel < currentMaxLevel) {
+      setModuleLevel((prevLevel) => prevLevel + 1);
+    }
+  };
+
+  const decrementLevel = (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
+    if (moduleLevel > 0) {
+      setModuleLevel((prevLevel) => prevLevel - 1);
+    }
+  };
+
   return (
     <div
       className="module"
@@ -67,11 +87,25 @@ export const Module = ({ module, onDragStart }) => {
         flexDirection: "column",
         alignItems: "center",
         pointerEvents: "auto",
-        zIndex: 1, // needed to cut the redundant background part of dragged module.
+        zIndex: 1,
       }}
       draggable={module !== null && module !== undefined}
       onDragStart={(e) => onDragStart(e, module)}
+      onContextMenu={(e) => e.preventDefault()}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
+      {isHovered && (
+        <div style={{ position: "absolute", bottom: 15, display: "flex", gap: "5px" }}>
+          <button onClick={incrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
+            +
+          </button>
+          <button onClick={decrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
+            -
+          </button>
+        </div>
+      )}
+
       <img
         className="module-middle-deco"
         src="assets/Modules/UI_Rune_Slot_MiddleDeco.png"
@@ -83,7 +117,6 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       />
-
       <img
         className="module-socket-type"
         src={moduleSocketType}
@@ -96,7 +129,6 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       />
-
       <p
         className="module-capacity"
         style={{
@@ -109,9 +141,8 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       >
-        {module.moduleStat && module.moduleStat[5] ? module.moduleStat[5].moduleCapacity : ""}
+        {module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].moduleCapacity : ""}
       </p>
-
       <img
         className="module-class"
         src={moduleClass}
@@ -124,7 +155,6 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       />
-
       <img
         className="module-tier"
         src={"assets/Modules/UI_RuneSlot_Tier.png"}
@@ -138,7 +168,6 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       />
-
       <img
         className="module-icon"
         src={module.moduleIcon}
@@ -151,6 +180,30 @@ export const Module = ({ module, onDragStart }) => {
           pointerEvents: "none",
         }}
       />
+
+      <div style={{ display: "flex", flexDirection: "column", position: "absolute", bottom: 106, left: 20 }}>
+        {/* Render level indicators */}
+        {[...Array(currentMaxLevel)].map((_, index) => {
+          // Removed +1 to match 0-indexing
+          const effectiveIndex = currentMaxLevel - 1 - index; // Adjust so we can start from the top
+
+          return (
+            <div
+              key={index}
+              className="module-level-icon"
+              style={{
+                width: "12px",
+                height: "4px",
+                borderRadius: "1.5px",
+                margin: "1px",
+                backgroundColor: effectiveIndex < moduleLevel ? "#F4833C" : "gray", // Change here
+                position: "relative",
+                bottom: `${effectiveIndex}px`, // Spacing between rectangles
+              }}
+            />
+          );
+        })}
+      </div>
 
       <p
         className="module-name"
@@ -172,7 +225,6 @@ export const Module = ({ module, onDragStart }) => {
       >
         {module.moduleName}
       </p>
-
       <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
     </div>
   );

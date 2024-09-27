@@ -21,7 +21,7 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
       moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_004.png";
       break;
     case "Rutile":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_004.png";
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_005.png";
       break;
   }
 
@@ -34,9 +34,11 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
     backgroundString = SUB_MODULE_STRING;
     backgroundStringColor = SUB_MODULE_COLOR_HEX;
   }
+
   return (
     <div
       className="module-slot"
+      onContextMenu={(e) => e.preventDefault()}
       style={{
         position: "relative",
         width: MODULE_WIDTH,
@@ -87,6 +89,7 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
           {backgroundString}
         </div>
       )}
+
       {backgroundImage && (
         <div
           className="background-image"
@@ -102,6 +105,7 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
           }}
         ></div>
       )}
+
       {Object.keys(equippedModule).length > 0 ? (
         <Module module={equippedModule} onDragStart={onDragStart} />
       ) : (
