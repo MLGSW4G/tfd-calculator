@@ -138,5 +138,17 @@
     "range1": 4,
     "modifier1": 2.281,
     "modifier2": 2.739
+  },
+  {
+    "id": 10,
+    "descendant": "Sharen",
+    "skillName": "Cutoff Beam",
+    "skillNumber": 1,
+    "skillElement": "Electric",
+    "skillType": "Fusion",
+    "maxRange": 3.0,
+    "range1": 4,
+    "modifier1": 8.021,
+    "modifier2": 2.739
   }
 ]

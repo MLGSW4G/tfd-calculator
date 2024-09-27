@@ -9,5 +9,6 @@ skillStats.duration1Label = "Duration";
 skillStats.intervalLabel = "Interval";
 skillStats.range1Label = "Range";
 skillStats.skillDamage1Label = `Cutoff Beam damage`;
+skillStats.skillDamage2Label = `Electrocution damage`;
 
 export default skillStats;

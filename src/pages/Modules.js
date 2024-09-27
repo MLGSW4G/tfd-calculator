@@ -10,16 +10,7 @@ const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
 
   const [equippedModules, setEquippedModules] = useState([
-    { id: 1, moduleName: null },
-    { id: 2, moduleName: null },
-    { id: 3, moduleName: null },
-    { id: 4, moduleName: null },
-    { id: 5, moduleName: null },
-    { id: 6, moduleName: null },
-    { id: 7, moduleName: null },
-    { id: 8, moduleName: null },
-    { id: 9, moduleName: null },
-    { id: 10, moduleName: null },
+    {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
   ]);
 
   const [height, setHeight] = useState(300);
@@ -67,9 +58,9 @@ const Modules = () => {
   const handleDrop = (e, index) => {
     e.preventDefault();
     const module = JSON.parse(e.dataTransfer.getData("module"));
-    const newequippedModules = [...equippedModules];
-    newequippedModules[index] = module;
-    setEquippedModules(newequippedModules);
+    const newEquippedModules = [...equippedModules];
+    newEquippedModules[index] = module;
+    setEquippedModules(newEquippedModules);
     setModuleList(moduleList.filter((c) => c.id !== module.id));
   };
 
@@ -87,7 +78,13 @@ const Modules = () => {
           >
             {equippedModules.map((equippedModule, index) => (
               <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.id}>
-                <ModuleSlot equippedModule={null} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} />
+                <ModuleSlot
+                  equippedModule={equippedModule}
+                  onDrop={(e) => handleDrop(e, index)}
+                  index={index}
+                  onDragStart={handleDragStart}
+                  key={equippedModule ? equippedModule.id : index} // Add a unique key prop
+                />
               </Grid>
             ))}
           </Grid>

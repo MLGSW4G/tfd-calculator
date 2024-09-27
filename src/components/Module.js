@@ -17,6 +17,7 @@ export const Module = ({ module, onDragStart }) => {
         flexDirection: "column",
         alignItems: "center",
         pointerEvents: "auto",
+        zIndex: 1, // needed to cut the redundant background part of dragged module.
       }}
       draggable={module !== null && module !== undefined}
       onDragStart={(e) => onDragStart(e, module)}

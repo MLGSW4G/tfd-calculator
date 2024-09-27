@@ -23,7 +23,6 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: 5,
       }}
       onDragOver={(e) => e.preventDefault()}
       onDrop={(e) => onDrop(e, index)}
@@ -38,10 +37,9 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 5,
         }}
       ></div>
-      {equippedModule ? (
+      {Object.keys(equippedModule).length > 0 ? (
         <Module module={equippedModule} onDragStart={onDragStart} />
       ) : (
         <div

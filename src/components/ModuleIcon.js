@@ -101,7 +101,7 @@ export const ModuleIcon = ({ module }) => {
           pointerEvents: "none",
         }}
       >
-        {module.moduleStat[5].moduleCapacity}
+        {module.moduleStat && module.moduleStat[5] ? module.moduleStat[5].moduleCapacity : ""}
       </p>
 
       <img
