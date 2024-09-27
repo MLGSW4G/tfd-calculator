@@ -5,6 +5,7 @@ import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
 import modulesData from "./Modules.json";
+import { MODULE_SOCKET_TYPES, MODULE_CLASSES } from "../const";
 
 const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
@@ -63,6 +64,14 @@ const Modules = () => {
     return matchesName && matchesSocketType && matchesClass;
   });
 
+  const getFilteredModules = () => {
+    return moduleList.filter((module) => {
+      const matchesSocketType = selectedSocketTypes.length === 0 || selectedSocketTypes.includes(module.moduleSocketType);
+      const matchesClass = selectedClasses.length === 0 || selectedClasses.includes(module.moduleClass);
+      return matchesSocketType && matchesClass;
+    });
+  };
+
   // Function to get the socket type icon
   const getSocketTypeIcon = (socketType) => {
     switch (socketType) {
@@ -99,9 +108,35 @@ const Modules = () => {
     }
   };
 
-  // Get unique socket types and moduleClasses for dropdowns
-  const moduleSocketTypes = [...new Set(moduleList.map((module) => module.moduleSocketType))];
-  const moduleClasses = [...new Set(moduleList.map((module) => module.moduleClass))];
+  const getSocketTypeCounts = () => {
+    const counts = {};
+    const filteredModules = getFilteredModules();
+
+    filteredModules.forEach((module) => {
+      if (counts[module.moduleSocketType]) {
+        counts[module.moduleSocketType]++;
+      } else {
+        counts[module.moduleSocketType] = 1;
+      }
+    });
+
+    return counts;
+  };
+
+  const getClassCounts = () => {
+    const counts = {};
+    const filteredModules = getFilteredModules();
+
+    filteredModules.forEach((module) => {
+      if (counts[module.moduleClass]) {
+        counts[module.moduleClass]++;
+      } else {
+        counts[module.moduleClass] = 1;
+      }
+    });
+
+    return counts;
+  };
 
   return (
     <>
@@ -151,10 +186,10 @@ const Modules = () => {
           <FormControl sx={{ margin: 2, minWidth: 200 }}>
             <InputLabel>Socket Type</InputLabel>
             <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
-              {moduleSocketTypes.map((type) => (
+              {MODULE_SOCKET_TYPES.map((type) => (
                 <MenuItem key={type} value={type}>
                   <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                  {type}
+                  {type} ({getSocketTypeCounts()[type] || 0})
                 </MenuItem>
               ))}
             </Select>
@@ -163,10 +198,10 @@ const Modules = () => {
           <FormControl sx={{ margin: 2, minWidth: 200 }}>
             <InputLabel>Module Class</InputLabel>
             <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
-              {moduleClasses.map((cls) => (
+              {MODULE_CLASSES.map((cls) => (
                 <MenuItem key={cls} value={cls}>
                   <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                  {cls}
+                  {cls} ({getClassCounts()[cls] || 0})
                 </MenuItem>
               ))}
             </Select>
