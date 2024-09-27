@@ -153,7 +153,7 @@ const Modules = () => {
             <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
               {moduleSocketTypes.map((type) => (
                 <MenuItem key={type} value={type}>
-                  <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
+                  <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
                   {type}
                 </MenuItem>
               ))}
@@ -165,7 +165,7 @@ const Modules = () => {
             <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
               {moduleClasses.map((cls) => (
                 <MenuItem key={cls} value={cls}>
-                  <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
+                  <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
                   {cls}
                 </MenuItem>
               ))}
