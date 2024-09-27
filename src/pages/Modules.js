@@ -10,8 +10,8 @@ const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
   const [equippedModules, setEquippedModules] = useState(Array(12).fill({}));
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
-  const [selectedSocketType, setSelectedSocketType] = useState(""); // State for socket type
-  const [selectedClass, setSelectedClass] = useState(""); // State for module class
+  const [selectedSocketTypes, setSelectedSocketTypes] = useState([]); // State for socket types
+  const [selectedClasses, setSelectedClasses] = useState([]); // State for module classes
 
   const handleDragStart = (e, module) => {
     e.dataTransfer.setData("module", JSON.stringify(module));
@@ -43,19 +43,22 @@ const Modules = () => {
   };
 
   const handleSocketTypeChange = (e) => {
-    setSelectedSocketType(e.target.value); // Update selected socket type
+    const value = e.target.value;
+    setSelectedSocketTypes(typeof value === "string" ? value.split(",") : value);
   };
 
   const handleClassChange = (e) => {
-    setSelectedClass(e.target.value); // Update selected module class
+    const value = e.target.value;
+    setSelectedClasses(typeof value === "string" ? value.split(",") : value);
   };
 
   // Filter modules based on search term and selected filters
   const filteredModules = moduleList.filter((module) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm);
-    const matchesSocketType = selectedSocketType ? module.moduleSocketType === selectedSocketType : true;
-    const matchesClass = selectedClass ? module.moduleClass === selectedClass : true;
+
+    const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
+    const matchesClass = selectedClasses.length > 0 ? selectedClasses.includes(module.moduleClass) : true;
 
     return matchesName && matchesSocketType && matchesClass;
   });
@@ -145,12 +148,9 @@ const Modules = () => {
         <div className="searchBar">
           <TextField variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
 
-          <FormControl sx={{ margin: 2, minWidth: 120 }}>
+          <FormControl sx={{ margin: 2, minWidth: 200 }}>
             <InputLabel>Socket Type</InputLabel>
-            <Select value={selectedSocketType} label="Socket Type" onChange={handleSocketTypeChange}>
-              <MenuItem value="">
-                <em>All</em>
-              </MenuItem>
+            <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
               {moduleSocketTypes.map((type) => (
                 <MenuItem key={type} value={type}>
                   <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
@@ -160,12 +160,9 @@ const Modules = () => {
             </Select>
           </FormControl>
 
-          <FormControl sx={{ margin: 2, minWidth: 120 }}>
+          <FormControl sx={{ margin: 2, minWidth: 200 }}>
             <InputLabel>Module Class</InputLabel>
-            <Select value={selectedClass} label="Module Class" onChange={handleClassChange}>
-              <MenuItem value="">
-                <em>All</em>
-              </MenuItem>
+            <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
               {moduleClasses.map((cls) => (
                 <MenuItem key={cls} value={cls}>
                   <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
