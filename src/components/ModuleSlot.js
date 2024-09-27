@@ -1,21 +1,44 @@
 // components/ModuleSlot.js
 import React from "react";
-import { MODULE_WIDTH, MODULE_HEIGHT } from "../const";
+import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_HEX, SUB_MODULE_STRING, SKILL_MODULE_STRING } from "../const";
 import { Module } from "./Module";
+import "../styles/ModuleSlot.css";
 
 export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
-  let backgroundImage;
+  let backgroundImage, backgroundString, backgroundStringColor, moduleSlotSocketType;
+
+  switch (moduleSlotSocketType) {
+    case "Cerulean":
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_001.png";
+      break;
+    case "Almandine":
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_002.png";
+      break;
+    case "Malachite":
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_003.png";
+      break;
+    case "Xantic":
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_004.png";
+      break;
+    case "Rutile":
+      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_004.png";
+      break;
+  }
+
   if (index === 0) {
     backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG01.png')`;
-  } else if (index === 5) {
+    backgroundString = SKILL_MODULE_STRING;
+    backgroundStringColor = SKILL_MODULE_COLOR_HEX;
+  } else if (index === 6) {
     backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG02.png')`;
-  } else {
-    backgroundImage = null;
+    backgroundString = SUB_MODULE_STRING;
+    backgroundStringColor = SUB_MODULE_COLOR_HEX;
   }
   return (
     <div
-      className="equipped-module-slot"
+      className="module-slot"
       style={{
+        position: "relative",
         width: MODULE_WIDTH,
         height: MODULE_HEIGHT,
         backgroundImage: `url('assets/Modules/UI_RuneSlot_EmptyBg.png')`,
@@ -27,22 +50,63 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
       onDragOver={(e) => e.preventDefault()}
       onDrop={(e) => onDrop(e, index)}
     >
-      <div
-        style={{
-          position: "absolute",
-          width: MODULE_WIDTH,
-          height: MODULE_HEIGHT,
-          backgroundImage: backgroundImage,
-          backgroundSize: "cover",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></div>
+      {moduleSlotSocketType && (
+        <img
+          className="module-slot-socket-type"
+          src={moduleSlotSocketType}
+          style={{
+            position: "relative",
+            width: 48,
+            height: 48,
+            bottom: "20%", // Center vertically
+            left: "37.5%", // Center horizontally
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></img>
+      )}
+
+      {backgroundString && (
+        <div
+          className="background-string"
+          style={{
+            position: "absolute", // Change from relative to absolute
+            width: MODULE_WIDTH,
+            height: MODULE_HEIGHT,
+            color: backgroundStringColor,
+            bottom: "-138%", // Center vertically
+            left: "50%", // Center horizontally
+            transform: "translate(-50%, -50%)", // Adjust for the element's dimensions
+            textAlign: "center",
+            fontSize: 16,
+            fontFamily: "NotoSans",
+            filter: "saturate(10%) brightness(200%) contrast(100%)",
+          }}
+        >
+          {backgroundString}
+        </div>
+      )}
+      {backgroundImage && (
+        <div
+          className="background-image"
+          style={{
+            position: "absolute",
+            width: MODULE_WIDTH,
+            height: MODULE_HEIGHT,
+            backgroundImage: backgroundImage,
+            backgroundSize: "cover",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
+      )}
       {Object.keys(equippedModule).length > 0 ? (
         <Module module={equippedModule} onDragStart={onDragStart} />
       ) : (
         <div
+          className="module"
           style={{
             width: MODULE_WIDTH,
             height: MODULE_HEIGHT,

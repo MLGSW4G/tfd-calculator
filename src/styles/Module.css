@@ -1,0 +1,11 @@
+/*todo: Make the border get rendered before the middledeco */
+
+.module {
+    /* existing styles */
+    transition: box-shadow 0.2s ease-in-out; /* add transition for smooth effect */
+    border-radius: 8px; /* add border radius to prevent square border effect */
+  }
+  
+  .module:hover {
+    box-shadow: 0 0 0 2px #fff; /* add white border-rounded frame on hover */
+  }

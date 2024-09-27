@@ -8,12 +8,12 @@ import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "
 
 export default function BasicGrid() {
   const [selectedSkill, setSelectedSkill] = useState(null);
-  const [skillStats, setSkillStats] = useState({});
+  const [skillStats, setSkillStats] = useState(null);
   const [element, setElement] = useState(false);
   const [skill, setSkill] = useState(false);
   const [optimizationCondition, setOptimizationCondition] = useState(false);
-  const [skillPower, setSkillPower] = useState(null);
-  const [totalSkillPower, setTotalSkillPower] = useState(0);
+  const [skillPower, setSkillPower] = useState("");
+  const [totalSkillPower, setTotalSkillPower] = useState("");
   const [dropdownValue, setDropdownValue] = useState("140%");
 
   // Calculate total skill power based on reactor skill power, optimization condition, element checkbox, and type checkbox
@@ -167,7 +167,7 @@ export default function BasicGrid() {
             id="total-skill-power"
             label="Total Skill Power"
             variant="standard"
-            value={totalSkillPower.toFixed(2)}
+            value={totalSkillPower != 0 ? totalSkillPower.toFixed(2) : null}
             InputProps={{
               readOnly: true,
               inputProps: {
@@ -303,8 +303,9 @@ export default function BasicGrid() {
           </Grid>
         )}
 
+        {/* todo: Add blank string display when reactor-skill-power is blank */}
         {skillStats && skillStats.modifier1 && (
-          <Grid item className="grid-item" xs={12} display=" flex">
+          <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier1: ${numberToPercents(skillStats.modifier1)}`}>
               <TextField
                 fullWidth

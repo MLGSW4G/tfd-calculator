@@ -1,6 +1,7 @@
 // components/Module.js
 import React from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
+import "../styles/Module.css";
 
 export const Module = ({ module, onDragStart }) => {
   let moduleSocketType, moduleClass, moduleTier;
@@ -10,7 +11,7 @@ export const Module = ({ module, onDragStart }) => {
       moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_001.png";
       break;
     case "Almandine":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_003.png";
+      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_002.png";
       break;
     case "Malachite":
       moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_003.png";
@@ -78,7 +79,7 @@ export const Module = ({ module, onDragStart }) => {
           position: "absolute",
           width: 78,
           height: 34,
-          top: -12,
+          top: -10,
           pointerEvents: "none",
         }}
       />
@@ -88,23 +89,10 @@ export const Module = ({ module, onDragStart }) => {
         src={moduleSocketType}
         style={{
           position: "absolute",
-          width: 24,
-          height: 24,
-          top: -8, // Adjust this value to move vertically
-          left: 50, // Adjust this value to move horizontally
-          pointerEvents: "none",
-        }}
-      />
-
-      <img
-        className="module-class"
-        src={moduleClass}
-        style={{
-          position: "absolute",
-          width: 24,
-          height: 24,
-          top: -1,
-          left: 124,
+          width: 20,
+          height: 20,
+          top: -6, // Adjust this value to move vertically
+          left: 55, // Adjust this value to move horizontally
           pointerEvents: "none",
         }}
       />
@@ -113,7 +101,7 @@ export const Module = ({ module, onDragStart }) => {
         className="module-capacity"
         style={{
           position: "absolute",
-          top: -44,
+          top: -42,
           left: 78,
           fontFamily: "Teko",
           fontSize: 28,
@@ -125,14 +113,14 @@ export const Module = ({ module, onDragStart }) => {
       </p>
 
       <img
-        className="module-icon"
-        src={module.moduleIcon}
-        alt={module.moduleName}
+        className="module-class"
+        src={moduleClass}
         style={{
           position: "absolute",
-          width: MODULE_ICON_WIDTH,
-          height: MODULE_ICON_HEIGHT,
-          top: 24,
+          width: 24,
+          height: 24,
+          top: -1,
+          left: 124,
           pointerEvents: "none",
         }}
       />
@@ -151,7 +139,18 @@ export const Module = ({ module, onDragStart }) => {
         }}
       />
 
-      <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
+      <img
+        className="module-icon"
+        src={module.moduleIcon}
+        alt={module.moduleName}
+        style={{
+          position: "absolute",
+          width: MODULE_ICON_WIDTH,
+          height: MODULE_ICON_HEIGHT,
+          top: 24,
+          pointerEvents: "none",
+        }}
+      />
 
       <p
         className="module-name"
@@ -173,6 +172,8 @@ export const Module = ({ module, onDragStart }) => {
       >
         {module.moduleName}
       </p>
+
+      <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
     </div>
   );
 };
