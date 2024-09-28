@@ -20,6 +20,18 @@ export default function BasicGrid() {
   const [totalSkillPower, setTotalSkillPower] = useState("");
   const [dropdownValue, setDropdownValue] = useState("140%");
 
+  const bonusesMapping = {
+    skillPowerModifier: {
+      modifier1: (value) => (skillStats) => skillStats.modifier1 * (1 + value),
+      modifier2: (value) => (skillStats) => skillStats.modifier2 * (1 + value),
+      modifier3: (value) => (skillStats) => skillStats.modifier3 * (1 + value),
+    },
+    skillCost: {
+      cost1: (value) => (skillStats) => skillStats.cost1 * (1 + value),
+      cost2: (value) => (skillStats) => skillStats.cost2 * (1 + value),
+    },
+  };
+
   useEffect(() => {
     const optimizationConditionMultiplier = optimizationCondition ? parseFloat(dropdownValue) / 100 : 1;
     const appliedElementSkillPower = element ? 1.2 : 1;
@@ -63,6 +75,22 @@ export default function BasicGrid() {
     let appliedElementSkillPower = elementChecked ? 1.2 : 1;
     let appliedTypeSkillPower = typeChecked ? 1.2 : 1;
     return skillPower * appliedElementSkillPower * appliedTypeSkillPower * (modifier || 0) * optimizationConditionMultiplier;
+  };
+
+  const calculateSkillStatsWithBonuses = (skillStats, totalBonuses) => {
+    const skillStatsWithBonuses = { ...skillStats };
+
+    Object.keys(totalBonuses).forEach((bonusKey) => {
+      if (bonusesMapping[bonusKey]) {
+        Object.keys(bonusesMapping[bonusKey]).forEach((statKey) => {
+          const bonusValue = totalBonuses[bonusKey];
+          const bonusFunction = bonusesMapping[bonusKey][statKey](bonusValue);
+          skillStatsWithBonuses[statKey] = bonusFunction(skillStats);
+        });
+      }
+    });
+
+    return skillStatsWithBonuses;
   };
 
   const skillPowerOptions = [
