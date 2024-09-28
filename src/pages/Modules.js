@@ -140,7 +140,7 @@ const Modules = () => {
 
   return (
     <>
-      <Box className="equippedModules" marginLeft="10%" marginRight="10%">
+      <Box className="equipped-modules" marginLeft="10%" marginRight="10%">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           <Grid
             container
@@ -166,23 +166,23 @@ const Modules = () => {
       </Box>
 
       <Box
-        className="moduleZone"
+        className="module-zone"
         width="100%"
         height={300}
         sx={{
           background: "grey",
           position: "fixed",
           bottom: 0,
-          left: 0,
           zIndex: 1000,
           overflow: "auto",
+          borderTop: "2px solid black",
         }}
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleModuleDrop}
       >
-        <TextField className="searchBar" variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
+        <TextField className="search-bar" variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
 
-        <FormControl className="moduleSocketTypeFilter" sx={{ margin: 2, minWidth: 200 }}>
+        <FormControl className="module-socket-type-filter" sx={{ margin: 2, minWidth: 200 }}>
           <InputLabel>Socket Type</InputLabel>
           <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
             {MODULE_SOCKET_TYPES.map((type) => (
@@ -194,7 +194,7 @@ const Modules = () => {
           </Select>
         </FormControl>
 
-        <FormControl className="moduleClassFilter" sx={{ margin: 2, minWidth: 200 }}>
+        <FormControl className="module-class-filter" sx={{ margin: 2, minWidth: 200 }}>
           <InputLabel>Module Class</InputLabel>
           <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
             {MODULE_CLASSES.map((cls) => (
