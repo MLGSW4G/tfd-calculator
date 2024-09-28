@@ -8,7 +8,6 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
 
   // State to hold the current module level and hover state
   const [moduleLevel, setModuleLevel] = useState(module.moduleLevel || 0);
-  const [isHovered, setIsHovered] = useState(false); // New state for hover
 
   let moduleSocketType, moduleClass, moduleTier;
 
@@ -92,8 +91,6 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
       draggable={module !== null && module !== undefined}
       onDragStart={(e) => onDragStart(e, module)}
       onContextMenu={(e) => e.preventDefault()}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {isInModuleSlot && (
         <div style={{ position: "absolute", bottom: 15, display: "flex", gap: "5px" }}>
