@@ -6,7 +6,6 @@ import "../styles/Module.css";
 export const Module = ({ module, onDragStart, isInModuleSlot }) => {
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
-  // State to hold the current module level and hover state
   const [moduleLevel, setModuleLevel] = useState(module.moduleLevel || 0);
 
   let moduleSocketType, moduleClass, moduleTier;
@@ -59,7 +58,6 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
       break;
   }
 
-  // Functions for buttons
   const incrementLevel = (e) => {
     if (moduleLevel < currentMaxLevel) {
       setModuleLevel((prevLevel) => prevLevel + 1);
@@ -121,8 +119,8 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
           position: "absolute",
           width: 20,
           height: 20,
-          top: -6, // Adjust this value to move vertically
-          left: 55, // Adjust this value to move horizontally
+          top: -6,
+          left: 55,
           pointerEvents: "none",
         }}
       />

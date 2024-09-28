@@ -16,7 +16,6 @@ export default function BasicGrid() {
   const [totalSkillPower, setTotalSkillPower] = useState("");
   const [dropdownValue, setDropdownValue] = useState("140%");
 
-  // Calculate total skill power based on reactor skill power, optimization condition, element checkbox, and type checkbox
   useEffect(() => {
     const optimizationConditionMultiplier = optimizationCondition ? parseFloat(dropdownValue) / 100 : 1;
     const appliedElementSkillPower = element ? 1.2 : 1;
@@ -54,7 +53,6 @@ export default function BasicGrid() {
     return skillPower * appliedElementSkillPower * appliedTypeSkillPower * (modifier || 0) * optimizationConditionMultiplier;
   };
 
-  // Define your magic numbers with corresponding tooltips
   const skillPowerOptions = [
     { value: 11060.963, tooltip: "Level 100 reactor" },
     { value: 11724.62078, tooltip: "Upgraded level 100 reactor (1.06x)" },
@@ -303,7 +301,6 @@ export default function BasicGrid() {
           </Grid>
         )}
 
-        {/* todo: Add blank string display when reactor-skill-power is blank */}
         {skillStats && skillStats.modifier1 && (
           <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier1: ${numberToPercents(skillStats.modifier1)}`}>

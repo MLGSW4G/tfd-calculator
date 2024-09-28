@@ -60,8 +60,8 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
             position: "relative",
             width: 48,
             height: 48,
-            bottom: "20%", // Center vertically
-            left: "37.5%", // Center horizontally
+            bottom: "20%",
+            left: "37.5%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -73,7 +73,7 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
         <p
           className="background-string"
           style={{
-            position: "absolute", // Change from relative to absolute
+            position: "absolute",
             width: MODULE_WIDTH,
             height: MODULE_HEIGHT * 0.15,
             color: backgroundStringColor,

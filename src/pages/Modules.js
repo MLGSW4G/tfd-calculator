@@ -1,6 +1,6 @@
 // pages/Modules.js
 import React, { useState } from "react";
-import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from "@mui/material"; // Import necessary MUI components
+import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
@@ -10,9 +10,9 @@ import { MODULE_SOCKET_TYPES, MODULE_CLASSES } from "../const";
 const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
   const [equippedModules, setEquippedModules] = useState(Array(12).fill({ module: {}, moduleLevel: 0 }));
-  const [searchTerm, setSearchTerm] = useState(""); // State for search term
-  const [selectedSocketTypes, setSelectedSocketTypes] = useState([]); // State for socket types
-  const [selectedClasses, setSelectedClasses] = useState([]); // State for module classes
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
+  const [selectedClasses, setSelectedClasses] = useState([]);
 
   const handleDragStart = (e, module) => {
     e.dataTransfer.setData("module", JSON.stringify(module));
@@ -59,7 +59,7 @@ const Modules = () => {
   };
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value); // Update search term on change
+    setSearchTerm(e.target.value);
   };
 
   const handleSocketTypeChange = (e) => {
@@ -72,7 +72,6 @@ const Modules = () => {
     setSelectedClasses(typeof value === "string" ? value.split(",") : value);
   };
 
-  // Filter modules based on search term and selected filters
   const filteredModules = moduleList.filter((module) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm);
@@ -174,7 +173,7 @@ const Modules = () => {
                   onDrop={(e) => handleDrop(e, index)}
                   index={index}
                   onDragStart={handleDragStart}
-                  key={equippedModule ? equippedModule.id : index} // Add a unique key prop
+                  key={equippedModule ? equippedModule.id : index}
                 />
               </Grid>
             ))}
