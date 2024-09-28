@@ -258,7 +258,7 @@
     "moduleType": null,
     "moduleSocketType": "Rutile",
     "moduleStat": [
-      { "level": 0, "moduleCapacity": 5, "skillDuration": 0.9 },
+      { "level": 0, "moduleCapacity": 5, "skillDuration": 0.09 },
       { "level": 1, "moduleCapacity": 6, "skillDuration": 0.102 },
       { "level": 2, "moduleCapacity": 7, "skillDuration": 0.117 },
       { "level": 3, "moduleCapacity": 8, "skillDuration": 0.135 },

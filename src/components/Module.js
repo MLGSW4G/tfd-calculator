@@ -10,8 +10,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
   const moduleKeys = useMemo(() => {
-    return [Object.keys(module.moduleStat[moduleLevel])[2], Object.values(module.moduleStat[moduleLevel])[2]];
-  }, [module]);
+    const stat = module.moduleStat[moduleLevel];
+    return [Object.keys(stat)[2], stat[Object.keys(stat)[2]]];
+  }, [module, moduleLevel]);
 
   let moduleSocketType, moduleClass, moduleTier;
 
