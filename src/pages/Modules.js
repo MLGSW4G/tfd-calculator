@@ -162,17 +162,16 @@ const Modules = () => {
   const calculateTotalBonuses = (equippedModules) => {
     const totalBonuses = {};
     equippedModules.forEach((equippedModule) => {
-      if (equippedModule.module.moduleStat) {
-        equippedModule.module.moduleStat.forEach((stat) => {
-          Object.keys(stat).forEach((key) => {
-            if (key !== "level" && key !== "moduleCapacity") {
-              if (totalBonuses[key]) {
-                totalBonuses[key] += stat[key];
-              } else {
-                totalBonuses[key] = stat[key];
-              }
+      if (equippedModule.module.moduleStat && equippedModule.moduleLevel < equippedModule.module.moduleStat.length) {
+        const stat = equippedModule.module.moduleStat[equippedModule.moduleLevel];
+        Object.keys(stat).forEach((key) => {
+          if (key !== "level" && key !== "moduleCapacity") {
+            if (totalBonuses[key]) {
+              totalBonuses[key] += stat[key];
+            } else {
+              totalBonuses[key] = stat[key];
             }
-          });
+          }
         });
       }
     });
