@@ -41,6 +41,15 @@ const Modules = () => {
       if (!module.moduleStat) {
         module.moduleStat = [];
       }
+      const index = equippedModules.findIndex((m) => m.module.id === module.id);
+      if (index !== -1) {
+        setEquippedModules((prevEquippedModules) => {
+          const newEquippedModules = [...prevEquippedModules];
+          newEquippedModules[index] = { module: {}, moduleLevel: 0 };
+          localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
+          return newEquippedModules;
+        });
+      }
       setModuleList((prevModuleList) => {
         const newModuleList = [...prevModuleList];
         const index = newModuleList.findIndex((m) => m.id > module.id);
@@ -50,14 +59,6 @@ const Modules = () => {
           newModuleList.splice(index, 0, module);
         }
         return newModuleList;
-      });
-      setEquippedModules((prevEquippedModules) => {
-        const newEquippedModules = [...prevEquippedModules];
-        const index = newEquippedModules.findIndex((m) => m.module.id === module.id);
-        if (index !== -1) {
-          newEquippedModules[index] = { module: {}, moduleLevel: 0 };
-        }
-        return newEquippedModules;
       });
     }
   };
@@ -184,6 +185,15 @@ const Modules = () => {
     localStorage.setItem("totalBonuses", JSON.stringify(totalBonuses));
   }, [totalBonuses]);
 
+  useEffect(() => {
+    const cachedEquippedModules = localStorage.getItem("equippedModules");
+    if (cachedEquippedModules) {
+      const parsedEquippedModules = JSON.parse(cachedEquippedModules);
+      setEquippedModules(parsedEquippedModules);
+      setModuleList((prevModuleList) => prevModuleList.filter((module) => !parsedEquippedModules.some((equippedModule) => equippedModule.module.id === module.id)));
+    }
+  }, []);
+
   return (
     <>
       <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="10%">
@@ -197,8 +207,8 @@ const Modules = () => {
             }}
           >
             {equippedModules.map((equippedModule, index) => (
-              <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.id}>
-                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} key={equippedModule ? equippedModule.id : index} />
+              <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.module.id}>
+                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} key={equippedModule.module.id} />
               </Grid>
             ))}
           </Grid>
