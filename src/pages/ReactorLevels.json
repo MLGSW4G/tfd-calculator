@@ -1,0 +1,642 @@
+{
+    "1": {
+        "skill_atk_power": 21.538,
+        "sub_skill_atk_power": 40.0
+    },
+    "2": {
+        "skill_atk_power": 38.29,
+        "sub_skill_atk_power": 85.0
+    },
+    "3": {
+        "skill_atk_power": 56.238,
+        "sub_skill_atk_power": 119.0
+    },
+    "4": {
+        "skill_atk_power": 76.58,
+        "sub_skill_atk_power": 157.0
+    },
+    "5": {
+        "skill_atk_power": 99.314,
+        "sub_skill_atk_power": 198.0
+    },
+    "6": {
+        "skill_atk_power": 123.245,
+        "sub_skill_atk_power": 244.0
+    },
+    "7": {
+        "skill_atk_power": 149.569,
+        "sub_skill_atk_power": 292.0
+    },
+    "8": {
+        "skill_atk_power": 178.287,
+        "sub_skill_atk_power": 345.0
+    },
+    "9": {
+        "skill_atk_power": 208.201,
+        "sub_skill_atk_power": 400.0
+    },
+    "10": {
+        "skill_atk_power": 240.508,
+        "sub_skill_atk_power": 460.0
+    },
+    "11": {
+        "skill_atk_power": 274.011,
+        "sub_skill_atk_power": 523.0
+    },
+    "12": {
+        "skill_atk_power": 309.908,
+        "sub_skill_atk_power": 590.0
+    },
+    "13": {
+        "skill_atk_power": 348.198,
+        "sub_skill_atk_power": 660.0
+    },
+    "14": {
+        "skill_atk_power": 387.684,
+        "sub_skill_atk_power": 734.0
+    },
+    "15": {
+        "skill_atk_power": 429.564,
+        "sub_skill_atk_power": 811.0
+    },
+    "16": {
+        "skill_atk_power": 472.64,
+        "sub_skill_atk_power": 893.0
+    },
+    "17": {
+        "skill_atk_power": 518.109,
+        "sub_skill_atk_power": 977.0
+    },
+    "18": {
+        "skill_atk_power": 565.971,
+        "sub_skill_atk_power": 1066.0
+    },
+    "19": {
+        "skill_atk_power": 615.03,
+        "sub_skill_atk_power": 1157.0
+    },
+    "20": {
+        "skill_atk_power": 666.482,
+        "sub_skill_atk_power": 1253.0
+    },
+    "21": {
+        "skill_atk_power": 720.327,
+        "sub_skill_atk_power": 1352.0
+    },
+    "22": {
+        "skill_atk_power": 775.368,
+        "sub_skill_atk_power": 1455.0
+    },
+    "23": {
+        "skill_atk_power": 832.803,
+        "sub_skill_atk_power": 1561.0
+    },
+    "24": {
+        "skill_atk_power": 891.434,
+        "sub_skill_atk_power": 1671.0
+    },
+    "25": {
+        "skill_atk_power": 953.655,
+        "sub_skill_atk_power": 1784.0
+    },
+    "26": {
+        "skill_atk_power": 1015.876,
+        "sub_skill_atk_power": 1902.0
+    },
+    "27": {
+        "skill_atk_power": 1081.687,
+        "sub_skill_atk_power": 2022.0
+    },
+    "28": {
+        "skill_atk_power": 1147.497,
+        "sub_skill_atk_power": 2147.0
+    },
+    "29": {
+        "skill_atk_power": 1216.897,
+        "sub_skill_atk_power": 2274.0
+    },
+    "30": {
+        "skill_atk_power": 1287.494,
+        "sub_skill_atk_power": 2406.0
+    },
+    "31": {
+        "skill_atk_power": 1360.484,
+        "sub_skill_atk_power": 2541.0
+    },
+    "32": {
+        "skill_atk_power": 1434.671,
+        "sub_skill_atk_power": 2680.0
+    },
+    "33": {
+        "skill_atk_power": 1511.25,
+        "sub_skill_atk_power": 2822.0
+    },
+    "34": {
+        "skill_atk_power": 1590.223,
+        "sub_skill_atk_power": 2968.0
+    },
+    "35": {
+        "skill_atk_power": 1670.392,
+        "sub_skill_atk_power": 3117.0
+    },
+    "36": {
+        "skill_atk_power": 1752.954,
+        "sub_skill_atk_power": 3271.0
+    },
+    "37": {
+        "skill_atk_power": 1837.91,
+        "sub_skill_atk_power": 3427.0
+    },
+    "38": {
+        "skill_atk_power": 1924.062,
+        "sub_skill_atk_power": 3588.0
+    },
+    "39": {
+        "skill_atk_power": 2012.607,
+        "sub_skill_atk_power": 3751.0
+    },
+    "40": {
+        "skill_atk_power": 2102.349,
+        "sub_skill_atk_power": 3919.0
+    },
+    "41": {
+        "skill_atk_power": 2194.484,
+        "sub_skill_atk_power": 4090.0
+    },
+    "42": {
+        "skill_atk_power": 2289.012,
+        "sub_skill_atk_power": 4265.0
+    },
+    "43": {
+        "skill_atk_power": 2384.736,
+        "sub_skill_atk_power": 4443.0
+    },
+    "44": {
+        "skill_atk_power": 2482.854,
+        "sub_skill_atk_power": 4625.0
+    },
+    "45": {
+        "skill_atk_power": 2582.168,
+        "sub_skill_atk_power": 4810.0
+    },
+    "46": {
+        "skill_atk_power": 2683.875,
+        "sub_skill_atk_power": 5000.0
+    },
+    "47": {
+        "skill_atk_power": 2787.975,
+        "sub_skill_atk_power": 5192.0
+    },
+    "48": {
+        "skill_atk_power": 2893.272,
+        "sub_skill_atk_power": 5389.0
+    },
+    "49": {
+        "skill_atk_power": 3000.962,
+        "sub_skill_atk_power": 5588.0
+    },
+    "50": {
+        "skill_atk_power": 3111.045,
+        "sub_skill_atk_power": 5792.0
+    },
+    "51": {
+        "skill_atk_power": 3222.325,
+        "sub_skill_atk_power": 5999.0
+    },
+    "52": {
+        "skill_atk_power": 3335.998,
+        "sub_skill_atk_power": 6210.0
+    },
+    "53": {
+        "skill_atk_power": 3450.867,
+        "sub_skill_atk_power": 6424.0
+    },
+    "54": {
+        "skill_atk_power": 3568.13,
+        "sub_skill_atk_power": 6642.0
+    },
+    "55": {
+        "skill_atk_power": 3687.785,
+        "sub_skill_atk_power": 6863.0
+    },
+    "56": {
+        "skill_atk_power": 3808.638,
+        "sub_skill_atk_power": 7089.0
+    },
+    "57": {
+        "skill_atk_power": 3931.883,
+        "sub_skill_atk_power": 7317.0
+    },
+    "58": {
+        "skill_atk_power": 4057.521,
+        "sub_skill_atk_power": 7550.0
+    },
+    "59": {
+        "skill_atk_power": 4184.356,
+        "sub_skill_atk_power": 7785.0
+    },
+    "60": {
+        "skill_atk_power": 4313.584,
+        "sub_skill_atk_power": 8025.0
+    },
+    "61": {
+        "skill_atk_power": 4444.009,
+        "sub_skill_atk_power": 8268.0
+    },
+    "62": {
+        "skill_atk_power": 4576.827,
+        "sub_skill_atk_power": 8515.0
+    },
+    "63": {
+        "skill_atk_power": 4712.037,
+        "sub_skill_atk_power": 8765.0
+    },
+    "64": {
+        "skill_atk_power": 4848.445,
+        "sub_skill_atk_power": 9019.0
+    },
+    "65": {
+        "skill_atk_power": 4987.245,
+        "sub_skill_atk_power": 9276.0
+    },
+    "66": {
+        "skill_atk_power": 5127.242,
+        "sub_skill_atk_power": 9538.0
+    },
+    "67": {
+        "skill_atk_power": 5269.632,
+        "sub_skill_atk_power": 9802.0
+    },
+    "68": {
+        "skill_atk_power": 5414.416,
+        "sub_skill_atk_power": 10071.0
+    },
+    "69": {
+        "skill_atk_power": 5560.395,
+        "sub_skill_atk_power": 10342.0
+    },
+    "70": {
+        "skill_atk_power": 5708.768,
+        "sub_skill_atk_power": 10618.0
+    },
+    "71": {
+        "skill_atk_power": 5859.534,
+        "sub_skill_atk_power": 10897.0
+    },
+    "72": {
+        "skill_atk_power": 6011.497,
+        "sub_skill_atk_power": 11180.0
+    },
+    "73": {
+        "skill_atk_power": 6165.853,
+        "sub_skill_atk_power": 11466.0
+    },
+    "74": {
+        "skill_atk_power": 6321.405,
+        "sub_skill_atk_power": 11756.0
+    },
+    "75": {
+        "skill_atk_power": 6480.547,
+        "sub_skill_atk_power": 12049.0
+    },
+    "76": {
+        "skill_atk_power": 6639.689,
+        "sub_skill_atk_power": 12347.0
+    },
+    "77": {
+        "skill_atk_power": 6802.421,
+        "sub_skill_atk_power": 12647.0
+    },
+    "78": {
+        "skill_atk_power": 6965.152,
+        "sub_skill_atk_power": 12952.0
+    },
+    "79": {
+        "skill_atk_power": 7131.473,
+        "sub_skill_atk_power": 13259.0
+    },
+    "80": {
+        "skill_atk_power": 7298.991,
+        "sub_skill_atk_power": 13571.0
+    },
+    "81": {
+        "skill_atk_power": 7468.902,
+        "sub_skill_atk_power": 13886.0
+    },
+    "82": {
+        "skill_atk_power": 7640.01,
+        "sub_skill_atk_power": 14205.0
+    },
+    "83": {
+        "skill_atk_power": 7813.51,
+        "sub_skill_atk_power": 14527.0
+    },
+    "84": {
+        "skill_atk_power": 7989.404,
+        "sub_skill_atk_power": 14853.0
+    },
+    "85": {
+        "skill_atk_power": 8166.494,
+        "sub_skill_atk_power": 15182.0
+    },
+    "86": {
+        "skill_atk_power": 8345.978,
+        "sub_skill_atk_power": 15516.0
+    },
+    "87": {
+        "skill_atk_power": 8527.854,
+        "sub_skill_atk_power": 15852.0
+    },
+    "88": {
+        "skill_atk_power": 8710.927,
+        "sub_skill_atk_power": 16193.0
+    },
+    "89": {
+        "skill_atk_power": 8896.393,
+        "sub_skill_atk_power": 16536.0
+    },
+    "90": {
+        "skill_atk_power": 9083.056,
+        "sub_skill_atk_power": 16884.0
+    },
+    "91": {
+        "skill_atk_power": 9272.112,
+        "sub_skill_atk_power": 17235.0
+    },
+    "92": {
+        "skill_atk_power": 9463.561,
+        "sub_skill_atk_power": 17590.0
+    },
+    "93": {
+        "skill_atk_power": 9656.206,
+        "sub_skill_atk_power": 17948.0
+    },
+    "94": {
+        "skill_atk_power": 9851.245,
+        "sub_skill_atk_power": 18310.0
+    },
+    "95": {
+        "skill_atk_power": 10047.48,
+        "sub_skill_atk_power": 18675.0
+    },
+    "96": {
+        "skill_atk_power": 10246.109,
+        "sub_skill_atk_power": 19045.0
+    },
+    "97": {
+        "skill_atk_power": 10447.13,
+        "sub_skill_atk_power": 19417.0
+    },
+    "98": {
+        "skill_atk_power": 10649.348,
+        "sub_skill_atk_power": 19794.0
+    },
+    "99": {
+        "skill_atk_power": 10853.959,
+        "sub_skill_atk_power": 20173.0
+    },
+    "100": {
+        "skill_atk_power": 11060.963,
+        "sub_skill_atk_power": 20557.0
+    },
+    "101": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "102": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "103": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "104": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "105": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "106": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "107": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "108": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "109": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "110": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "111": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "112": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "113": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "114": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "115": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "116": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "117": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "118": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "119": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "120": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "121": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "122": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "123": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "124": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "125": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "126": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "127": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "128": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "129": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "130": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "131": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "132": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "133": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "134": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "135": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "136": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "137": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "138": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "139": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "140": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "141": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "142": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "143": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "144": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "145": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "146": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "147": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "148": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "149": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "150": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "151": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "152": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "153": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "154": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "155": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "156": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "157": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "158": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "159": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    },
+    "160": {
+        "skill_atk_power": 6723.0,
+        "sub_skill_atk_power": 100.0
+    }
+}

@@ -1,24 +1,43 @@
 // pages/Build.js
 import React, { useState, useEffect } from "react";
-import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel } from "@mui/material";
+import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider } from "@mui/material";
 import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
 import "../styles/styles.css";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../components/ValueFormatters";
+import ReactorLevels from "./ReactorLevels.json";
 
 export default function BasicGrid() {
+  // Define the reactor levels and their corresponding skill powers
+  const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
+    value: parseInt(level),
+    skillPower: ReactorLevels[level].skill_atk_power,
+    subSkillPower: ReactorLevels[level].sub_skill_atk_power,
+  }));
+
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [skillStats, setSkillStats] = useState(null);
+
+  const [reactorLevel, setReactorLevel] = useState(1);
+  const [reactorSkillPower, setReactorSkillPower] = useState(reactorLevels[reactorLevel - 1].skillPower);
+  const [subSkillPower, setSubSkillPower] = useState(reactorLevels[reactorLevel - 1].subSkillPower);
+
   const [totalBonuses, setTotalBonuses] = useState(() => {
     const cachedTotalBonuses = localStorage.getItem("totalBonuses");
     return cachedTotalBonuses ? JSON.parse(cachedTotalBonuses) : {};
   });
+
   const [element, setElement] = useState(false);
   const [skill, setSkill] = useState(false);
+
   const [optimizationCondition, setOptimizationCondition] = useState(false);
+  const [reactorEnhancement, setReactorEnhancement] = useState(false);
+
   const [skillPower, setSkillPower] = useState("");
   const [totalSkillPower, setTotalSkillPower] = useState("");
-  const [dropdownValue, setDropdownValue] = useState("140%");
+
+  const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState("140%");
+  const [reactorEnhancementLevel, setReactorEnhancementLevel] = useState(1);
 
   const bonusesMapping = {
     skillPowerModifier: {
@@ -32,13 +51,15 @@ export default function BasicGrid() {
     },
   };
 
+  // Update the useEffect hook to use reactorSkillPower and reactorEnhancementLevel
   useEffect(() => {
-    const optimizationConditionMultiplier = optimizationCondition ? parseFloat(dropdownValue) / 100 : 1;
+    const optimizationConditionMultiplierValue = optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1;
     const appliedElementSkillPower = element ? 1.2 : 1;
     const appliedTypeSkillPower = skill ? 1.2 : 1;
-    const totalSkillPowerValue = skillPower * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower;
+    const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
+    const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower;
     setTotalSkillPower(totalSkillPowerValue);
-  }, [skillPower, optimizationCondition, dropdownValue, element, skill]);
+  }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill]);
 
   useEffect(() => {
     if (selectedSkill) {
@@ -93,11 +114,6 @@ export default function BasicGrid() {
     return skillStatsWithBonuses;
   };
 
-  const skillPowerOptions = [
-    { value: 11060.963, tooltip: "Level 100 reactor" },
-    { value: 11724.62078, tooltip: "Upgraded level 100 reactor (1.06x)" },
-  ];
-
   return (
     <Box
       sx={{
@@ -137,65 +153,58 @@ export default function BasicGrid() {
         </Grid>
 
         <Grid xs={12} item display="flex">
-          <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label="Optimization condition" />
+          <Grid item xs={12} display="flex">
+            <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label="Optimization condition" />
+            {optimizationCondition && (
+              <Select
+                size="small"
+                value={optimizationConditionMultiplier}
+                onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
+                sx={{
+                  "& .MuiSelect-select": {
+                    backgroundColor: optimizationConditionMultiplier === "140%" ? colorRare : optimizationConditionMultiplier === "160%" ? colorUltimate : null,
+                  },
+                }}
+              >
+                <MenuItem value="140%" sx={{ color: colorRare }}>
+                  140%
+                </MenuItem>
+                <MenuItem value="160%" sx={{ color: colorUltimate }}>
+                  160%
+                </MenuItem>
+              </Select>
+            )}
+          </Grid>
 
-          {optimizationCondition && (
-            <Select
-              size="small"
-              value={dropdownValue}
-              onChange={(event) => setDropdownValue(event.target.value)}
-              sx={{
-                "& .MuiSelect-select": {
-                  backgroundColor: dropdownValue === "140%" ? colorRare : dropdownValue === "160%" ? colorUltimate : null,
-                },
-              }}
-            >
-              <MenuItem value="140%" sx={{ color: colorRare }}>
-                140%
-              </MenuItem>
-              <MenuItem value="160%" sx={{ color: colorUltimate }}>
-                160%
-              </MenuItem>
-            </Select>
-          )}
+          <Grid item xs={12} display="flex">
+            <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label="Reactor enhancement" />
+            {reactorEnhancement && (
+              <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
+                <MenuItem value={1} title="Reactor skill power +3%">
+                  Upgrade 1
+                </MenuItem>
+                <MenuItem value={2} title="Reactor skill power +6%">
+                  Upgrade 2
+                </MenuItem>
+              </Select>
+            )}
+          </Grid>
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
-          <Autocomplete
-            freeSolo
-            fullWidth
-            disableClearable
-            options={skillPowerOptions.map((option) => option.value)}
+          <Slider
+            valueLabelDisplay="on"
+            value={reactorLevel}
             onChange={(event, newValue) => {
-              setSkillPower(newValue);
+              setReactorLevel(newValue);
+              const selectedReactorLevel = reactorLevels.find((level) => level.value === newValue);
+              if (selectedReactorLevel) {
+                setReactorSkillPower(selectedReactorLevel.skillPower);
+                setSubSkillPower(selectedReactorLevel.subSkillPower);
+              }
             }}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                fullWidth
-                id="reactor-skill-power"
-                label="Reactor Skill Power"
-                variant="standard"
-                value={skillPower}
-                onChange={(event) => setSkillPower(event.target.value)}
-                InputProps={{
-                  ...params.InputProps,
-                  style: { textAlign: "right" }, // Right-align the text inside the input
-                }}
-                inputProps={{
-                  ...params.inputProps,
-                  style: { textAlign: "right" }, // Also align the actual input text
-                }}
-              />
-            )}
-            renderOption={(props, option) => {
-              const optionObj = skillPowerOptions.find((opt) => opt.value === option);
-              return (
-                <Tooltip title={optionObj.tooltip} arrow>
-                  <li {...props}>{option}</li>
-                </Tooltip>
-              );
-            }}
+            min={Math.min(...reactorLevels.map((level) => level.value))}
+            max={Math.max(...reactorLevels.map((level) => level.value))}
           />
         </Grid>
 
@@ -214,7 +223,6 @@ export default function BasicGrid() {
             }}
           />
         </Grid>
-
         <Grid item className="grid-item" xs={12} display="flex">
           <TextField
             fullWidth
@@ -234,7 +242,6 @@ export default function BasicGrid() {
             }}
           />
         </Grid>
-
         {skillStats && Object.keys(skillStats).includes("cooldown") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -252,7 +259,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("cost1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -270,7 +276,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("cost2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -288,7 +293,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("duration1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -306,7 +310,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("duration2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -324,7 +327,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("interval") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -342,7 +344,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("range1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -360,7 +361,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && Object.keys(skillStats).includes("range2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -378,7 +378,6 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
-
         {skillStats && skillStats.modifier1 && (
           <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier1: ${numberToPercents(skillStats.modifier1)}`}>
@@ -387,7 +386,7 @@ export default function BasicGrid() {
                 id="skillDamage1"
                 label={skillStats.skillDamage1Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier1, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier1, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -398,7 +397,6 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
-
         {skillStats && skillStats.modifier2 && (
           <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier2: ${numberToPercents(skillStats.modifier2)}`}>
@@ -407,7 +405,7 @@ export default function BasicGrid() {
                 id="skillDamage2"
                 label={skillStats.skillDamage2Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier2, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier2, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -418,7 +416,6 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
-
         {skillStats && skillStats.modifier3 && (
           <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier3: ${numberToPercents(skillStats.modifier3)}`}>
@@ -427,7 +424,7 @@ export default function BasicGrid() {
                 id="skillDamage3"
                 label={skillStats.skillDamage3Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier3, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier3, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -438,7 +435,6 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
-
         {skillStats && skillStats.modifier4 && (
           <Grid item className="grid-item" xs={12} display="flex">
             <Tooltip title={`Modifier4: ${numberToPercents(skillStats.modifier4)}`}>
@@ -447,7 +443,7 @@ export default function BasicGrid() {
                 id="skillDamage4"
                 label={skillStats.skillDamage4Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier4, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier4, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
