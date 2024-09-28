@@ -1,4 +1,4 @@
-// pages/Build.js
+// pages/Overview.js
 import React, { useState, useEffect } from "react";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider } from "@mui/material";
 import { sortedRows } from "./SkillsList";
@@ -7,7 +7,7 @@ import "../styles/styles.css";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../components/ValueFormatters";
 import ReactorLevels from "./ReactorLevels.json";
 
-export default function BasicGrid() {
+export default function Overview() {
   const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
     value: parseInt(level),
     skillPower: ReactorLevels[level].skill_atk_power,

@@ -42,7 +42,7 @@ export default function NavTabs() {
   return (
     <Box className="nav-tabs">
       <Tabs value={value} onChange={handleChange} role="navigation" variant="fullWidth">
-        <LinkTab label="Build" href="/build"/>
+        <LinkTab label="Overview" href="/overview"/>
         <LinkTab label="Skills List" href="/skillsList" />
         <LinkTab label="Modules" href="/modules" />
       </Tabs>
