@@ -9,6 +9,10 @@ import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "
 export default function BasicGrid() {
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [skillStats, setSkillStats] = useState(null);
+  const [totalBonuses, setTotalBonuses] = useState(() => {
+    const cachedTotalBonuses = localStorage.getItem("totalBonuses");
+    return cachedTotalBonuses ? JSON.parse(cachedTotalBonuses) : {};
+  });
   const [element, setElement] = useState(false);
   const [skill, setSkill] = useState(false);
   const [optimizationCondition, setOptimizationCondition] = useState(false);
@@ -28,7 +32,15 @@ export default function BasicGrid() {
     if (selectedSkill) {
       import(`../pages/skills/${selectedSkill.skillName.replaceAll(" ", "")}.js`)
         .then((module) => {
-          setSkillStats(module.default);
+          const skillStatsWithBonuses = { ...module.default };
+          Object.keys(totalBonuses).forEach((key) => {
+            if (skillStatsWithBonuses[key]) {
+              skillStatsWithBonuses[key] += totalBonuses[key];
+            } else {
+              skillStatsWithBonuses[key] = totalBonuses[key];
+            }
+          });
+          setSkillStats(skillStatsWithBonuses);
         })
         .catch((error) => {
           console.error(error);
@@ -36,7 +48,7 @@ export default function BasicGrid() {
     } else {
       setSkillStats({}); // Reset skillStats to an empty object when selectedSkill is null
     }
-  }, [selectedSkill]);
+  }, [selectedSkill, totalBonuses]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);

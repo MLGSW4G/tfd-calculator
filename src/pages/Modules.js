@@ -1,5 +1,5 @@
 // pages/Modules.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import "../styles/styles.css";
 import { Module } from "../components/Module";
@@ -9,7 +9,10 @@ import { MODULE_SOCKET_TYPES, MODULE_CLASSES } from "../const";
 
 const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
-  const [equippedModules, setEquippedModules] = useState(Array(12).fill({ module: {}, moduleLevel: 0 }));
+  const [equippedModules, setEquippedModules] = useState(() => {
+    const cachedEquippedModules = localStorage.getItem("equippedModules");
+    return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
+  });
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
   const [selectedClasses, setSelectedClasses] = useState([]);
@@ -24,6 +27,7 @@ const Modules = () => {
     setEquippedModules((prevEquippedModules) => {
       const newEquippedModules = [...prevEquippedModules];
       newEquippedModules[index] = { module, moduleLevel: 0 };
+      localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
       return newEquippedModules;
     });
     setModuleList((prevModuleList) => prevModuleList.filter((c) => c.id !== module.id));
@@ -154,6 +158,32 @@ const Modules = () => {
     return counts;
   };
 
+  const calculateTotalBonuses = (equippedModules) => {
+    const totalBonuses = {};
+    equippedModules.forEach((equippedModule) => {
+      if (equippedModule.module.moduleStat) {
+        equippedModule.module.moduleStat.forEach((stat) => {
+          Object.keys(stat).forEach((key) => {
+            if (key !== "level" && key !== "moduleCapacity") {
+              if (totalBonuses[key]) {
+                totalBonuses[key] += stat[key];
+              } else {
+                totalBonuses[key] = stat[key];
+              }
+            }
+          });
+        });
+      }
+    });
+    return totalBonuses;
+  };
+
+  const totalBonuses = calculateTotalBonuses(equippedModules);
+
+  useEffect(() => {
+    localStorage.setItem("totalBonuses", JSON.stringify(totalBonuses));
+  }, [totalBonuses]);
+
   return (
     <>
       <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="10%">
@@ -168,13 +198,7 @@ const Modules = () => {
           >
             {equippedModules.map((equippedModule, index) => (
               <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.id}>
-                <ModuleSlot
-                  equippedModule={equippedModule}
-                  onDrop={(e) => handleDrop(e, index)}
-                  index={index}
-                  onDragStart={handleDragStart}
-                  key={equippedModule ? equippedModule.id : index}
-                />
+                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} key={equippedModule ? equippedModule.id : index} />
               </Grid>
             ))}
           </Grid>
