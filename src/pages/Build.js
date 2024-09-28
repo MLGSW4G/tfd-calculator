@@ -204,7 +204,7 @@ export default function BasicGrid() {
               }
             }}
             min={Math.min(...reactorLevels.map((level) => level.value))}
-            max={Math.max(...reactorLevels.map((level) => level.value))}
+            max={100}
           />
         </Grid>
 
