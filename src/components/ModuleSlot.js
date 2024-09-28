@@ -70,24 +70,23 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
       )}
 
       {backgroundString && (
-        <div
+        <p
           className="background-string"
           style={{
             position: "absolute", // Change from relative to absolute
             width: MODULE_WIDTH,
-            height: MODULE_HEIGHT,
+            height: MODULE_HEIGHT * 0.15,
             color: backgroundStringColor,
-            bottom: "-138%", // Center vertically
-            left: "50%", // Center horizontally
-            transform: "translate(-50%, -50%)", // Adjust for the element's dimensions
+            bottom: "0",
             textAlign: "center",
             fontSize: 16,
+            margin: 0,
             fontFamily: "NotoSans",
             filter: "saturate(10%) brightness(200%) contrast(100%)",
           }}
         >
           {backgroundString}
-        </div>
+        </p>
       )}
 
       {backgroundImage && (
