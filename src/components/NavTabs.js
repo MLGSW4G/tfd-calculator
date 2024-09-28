@@ -44,6 +44,7 @@ export default function NavTabs() {
       <Tabs value={value} onChange={handleChange} role="navigation" variant="fullWidth">
         <LinkTab label="Overview" href="/overview"/>
         <LinkTab label="Skills List" href="/skillsList" />
+        <LinkTab label="Descendants List" href="/descendantsList" />
         <LinkTab label="Modules" href="/modules" />
       </Tabs>
     </Box>

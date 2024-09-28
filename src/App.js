@@ -4,6 +4,7 @@ import NavTabs from "./components/NavTabs";
 import Build from "./pages/Overview";
 import Modules from "./pages/Modules";
 import SkillsList from "./pages/SkillsList";
+import DescendantsList from "./pages/DescendantsList";
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/overview" replace />} />
         <Route path="/overview" element={<Build />} />
-        <Route path="/modules" element={<Modules />} />
         <Route path="/skillsList" element={<SkillsList />} />
-        {/* Add more routes as needed */}
+        <Route path="/descendantsList" element={<DescendantsList />} />
+        <Route path="/modules" element={<Modules />} />
       </Routes>
     </div>
   );
