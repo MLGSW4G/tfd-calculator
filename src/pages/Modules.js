@@ -9,7 +9,7 @@ import { MODULE_SOCKET_TYPES, MODULE_CLASSES } from "../const";
 
 const Modules = () => {
   const [moduleList, setModuleList] = useState(modulesData);
-  const [equippedModules, setEquippedModules] = useState(Array(12).fill({}));
+  const [equippedModules, setEquippedModules] = useState(Array(12).fill({ module: {}, moduleLevel: 0 }));
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]); // State for socket types
   const [selectedClasses, setSelectedClasses] = useState([]); // State for module classes
@@ -23,7 +23,7 @@ const Modules = () => {
     const module = JSON.parse(e.dataTransfer.getData("module"));
     setEquippedModules((prevEquippedModules) => {
       const newEquippedModules = [...prevEquippedModules];
-      newEquippedModules[index] = module;
+      newEquippedModules[index] = { module, moduleLevel: 0 };
       return newEquippedModules;
     });
     setModuleList((prevModuleList) => prevModuleList.filter((c) => c.id !== module.id));
@@ -34,8 +34,27 @@ const Modules = () => {
     const moduleData = e.dataTransfer.getData("module");
     if (moduleData) {
       const module = JSON.parse(moduleData);
-      setModuleList((prevModuleList) => [...prevModuleList, module]);
-      setEquippedModules((prevEquippedModules) => prevEquippedModules.map((c) => (c.id === module.id ? { id: c.id, moduleName: "" } : c)));
+      if (!module.moduleStat) {
+        module.moduleStat = [];
+      }
+      setModuleList((prevModuleList) => {
+        const newModuleList = [...prevModuleList];
+        const index = newModuleList.findIndex((m) => m.id > module.id);
+        if (index === -1) {
+          newModuleList.push(module);
+        } else {
+          newModuleList.splice(index, 0, module);
+        }
+        return newModuleList;
+      });
+      setEquippedModules((prevEquippedModules) => {
+        const newEquippedModules = [...prevEquippedModules];
+        const index = newEquippedModules.findIndex((m) => m.module.id === module.id);
+        if (index !== -1) {
+          newEquippedModules[index] = { module: {}, moduleLevel: 0 };
+        }
+        return newEquippedModules;
+      });
     }
   };
 
@@ -72,7 +91,6 @@ const Modules = () => {
     });
   };
 
-  // Function to get the socket type icon
   const getSocketTypeIcon = (socketType) => {
     switch (socketType) {
       case "Cerulean":
@@ -86,11 +104,10 @@ const Modules = () => {
       case "Rutile":
         return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
       default:
-        return null; // Return null if no match found
+        return null;
     }
   };
 
-  // Function to get the class icon
   const getClassIcon = (moduleClass) => {
     switch (moduleClass) {
       case "Descendant":
@@ -104,7 +121,7 @@ const Modules = () => {
       case "Heavy Rounds":
         return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
       default:
-        return null; // Return null if no match found
+        return null;
     }
   };
 
@@ -140,7 +157,7 @@ const Modules = () => {
 
   return (
     <>
-      <Box className="equipped-modules" marginLeft="10%" marginRight="10%">
+      <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="10%">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           <Grid
             container
@@ -168,7 +185,7 @@ const Modules = () => {
       <Box
         className="module-zone"
         width="100%"
-        height={300}
+        height={250}
         sx={{
           background: "grey",
           position: "fixed",

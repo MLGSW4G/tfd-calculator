@@ -106,8 +106,8 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
         ></div>
       )}
 
-      {Object.keys(equippedModule).length > 0 ? (
-        <Module module={equippedModule} onDragStart={onDragStart} />
+      {Object.keys(equippedModule.module).length > 0 && equippedModule.module.moduleName ? (
+        <Module module={equippedModule.module} onDragStart={onDragStart} isInModuleSlot={true} moduleLevel={equippedModule.moduleLevel} />
       ) : (
         <div
           className="module"
