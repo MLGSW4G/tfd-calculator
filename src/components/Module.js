@@ -1,6 +1,6 @@
 // components/Module.js
 import { React, useState, useMemo } from "react";
-import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
+import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
 
@@ -47,7 +47,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     case "Impact Rounds":
       moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_C_Color.png";
       break;
-    case "Heavy Rounds":
+    case "High-Power Rounds":
       moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
       break;
   }
@@ -61,6 +61,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
       break;
     case "Ultimate":
       moduleTier = filterUltimate;
+      break;
+    case "Transcendent":
+      moduleTier = filterTranscendent;
       break;
   }
 
@@ -83,7 +86,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     <Tooltip
       title={
         <div style={{ fontSize: "16px" }}>
-          {moduleKeys[0]}: {moduleKeys[1]}
+          {moduleKeys[1]}
         </div>
       }
     >
@@ -153,7 +156,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         >
-          {module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].moduleCapacity : ""}
+          {module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].module_capacity : ""}
         </p>
 
         <img

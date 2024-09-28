@@ -4,17 +4,28 @@ import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from 
 import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
-import modulesData from "./Modules.json";
-import { MODULE_SOCKET_TYPES, MODULE_CLASSES } from "../const";
+import modulesData from "../api/module.json";
+import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, colorStandard, colorRare, colorUltimate, colorTranscendent } from "../const";
 
 const Modules = () => {
-  const [moduleList, setModuleList] = useState(modulesData);
+  const [moduleList, setModuleList] = useState(
+    modulesData.map((module) => ({
+      id: module.module_id,
+      moduleName: module.module_name,
+      moduleIcon: module.image_url,
+      moduleTier: module.module_tier,
+      moduleClass: module.module_class,
+      moduleSocketType: module.module_socket_type,
+      moduleStat: module.module_stat,
+    }))
+  );
   const [equippedModules, setEquippedModules] = useState(() => {
     const cachedEquippedModules = localStorage.getItem("equippedModules");
     return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
   });
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
+  const [selectedTiers, setSelectedTiers] = useState([]);
   const [selectedClasses, setSelectedClasses] = useState([]);
 
   const handleDragStart = (e, module) => {
@@ -81,6 +92,11 @@ const Modules = () => {
     setSelectedSocketTypes(typeof value === "string" ? value.split(",") : value);
   };
 
+  const handleTierChange = (e) => {
+    const value = e.target.value;
+    setSelectedTiers(typeof value === "string" ? value.split(",") : value);
+  };
+
   const handleClassChange = (e) => {
     const value = e.target.value;
     setSelectedClasses(typeof value === "string" ? value.split(",") : value);
@@ -91,16 +107,18 @@ const Modules = () => {
     const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm);
 
     const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
-    const matchesClass = selectedClasses.length > 0 ? selectedClasses.includes(module.moduleClass) : true;
+    const matchesTier = selectedTiers.length > 0 ? selectedTiers.includes(module.moduleTier) : true;
+    const matchesClass = module.moduleClass === "Descendant"; // Only allow "Descendant" class
 
-    return matchesName && matchesSocketType && matchesClass;
+    return matchesName && matchesSocketType && matchesTier && matchesClass;
   });
 
   const getFilteredModules = () => {
     return moduleList.filter((module) => {
       const matchesSocketType = selectedSocketTypes.length === 0 || selectedSocketTypes.includes(module.moduleSocketType);
-      const matchesClass = selectedClasses.length === 0 || selectedClasses.includes(module.moduleClass);
-      return matchesSocketType && matchesClass;
+      const matchesTier = selectedTiers.length === 0 || selectedTiers.includes(module.moduleTier);
+      const matchesClass = module.moduleClass === "Descendant"; // Only allow "Descendant" class
+      return matchesSocketType && matchesTier && matchesClass;
     });
   };
 
@@ -115,9 +133,24 @@ const Modules = () => {
       case "Xantic":
         return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
       case "Rutile":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
+        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_005.png";
       default:
         return null;
+    }
+  };
+
+  const getTierColor = (tier) => {
+    switch (tier) {
+      case "Standard":
+        return colorStandard;
+      case "Rare":
+        return colorRare;
+      case "Ultimate":
+        return colorUltimate;
+      case "Transcendent":
+        return colorTranscendent;
+      default:
+        return "gray";
     }
   };
 
@@ -131,7 +164,7 @@ const Modules = () => {
         return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_B_Color.png";
       case "Impact Rounds":
         return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_C_Color.png";
-      case "Heavy Rounds":
+      case "High-Power Rounds":
         return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
       default:
         return null;
@@ -147,6 +180,21 @@ const Modules = () => {
         counts[module.moduleSocketType]++;
       } else {
         counts[module.moduleSocketType] = 1;
+      }
+    });
+
+    return counts;
+  };
+
+  const getTierCounts = () => {
+    const counts = {};
+    const filteredModules = getFilteredModules();
+
+    filteredModules.forEach((module) => {
+      if (counts[module.moduleTier]) {
+        counts[module.moduleTier]++;
+      } else {
+        counts[module.moduleTier] = 1;
       }
     });
 
@@ -173,15 +221,35 @@ const Modules = () => {
     equippedModules.forEach((equippedModule) => {
       if (equippedModule.module.moduleStat && equippedModule.moduleLevel < equippedModule.module.moduleStat.length) {
         const stat = equippedModule.module.moduleStat[equippedModule.moduleLevel];
-        Object.keys(stat).forEach((key) => {
-          if (key !== "level" && key !== "moduleCapacity") {
-            if (totalBonuses[key]) {
-              totalBonuses[key] += stat[key];
+        const match = stat.value.match(/([+-]?\d+(?:\.\d+)?)/);
+        if (match) {
+          const bonusValue = parseFloat(match[0]);
+          const bonusType = stat.value.replace(/[\d.-]/g, "").trim();
+
+          if (bonusType.includes("%")) {
+            const percentageMatch = bonusType.match(/%$/);
+            if (percentageMatch) {
+              const percentageBonusType = bonusType.replace("%", "").trim();
+              if (totalBonuses[percentageBonusType]) {
+                totalBonuses[percentageBonusType] += bonusValue;
+              } else {
+                totalBonuses[percentageBonusType] = bonusValue;
+              }
             } else {
-              totalBonuses[key] = stat[key];
+              if (totalBonuses[bonusType]) {
+                totalBonuses[bonusType] += bonusValue;
+              } else {
+                totalBonuses[bonusType] = bonusValue;
+              }
+            }
+          } else {
+            if (totalBonuses[bonusType]) {
+              totalBonuses[bonusType] += bonusValue;
+            } else {
+              totalBonuses[bonusType] = bonusValue;
             }
           }
-        });
+        }
       }
     });
     return totalBonuses;
@@ -216,13 +284,7 @@ const Modules = () => {
           >
             {equippedModules.map((equippedModule, index) => (
               <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.module.id}>
-                <ModuleSlot
-                  equippedModule={equippedModule}
-                  onDrop={(e) => handleDrop(e, index)}
-                  index={index}
-                  onDragStart={handleDragStart}
-                  onLevelChange={handleLevelChange}
-                />
+                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} onLevelChange={handleLevelChange} />
               </Grid>
             ))}
           </Grid>
@@ -248,7 +310,31 @@ const Modules = () => {
 
         <FormControl className="module-socket-type-filter" sx={{ margin: 2, minWidth: 200 }}>
           <InputLabel>Socket Type</InputLabel>
-          <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
+          <Select
+            multiple
+            value={selectedSocketTypes}
+            label="Socket Type"
+            onChange={handleSocketTypeChange}
+            MenuProps={{ sx: { marginTop: "10px" } }}
+            renderValue={(selected) => (
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                {selected
+                  .sort((a, b) => MODULE_SOCKET_TYPES.indexOf(a) - MODULE_SOCKET_TYPES.indexOf(b))
+                  .map((value) => (
+                    <Box
+                      key={value}
+                      sx={{
+                        width: "20px",
+                        height: "20px",
+                        backgroundImage: `url(${getSocketTypeIcon(value)})`,
+                        backgroundSize: "cover",
+                        borderRadius: "2px",
+                      }}
+                    />
+                  ))}
+              </Box>
+            )}
+          >
             {MODULE_SOCKET_TYPES.map((type) => (
               <MenuItem key={type} value={type}>
                 <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
@@ -258,9 +344,76 @@ const Modules = () => {
           </Select>
         </FormControl>
 
+        <FormControl className="module-tier-filter" sx={{ margin: 2, minWidth: 200 }}>
+          <InputLabel>Tier</InputLabel>
+          <Select
+            multiple
+            value={selectedTiers}
+            label="Tier"
+            onChange={handleTierChange}
+            MenuProps={{ sx: { marginTop: "10px" } }}
+            renderValue={(selected) => (
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                {selected
+                  .sort((a, b) => MODULE_TIERS.indexOf(a) - MODULE_TIERS.indexOf(b))
+                  .map((value) => (
+                    <Box
+                      key={value}
+                      sx={{
+                        width: "20px",
+                        height: "20px",
+                        backgroundColor: getTierColor(value),
+                        borderRadius: "2px",
+                      }}
+                    />
+                  ))}
+              </Box>
+            )}
+          >
+            {MODULE_TIERS.map((tier) => (
+              <MenuItem key={tier} value={tier}>
+                <div
+                  alt={`${tier} icon`}
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    marginRight: "8px",
+                    backgroundColor: getTierColor(tier),
+                  }}
+                />
+                {tier} ({getTierCounts()[tier] || 0})
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
         <FormControl className="module-class-filter" sx={{ margin: 2, minWidth: 200 }}>
           <InputLabel>Module Class</InputLabel>
-          <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
+          <Select
+            multiple
+            value={selectedClasses}
+            label="Module Class"
+            onChange={handleClassChange}
+            MenuProps={{ sx: { marginTop: "10px" } }}
+            renderValue={(selected) => (
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                {selected
+                  .sort((a, b) => MODULE_CLASSES.indexOf(a) - MODULE_CLASSES.indexOf(b))
+                  .map((value) => (
+                    <Box
+                      key={value}
+                      sx={{
+                        width: "20px",
+                        height: "20px",
+                        backgroundImage: `url(${getClassIcon(value)})`,
+                        backgroundSize: "cover",
+                        borderRadius: "2px",
+                      }}
+                    />
+                  ))}
+              </Box>
+            )}
+          >
             {MODULE_CLASSES.map((cls) => (
               <MenuItem key={cls} value={cls}>
                 <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
