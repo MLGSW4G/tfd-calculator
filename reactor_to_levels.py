@@ -1,3 +1,12 @@
+"""Produces a stats.json file formatted as:
+{
+    "level": {
+        "skill_atk_power": reactorSkillPower,
+        "sub_skill_atk_power": subSkillPower
+    }
+}
+"""
+
 import json
 
 def process_json_file(json_file_path):
