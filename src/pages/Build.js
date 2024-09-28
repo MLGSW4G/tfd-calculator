@@ -187,6 +187,26 @@ export default function BasicGrid() {
           />
         </Grid>
 
+        <Grid item className="grid-item" xs={12} display="flex">
+          <TextField
+            fullWidth
+            id="total-bonuses"
+            label="Total Bonuses"
+            variant="standard"
+            multiline
+            rows={Object.keys(totalBonuses).length}
+            value={Object.keys(totalBonuses)
+              .map((key) => `${key}: ${totalBonuses[key]}`)
+              .join("\n")}
+            InputProps={{
+              readOnly: true,
+              inputProps: {
+                style: { textAlign: "left" },
+              },
+            }}
+          />
+        </Grid>
+
         {skillStats && Object.keys(skillStats).includes("cooldown") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
