@@ -271,6 +271,24 @@ export default function BasicGrid() {
           </Grid>
         )}
 
+        {skillStats && Object.keys(skillStats).includes("cost2") && (
+          <Grid item className="grid-item" xs={12} display="flex">
+            <TextField
+              fullWidth
+              id="cost2"
+              label={skillStats.cost2Label}
+              variant="standard"
+              value={numberToMPs(skillStats.cost2)}
+              InputProps={{
+                readOnly: true,
+                inputProps: {
+                  style: { textAlign: "right" },
+                },
+              }}
+            />
+          </Grid>
+        )}
+
         {skillStats && Object.keys(skillStats).includes("duration1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -410,6 +428,26 @@ export default function BasicGrid() {
                 label={skillStats.skillDamage3Label}
                 variant="standard"
                 value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier3, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
+                InputProps={{
+                  readOnly: true,
+                  inputProps: {
+                    style: { textAlign: "right" },
+                  },
+                }}
+              />
+            </Tooltip>
+          </Grid>
+        )}
+
+        {skillStats && skillStats.modifier4 && (
+          <Grid item className="grid-item" xs={12} display="flex">
+            <Tooltip title={`Modifier4: ${numberToPercents(skillStats.modifier4)}`}>
+              <TextField
+                fullWidth
+                id="skillDamage4"
+                label={skillStats.skillDamage4Label}
+                variant="standard"
+                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier4, element, skill, optimizationCondition ? parseFloat(dropdownValue) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
