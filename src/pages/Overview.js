@@ -15,9 +15,14 @@ export default function Overview() {
   }));
 
   const [selectedSkill, setSelectedSkill] = useState(null);
+
   const [skillStats, setSkillStats] = useState(null);
 
-  const [reactorLevel, setReactorLevel] = useState(1);
+  const [reactorLevel, setReactorLevel] = useState(() => {
+    const cachedReactorLevel = localStorage.getItem("reactorLevel");
+    return cachedReactorLevel ? JSON.parse(cachedReactorLevel) : 1;
+  });
+
   const [reactorSkillPower, setReactorSkillPower] = useState(reactorLevels[reactorLevel - 1].skillPower);
   const [subSkillPower, setSubSkillPower] = useState(reactorLevels[reactorLevel - 1].subSkillPower);
 
@@ -26,17 +31,39 @@ export default function Overview() {
     return cachedTotalBonuses ? JSON.parse(cachedTotalBonuses) : {};
   });
 
-  const [element, setElement] = useState(false);
-  const [skill, setSkill] = useState(false);
+  const [element, setElement] = useState(() => {
+    const cachedElement = localStorage.getItem("element");
+    return cachedElement ? JSON.parse(cachedElement) : false;
+  });
 
-  const [optimizationCondition, setOptimizationCondition] = useState(false);
-  const [reactorEnhancement, setReactorEnhancement] = useState(false);
+  const [skill, setSkill] = useState(() => {
+    const cachedSkill = localStorage.getItem("skill");
+    return cachedSkill ? JSON.parse(cachedSkill) : false;
+  });
+
+  const [optimizationCondition, setOptimizationCondition] = useState(() => {
+    const cachedOptimizationCondition = localStorage.getItem("optimizationCondition");
+    return cachedOptimizationCondition ? JSON.parse(cachedOptimizationCondition) : false;
+  });
+
+  const [reactorEnhancement, setReactorEnhancement] = useState(() => {
+    const cachedReactorEnhancement = localStorage.getItem("reactorEnhancement");
+    return cachedReactorEnhancement ? JSON.parse(cachedReactorEnhancement) : false;
+  });
+
+  const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState(() => {
+    const cachedOptimizationConditionMultiplier = localStorage.getItem("optimizationConditionMultiplier");
+    return cachedOptimizationConditionMultiplier ? cachedOptimizationConditionMultiplier : "140%";
+  });
+
+  const [reactorEnhancementLevel, setReactorEnhancementLevel] = useState(() => {
+    const cachedReactorEnhancementLevel = localStorage.getItem("reactorEnhancementLevel");
+    return cachedReactorEnhancementLevel ? parseInt(cachedReactorEnhancementLevel) : 1;
+  });
 
   const [skillPower, setSkillPower] = useState("");
   const [totalSkillPower, setTotalSkillPower] = useState("");
-
-  const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState("140%");
-  const [reactorEnhancementLevel, setReactorEnhancementLevel] = useState(1);
+  const [skillStatsWithBonuses, setSkillStatsWithBonuses] = useState({});
 
   const bonusesMapping = {
     skillPowerModifier: {
@@ -63,23 +90,53 @@ export default function Overview() {
     if (selectedSkill) {
       import(`../pages/skills/${selectedSkill.skillName.replaceAll(" ", "")}.js`)
         .then((module) => {
-          const skillStatsWithBonuses = { ...module.default };
-          Object.keys(totalBonuses).forEach((key) => {
-            if (skillStatsWithBonuses[key]) {
-              skillStatsWithBonuses[key] += totalBonuses[key];
-            } else {
-              skillStatsWithBonuses[key] = totalBonuses[key];
-            }
-          });
+          const skillStatsWithBonuses = calculateSkillStatsWithBonuses(module.default, totalBonuses);
           setSkillStats(skillStatsWithBonuses);
+          setSkillStatsWithBonuses(skillStatsWithBonuses);
         })
         .catch((error) => {
           console.error(error);
         });
     } else {
-      setSkillStats({}); // Reset skillStats to an empty object when selectedSkill is null
+      setSkillStats({});
+      setSkillStatsWithBonuses({}); // Reset skillStatsWithBonuses to an empty object when selectedSkill is null
     }
   }, [selectedSkill, totalBonuses]);
+
+  useEffect(() => {
+    localStorage.setItem("element", JSON.stringify(element));
+  }, [element]);
+
+  useEffect(() => {
+    localStorage.setItem("skill", JSON.stringify(skill));
+  }, [skill]);
+
+  useEffect(() => {
+    localStorage.setItem("optimizationCondition", JSON.stringify(optimizationCondition));
+  }, [optimizationCondition]);
+
+  useEffect(() => {
+    localStorage.setItem("reactorEnhancement", JSON.stringify(reactorEnhancement));
+  }, [reactorEnhancement]);
+
+  useEffect(() => {
+    localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
+  }, [reactorLevel]);
+
+  useEffect(() => {
+    localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
+  }, [optimizationConditionMultiplier]);
+
+  useEffect(() => {
+    localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel.toString());
+  }, [reactorEnhancementLevel]);
+
+  useEffect(() => {
+    if (skillStats && totalBonuses) {
+      const skillStatsWithBonuses = calculateSkillStatsWithBonuses(skillStats, totalBonuses);
+      setSkillStatsWithBonuses(skillStatsWithBonuses);
+    }
+  }, [skillStats, totalBonuses]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);
@@ -102,9 +159,11 @@ export default function Overview() {
     Object.keys(totalBonuses).forEach((bonusKey) => {
       if (bonusesMapping[bonusKey]) {
         Object.keys(bonusesMapping[bonusKey]).forEach((statKey) => {
-          const bonusValue = totalBonuses[bonusKey];
-          const bonusFunction = bonusesMapping[bonusKey][statKey](bonusValue);
-          skillStatsWithBonuses[statKey] = bonusFunction(skillStats);
+          if (skillStats[statKey] !== undefined) {
+            const bonusValue = totalBonuses[bonusKey];
+            const bonusFunction = bonusesMapping[bonusKey][statKey](bonusValue);
+            skillStatsWithBonuses[statKey] = bonusFunction(skillStats);
+          }
         });
       }
     });
@@ -242,14 +301,14 @@ export default function Overview() {
           />
         </Grid>
 
-        {skillStats && Object.keys(skillStats).includes("cooldown") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("cooldown") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="cooldown"
-              label={skillStats.cooldownLabel}
+              label={skillStatsWithBonuses.cooldownLabel}
               variant="standard"
-              value={numberToSeconds(skillStats.cooldown)}
+              value={numberToSeconds(skillStatsWithBonuses.cooldown)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -260,14 +319,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("cost1") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("cost1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="cost1"
-              label={skillStats.cost1Label}
+              label={skillStatsWithBonuses.cost1Label}
               variant="standard"
-              value={numberToMPs(skillStats.cost1)}
+              value={numberToMPs(skillStatsWithBonuses.cost1)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -278,14 +337,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("cost2") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("cost2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="cost2"
-              label={skillStats.cost2Label}
+              label={skillStatsWithBonuses.cost2Label}
               variant="standard"
-              value={numberToMPs(skillStats.cost2)}
+              value={numberToMPs(skillStatsWithBonuses.cost2)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -296,14 +355,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("duration1") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("duration1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="duration1"
-              label={skillStats.duration1Label}
+              label={skillStatsWithBonuses.duration1Label}
               variant="standard"
-              value={numberToSeconds(skillStats.duration1)}
+              value={numberToSeconds(skillStatsWithBonuses.duration1)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -314,14 +373,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("duration2") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("duration2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="duration2"
-              label={skillStats.duration2Label}
+              label={skillStatsWithBonuses.duration2Label}
               variant="standard"
-              value={numberToSeconds(skillStats.duration2)}
+              value={numberToSeconds(skillStatsWithBonuses.duration2)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -332,14 +391,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("interval") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("interval") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="interval"
-              label={skillStats.intervalLabel}
+              label={skillStatsWithBonuses.intervalLabel}
               variant="standard"
-              value={numberToSeconds(skillStats.interval)}
+              value={numberToSeconds(skillStatsWithBonuses.interval)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -350,14 +409,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("range1") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("range1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="range1"
-              label={skillStats.range1Label}
+              label={skillStatsWithBonuses.range1Label}
               variant="standard"
-              value={numberToMeters(skillStats.range1)}
+              value={numberToMeters(skillStatsWithBonuses.range1)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -368,14 +427,14 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && Object.keys(skillStats).includes("range2") && (
+        {skillStatsWithBonuses && Object.keys(skillStatsWithBonuses).includes("range2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
               fullWidth
               id="range2"
-              label={skillStats.range2Label}
+              label={skillStatsWithBonuses.range2Label}
               variant="standard"
-              value={numberToMeters(skillStats.range2)}
+              value={numberToMeters(skillStatsWithBonuses.range2)}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -386,15 +445,15 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && skillStats.modifier1 && (
+        {skillStatsWithBonuses && skillStatsWithBonuses.modifier1 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier1)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithBonuses.modifier1)}`}>
               <TextField
                 fullWidth
                 id="skillDamage1"
-                label={skillStats.skillDamage1Label}
+                label={skillStatsWithBonuses.skillDamage1Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier1, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithBonuses.modifier1, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -406,15 +465,15 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && skillStats.modifier2 && (
+        {skillStatsWithBonuses && skillStatsWithBonuses.modifier2 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier2)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithBonuses.modifier2)}`}>
               <TextField
                 fullWidth
                 id="skillDamage2"
-                label={skillStats.skillDamage2Label}
+                label={skillStatsWithBonuses.skillDamage2Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier2, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithBonuses.modifier2, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -426,15 +485,15 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && skillStats.modifier3 && (
+        {skillStatsWithBonuses && skillStatsWithBonuses.modifier3 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier3)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithBonuses.modifier3)}`}>
               <TextField
                 fullWidth
                 id="skillDamage3"
-                label={skillStats.skillDamage3Label}
+                label={skillStatsWithBonuses.skillDamage3Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier3, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithBonuses.modifier3, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -446,15 +505,15 @@ export default function Overview() {
           </Grid>
         )}
 
-        {skillStats && skillStats.modifier4 && (
+        {skillStatsWithBonuses && skillStatsWithBonuses.modifier4 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier4)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithBonuses.modifier4)}`}>
               <TextField
                 fullWidth
                 id="skillDamage4"
-                label={skillStats.skillDamage4Label}
+                label={skillStatsWithBonuses.skillDamage4Label}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(skillPower, skillStats.modifier4, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithBonuses.modifier4, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
