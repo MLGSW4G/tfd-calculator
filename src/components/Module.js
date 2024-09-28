@@ -145,10 +145,10 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
         src={moduleClass}
         style={{
           position: "absolute",
-          width: 24,
-          height: 24,
-          top: -1,
-          left: 124,
+          width: 30,
+          height: 30,
+          top: -2,
+          left: 120,
           pointerEvents: "none",
         }}
       />
