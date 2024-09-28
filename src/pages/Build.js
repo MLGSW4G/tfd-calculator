@@ -8,7 +8,6 @@ import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "
 import ReactorLevels from "./ReactorLevels.json";
 
 export default function BasicGrid() {
-  // Define the reactor levels and their corresponding skill powers
   const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
     value: parseInt(level),
     skillPower: ReactorLevels[level].skill_atk_power,
@@ -51,7 +50,6 @@ export default function BasicGrid() {
     },
   };
 
-  // Update the useEffect hook to use reactorSkillPower and reactorEnhancementLevel
   useEffect(() => {
     const optimizationConditionMultiplierValue = optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1;
     const appliedElementSkillPower = element ? 1.2 : 1;
@@ -193,7 +191,7 @@ export default function BasicGrid() {
 
         <Grid item className="grid-item" xs={12} display="flex">
           <Slider
-            valueLabelDisplay="on"
+            valueLabelDisplay="auto"
             value={reactorLevel}
             onChange={(event, newValue) => {
               setReactorLevel(newValue);
@@ -223,6 +221,7 @@ export default function BasicGrid() {
             }}
           />
         </Grid>
+
         <Grid item className="grid-item" xs={12} display="flex">
           <TextField
             fullWidth
@@ -242,6 +241,7 @@ export default function BasicGrid() {
             }}
           />
         </Grid>
+
         {skillStats && Object.keys(skillStats).includes("cooldown") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -259,6 +259,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("cost1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -276,6 +277,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("cost2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -293,6 +295,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("duration1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -310,6 +313,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("duration2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -327,6 +331,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("interval") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -344,6 +349,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("range1") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -361,6 +367,7 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && Object.keys(skillStats).includes("range2") && (
           <Grid item className="grid-item" xs={12} display="flex">
             <TextField
@@ -378,9 +385,10 @@ export default function BasicGrid() {
             />
           </Grid>
         )}
+
         {skillStats && skillStats.modifier1 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier1: ${numberToPercents(skillStats.modifier1)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier1)}`}>
               <TextField
                 fullWidth
                 id="skillDamage1"
@@ -397,9 +405,10 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
+
         {skillStats && skillStats.modifier2 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier2: ${numberToPercents(skillStats.modifier2)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier2)}`}>
               <TextField
                 fullWidth
                 id="skillDamage2"
@@ -416,9 +425,10 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
+
         {skillStats && skillStats.modifier3 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier3: ${numberToPercents(skillStats.modifier3)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier3)}`}>
               <TextField
                 fullWidth
                 id="skillDamage3"
@@ -435,9 +445,10 @@ export default function BasicGrid() {
             </Tooltip>
           </Grid>
         )}
+
         {skillStats && skillStats.modifier4 && (
           <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier4: ${numberToPercents(skillStats.modifier4)}`}>
+            <Tooltip title={`Modifier: ${numberToPercents(skillStats.modifier4)}`}>
               <TextField
                 fullWidth
                 id="skillDamage4"
