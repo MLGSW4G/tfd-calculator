@@ -180,33 +180,31 @@ const Modules = () => {
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleModuleDrop}
       >
-        <div className="searchBar">
-          <TextField variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
+        <TextField className="searchBar" variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
 
-          <FormControl sx={{ margin: 2, minWidth: 200 }}>
-            <InputLabel>Socket Type</InputLabel>
-            <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
-              {MODULE_SOCKET_TYPES.map((type) => (
-                <MenuItem key={type} value={type}>
-                  <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                  {type} ({getSocketTypeCounts()[type] || 0})
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+        <FormControl className="moduleSocketTypeFilter" sx={{ margin: 2, minWidth: 200 }}>
+          <InputLabel>Socket Type</InputLabel>
+          <Select multiple value={selectedSocketTypes} label="Socket Type" onChange={handleSocketTypeChange}>
+            {MODULE_SOCKET_TYPES.map((type) => (
+              <MenuItem key={type} value={type}>
+                <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
+                {type} ({getSocketTypeCounts()[type] || 0})
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
-          <FormControl sx={{ margin: 2, minWidth: 200 }}>
-            <InputLabel>Module Class</InputLabel>
-            <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
-              {MODULE_CLASSES.map((cls) => (
-                <MenuItem key={cls} value={cls}>
-                  <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                  {cls} ({getClassCounts()[cls] || 0})
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+        <FormControl className="moduleClassFilter" sx={{ margin: 2, minWidth: 200 }}>
+          <InputLabel>Module Class</InputLabel>
+          <Select multiple value={selectedClasses} label="Module Class" onChange={handleClassChange}>
+            {MODULE_CLASSES.map((cls) => (
+              <MenuItem key={cls} value={cls}>
+                <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
+                {cls} ({getClassCounts()[cls] || 0})
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
         <Grid container justifyContent="left" alignItems="center">
           {/* Render only filtered modules */}
