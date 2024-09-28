@@ -105,7 +105,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         onContextMenu={(e) => e.preventDefault()}
       >
         {isInModuleSlot && (
-          <div style={{ position: "absolute", bottom: 15, display: "flex", gap: "5px" }}>
+          <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>
             <button onClick={incrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
               +
             </button>
@@ -126,6 +126,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         />
+
         <img
           className="module-socket-type"
           src={moduleSocketType}
@@ -138,6 +139,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         />
+
         <p
           className="module-capacity"
           style={{
@@ -152,6 +154,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         >
           {module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].moduleCapacity : ""}
         </p>
+
         <img
           className="module-class"
           src={moduleClass}
@@ -164,6 +167,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         />
+
         <img
           className="module-tier"
           src={"assets/Modules/UI_RuneSlot_Tier.png"}
@@ -177,6 +181,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         />
+
         <img
           className="module-icon"
           src={module.moduleIcon}
@@ -235,6 +240,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         >
           {module.moduleName}
         </p>
+
         <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
       </div>
     </Tooltip>
