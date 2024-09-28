@@ -3,10 +3,10 @@ import { React, useState } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate } from "../const";
 import "../styles/Module.css";
 
-export const Module = ({ module, onDragStart, isInModuleSlot }) => {
+export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel }) => {
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
-  const [moduleLevel, setModuleLevel] = useState(module.moduleLevel || 0);
+  const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
   let moduleSocketType, moduleClass, moduleTier;
 
@@ -61,6 +61,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
   const incrementLevel = (e) => {
     if (moduleLevel < currentMaxLevel) {
       setModuleLevel((prevLevel) => prevLevel + 1);
+      onLevelChange(module, moduleLevel + 1); // Call the onLevelChange callback
     }
   };
 
@@ -68,6 +69,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot }) => {
     e.stopPropagation(); // Prevent event from bubbling up
     if (moduleLevel > 0) {
       setModuleLevel((prevLevel) => prevLevel - 1);
+      onLevelChange(module, moduleLevel - 1); // Call the onLevelChange callback
     }
   };
 

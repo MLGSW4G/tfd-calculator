@@ -8,6 +8,8 @@ const columns = [
   { field: "descendant", headerName: "Descendant Name", width: 130 },
   { field: "skillName", headerName: "Skill Name", width: 150 },
   { field: "skillNumber", headerName: "Skill №", width: 60 },
+  { field: "skillElement", headerName: "Skill Element", width: 120 },
+  { field: "skillType", headerName: "Skill Type", width: 120 },
   {
     field: "cooldown",
     headerName: "cooldown",
@@ -67,6 +69,8 @@ const rows = jsonData.map((item) => ({
   descendant: item.descendant,
   skillName: item.skillName,
   skillNumber: item.skillNumber,
+  skillElement: item.skillElement,
+  skillType: item.skillType,
   cooldown: item.cooldown,
   cost1: item.cost1,
   duration1: item.duration1,

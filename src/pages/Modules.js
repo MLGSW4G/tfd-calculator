@@ -63,6 +63,15 @@ const Modules = () => {
     }
   };
 
+  const handleLevelChange = (index, module, level) => {
+    setEquippedModules((prevEquippedModules) => {
+      const newEquippedModules = [...prevEquippedModules];
+      newEquippedModules[index] = { module, moduleLevel: level };
+      localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
+      return newEquippedModules;
+    });
+  };
+
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -207,7 +216,13 @@ const Modules = () => {
           >
             {equippedModules.map((equippedModule, index) => (
               <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.module.id}>
-                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} key={equippedModule.module.id} />
+                <ModuleSlot
+                  equippedModule={equippedModule}
+                  onDrop={(e) => handleDrop(e, index)}
+                  index={index}
+                  onDragStart={handleDragStart}
+                  onLevelChange={handleLevelChange}
+                />
               </Grid>
             ))}
           </Grid>

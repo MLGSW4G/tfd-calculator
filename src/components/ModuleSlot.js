@@ -4,7 +4,7 @@ import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_H
 import { Module } from "./Module";
 import "../styles/ModuleSlot.css";
 
-export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
+export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevelChange }) => {
   let backgroundImage, backgroundString, backgroundStringColor, moduleSlotSocketType;
 
   switch (moduleSlotSocketType) {
@@ -106,7 +106,13 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart }) => {
       )}
 
       {Object.keys(equippedModule.module).length > 0 && equippedModule.module.moduleName ? (
-        <Module module={equippedModule.module} onDragStart={onDragStart} isInModuleSlot={true} moduleLevel={equippedModule.moduleLevel} />
+        <Module
+          module={equippedModule.module}
+          onDragStart={onDragStart}
+          isInModuleSlot={true}
+          onLevelChange={(module, level) => onLevelChange(index, module, level)} // Pass the onLevelChange callback
+          initialModuleLevel={equippedModule.moduleLevel} // Pass the initial module level
+        />
       ) : (
         <div
           className="module"
