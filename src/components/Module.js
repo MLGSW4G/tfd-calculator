@@ -4,10 +4,10 @@ import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, fil
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
 
-export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel }) => {
+export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange }) => {
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
-  const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
+  const [moduleLevel, setModuleLevel] = useState(module.moduleLevel);
 
   const moduleKeys = useMemo(() => {
     const stat = module.moduleStat[moduleLevel];
