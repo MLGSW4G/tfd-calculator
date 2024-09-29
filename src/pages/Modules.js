@@ -110,26 +110,10 @@ const Modules = () => {
     }))
   );
 
-  const excludedIndices = [
-    [51, 57],
-    [59, 71],
-    [134, 139],
-    [142, 143],
-    [146, 149],
-    [150, 333],
-    [363, 533],
-    [556, 557],
-    [561, 563],
-  ];
-
-  const excluded = excludedIndices.flatMap((range) => Array.from({ length: range[1] - range[0] + 1 }, (_, i) => range[0] + i));
-
-  const filteredModuleList = moduleList.filter((_, index) => !excluded.includes(index));
-
-const [equippedModules, setEquippedModules] = useState(() => {
-  const cachedEquippedModules = localStorage.getItem("equippedModules");
-  return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
-});
+  const [equippedModules, setEquippedModules] = useState(() => {
+    const cachedEquippedModules = localStorage.getItem("equippedModules");
+    return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
+  });
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
   const [selectedTiers, setSelectedTiers] = useState([]);
@@ -209,7 +193,7 @@ const [equippedModules, setEquippedModules] = useState(() => {
     setSelectedClasses(typeof value === "string" ? value.split(",") : value);
   };
 
-  const filteredModules = filteredModuleList.filter((module) => {
+  const filteredModules = moduleList.filter((module) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm);
 
