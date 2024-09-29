@@ -105,15 +105,32 @@ const Modules = () => {
       moduleClass: module.module_class,
       moduleSocketType: module.module_socket_type,
       moduleStat: module.module_stat,
-      moduleLevel: 0,
-      moduleEffects: parseModuleEffect(module, module.moduleLevel),
+      moduleEffects: parseModuleEffect(module, 0), // Initialize moduleEffects with level 0
     }))
   );
 
   const [equippedModules, setEquippedModules] = useState(() => {
     const cachedEquippedModules = localStorage.getItem("equippedModules");
-    return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
+    if (cachedEquippedModules) {
+      const parsedEquippedModules = JSON.parse(cachedEquippedModules);
+      return parsedEquippedModules.map((module) => ({
+        module: {
+          id: module.module.id,
+          moduleName: module.module.moduleName,
+          moduleIcon: module.module.moduleIcon,
+          moduleType: module.module.moduleType,
+          moduleTier: module.module.moduleTier,
+          moduleClass: module.module.moduleClass,
+          moduleSocketType: module.module.moduleSocketType,
+          moduleStat: module.module.moduleStat,
+        },
+        moduleLevel: module.moduleLevel,
+      }));
+    } else {
+      return Array(12).fill({ module: {}, moduleLevel: 0 });
+    }
   });
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
   const [selectedTiers, setSelectedTiers] = useState([]);
@@ -337,7 +354,6 @@ const Modules = () => {
     if (cachedEquippedModules) {
       const parsedEquippedModules = JSON.parse(cachedEquippedModules);
       setEquippedModules(parsedEquippedModules);
-      setModuleList((prevModuleList) => prevModuleList.filter((module) => !parsedEquippedModules.some((equippedModule) => equippedModule.module.id === module.id)));
     }
   }, []);
 
