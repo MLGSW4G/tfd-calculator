@@ -4,7 +4,7 @@ import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip
 import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
 import "../styles/styles.css";
-import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../components/ValueFormatters";
+import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../Utils";
 import ReactorLevels from "./ReactorLevels.json";
 
 export default function Overview() {

@@ -2,7 +2,7 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import jsonData from "./SkillsList.json";
-import { numberToMeters, numberToPercents, numberToSeconds } from "../components/ValueFormatters";
+import { numberToMeters, numberToPercents, numberToSeconds } from "../Utils";
 
 const columns = [
   { field: "descendant", headerName: "Descendant Name", width: 130 },
