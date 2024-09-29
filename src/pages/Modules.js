@@ -10,17 +10,19 @@ import { parseModuleEffect } from "../Utils";
 
 const Modules = () => {
   const [moduleList, setModuleList] = useState(
-    moduleData.map((module) => ({
-      id: module.module_id,
-      moduleName: module.module_name,
-      moduleIcon: module.image_url,
-      moduleType: module.module_type,
-      moduleTier: module.module_tier,
-      moduleClass: module.module_class,
-      moduleSocketType: module.module_socket_type,
-      moduleStat: module.module_stat,
-      moduleEffects: parseModuleEffect(module, module.moduleLevel),
-    }))
+    moduleData
+      .sort((a, b) => a.module_id - b.module_id)
+      .map((module) => ({
+        id: module.module_id,
+        moduleName: module.module_name,
+        moduleIcon: module.image_url,
+        moduleType: module.module_type,
+        moduleTier: module.module_tier,
+        moduleClass: module.module_class,
+        moduleSocketType: module.module_socket_type,
+        moduleStat: module.module_stat,
+        moduleEffects: parseModuleEffect(module, module.moduleLevel),
+      }))
   );
 
   const [equippedModules, setEquippedModules] = useState(() => {
@@ -40,12 +42,34 @@ const Modules = () => {
   const handleDrop = (e, index) => {
     e.preventDefault();
     const module = JSON.parse(e.dataTransfer.getData("module"));
+    const currentModule = equippedModules[index];
     setEquippedModules((prevEquippedModules) => {
       const newEquippedModules = [...prevEquippedModules];
       newEquippedModules[index] = { module, moduleLevel: 0 };
+      // Remove the module from its previous slot if it exists
+      const previousIndex = prevEquippedModules.findIndex((m) => m.module.id === module.id);
+      if (previousIndex !== -1 && previousIndex !== index) {
+        newEquippedModules[previousIndex] = { module: {}, moduleLevel: 0 };
+      }
       localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
       return newEquippedModules;
     });
+    // If the ModuleSlot already has a Module, move it to the module list
+    if (currentModule.module.id) {
+      setModuleList((prevModuleList) => {
+        const newModuleList = [...prevModuleList];
+        const currentIndex = newModuleList.findIndex((m) => m.id > currentModule.module.id);
+        if (currentIndex === -1) {
+          newModuleList.push(currentModule.module);
+        } else {
+          newModuleList.splice(currentIndex, 0, currentModule.module);
+        }
+        // Sort the newModuleList
+        newModuleList.sort((a, b) => a.id - b.id);
+        return newModuleList;
+      });
+    }
+    // Remove the module from the module list
     setModuleList((prevModuleList) => prevModuleList.filter((c) => c.id !== module.id));
   };
 
@@ -54,9 +78,7 @@ const Modules = () => {
     const moduleData = e.dataTransfer.getData("module");
     if (moduleData) {
       const module = JSON.parse(moduleData);
-      if (!module.moduleStat) {
-        module.moduleStat = [];
-      }
+      // Remove the module from its previous slot if it exists
       const index = equippedModules.findIndex((m) => m.module.id === module.id);
       if (index !== -1) {
         setEquippedModules((prevEquippedModules) => {
@@ -66,6 +88,7 @@ const Modules = () => {
           return newEquippedModules;
         });
       }
+      // Add the module back to the module list
       setModuleList((prevModuleList) => {
         const newModuleList = [...prevModuleList];
         const index = newModuleList.findIndex((m) => m.id > module.id);
