@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Grid, TextField, Autocomplete, Slider } from "@mui/material";
-import data from "./DescendantsList.json";
+import data from "../api/descendant.json";
 
 const DescendantStats = () => {
   const [descendant, setDescendant] = useState(null);
