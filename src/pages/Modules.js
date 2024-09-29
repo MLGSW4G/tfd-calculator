@@ -105,7 +105,7 @@ const Modules = () => {
       moduleClass: module.module_class,
       moduleSocketType: module.module_socket_type,
       moduleStat: module.module_stat,
-      moduleEffects: parseModuleEffect(module, 0), // Initialize moduleEffects with level 0
+      moduleEffects: parseModuleEffect(module, module.moduleLevel), // Initialize moduleEffects with level 0
     }))
   );
 
