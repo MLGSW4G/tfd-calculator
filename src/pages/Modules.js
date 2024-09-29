@@ -7,7 +7,6 @@ import { ModuleSlot } from "../components/ModuleSlot";
 import moduleData from "../api/module.json";
 import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, colorStandard, colorRare, colorUltimate, colorTranscendent } from "../const";
 
-// Helper function to convert percentage string to float
 function percentageToFloat(value) {
   const sign = value[0] === "+" || value[0] === "-" ? value.slice(0, 1) : "";
   const percentIndex = value.indexOf("%");
@@ -15,7 +14,6 @@ function percentageToFloat(value) {
   return sign === "-" ? -floatValue : floatValue;
 }
 
-// Helper function to parse module effects
 function parseModuleEffect(module, moduleLevel) {
   if (!module.moduleStat || module.moduleStat.length === 0) {
     return {};
@@ -79,7 +77,6 @@ function parseModuleEffect(module, moduleLevel) {
   return effects;
 }
 
-// Add custom prototype methods for camelCase conversion
 Array.prototype.joinCamelCase = function () {
   if (this.length === 0) return "";
   return this.map((str, index) => {
@@ -105,7 +102,7 @@ const Modules = () => {
       moduleClass: module.module_class,
       moduleSocketType: module.module_socket_type,
       moduleStat: module.module_stat,
-      moduleEffects: parseModuleEffect(module, module.moduleLevel), // Initialize moduleEffects with level 0
+      moduleEffects: parseModuleEffect(module, module.moduleLevel),
     }))
   );
 
@@ -195,7 +192,7 @@ const Modules = () => {
 
   const filteredModules = moduleList.filter((module) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
-    const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm);
+    const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm) + module.moduleStat[0]["value"].toLowerCase().includes(lowerCaseSearchTerm);
 
     const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
     const matchesTier = selectedTiers.length > 0 ? selectedTiers.includes(module.moduleTier) : true;
