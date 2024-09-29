@@ -22,8 +22,8 @@ def process_json_file(json_file_path):
             sub_skill_atk_power = skill_power['sub_skill_atk_power']
             tier_data[level] = {"skill_atk_power": skill_atk_power, "sub_skill_atk_power": sub_skill_atk_power}
 
-    with open("stats.json", 'w') as f:
-        json.dump(tier_data, f, indent=4)
+    with open("ReactorLevels.json", 'w') as file:
+        json.dump(tier_data, file, indent=4)
 
 # Example usage:
 process_json_file(r'C:\Users\User\Documents\tfd-calculator\src\api\reactor.json')
