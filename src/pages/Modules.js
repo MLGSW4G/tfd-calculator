@@ -13,6 +13,7 @@ const Modules = () => {
       id: module.module_id,
       moduleName: module.module_name,
       moduleIcon: module.image_url,
+      moduleType: module.module_type,
       moduleTier: module.module_tier,
       moduleClass: module.module_class,
       moduleSocketType: module.module_socket_type,
@@ -216,50 +217,50 @@ const Modules = () => {
     return counts;
   };
 
-  const calculateTotalBonuses = (equippedModules) => {
-    const totalBonuses = {};
+  const calculateTotalEffects = (equippedModules) => {
+    const totalEffects = {};
     equippedModules.forEach((equippedModule) => {
       if (equippedModule.module.moduleStat && equippedModule.moduleLevel < equippedModule.module.moduleStat.length) {
         const stat = equippedModule.module.moduleStat[equippedModule.moduleLevel];
         const match = stat.value.match(/([+-]?\d+(?:\.\d+)?)/);
         if (match) {
-          const bonusValue = parseFloat(match[0]);
-          const bonusType = stat.value.replace(/[\d.-]/g, "").trim();
+          const effectValue = parseFloat(match[0]);
+          const effectType = stat.value.replace(/[\d.-]/g, "").trim();
 
-          if (bonusType.includes("%")) {
-            const percentageMatch = bonusType.match(/%$/);
+          if (effectType.includes("%")) {
+            const percentageMatch = effectType.match(/%$/);
             if (percentageMatch) {
-              const percentageBonusType = bonusType.replace("%", "").trim();
-              if (totalBonuses[percentageBonusType]) {
-                totalBonuses[percentageBonusType] += bonusValue;
+              const percentageeffectType = effectType.replace("%", "").trim();
+              if (totalEffects[percentageeffectType]) {
+                totalEffects[percentageeffectType] += effectValue;
               } else {
-                totalBonuses[percentageBonusType] = bonusValue;
+                totalEffects[percentageeffectType] = effectValue;
               }
             } else {
-              if (totalBonuses[bonusType]) {
-                totalBonuses[bonusType] += bonusValue;
+              if (totalEffects[effectType]) {
+                totalEffects[effectType] += effectValue;
               } else {
-                totalBonuses[bonusType] = bonusValue;
+                totalEffects[effectType] = effectValue;
               }
             }
           } else {
-            if (totalBonuses[bonusType]) {
-              totalBonuses[bonusType] += bonusValue;
+            if (totalEffects[effectType]) {
+              totalEffects[effectType] += effectValue;
             } else {
-              totalBonuses[bonusType] = bonusValue;
+              totalEffects[effectType] = effectValue;
             }
           }
         }
       }
     });
-    return totalBonuses;
+    return totalEffects;
   };
 
-  const totalBonuses = calculateTotalBonuses(equippedModules);
+  const totalEffects = calculateTotalEffects(equippedModules);
 
   useEffect(() => {
-    localStorage.setItem("totalBonuses", JSON.stringify(totalBonuses));
-  }, [totalBonuses]);
+    localStorage.setItem("totalEffects", JSON.stringify(totalEffects));
+  }, [totalEffects]);
 
   useEffect(() => {
     const cachedEquippedModules = localStorage.getItem("equippedModules");
