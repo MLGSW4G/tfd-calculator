@@ -3,10 +3,10 @@ import { React, useState } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
 import "../styles/Module.css";
 
-export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange }) => {
+export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel }) => {
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
-  const [moduleLevel, setModuleLevel] = useState(0); // Initialize moduleLevel to 0
+  const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
   let moduleSocketType, moduleClass, moduleTier;
 
@@ -97,7 +97,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange }) =
     >
       {isInModuleSlot && (
         <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>
-          < button onClick={incrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
+          <button onClick={incrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
             +
           </button>
           <button onClick={decrementLevel} style={{ padding: "5px", cursor: "pointer" }}>

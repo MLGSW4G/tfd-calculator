@@ -111,24 +111,7 @@ const Modules = () => {
 
   const [equippedModules, setEquippedModules] = useState(() => {
     const cachedEquippedModules = localStorage.getItem("equippedModules");
-    if (cachedEquippedModules) {
-      const parsedEquippedModules = JSON.parse(cachedEquippedModules);
-      return parsedEquippedModules.map((module) => ({
-        module: {
-          id: module.module.id,
-          moduleName: module.module.moduleName,
-          moduleIcon: module.module.moduleIcon,
-          moduleType: module.module.moduleType,
-          moduleTier: module.module.moduleTier,
-          moduleClass: module.module.moduleClass,
-          moduleSocketType: module.module.moduleSocketType,
-          moduleStat: module.module.moduleStat,
-        },
-        moduleLevel: module.moduleLevel,
-      }));
-    } else {
-      return Array(12).fill({ module: {}, moduleLevel: 0 });
-    }
+    return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
   });
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -354,6 +337,7 @@ const Modules = () => {
     if (cachedEquippedModules) {
       const parsedEquippedModules = JSON.parse(cachedEquippedModules);
       setEquippedModules(parsedEquippedModules);
+      setModuleList((prevModuleList) => prevModuleList.filter((module) => !parsedEquippedModules.some((equippedModule) => equippedModule.module.id === module.id)));
     }
   }, []);
 
