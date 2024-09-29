@@ -78,27 +78,30 @@ const Modules = () => {
     const moduleData = e.dataTransfer.getData("module");
     if (moduleData) {
       const module = JSON.parse(moduleData);
-      // Remove the module from its previous slot if it exists
-      const index = equippedModules.findIndex((m) => m.module.id === module.id);
-      if (index !== -1) {
-        setEquippedModules((prevEquippedModules) => {
-          const newEquippedModules = [...prevEquippedModules];
-          newEquippedModules[index] = { module: {}, moduleLevel: 0 };
-          localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
-          return newEquippedModules;
+      // Check if the module is already in the module-zone
+      if (!moduleList.find((m) => m.id === module.id)) {
+        // Remove the module from its previous slot if it exists
+        const index = equippedModules.findIndex((m) => m.module.id === module.id);
+        if (index !== -1) {
+          setEquippedModules((prevEquippedModules) => {
+            const newEquippedModules = [...prevEquippedModules];
+            newEquippedModules[index] = { module: {}, moduleLevel: 0 };
+            localStorage.setItem("equippedModules", JSON.stringify(newEquippedModules));
+            return newEquippedModules;
+          });
+        }
+        // Add the module back to the module list
+        setModuleList((prevModuleList) => {
+          const newModuleList = [...prevModuleList];
+          const index = newModuleList.findIndex((m) => m.id > module.id);
+          if (index === -1) {
+            newModuleList.push(module);
+          } else {
+            newModuleList.splice(index, 0, module);
+          }
+          return newModuleList;
         });
       }
-      // Add the module back to the module list
-      setModuleList((prevModuleList) => {
-        const newModuleList = [...prevModuleList];
-        const index = newModuleList.findIndex((m) => m.id > module.id);
-        if (index === -1) {
-          newModuleList.push(module);
-        } else {
-          newModuleList.splice(index, 0, module);
-        }
-        return newModuleList;
-      });
     }
   };
 
