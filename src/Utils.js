@@ -32,7 +32,7 @@ export const numberToMPs = (value) => {
   if (value == null) {
     return null;
   }
-  return `${value} MP`;
+  return `${value.toFixed(1)} MP`;
 };
 
 
