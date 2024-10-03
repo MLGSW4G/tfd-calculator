@@ -9,7 +9,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
-  const moduleKeys = useMemo(() => {
+  const moduleDescription = useMemo(() => {
     const stat = module.moduleStat[moduleLevel];
     return stat[Object.keys(stat)[2]];
   }, [module, moduleLevel]);
@@ -83,7 +83,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   };
 
   return (
-    <Tooltip title={<div style={{ fontSize: "16px" }}>{moduleKeys}</div>}>
+    <Tooltip title={<div style={{ fontSize: "16px" }}>{moduleDescription}</div>}>
       <div
         className="module"
         style={{
