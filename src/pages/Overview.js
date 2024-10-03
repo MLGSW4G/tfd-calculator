@@ -131,13 +131,6 @@ export default function Overview() {
     localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel.toString());
   }, [reactorEnhancementLevel]);
 
-  useEffect(() => {
-    if (skillStats && totalEffects) {
-      const skillStatsWithEffects = calculateSkillStatsWithEffects(skillStats, totalEffects);
-      setSkillStatsWithEffects(skillStatsWithEffects);
-    }
-  }, [skillStats, totalEffects]);
-
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);
   };
@@ -159,10 +152,10 @@ export default function Overview() {
     Object.keys(totalEffects).forEach((effectKey) => {
       if (effectsMapping[effectKey]) {
         Object.keys(effectsMapping[effectKey]).forEach((statKey) => {
-          if (skillStats[statKey] !== undefined) {
+          if (skillStatsWithEffects[statKey] !== undefined) {
             const effectValue = totalEffects[effectKey];
             const effectFunction = effectsMapping[effectKey][statKey](effectValue);
-            skillStatsWithEffects[statKey] = effectFunction(skillStats);
+            skillStatsWithEffects[statKey] = effectFunction(skillStatsWithEffects); // Apply the effect to skillStatsWithEffects
           }
         });
       }
