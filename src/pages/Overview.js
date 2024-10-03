@@ -15,16 +15,9 @@ export default function Overview() {
   }));
 
   const [selectedSkill, setSelectedSkill] = useState(null);
-
   const [skillStats, setSkillStats] = useState(null);
-
-  const [reactorLevel, setReactorLevel] = useState(() => {
-    const cachedReactorLevel = localStorage.getItem("reactorLevel");
-    return cachedReactorLevel ? JSON.parse(cachedReactorLevel) : 1;
-  });
-
-  const [reactorSkillPower, setReactorSkillPower] = useState(reactorLevels[reactorLevel - 1].skillPower);
-  const [subSkillPower, setSubSkillPower] = useState(reactorLevels[reactorLevel - 1].subSkillPower);
+  const [totalSkillPower, setTotalSkillPower] = useState("");
+  const [skillStatsWithEffects, setSkillStatsWithEffects] = useState({});
 
   const [totalEffects, setTotalEffects] = useState(() => {
     const cachedtotalEffects = localStorage.getItem("totalEffects");
@@ -35,7 +28,6 @@ export default function Overview() {
     const cachedElement = localStorage.getItem("element");
     return cachedElement ? JSON.parse(cachedElement) : false;
   });
-
   const [skill, setSkill] = useState(() => {
     const cachedSkill = localStorage.getItem("skill");
     return cachedSkill ? JSON.parse(cachedSkill) : false;
@@ -46,24 +38,27 @@ export default function Overview() {
     return cachedOptimizationCondition ? JSON.parse(cachedOptimizationCondition) : false;
   });
 
-  const [reactorEnhancement, setReactorEnhancement] = useState(() => {
-    const cachedReactorEnhancement = localStorage.getItem("reactorEnhancement");
-    return cachedReactorEnhancement ? JSON.parse(cachedReactorEnhancement) : false;
-  });
-
   const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState(() => {
     const cachedOptimizationConditionMultiplier = localStorage.getItem("optimizationConditionMultiplier");
     return cachedOptimizationConditionMultiplier ? cachedOptimizationConditionMultiplier : "140%";
+  });
+
+  const [reactorLevel, setReactorLevel] = useState(() => {
+    const cachedReactorLevel = localStorage.getItem("reactorLevel");
+    return cachedReactorLevel ? JSON.parse(cachedReactorLevel) : 1;
+  });
+  const [reactorSkillPower, setReactorSkillPower] = useState(reactorLevels[reactorLevel - 1].skillPower);
+  const [subSkillPower, setSubSkillPower] = useState(reactorLevels[reactorLevel - 1].subSkillPower);
+
+  const [reactorEnhancement, setReactorEnhancement] = useState(() => {
+    const cachedReactorEnhancement = localStorage.getItem("reactorEnhancement");
+    return cachedReactorEnhancement ? JSON.parse(cachedReactorEnhancement) : false;
   });
 
   const [reactorEnhancementLevel, setReactorEnhancementLevel] = useState(() => {
     const cachedReactorEnhancementLevel = localStorage.getItem("reactorEnhancementLevel");
     return cachedReactorEnhancementLevel ? parseInt(cachedReactorEnhancementLevel) : 1;
   });
-
-  const [skillPower, setSkillPower] = useState("");
-  const [totalSkillPower, setTotalSkillPower] = useState("");
-  const [skillStatsWithEffects, setSkillStatsWithEffects] = useState({});
 
   const effectsMapping = {
     skillPowerModifier: {
@@ -116,16 +111,16 @@ export default function Overview() {
   }, [optimizationCondition]);
 
   useEffect(() => {
-    localStorage.setItem("reactorEnhancement", JSON.stringify(reactorEnhancement));
-  }, [reactorEnhancement]);
+    localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
+  }, [optimizationConditionMultiplier]);
 
   useEffect(() => {
     localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
   }, [reactorLevel]);
 
   useEffect(() => {
-    localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
-  }, [optimizationConditionMultiplier]);
+    localStorage.setItem("reactorEnhancement", JSON.stringify(reactorEnhancement));
+  }, [reactorEnhancement]);
 
   useEffect(() => {
     localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel.toString());
