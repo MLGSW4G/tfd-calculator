@@ -65,10 +65,22 @@ export default function Overview() {
       modifier1: (value) => (skillStats) => skillStats.modifier1 * (1 + value),
       modifier2: (value) => (skillStats) => skillStats.modifier2 * (1 + value),
       modifier3: (value) => (skillStats) => skillStats.modifier3 * (1 + value),
+      modifier4: (value) => (skillStats) => skillStats.modifier4 * (1 + value),
+    },
+    skillCooldown: {
+      cooldown: (value) => (skillStats) => skillStats.cooldown * (1 + value),
     },
     skillCost: {
       cost1: (value) => (skillStats) => skillStats.cost1 * (1 + value),
       cost2: (value) => (skillStats) => skillStats.cost2 * (1 + value),
+    },
+    skillDuration: {
+      duration1: (value) => (skillStats) => skillStats.duration1 * (1 + value),
+      duration2: (value) => (skillStats) => skillStats.duration2 * (1 + value),
+    },
+    skillEffectRange: {
+      range1: (value) => (skillStats) => skillStats.range1 * (1 + value),
+      range2: (value) => (skillStats) => skillStats.range2 * (1 + value),
     },
   };
 
