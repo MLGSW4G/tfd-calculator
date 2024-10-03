@@ -56,12 +56,7 @@ const columns = [
   },
   { field: "modifier2", headerName: "modifier2", width: 120, valueFormatter: numberToPercents },
   { field: "modifier3", headerName: "modifier3", width: 120, valueFormatter: numberToPercents },
-  {
-    field: "modifier4",
-    headerName: "modifier4",
-    width: 120,
-    valueFormatter: numberToPercents,
-  },
+  { field: "modifier4", headerName: "modifier4", width: 120, valueFormatter: numberToPercents },
 ];
 
 const rows = jsonData.map((item) => ({
@@ -73,6 +68,7 @@ const rows = jsonData.map((item) => ({
   skillType: item.skillType,
   cooldown: item.cooldown,
   cost1: item.cost1,
+  cost2: item.cost2,
   duration1: item.duration1,
   duration2: item.duration2,
   interval: item.interval,
@@ -81,6 +77,7 @@ const rows = jsonData.map((item) => ({
   modifier1: item.modifier1,
   modifier2: item.modifier2,
   modifier3: item.modifier3,
+  modifier4: item.modifier4,
 }));
 
 // Sort the rows

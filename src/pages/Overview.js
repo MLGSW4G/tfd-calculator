@@ -62,10 +62,64 @@ export default function Overview() {
 
   const effectsMapping = {
     skillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.modifier1 * (1 + value),
-      modifier2: (value) => (skillStats) => skillStats.modifier2 * (1 + value),
-      modifier3: (value) => (skillStats) => skillStats.modifier3 * (1 + value),
-      modifier4: (value) => (skillStats) => skillStats.modifier4 * (1 + value),
+      modifier1: (value) => (skillStats) => skillStats.modifier1 + value,
+      modifier2: (value) => (skillStats) => skillStats.skillName === "Lightning Emission" ? skillStats.modifier1 * 2.35 : skillStats.modifier2 + value,
+      modifier3: (value) => (skillStats) => skillStats.modifier3 + value,
+      modifier4: (value) => (skillStats) => skillStats.modifier4 + value,
+    },
+    fusionSkillPowerModifier: {
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier1 + value : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier2 + value : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier3 + value : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier4 + value : skillStats.modifier4,
+    },
+    singularSkillPowerModifier: {
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier1 + value : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Singular" ? (skillStats.skillName === "Lightning Emission" ? skillStats.modifier1 * 2.35 : skillStats.modifier2 + value) : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier3 + value : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier4 + value : skillStats.modifier4,
+    },
+    dimensionSkillPowerModifier: {
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier1 + value : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier2 + value : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier3 + value : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier4 + value : skillStats.modifier4,
+    },
+    techSkillPowerModifier: {
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier1 + value : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier2 + value : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier3 + value : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier4 + value : skillStats.modifier4,
+    },
+    skillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillPower * (1 + value),
+    },
+    fusionSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    singularSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    dimensionSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    techSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    nonAttributeSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillElement === "Non-Attribute" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    chillSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillElement === "Chill" ? skillStats.skillPower * (1 + value) : skillStats.skiltPower,
+    },
+    fireSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillElement === "Fire" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    toxinSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillElement === "Toxin" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
+    },
+    electricSkillPower: {
+      skillPower: (value) => (skillStats) => skillStats.skillElement === "Electric" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
     },
     skillCooldown: {
       cooldown: (value) => (skillStats) => skillStats.cooldown * (1 + value),
@@ -90,7 +144,7 @@ export default function Overview() {
     const appliedTypeSkillPower = skill ? 1.2 : 1;
     const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
     const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower;
-    setTotalSkillPower(totalSkillPowerValue);
+    setTotalSkillPower(totalSkillPowerValue * (skillStats ? skillStats.skillPower : 1));
   }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill]);
 
   useEffect(() => {
