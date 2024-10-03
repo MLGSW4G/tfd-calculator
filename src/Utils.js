@@ -18,14 +18,14 @@ export const numberToSeconds = (value) => {
   if (value == null) {
     return null;
   }
-  return `${value} s.`;
+  return `${value.toFixed(1)} s.`;
 };
 
 export const numberToMeters = (value) => {
   if (value == null) {
     return null;
   }
-  return `${value} m.`;
+  return `${value.toFixed(1)} m.`;
 };
 
 export const numberToMPs = (value) => {
@@ -34,7 +34,6 @@ export const numberToMPs = (value) => {
   }
   return `${value.toFixed(1)} MP`;
 };
-
 
 export function percentageToFloat(value) {
   const sign = value[0] === "+" || value[0] === "-" ? value.slice(0, 1) : "";
