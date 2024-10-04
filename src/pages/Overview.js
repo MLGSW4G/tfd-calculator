@@ -144,9 +144,51 @@ export default function Overview() {
     const appliedTypeSkillPower = skill ? 1.2 : 1;
     const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
     const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
-    const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
+    let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
+
+    // Calculate the total skill power with effects
+    let elementSkillPowerEffect = 1;
+    let typeSkillPowerEffect = 1;
+
+    if (!selectedSkill) {
+      Object.keys(totalEffects).forEach((effectKey) => {
+        if (effectsMapping[effectKey]) {
+          Object.keys(effectsMapping[effectKey]).forEach((statKey) => {
+            if (statKey === "skillPower") {
+              if (effectKey === "skillPower") {
+                const effectValue = totalEffects[effectKey];
+                totalSkillPowerValue *= 1 + effectValue;
+              }
+            }
+          });
+        }
+      });
+    } else {
+      Object.keys(totalEffects).forEach((effectKey) => {
+        if (effectsMapping[effectKey]) {
+          Object.keys(effectsMapping[effectKey]).forEach((statKey) => {
+            if (statKey === "skillPower") {
+              if (effectKey === "nonAttributeSkillPower" || effectKey === "chillSkillPower" || effectKey === "fireSkillPower" || effectKey === "toxinSkillPower" || effectKey === "electricSkillPower") {
+                if (skillStats && skillStats.skillElement === effectKey.replace("SkillPower", "")) {
+                  const effectValue = totalEffects[effectKey];
+                  elementSkillPowerEffect *= 1 + effectValue;
+                }
+              } else if (effectKey === "fusionSkillPower" || effectKey === "singularSkillPower" || effectKey === "dimensionSkillPower" || effectKey === "techSkillPower") {
+                if (skillStats && skillStats.skillType === effectKey.replace("SkillPower", "")) {
+                  const effectValue = totalEffects[effectKey];
+                  typeSkillPowerEffect *= 1 + effectValue;
+                }
+              }
+            }
+          });
+        }
+      });
+    }
+
+    totalSkillPowerValue *= elementSkillPowerEffect * typeSkillPowerEffect;
+
     setTotalSkillPower(totalSkillPowerValue);
-  }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill]);
+  }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill, totalEffects, skillStats, selectedSkill]);
 
   useEffect(() => {
     if (selectedSkill) {
