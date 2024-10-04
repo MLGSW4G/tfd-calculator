@@ -239,7 +239,7 @@ export default function Overview() {
       <Grid className="grid-container" container>
         <Grid item xs={12} display="flex">
           <Autocomplete
-            id="combo-box-skill"
+            id="selectedSkill"
             options={sortedRows}
             groupBy={(option) => option.descendant}
             getOptionLabel={(option) => `${option.skillNumber}. ${option.skillName}`}
@@ -253,13 +253,13 @@ export default function Overview() {
 
       <Grid className="grid-container" container>
         <Grid item xs={6} display="flex">
-          <Tooltip title="Element skill power +20%">
+          <Tooltip title="Element skill power +20%" placement="top">
             <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label="Matching skill element" />
           </Tooltip>
         </Grid>
 
         <Grid item xs={6} display="flex">
-          <Tooltip title="Type skill power +20%">
+          <Tooltip title="Type skill power +20%" placement="top">
             <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label="Matching skill type" />
           </Tooltip>
         </Grid>
@@ -304,8 +304,10 @@ export default function Overview() {
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
-          <Typography style={{width: "100%"}}>Reactor Level
+          <Typography id="reactor-level-label" style={{ width: "100%" }}>
+            Reactor Level
             <Slider
+              id="reactor-level"
               valueLabelDisplay="auto"
               value={reactorLevel}
               onChange={(event, newValue) => {
