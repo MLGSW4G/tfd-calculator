@@ -1,6 +1,6 @@
 // pages/Overview.js
 import React, { useState, useEffect } from "react";
-import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider } from "@mui/material";
+import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
 import "../styles/styles.css";
@@ -304,7 +304,7 @@ export default function Overview() {
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
-          <p style={{width: "100%"}}>Reactor Level
+          <Typography style={{width: "100%"}}>Reactor Level
             <Slider
               valueLabelDisplay="auto"
               value={reactorLevel}
@@ -319,7 +319,7 @@ export default function Overview() {
               min={Math.min(...reactorLevels.map((level) => level.value))}
               max={100}
             />
-          </p>
+          </Typography>
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
