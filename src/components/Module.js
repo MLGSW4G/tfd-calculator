@@ -2,9 +2,9 @@
 import { React, useState, useMemo } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
 import "../styles/Module.css";
-import { Tooltip} from "@mui/material";
+import { Tooltip } from "@mui/material";
 
-export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel }) => {
+export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel, onModuleDrop }) => {
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
@@ -101,6 +101,14 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         draggable={module !== null && module !== undefined}
         onDragStart={(e) => onDragStart(e, module)}
         onContextMenu={(e) => e.preventDefault()}
+        onDoubleClick={(e) => {
+          if (module !== null && module !== undefined) {
+            const moduleData = JSON.stringify(module);
+            const event = new DataTransfer();
+            event.setData("module", moduleData);
+            onModuleDrop({ preventDefault: () => {}, dataTransfer: event });
+          }
+        }}
       >
         {isInModuleSlot && (
           <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>

@@ -295,7 +295,14 @@ const Modules = () => {
           >
             {equippedModules.map((equippedModule, index) => (
               <Grid item margin={"40px"} marginBottom={"0px"} key={equippedModule.module.id}>
-                <ModuleSlot equippedModule={equippedModule} onDrop={(e) => handleDrop(e, index)} index={index} onDragStart={handleDragStart} onLevelChange={handleLevelChange} />
+                <ModuleSlot
+                  equippedModule={equippedModule}
+                  onDrop={(e) => handleDrop(e, index)}
+                  index={index}
+                  onDragStart={handleDragStart}
+                  onLevelChange={handleLevelChange}
+                  onModuleDrop={handleModuleDrop} // Pass the onModuleDrop callback
+                />
               </Grid>
             ))}
           </Grid>
@@ -438,7 +445,7 @@ const Modules = () => {
           {/* Render only filtered modules */}
           {filteredModules.map((module) => (
             <Grid item key={module.id} padding={1.5} marginTop={2} marginBottom={1}>
-              <Module module={module} onDragStart={handleDragStart} />
+              <Module module={module} onDragStart={handleDragStart} onModuleDrop={handleModuleDrop} />
             </Grid>
           ))}
         </Grid>
