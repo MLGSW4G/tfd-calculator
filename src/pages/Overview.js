@@ -94,18 +94,6 @@ export default function Overview() {
     skillPower: {
       skillPower: (value) => (skillStats) => skillStats.skillPower * (1 + value),
     },
-    fusionSkillPower: {
-      skillPower: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
-    },
-    singularSkillPower: {
-      skillPower: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
-    },
-    dimensionSkillPower: {
-      skillPower: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
-    },
-    techSkillPower: {
-      skillPower: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
-    },
     nonAttributeSkillPower: {
       skillPower: (value) => (skillStats) => skillStats.skillElement === "Non-Attribute" ? skillStats.skillPower * (1 + value) : skillStats.skillPower,
     },
@@ -148,7 +136,6 @@ export default function Overview() {
 
     // Calculate the total skill power with effects
     let elementSkillPowerEffect = 1;
-    let typeSkillPowerEffect = 1;
 
     if (!selectedSkill) {
       Object.keys(totalEffects).forEach((effectKey) => {
@@ -173,11 +160,6 @@ export default function Overview() {
                   const effectValue = totalEffects[effectKey];
                   elementSkillPowerEffect *= 1 + effectValue;
                 }
-              } else if (effectKey === "fusionSkillPower" || effectKey === "singularSkillPower" || effectKey === "dimensionSkillPower" || effectKey === "techSkillPower") {
-                if (skillStats && skillStats.skillType === effectKey.replace("SkillPower", "")) {
-                  const effectValue = totalEffects[effectKey];
-                  typeSkillPowerEffect *= 1 + effectValue;
-                }
               }
             }
           });
@@ -185,7 +167,7 @@ export default function Overview() {
       });
     }
 
-    totalSkillPowerValue *= elementSkillPowerEffect * typeSkillPowerEffect;
+    totalSkillPowerValue *= elementSkillPowerEffect;
 
     setTotalSkillPower(totalSkillPowerValue);
   }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill, totalEffects, skillStats, selectedSkill]);
