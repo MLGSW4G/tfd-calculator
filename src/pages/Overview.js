@@ -143,8 +143,9 @@ export default function Overview() {
     const appliedElementSkillPower = element ? 1.2 : 1;
     const appliedTypeSkillPower = skill ? 1.2 : 1;
     const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
-    const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower;
-    setTotalSkillPower(totalSkillPowerValue * (skillStats ? skillStats.skillPower : 1));
+    const skillPower = skillStats.skillPower ? skillStats.skillPower : 1;
+    const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
+    setTotalSkillPower(totalSkillPowerValue);
   }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill]);
 
   useEffect(() => {
@@ -303,20 +304,22 @@ export default function Overview() {
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
-          <Slider
-            valueLabelDisplay="auto"
-            value={reactorLevel}
-            onChange={(event, newValue) => {
-              setReactorLevel(newValue);
-              const selectedReactorLevel = reactorLevels.find((level) => level.value === newValue);
-              if (selectedReactorLevel) {
-                setReactorSkillPower(selectedReactorLevel.skillPower);
-                setSubSkillPower(selectedReactorLevel.subSkillPower);
-              }
-            }}
-            min={Math.min(...reactorLevels.map((level) => level.value))}
-            max={100}
-          />
+          <p style={{width: "100%"}}>Reactor Level
+            <Slider
+              valueLabelDisplay="auto"
+              value={reactorLevel}
+              onChange={(event, newValue) => {
+                setReactorLevel(newValue);
+                const selectedReactorLevel = reactorLevels.find((level) => level.value === newValue);
+                if (selectedReactorLevel) {
+                  setReactorSkillPower(selectedReactorLevel.skillPower);
+                  setSubSkillPower(selectedReactorLevel.subSkillPower);
+                }
+              }}
+              min={Math.min(...reactorLevels.map((level) => level.value))}
+              max={100}
+            />
+          </p>
         </Grid>
 
         <Grid item className="grid-item" xs={12} display="flex">
@@ -325,7 +328,7 @@ export default function Overview() {
             id="total-skill-power"
             label="Total Skill Power"
             variant="standard"
-            value={totalSkillPower != 0 ? totalSkillPower.toFixed(2) : null}
+            value={totalSkillPower != null ? Number(totalSkillPower).toFixed(2) : null}
             InputProps={{
               readOnly: true,
               inputProps: {
