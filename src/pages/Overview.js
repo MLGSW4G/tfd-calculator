@@ -143,7 +143,7 @@ export default function Overview() {
     const appliedElementSkillPower = element ? 1.2 : 1;
     const appliedTypeSkillPower = skill ? 1.2 : 1;
     const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
-    const skillPower = skillStats.skillPower ? skillStats.skillPower : 1;
+    const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
     const totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
     setTotalSkillPower(totalSkillPowerValue);
   }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill]);
