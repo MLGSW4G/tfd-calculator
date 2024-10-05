@@ -5,7 +5,7 @@ import App from "./App";
 import "./styles/styles.css"; // Adjust path according to your styles location
 
 ReactDOM.render(
-  <Router>
+  <Router basename="/tfd-calculator">
     <App />
   </Router>,
   document.getElementById("root")
