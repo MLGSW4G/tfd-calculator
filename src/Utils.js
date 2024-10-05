@@ -1,4 +1,4 @@
-// Utils.js
+// src/Utils.js
 
 export const numberToPercents = (value) => {
   if (value == null) {

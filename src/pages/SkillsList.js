@@ -1,4 +1,4 @@
-// pages/SkillsList.js
+// src/pages/SkillsList.js
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import jsonData from "./SkillsList.json";

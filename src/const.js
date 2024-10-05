@@ -1,4 +1,4 @@
-// const.js
+// src/const.js
 
 export const MODULE_WIDTH = 149,
   MODULE_HEIGHT = 202,

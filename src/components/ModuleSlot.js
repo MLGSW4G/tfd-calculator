@@ -1,4 +1,4 @@
-// components/ModuleSlot.js
+// src/components/ModuleSlot.js
 import React from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_HEX, SUB_MODULE_STRING, SKILL_MODULE_STRING } from "../const";
 import { Module } from "./Module";

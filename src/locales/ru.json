@@ -1,0 +1,9 @@
+{
+  "navTabs": {
+    "overview": "Обзор",
+    "skillsList": "Список навыков",
+    "descendantsList": "Список потомков",
+    "modules": "Модули",
+    "settings": "Настройки"
+  }
+}

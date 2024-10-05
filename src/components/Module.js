@@ -1,4 +1,4 @@
-// components/Module.js
+// src/components/Module.js
 import { React, useState, useMemo } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
 import "../styles/Module.css";

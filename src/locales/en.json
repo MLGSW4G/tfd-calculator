@@ -1,0 +1,9 @@
+{
+  "navTabs": {
+    "overview": "Overview",
+    "skillsList": "Skills List",
+    "descendantsList": "Descendants List",
+    "modules": "Modules",
+    "settings": "Settings"
+  }
+}

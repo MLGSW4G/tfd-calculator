@@ -1,4 +1,4 @@
-// pages/Overview.js
+// src/pages/Overview.js
 import React, { useState, useEffect } from "react";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
