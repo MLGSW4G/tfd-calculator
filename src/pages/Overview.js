@@ -60,36 +60,51 @@ export default function Overview() {
     return cachedReactorEnhancementLevel ? parseInt(cachedReactorEnhancementLevel) : 1;
   });
 
+  const specialCases = {
+    "Lightning Emission": {
+      modifier1: (skillStats, value) => skillStats.modifier1 + value,
+      modifier2: (skillStats, value) => skillStats.modifier1 * 2.35,
+      modifier3: (skillStats, value) => skillStats.modifier3 + value,
+      modifier4: (skillStats, value) => skillStats.modifier4 + value,
+    },
+    "HV Lightning Emission": {
+      modifier1: (skillStats, value) => skillStats.modifier1 + value,
+      modifier2: (skillStats, value) => skillStats.modifier1 * 2.35,
+      modifier3: (skillStats, value) => skillStats.modifier3 + value,
+      modifier4: (skillStats, value) => skillStats.modifier4 + value,
+    },
+  };
+
   const effectsMapping = {
     skillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.modifier1 + value,
-      modifier2: (value) => (skillStats) => skillStats.skillName === "Lightning Emission" ? skillStats.modifier1 * 2.35 : skillStats.modifier2 + value,
-      modifier3: (value) => (skillStats) => skillStats.modifier3 + value,
-      modifier4: (value) => (skillStats) => skillStats.modifier4 + value,
+      modifier1: (value) => (skillStats) => specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier1(skillStats, value) : skillStats.modifier1 + value,
+      modifier2: (value) => (skillStats) => specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier2(skillStats, value) : skillStats.modifier2 + value,
+      modifier3: (value) => (skillStats) => specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier3(skillStats, value) : skillStats.modifier3 + value,
+      modifier4: (value) => (skillStats) => specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier4(skillStats, value) : skillStats.modifier4 + value,
     },
     fusionSkillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier1 + value : skillStats.modifier1,
-      modifier2: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier2 + value : skillStats.modifier2,
-      modifier3: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier3 + value : skillStats.modifier3,
-      modifier4: (value) => (skillStats) => skillStats.skillType === "Fusion" ? skillStats.modifier4 + value : skillStats.modifier4,
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Fusion" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier1(skillStats, value) : skillStats.modifier1 + value) : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Fusion" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier2(skillStats, value) : skillStats.modifier2 + value) : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Fusion" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier3(skillStats, value) : skillStats.modifier3 + value) : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Fusion" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier4(skillStats, value) : skillStats.modifier4 + value) : skillStats.modifier4,
     },
     singularSkillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier1 + value : skillStats.modifier1,
-      modifier2: (value) => (skillStats) => skillStats.skillType === "Singular" ? (skillStats.skillName === "Lightning Emission" ? skillStats.modifier1 * 2.35 : skillStats.modifier2 + value) : skillStats.modifier2,
-      modifier3: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier3 + value : skillStats.modifier3,
-      modifier4: (value) => (skillStats) => skillStats.skillType === "Singular" ? skillStats.modifier4 + value : skillStats.modifier4,
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Singular" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier1(skillStats, value) : skillStats.modifier1 + value) : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Singular" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier2(skillStats, value) : skillStats.modifier2 + value) : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Singular" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier3(skillStats, value) : skillStats.modifier3 + value) : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Singular" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier4(skillStats, value) : skillStats.modifier4 + value) : skillStats.modifier4,
     },
     dimensionSkillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier1 + value : skillStats.modifier1,
-      modifier2: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier2 + value : skillStats.modifier2,
-      modifier3: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier3 + value : skillStats.modifier3,
-      modifier4: (value) => (skillStats) => skillStats.skillType === "Dimension" ? skillStats.modifier4 + value : skillStats.modifier4,
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Dimension" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier1(skillStats, value) : skillStats.modifier1 + value) : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Dimension" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier2(skillStats, value) : skillStats.modifier2 + value) : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Dimension" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier3(skillStats, value) : skillStats.modifier3 + value) : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Dimension" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier4(skillStats, value) : skillStats.modifier4 + value) : skillStats.modifier4,
     },
     techSkillPowerModifier: {
-      modifier1: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier1 + value : skillStats.modifier1,
-      modifier2: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier2 + value : skillStats.modifier2,
-      modifier3: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier3 + value : skillStats.modifier3,
-      modifier4: (value) => (skillStats) => skillStats.skillType === "Tech" ? skillStats.modifier4 + value : skillStats.modifier4,
+      modifier1: (value) => (skillStats) => skillStats.skillType === "Tech" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier1(skillStats, value) : skillStats.modifier1 + value) : skillStats.modifier1,
+      modifier2: (value) => (skillStats) => skillStats.skillType === "Tech" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier2(skillStats, value) : skillStats.modifier2 + value) : skillStats.modifier2,
+      modifier3: (value) => (skillStats) => skillStats.skillType === "Tech" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier3(skillStats, value) : skillStats.modifier3 + value) : skillStats.modifier3,
+      modifier4: (value) => (skillStats) => skillStats.skillType === "Tech" ? (specialCases[skillStats.skillName] ? specialCases[skillStats.skillName].modifier4(skillStats, value) : skillStats.modifier4 + value) : skillStats.modifier4,
     },
     skillPower: {
       skillPower: (value) => (skillStats) => skillStats.skillPower * (1 + value),
