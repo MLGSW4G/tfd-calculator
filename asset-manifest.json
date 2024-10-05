@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/css/main.ff403043.css",
-    "main.js": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/main.9a44a35d.js",
+    "main.js": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/main.40e3be09.js",
     "static/js/82.4aec3683.chunk.js": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/82.4aec3683.chunk.js",
     "static/js/884.76107f1e.chunk.js": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/884.76107f1e.chunk.js",
     "static/js/833.0e20aea1.chunk.js": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/833.0e20aea1.chunk.js",
@@ -18,7 +18,7 @@
     "static/media/octin-college-rg.otf": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/media/octin-college-rg.dca141742faaabcfb3b3.otf",
     "index.html": "/https//mlgsw4g.github.io/tfd-calculator/Overview/index.html",
     "main.ff403043.css.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/css/main.ff403043.css.map",
-    "main.9a44a35d.js.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/main.9a44a35d.js.map",
+    "main.40e3be09.js.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/main.40e3be09.js.map",
     "82.4aec3683.chunk.js.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/82.4aec3683.chunk.js.map",
     "884.76107f1e.chunk.js.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/884.76107f1e.chunk.js.map",
     "833.0e20aea1.chunk.js.map": "/https//mlgsw4g.github.io/tfd-calculator/Overview/static/js/833.0e20aea1.chunk.js.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.ff403043.css",
-    "static/js/main.9a44a35d.js"
+    "static/js/main.40e3be09.js"
   ]
 }
