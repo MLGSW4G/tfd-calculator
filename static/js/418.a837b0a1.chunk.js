@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[418],{2418:(a,e,l)=>{l.r(e),l.d(e,{default:()=>t});const o=l(1350).find((a=>"Speed of Light"===a.skillName));o.cooldownLabel="Cooldown",o.cost1Label="Cost",o.duration1Label="Duration",o.range1Label="Range";const t=o}}]);
+//# sourceMappingURL=418.a837b0a1.chunk.js.map

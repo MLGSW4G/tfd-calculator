@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[884],{7884:(e,a,l)=>{l.r(a),l.d(a,{default:()=>t});const c=l(1350).find((e=>"Electric Condense"===e.skillName));c.cooldownLabel="Cooldown",c.cost1Label="Cost",c.duration1Label="Max charge time",c.range1Label="Range",c.range2Label="Charged range",c.skillDamage1Label="0% electricity damage",c.skillDamage2Label="100% electricity damage";const t=c}}]);
+//# sourceMappingURL=884.76107f1e.chunk.js.map

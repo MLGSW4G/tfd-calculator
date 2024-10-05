@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[508],{8508:(a,e,l)=>{l.r(e),l.d(e,{default:()=>s});const t=l(1350).find((a=>"Test"===a.skillName));t.cooldownLabel="Cooldown",t.cost1Label="Cost",t.duration1Label="Duration",t.intervalLabel="Interval",t.range1Label="Range",t.skillDamage1Label="Test damage",t.skillDamage2Label="Test 2 damage",t.skillDamage3Label="Test 3 damage";const s=t}}]);
+//# sourceMappingURL=508.0015cd95.chunk.js.map

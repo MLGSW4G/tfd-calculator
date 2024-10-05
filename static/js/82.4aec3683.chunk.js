@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[82],{1082:(a,e,l)=>{l.r(e),l.d(e,{default:()=>o});const t=l(1350).find((a=>"Cutoff Beam"===a.skillName));t.cooldownLabel="Cooldown",t.cost1Label="Cost",t.duration1Label="Duration",t.intervalLabel="Interval",t.range1Label="Range",t.skillDamage1Label="Cutoff Beam damage",t.skillDamage2Label="Electrocution damage";const o=t}}]);
+//# sourceMappingURL=82.4aec3683.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[871],{871:(a,l,e)=>{e.r(l),e.d(l,{default:()=>c});const t=e(1350).find((a=>"HV Thrill Bomb"===a.skillName));t.cooldownLabel="Cooldown",t.cost1Label="Cost",t.duration1Label="Electrocution duration",t.intervalLabel="Electrocution interval",t.range1Label="Range",t.skillDamage1Label="0% electricity damage",t.skillDamage2Label="100% electricity damage",t.skillDamage3Label="Electrocution damage";const c=t}}]);
+//# sourceMappingURL=871.57160af0.chunk.js.map

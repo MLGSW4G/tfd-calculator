@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[92],{5092:(a,l,e)=>{e.r(l),e.d(l,{default:()=>o});const t=e(1350).find((a=>"Rabbit Foot"===a.skillName));t.cooldownLabel="Cooldown",t.cost1Label="Cost",t.duration1Label="Duration",t.intervalLabel="Interval",t.range1Label="Range",t.skillDamage1Label="Damage";const o=t}}]);
+//# sourceMappingURL=92.b55a7670.chunk.js.map
