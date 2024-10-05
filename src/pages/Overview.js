@@ -1,13 +1,18 @@
 // src/pages/Overview.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
 import "../styles/styles.css";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../Utils";
 import ReactorLevels from "./ReactorLevels.json";
+import { getTranslation } from "../translations";
 
 export default function Overview() {
+  const { language } = useContext(LocalizationContext);
+  const translations = getTranslation(language, "overview");
+
   const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
     value: parseInt(level),
     skillPower: ReactorLevels[level].skill_atk_power,
@@ -285,27 +290,27 @@ export default function Overview() {
             onChange={handleComboBoxChange}
             filterOptions={filterOptions}
             sx={{ width: "100%" }}
-            renderInput={(params) => <TextField {...params} label="Skill" />}
+            renderInput={(params) => <TextField {...params} label={translations.selectedSkillPlaceholder} />}
           />
         </Grid>
       </Grid>
 
       <Grid className="grid-container" container>
         <Grid item xs={6} display="flex">
-          <Tooltip title="Element skill power +20%" placement="top">
-            <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label="Matching skill element" />
+          <Tooltip title={translations.elementTooltip} placement="top">
+            <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label={translations.element} />
           </Tooltip>
         </Grid>
 
         <Grid item xs={6} display="flex">
-          <Tooltip title="Type skill power +20%" placement="top">
-            <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label="Matching skill type" />
+          <Tooltip title={translations.typeTooltip} placement="top">
+            <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label={translations.type} />
           </Tooltip>
         </Grid>
 
         <Grid xs={12} item display="flex">
           <Grid item xs={12} display="flex">
-            <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label="Optimization condition" />
+            <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label={translations.optimizationCondition} />
             {optimizationCondition && (
               <Select
                 size="small"
@@ -328,14 +333,14 @@ export default function Overview() {
           </Grid>
 
           <Grid item xs={12} display="flex">
-            <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label="Reactor enhancement" />
+            <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label={translations.reactorEnhancement} />
             {reactorEnhancement && (
               <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
-                <MenuItem value={1} title="Reactor skill power +3%">
-                  Upgrade 1
+                <MenuItem value={1} title={translations.reactorUpgrade1Tooltip} >
+                  {translations.reactorUpgrade1}
                 </MenuItem>
-                <MenuItem value={2} title="Reactor skill power +6%">
-                  Upgrade 2
+                <MenuItem value={2} title={translations.reactorUpgrade2Tooltip}>
+                  {translations.reactorUpgrade2}
                 </MenuItem>
               </Select>
             )}
@@ -344,7 +349,7 @@ export default function Overview() {
 
         <Grid item className="grid-item" xs={12} display="flex">
           <Typography id="reactor-level-label" style={{ width: "100%" }}>
-            Reactor Level
+            {translations.reactorLevel}
             <Slider
               id="reactor-level"
               valueLabelDisplay="auto"
@@ -367,7 +372,7 @@ export default function Overview() {
           <TextField
             fullWidth
             id="total-skill-power"
-            label="Total Skill Power"
+            label={translations.totalSkillPower}
             variant="standard"
             value={totalSkillPower != null ? Number(totalSkillPower).toFixed(2) : null}
             InputProps={{
@@ -382,8 +387,8 @@ export default function Overview() {
         <Grid item className="grid-item" xs={12} display="flex">
           <TextField
             fullWidth
-            id="total-bonuses"
-            label="Total Bonuses"
+            id="total-effects"
+            label={translations.totalEffects}
             variant="standard"
             multiline
             rows={Object.keys(totalEffects).length}

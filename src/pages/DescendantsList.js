@@ -1,9 +1,14 @@
 // src/pages/DescendantsList.js
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
+import { LocalizationContext } from "../components/LocalizationContext";
 import { Grid, TextField, Autocomplete, Slider } from "@mui/material";
 import data from "../api/descendant.json";
+import { getTranslation } from "../translations";
 
 const DescendantStats = () => {
+  const { language } = useContext(LocalizationContext);
+  const translations = getTranslation(language, "descendantList");
+
   const [descendant, setDescendant] = useState(null);
   const [level, setLevel] = useState(1);
   const [stats, setStats] = useState({});
@@ -43,7 +48,7 @@ const DescendantStats = () => {
             getOptionLabel={(option) => option.descendant_name}
             value={descendant || null} // Update to match the entire object
             onChange={handleDescendantChange}
-            renderInput={(params) => <TextField {...params} placeholder="Choose descendant" label="Descendant Name" variant="outlined" />}
+            renderInput={(params) => <TextField {...params} label={translations.descendantLabel} variant="outlined" />}
           />
         </Grid>
         <Grid item xs={12}>

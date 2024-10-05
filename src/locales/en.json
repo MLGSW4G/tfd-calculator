@@ -5,5 +5,37 @@
     "descendantsList": "Descendants List",
     "modules": "Modules",
     "settings": "Settings"
+  },
+  "moduleSlot": {
+    "skillModuleString": "Skill Modules",
+    "subModuleString": "Sub Module"
+  },
+  "overview": {
+    "selectedSkillPlaceholder": "Skill",
+    "element": "Matching skill element",
+    "elementTooltip": "Element skill power +20%",
+    "type": "Matching skill type",
+    "typeTooltip": "Type skill power +20%",
+    "optimizationCondition": "Optimization Condition",
+    "reactorEnhancement": "Reactor enhancement",
+    "reactorLevel": "Reactor level",
+    "reactorUpgrade1": "Upgrade 1",
+    "reactorUpgrade1Tooltip": "Reactor skill power +3%",
+    "reactorUpgrade2": "Upgrade 2",
+    "reactorUpgrade2Tooltip": "Reactor skill power +6%",
+    "totalSkillPower": "Total Skill Power",
+    "totalEffects": "Total effects"
+  },
+  "modules": {
+    "searchBarPlaceholder": "Search modules...",
+    "socketTypeFilterLabel": "Socket Type",
+    "tierFilterLabel": "Tier",
+    "classFilterLabel": "Class"
+  },
+  "descendantList": {
+    "descendantLabel": "Descendant name"
+  },
+  "settings": {
+    "language": "Language"
   }
 }

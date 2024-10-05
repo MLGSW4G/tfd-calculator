@@ -1,5 +1,6 @@
 // src/pages/Modules.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import "../styles/styles.css";
 import { Module } from "../components/Module";
@@ -7,8 +8,12 @@ import { ModuleSlot } from "../components/ModuleSlot";
 import moduleData from "../api/module.json";
 import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, colorStandard, colorRare, colorUltimate, colorTranscendent } from "../const";
 import { parseModuleEffect } from "../Utils";
+import { getTranslation } from "../translations";
 
 const Modules = () => {
+  const { language } = useContext(LocalizationContext);
+  const translations = getTranslation(language, "modules");
+
   const [moduleList, setModuleList] = useState(
     moduleData
       .sort((a, b) => a.module_id - b.module_id)
@@ -324,14 +329,13 @@ const Modules = () => {
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleModuleDrop}
       >
-        <TextField className="search-bar" variant="outlined" placeholder="Search by module name..." value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
+        <TextField className="search-bar" variant="outlined" placeholder={translations.searchBarPlaceholder} value={searchTerm} onChange={handleSearchChange} sx={{ margin: 2 }} />
 
         <FormControl className="module-socket-type-filter" sx={{ margin: 2, minWidth: 200 }}>
-          <InputLabel>Socket Type</InputLabel>
+          <InputLabel>{translations.socketTypeFilterLabel}</InputLabel>
           <Select
             multiple
             value={selectedSocketTypes}
-            label="Socket Type"
             onChange={handleSocketTypeChange}
             MenuProps={{ sx: { marginTop: "10px" } }}
             renderValue={(selected) => (
@@ -363,11 +367,10 @@ const Modules = () => {
         </FormControl>
 
         <FormControl className="module-tier-filter" sx={{ margin: 2, minWidth: 200 }}>
-          <InputLabel>Tier</InputLabel>
+          <InputLabel>{translations.tierFilterLabel}</InputLabel>
           <Select
             multiple
             value={selectedTiers}
-            label="Tier"
             onChange={handleTierChange}
             MenuProps={{ sx: { marginTop: "10px" } }}
             renderValue={(selected) => (
@@ -406,11 +409,10 @@ const Modules = () => {
         </FormControl>
 
         <FormControl className="module-class-filter" sx={{ margin: 2, minWidth: 200 }}>
-          <InputLabel>Module Class</InputLabel>
+          <InputLabel>{translations.classFilterLabel}</InputLabel>
           <Select
             multiple
             value={selectedClasses}
-            label="Module Class"
             onChange={handleClassChange}
             MenuProps={{ sx: { marginTop: "10px" } }}
             renderValue={(selected) => (

@@ -1,10 +1,14 @@
 // src/components/ModuleSlot.js
-import React from "react";
+import { React, useContext } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_HEX, SUB_MODULE_STRING, SKILL_MODULE_STRING } from "../const";
+import { getTranslation } from "../translations";
+import { LocalizationContext } from "./LocalizationContext";
 import { Module } from "./Module";
 import "../styles/ModuleSlot.css";
 
 export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevelChange, onModuleDrop }) => {
+  const { language } = useContext(LocalizationContext);
+  const translations = getTranslation(language, "moduleSlot");
   let backgroundImage, backgroundString, backgroundStringColor, moduleSlotSocketType;
 
   switch (moduleSlotSocketType) {
@@ -27,11 +31,11 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
 
   if (index === 0) {
     backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG01.png')`;
-    backgroundString = SKILL_MODULE_STRING;
+    backgroundString = translations.skillModuleString;
     backgroundStringColor = SKILL_MODULE_COLOR_HEX;
   } else if (index === 6) {
     backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG02.png')`;
-    backgroundString = SUB_MODULE_STRING;
+    backgroundString = translations.subModuleString;
     backgroundStringColor = SUB_MODULE_COLOR_HEX;
   }
 

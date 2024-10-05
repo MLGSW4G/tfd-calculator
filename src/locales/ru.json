@@ -5,5 +5,37 @@
     "descendantsList": "Список потомков",
     "modules": "Модули",
     "settings": "Настройки"
+  },
+  "moduleSlot": {
+    "skillModuleString": "Модули навыка",
+    "subModuleString": "Дополнительный модуль"
+  },
+  "overview": {
+    "selectedSkillPlaceholder": "Способность",
+    "element": "Соответствующий элемент навыка",
+    "elementTooltip": "Элементальная сила навыков +20%",
+    "type": "Соответствующий тип навыка",
+    "typeTooltip": "Типовая сила навыков +20%",
+    "optimizationCondition": "Условия оптимизации",
+    "reactorEnhancement": "Улучшение реактора",
+    "reactorLevel": "Уровень реактора",
+    "reactorUpgrade1": "Улучшение 1",
+    "reactorUpgrade1Tooltip": "Сила навыка реактора +3%",
+    "reactorUpgrade2": "Улучшение 2",
+    "reactorUpgrade2Tooltip": "Сила навыка реактора +6%",
+    "totalSkillPower": "Итоговая сила навыка",
+    "totalEffects": "Всего эффектов"
+  },
+  "modules": {
+    "searchBarPlaceholder": "Искать модули...",
+    "socketTypeFilterLabel": "Гнездо",
+    "tierFilterLabel": "Категория",
+    "classFilterLabel": "Класс"
+  },
+  "descendantList": {
+    "descendantLabel": "Имя потомка"
+  },
+  "settings": {
+    "language": "Язык"
   }
 }

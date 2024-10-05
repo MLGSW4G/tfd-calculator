@@ -1,10 +1,17 @@
 // src/components/LanguageSwitcher.js
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { LocalizationContext } from './LocalizationContext';
-import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Select, MenuItem, FormControl, Typography } from '@mui/material';
 
 const LanguageSwitcher = () => {
   const { language, switchLanguage } = useContext(LocalizationContext);
+  const [translations, setTranslations] = useState({});
+
+  useEffect(() => {
+    import(`../locales/${language}.json`).then((data) => {
+      setTranslations(data.default);
+    });
+  }, [language]);
 
   const handleLanguageChange = (event) => {
     switchLanguage(event.target.value);
@@ -12,7 +19,6 @@ const LanguageSwitcher = () => {
 
   return (
     <FormControl sx={{ width: 150 }}>
-      <InputLabel id="language-label">Language</InputLabel>
       <Select
         labelId="language-label"
         value={language}

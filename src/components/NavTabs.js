@@ -6,6 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Link } from "react-router-dom";
 import { LocalizationContext } from "../components/LocalizationContext";
+import { getTranslation } from "../translations";
 
 function samePageLinkNavigation(event) {
   if (
@@ -31,13 +32,7 @@ LinkTab.propTypes = {
 
 const NavTabs = () => {
   const { language } = useContext(LocalizationContext);
-  const [translations, setTranslations] = useState({});
-
-  useEffect(() => {
-    import(`../locales/${language}.json`).then((data) => {
-      setTranslations(data.default);
-    });
-  }, [language]);
+  const translations = getTranslation(language, "navTabs");
 
   const [value, setValue] = React.useState(0);
 
@@ -51,11 +46,11 @@ const NavTabs = () => {
   return (
     <Box className="nav-tabs">
       <Tabs value={value} onChange={handleChange} role="navigation" variant="fullWidth">
-        <LinkTab label={translations.navTabs?.overview} to="/overview" />
-        <LinkTab label={translations.navTabs?.skillsList} to="/skillsList" />
-        <LinkTab label={translations.navTabs?.descendantsList} to="/descendantsList" />
-        <LinkTab label={translations.navTabs?.modules} to="/modules" />
-        <LinkTab label={translations.navTabs?.settings} to="/settings" />
+        <LinkTab label={translations.overview} to="/overview" />
+        <LinkTab label={translations.skillsList} to="/skillsList" />
+        <LinkTab label={translations.descendantsList} to="/descendantsList" />
+        <LinkTab label={translations.modules} to="/modules" />
+        <LinkTab label={translations.settings} to="/settings" />
       </Tabs>
     </Box>
   );
