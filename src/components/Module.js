@@ -102,6 +102,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         onDragStart={(e) => onDragStart(e, module)}
         onContextMenu={(e) => e.preventDefault()}
         onDoubleClick={(e) => {
+          if (e.target.tagName === "BUTTON") return; // Check if the event target is a button
           if (module !== null && module !== undefined) {
             const moduleData = JSON.stringify(module);
             const event = new DataTransfer();
