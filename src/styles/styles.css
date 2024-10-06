@@ -35,32 +35,56 @@
 
 body {
   background: rgb(161, 161, 161);
-  /* background: rgb(34,34,34);
-  background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(120,120,120,1) 50%, rgba(255,255,255,1) 75%); */
   margin: 0px;
 }
 
-.nav-tabs {
-  border-radius: 4px;
-  margin-bottom: 3%;
+.button {
+  background: linear-gradient(145deg, #e6e6e6, #c2c2c2);
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: filter 0.1s ease, transform 0.1s ease;
 }
 
-.nav-tabs .MuiTab-root {
-  /* min-width: 50%; */
-  /* font-size: 16px; */
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  font-weight: bold;
+.button:hover {
+  filter: brightness(90%);
 }
 
-.grid-container {
-  padding: 2%;
+.button:active {
+  filter: brightness(80%);
+  transform: translateY(1px);
+}
+
+.MuiGrid-container {
+  padding: 1%;
   padding-left: 0;
   padding-right: 0;
 }
 
-.grid-item {
-  padding: 2%;
+.MuiGrid-item {
+  padding: 0.6%;
   padding-left: 0;
   padding-right: 0;
+}
+
+.stat-field {
+  padding: 1%;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.MuiDataGrid-columnHeader {
+  background-color: lightgrey;
+}
+
+.MuiDataGrid-filler {
+  background-color: lightgrey;
+}
+
+.MuiDataGrid-row {
+  background-color: lightgrey;
 }

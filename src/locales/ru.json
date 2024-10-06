@@ -24,16 +24,34 @@
     "reactorUpgrade2": "Улучшение 2",
     "reactorUpgrade2Tooltip": "Сила навыка реактора +6%",
     "totalSkillPower": "Итоговая сила навыка",
-    "totalEffects": "Всего эффектов"
+    "totalEffects": "Все эффекты",
+    "cooldown": "Перезарядка",
+    "cost1": "Стоимость 1",
+    "cost2": "Стоимость 2",
+    "duration1": "Длительность 1",
+    "duration2": "Длительность 2",
+    "interval": "Интервал",
+    "range1": "Дальность 1",
+    "range2": "Дальность 2",
+    "skillDamage1": "Урон навыка 1",
+    "skillDamage2": "Урон навыка 2",
+    "skillDamage3": "Урон навыка 3",
+    "skillDamage4": "Урон навыка 4",
+    "modifier": "Множитель"
   },
   "modules": {
     "searchBarPlaceholder": "Искать модули...",
-    "socketTypeFilterLabel": "Гнездо",
-    "tierFilterLabel": "Категория",
-    "classFilterLabel": "Класс"
+    "sortBy": "Отсортировать по...",
+    "id": "ИД",
+    "name": "Название",
+    "socketType": "Гнездо",
+    "tier": "Категория",
+    "class": "Класс",
+    "type": "Группа"
   },
   "descendantList": {
-    "descendantLabel": "Имя потомка"
+    "descendantLabel": "Имя потомка",
+    "descendantLevel": "Уровень потомка"
   },
   "settings": {
     "language": "Язык"

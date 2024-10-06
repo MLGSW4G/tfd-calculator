@@ -89,10 +89,11 @@ export const sortedRows = [...rows].sort((a, b) => {
 
 export default function DataTable() {
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", margin: 0, padding: 0 }}>
       <DataGrid
         rows={sortedRows}
         columns={columns}
+        style={{margin: 0, padding: 0}}
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 100 },

@@ -72,6 +72,15 @@ export function parseModuleEffect(module, moduleLevel) {
     return effects;
   }
 
+  // Handle sub modules (+capacity)
+  if (value.includes("Max Module Capacity")) {
+    const effectName = "maxCapacity";
+    const maxCapacity = moduleLevel;
+    module.moduleStat[moduleLevel].module_capacity = maxCapacity; // module_capacity is equal to moduleLevel
+    effects[effectName] = maxCapacity;
+    return effects;
+  }
+
   // Handle "Overwhelming..." modules
   if (value.startsWith("Fixes")) {
     effects[module.moduleName.camelCase()] = true;

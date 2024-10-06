@@ -24,16 +24,34 @@
     "reactorUpgrade2": "Upgrade 2",
     "reactorUpgrade2Tooltip": "Reactor skill power +6%",
     "totalSkillPower": "Total Skill Power",
-    "totalEffects": "Total effects"
+    "totalEffects": "Total effects",
+    "cooldown": "Cooldown",
+    "cost1": "Cost 1",
+    "cost2": "Cost 2",
+    "duration1": "Duration 1",
+    "duration2": "Duration 2",
+    "interval": "Interval",
+    "range1": "Range 1",
+    "range2": "Range 2",
+    "skillDamage1": "Skill damage 1",
+    "skillDamage2": "Skill damage 2",
+    "skillDamage3": "Skill damage 3",
+    "skillDamage4": "Skill damage 4",
+    "modifier": "Modifier"
   },
   "modules": {
     "searchBarPlaceholder": "Search modules...",
-    "socketTypeFilterLabel": "Socket Type",
-    "tierFilterLabel": "Tier",
-    "classFilterLabel": "Class"
+    "sortBy": "Sort by...",
+    "id": "ID",
+    "name": "Name",
+    "socketType": "Socket Type",
+    "tier": "Tier",
+    "class": "Class",
+    "type": "Group"
   },
   "descendantList": {
-    "descendantLabel": "Descendant name"
+    "descendantLabel": "Descendant name",
+    "descendantLevel": "Descendant level"
   },
   "settings": {
     "language": "Language"

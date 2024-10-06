@@ -1,9 +1,8 @@
 .module-slot {
-    /* existing styles */
-    transition: box-shadow 0.2s ease-in-out;
-    border-radius: 8px;
-  }
-  
-  .module-slot:hover {
-    box-shadow: 0 0 0 2px #fff;
-  }
+  transition: box-shadow 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.module-slot:hover {
+  box-shadow: 0 0 0 2px #fff;
+}

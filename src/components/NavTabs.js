@@ -1,5 +1,5 @@
-// components/NavTabs.js
-import React, { useContext, useState, useEffect } from "react";
+// src/components/NavTabs.js
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -7,6 +7,7 @@ import Tab from "@mui/material/Tab";
 import { Link } from "react-router-dom";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
+import "../styles/NavTabs.css";
 
 function samePageLinkNavigation(event) {
   if (

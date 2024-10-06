@@ -4,10 +4,10 @@ import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
 import { colorRare, colorUltimate } from "../const";
-import "../styles/styles.css";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../Utils";
 import ReactorLevels from "./ReactorLevels.json";
 import { getTranslation } from "../translations";
+import "../styles/styles.css";
 
 export default function Overview() {
   const { language } = useContext(LocalizationContext);
@@ -66,6 +66,18 @@ export default function Overview() {
   });
 
   const specialCases = {
+    "Thrill Bomb": {
+      modifier1: (skillStats, value) => skillStats.modifier1 + value,
+      modifier2: (skillStats, value) => skillStats.modifier1 * 2.35,
+      modifier3: (skillStats, value) => skillStats.modifier3 + value,
+      modifier4: (skillStats, value) => skillStats.modifier4 + value,
+    },
+    "HV Thrill Bomb": {
+      modifier1: (skillStats, value) => skillStats.modifier1 + value,
+      modifier2: (skillStats, value) => skillStats.modifier1 * 2.35,
+      modifier3: (skillStats, value) => skillStats.modifier3 + value,
+      modifier4: (skillStats, value) => skillStats.modifier4 + value,
+    },
     "Lightning Emission": {
       modifier1: (skillStats, value) => skillStats.modifier1 + value,
       modifier2: (skillStats, value) => skillStats.modifier1 * 2.35,
@@ -274,80 +286,79 @@ export default function Overview() {
     <Box
       sx={{
         position: "absolute",
-        left: "20%",
-        width: "60%",
+        left: "10%",
+        width: "80%",
         backgroundColor: "inherit",
         justifyItems: "left",
+        marginTop: "3%",
       }}
     >
-      <Grid className="grid-container" container>
-        <Grid item xs={12} display="flex">
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
           <Autocomplete
-            id="selectedSkill"
+            fullWidth
+            id="selected-skill"
             options={sortedRows}
             groupBy={(option) => option.descendant}
             getOptionLabel={(option) => `${option.skillNumber}. ${option.skillName}`}
             onChange={handleComboBoxChange}
             filterOptions={filterOptions}
-            sx={{ width: "100%" }}
             renderInput={(params) => <TextField {...params} label={translations.selectedSkillPlaceholder} />}
           />
         </Grid>
       </Grid>
 
-      <Grid className="grid-container" container>
-        <Grid item xs={6} display="flex">
+      <Grid container>
+        <Grid item xs={6}>
           <Tooltip title={translations.elementTooltip} placement="top">
             <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label={translations.element} />
           </Tooltip>
         </Grid>
 
-        <Grid item xs={6} display="flex">
+        <Grid item xs={6}>
           <Tooltip title={translations.typeTooltip} placement="top">
             <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label={translations.type} />
           </Tooltip>
         </Grid>
 
-        <Grid xs={12} item display="flex">
-          <Grid item xs={12} display="flex">
-            <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label={translations.optimizationCondition} />
-            {optimizationCondition && (
-              <Select
-                size="small"
-                value={optimizationConditionMultiplier}
-                onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
-                sx={{
-                  "& .MuiSelect-select": {
-                    backgroundColor: optimizationConditionMultiplier === "140%" ? colorRare : optimizationConditionMultiplier === "160%" ? colorUltimate : null,
-                  },
-                }}
-              >
-                <MenuItem value="140%" sx={{ color: colorRare }}>
-                  140%
-                </MenuItem>
-                <MenuItem value="160%" sx={{ color: colorUltimate }}>
-                  160%
-                </MenuItem>
-              </Select>
-            )}
-          </Grid>
-
-          <Grid item xs={12} display="flex">
-            <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label={translations.reactorEnhancement} />
-            {reactorEnhancement && (
-              <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
-                <MenuItem value={1} title={translations.reactorUpgrade1Tooltip} >
-                  {translations.reactorUpgrade1}
-                </MenuItem>
-                <MenuItem value={2} title={translations.reactorUpgrade2Tooltip}>
-                  {translations.reactorUpgrade2}
-                </MenuItem>
-              </Select>
-            )}
-          </Grid>
+        <Grid item xs={6}>
+          <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label={translations.optimizationCondition} />
+          {optimizationCondition && (
+            <Select
+              size="small"
+              value={optimizationConditionMultiplier}
+              onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
+              sx={{
+                "& .MuiSelect-select": {
+                  backgroundColor: optimizationConditionMultiplier === "140%" ? colorRare : optimizationConditionMultiplier === "160%" ? colorUltimate : null,
+                },
+              }}
+            >
+              <MenuItem value="140%" sx={{ color: colorRare }}>
+                140%
+              </MenuItem>
+              <MenuItem value="160%" sx={{ color: colorUltimate }}>
+                160%
+              </MenuItem>
+            </Select>
+          )}
         </Grid>
 
-        <Grid item className="grid-item" xs={12} display="flex">
+        <Grid item xs={6} display="flex">
+          <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label={translations.reactorEnhancement} />
+          {reactorEnhancement && (
+            <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
+              <MenuItem value={1} title={translations.reactorUpgrade1Tooltip}>
+                {translations.reactorUpgrade1}
+              </MenuItem>
+              <MenuItem value={2} title={translations.reactorUpgrade2Tooltip}>
+                {translations.reactorUpgrade2}
+              </MenuItem>
+            </Select>
+          )}
+        </Grid>
+
+        <Grid item xs={12} display="flex">
           <Typography id="reactor-level-label" style={{ width: "100%" }}>
             {translations.reactorLevel}
             <Slider
@@ -368,7 +379,7 @@ export default function Overview() {
           </Typography>
         </Grid>
 
-        <Grid item className="grid-item" xs={12} display="flex">
+        <Grid item xs={12} display="flex">
           <TextField
             fullWidth
             id="total-skill-power"
@@ -384,7 +395,7 @@ export default function Overview() {
           />
         </Grid>
 
-        <Grid item className="grid-item" xs={12} display="flex">
+        <Grid item xs={12} display="flex">
           <TextField
             fullWidth
             id="total-effects"
@@ -403,13 +414,12 @@ export default function Overview() {
             }}
           />
         </Grid>
-
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("cooldown") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="cooldown"
-              label={skillStatsWithEffects.cooldownLabel}
+              label={translations.cooldown}
               variant="standard"
               value={numberToSeconds(skillStatsWithEffects.cooldown)}
               InputProps={{
@@ -423,11 +433,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("cost1") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="cost1"
-              label={skillStatsWithEffects.cost1Label}
+              label={translations.cost1}
               variant="standard"
               value={numberToMPs(skillStatsWithEffects.cost1)}
               InputProps={{
@@ -441,11 +451,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("cost2") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="cost2"
-              label={skillStatsWithEffects.cost2Label}
+              label={translations.cost2}
               variant="standard"
               value={numberToMPs(skillStatsWithEffects.cost2)}
               InputProps={{
@@ -459,11 +469,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("duration1") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="duration1"
-              label={skillStatsWithEffects.duration1Label}
+              label={translations.duration1}
               variant="standard"
               value={numberToSeconds(skillStatsWithEffects.duration1)}
               InputProps={{
@@ -477,11 +487,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("duration2") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="duration2"
-              label={skillStatsWithEffects.duration2Label}
+              label={translations.duration2}
               variant="standard"
               value={numberToSeconds(skillStatsWithEffects.duration2)}
               InputProps={{
@@ -495,11 +505,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("interval") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="interval"
-              label={skillStatsWithEffects.intervalLabel}
+              label={translations.interval}
               variant="standard"
               value={numberToSeconds(skillStatsWithEffects.interval)}
               InputProps={{
@@ -513,11 +523,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("range1") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="range1"
-              label={skillStatsWithEffects.range1Label}
+              label={translations.range1}
               variant="standard"
               value={numberToMeters(skillStatsWithEffects.range1)}
               InputProps={{
@@ -531,11 +541,11 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && Object.keys(skillStatsWithEffects).includes("range2") && (
-          <Grid item className="grid-item" xs={12} display="flex">
+          <Grid item className="stat-field" xs={12} display="flex">
             <TextField
               fullWidth
               id="range2"
-              label={skillStatsWithEffects.range2Label}
+              label={translations.range2}
               variant="standard"
               value={numberToMeters(skillStatsWithEffects.range2)}
               InputProps={{
@@ -549,12 +559,12 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier1 && (
-          <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithEffects.modifier1)}`}>
+          <Grid item className="stat-field" xs={12} display="flex">
+            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier1)}`}>
               <TextField
                 fullWidth
-                id="skillDamage1"
-                label={skillStatsWithEffects.skillDamage1Label}
+                id="skill-damage1"
+                label={translations.skillDamage1}
                 variant="standard"
                 value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
@@ -569,12 +579,12 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier2 && (
-          <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithEffects.modifier2)}`}>
+          <Grid item className="stat-field" xs={12} display="flex">
+            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier2)}`}>
               <TextField
                 fullWidth
-                id="skillDamage2"
-                label={skillStatsWithEffects.skillDamage2Label}
+                id="skill-damage2"
+                label={translations.skillDamage2}
                 variant="standard"
                 value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
@@ -589,12 +599,12 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier3 && (
-          <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithEffects.modifier3)}`}>
+          <Grid item className="stat-field" xs={12} display="flex">
+            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier3)}`}>
               <TextField
                 fullWidth
-                id="skillDamage3"
-                label={skillStatsWithEffects.skillDamage3Label}
+                id="skill-damage3"
+                label={translations.skillDamage3}
                 variant="standard"
                 value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{
@@ -609,12 +619,12 @@ export default function Overview() {
         )}
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier4 && (
-          <Grid item className="grid-item" xs={12} display="flex">
-            <Tooltip title={`Modifier: ${numberToPercents(skillStatsWithEffects.modifier4)}`}>
+          <Grid item className="stat-field" xs={12} display="flex">
+            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier4)}`}>
               <TextField
                 fullWidth
-                id="skillDamage4"
-                label={skillStatsWithEffects.skillDamage4Label}
+                id="skill-damage4"
+                label={translations.skillDamage4}
                 variant="standard"
                 value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
                 InputProps={{

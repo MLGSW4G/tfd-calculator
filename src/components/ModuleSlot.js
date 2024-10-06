@@ -1,6 +1,6 @@
 // src/components/ModuleSlot.js
 import { React, useContext } from "react";
-import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_HEX, SUB_MODULE_STRING, SKILL_MODULE_STRING } from "../const";
+import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_HEX } from "../const";
 import { getTranslation } from "../translations";
 import { LocalizationContext } from "./LocalizationContext";
 import { Module } from "./Module";

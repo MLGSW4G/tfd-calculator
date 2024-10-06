@@ -1,4 +1,4 @@
-// translations.js
+// src/translations.js
 import enTranslations from "./locales/en.json";
 import ruTranslations from "./locales/ru.json";
 

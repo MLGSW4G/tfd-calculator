@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { LocalizationContext } from "../components/LocalizationContext";
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { getTranslation } from "../translations";
 
 function Settings() {
@@ -10,9 +10,13 @@ function Settings() {
   const translations = getTranslation(language, "settings");
 
   return (
-    <div style={{marginLeft: "5%"}}>
-      <Typography id="language-label">{translations.language}</Typography>
-      <LanguageSwitcher />;
+    <div style={{ position: "relative", marginTop: "3%", left: "10%", width: "80%" }}>
+      <Grid container>
+        <Grid item sx={12}>
+          <Typography id="language-label">{translations.language}</Typography>
+          <LanguageSwitcher />
+        </Grid>
+      </Grid>
     </div>
   );
 }

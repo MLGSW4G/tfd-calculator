@@ -23,6 +23,7 @@ const LanguageSwitcher = () => {
         labelId="language-label"
         value={language}
         onChange={handleLanguageChange}
+        style={{minWidth: 200}}
       >
         <MenuItem value="en">English</MenuItem>
         <MenuItem value="ru">Русский</MenuItem>

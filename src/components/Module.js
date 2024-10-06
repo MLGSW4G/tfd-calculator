@@ -1,10 +1,15 @@
 // src/components/Module.js
-import { React, useState, useMemo } from "react";
+import { React, useState, useMemo, useContext } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
+import { getTranslation } from "../translations";
+import { LocalizationContext } from "./LocalizationContext";
 
 export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel, onModuleDrop }) => {
+  const { language } = useContext(LocalizationContext);
+  const translations = getTranslation(language, "module");
+
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
@@ -113,10 +118,10 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
       >
         {isInModuleSlot && (
           <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>
-            <button onClick={incrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
+            <button className="button" onClick={incrementLevel}>
               +
             </button>
-            <button onClick={decrementLevel} style={{ padding: "5px", cursor: "pointer" }}>
+            <button className="button" onClick={decrementLevel}>
               -
             </button>
           </div>
@@ -131,6 +136,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             height: 34,
             top: -10,
             pointerEvents: "none",
+            zIndex: -1
           }}
         />
 
