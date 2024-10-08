@@ -310,13 +310,13 @@ export default function Overview() {
 
       <Grid container>
         <Grid item xs={6}>
-          <Tooltip title={translations.elementTooltip} placement="top">
+          <Tooltip enterDelay={0} title={translations.elementTooltip} placement="top">
             <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label={translations.element} />
           </Tooltip>
         </Grid>
 
         <Grid item xs={6}>
-          <Tooltip title={translations.typeTooltip} placement="top">
+          <Tooltip enterDelay={0} title={translations.typeTooltip} placement="top">
             <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label={translations.type} />
           </Tooltip>
         </Grid>
@@ -348,11 +348,16 @@ export default function Overview() {
           <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label={translations.reactorEnhancement} />
           {reactorEnhancement && (
             <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
-              <MenuItem value={1} title={translations.reactorUpgrade1Tooltip}>
-                {translations.reactorUpgrade1}
+              <MenuItem value={1}>
+                <Tooltip enterDelay={0} title={translations.reactorUpgrade1Tooltip} placement="right">
+                  {translations.reactorUpgrade1}
+                </Tooltip>
               </MenuItem>
-              <MenuItem value={2} title={translations.reactorUpgrade2Tooltip}>
-                {translations.reactorUpgrade2}
+
+              <MenuItem value={2}>
+                <Tooltip enterDelay={0} title={translations.reactorUpgrade2Tooltip} placement="right">
+                  {translations.reactorUpgrade2}
+                </Tooltip>
               </MenuItem>
             </Select>
           )}
@@ -560,7 +565,7 @@ export default function Overview() {
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier1 && (
           <Grid item className="stat-field" xs={12} display="flex">
-            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier1)}`}>
+            <Tooltip enterDelay={0} title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier1)}`}>
               <TextField
                 fullWidth
                 id="skill-damage1"
@@ -580,7 +585,7 @@ export default function Overview() {
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier2 && (
           <Grid item className="stat-field" xs={12} display="flex">
-            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier2)}`}>
+            <Tooltip enterDelay={0} title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier2)}`}>
               <TextField
                 fullWidth
                 id="skill-damage2"
@@ -600,7 +605,7 @@ export default function Overview() {
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier3 && (
           <Grid item className="stat-field" xs={12} display="flex">
-            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier3)}`}>
+            <Tooltip enterDelay={0} title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier3)}`}>
               <TextField
                 fullWidth
                 id="skill-damage3"
@@ -620,7 +625,7 @@ export default function Overview() {
 
         {skillStatsWithEffects && skillStatsWithEffects.modifier4 && (
           <Grid item className="stat-field" xs={12} display="flex">
-            <Tooltip title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier4)}`}>
+            <Tooltip enterDelay={0} title={`${translations.modifier}: ${numberToPercents(skillStatsWithEffects.modifier4)}`}>
               <TextField
                 fullWidth
                 id="skill-damage4"
