@@ -391,7 +391,8 @@ const Modules = () => {
         >
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
             <TextField className="search-bar" variant="outlined" placeholder={translations.searchBarPlaceholder} value={searchTerm} onChange={handleSearchChange} sx={{ margin: 1 }} />
-            <FormControl className="module-socket-type-filter" sx={{ margin: 1, minWidth: 200 }}>
+
+            <FormControl className="module-socket-type-filter" sx={{ margin: 1, minWidth: 180 }}>
               <InputLabel>{translations.socketType}</InputLabel>
               <Select
                 multiple
@@ -409,6 +410,7 @@ const Modules = () => {
                             width: "20px",
                             height: "20px",
                             backgroundImage: `url(${getSocketTypeIcon(value)})`,
+                            filter: "brightness(0)",
                             backgroundSize: "cover",
                             borderRadius: "2px",
                           }}
@@ -419,14 +421,19 @@ const Modules = () => {
               >
                 {MODULE_SOCKET_TYPES.map((type) => (
                   <MenuItem key={type} value={type}>
-                    <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                    {type} ({getSocketTypeCounts()[type] || 0})
+                    <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", filter: "brightness(0)" }} />
+                        {type}
+                      </Box>
+                      <Box sx={{ textAlign: "right" }}>{getSocketTypeCounts()[type] || 0}</Box>
+                    </Box>
                   </MenuItem>
                 ))}
               </Select>
             </FormControl>
 
-            <FormControl className="module-tier-filter" sx={{ margin: 1, minWidth: 200 }}>
+            <FormControl className="module-tier-filter" sx={{ margin: 1, minWidth: 190 }}>
               <InputLabel>{translations.tier}</InputLabel>
               <Select
                 multiple
@@ -444,7 +451,7 @@ const Modules = () => {
                             width: "20px",
                             height: "20px",
                             backgroundColor: getTierColor(value),
-                            borderRadius: "2px",
+                            borderRadius: "20px",
                           }}
                         />
                       ))}
@@ -453,22 +460,28 @@ const Modules = () => {
               >
                 {MODULE_TIERS.map((tier) => (
                   <MenuItem key={tier} value={tier}>
-                    <div
-                      alt={`${tier} icon`}
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        marginRight: "8px",
-                        backgroundColor: getTierColor(tier),
-                      }}
-                    />
-                    {tier} ({getTierCounts()[tier] || 0})
+                    <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <div
+                          alt={`${tier} icon`}
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            marginRight: "8px",
+                            backgroundColor: getTierColor(tier),
+                            borderRadius: "20px",
+                          }}
+                        />
+                        {tier}
+                      </Box>
+                      <Box sx={{ textAlign: "right" }}>{getTierCounts()[tier] || 0}</Box>
+                    </Box>
                   </MenuItem>
                 ))}
               </Select>
             </FormControl>
 
-            <FormControl className="module-class-filter" sx={{ margin: 1, minWidth: 200 }}>
+            <FormControl className="module-class-filter" sx={{ margin: 1, minWidth: 220 }}>
               <InputLabel>{translations.class}</InputLabel>
               <Select
                 multiple
@@ -496,8 +509,13 @@ const Modules = () => {
               >
                 {MODULE_CLASSES.map((cls) => (
                   <MenuItem key={cls} value={cls} disabled>
-                    <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", background: "gray" }} />
-                    {cls} ({getClassCounts()[cls] || 0})
+                    <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
+                        {cls}
+                      </Box>
+                      <Box sx={{ textAlign: "right" }}>{getClassCounts()[cls] || 0}</Box>
+                    </Box>
                   </MenuItem>
                 ))}
               </Select>
@@ -529,7 +547,10 @@ const Modules = () => {
               >
                 {MODULE_TYPES.map((type) => (
                   <MenuItem key={type} value={type}>
-                    {type} ({getTypeCounts()[type] || 0})
+                    <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>{type}</Box>
+                      <Box sx={{ textAlign: "right" }}>{getTypeCounts()[type] || 0}</Box>
+                    </Box>
                   </MenuItem>
                 ))}
               </Select>
