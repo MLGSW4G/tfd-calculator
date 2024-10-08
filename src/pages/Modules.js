@@ -52,7 +52,11 @@ const Modules = () => {
     const currentModule = equippedModules[index];
 
     // Check if the module can be equipped onto the current slot
-    if ((index === 0 && module.moduleTier === "Transcendent") || (index === 6 && module.moduleStat[0].value.includes("Max Module Capacity")) || (index !== 6 && index !== 0)) {
+    if (
+      (index === 0 && module.moduleTier === "Transcendent") ||
+      (index === 6 && module.moduleStat[0].value.includes("Max Module Capacity")) ||
+      (index !== 6 && index !== 0 && !module.moduleStat[0].value.includes("Max Module Capacity") && module.moduleTier !== "Transcendent")
+    ) {
       setEquippedModules((prevEquippedModules) => {
         const newEquippedModules = [...prevEquippedModules];
         newEquippedModules[index] = { module, moduleLevel: 0 };
