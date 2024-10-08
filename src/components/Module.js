@@ -1,6 +1,6 @@
 // src/components/Module.js
 import { React, useState, useMemo, useContext } from "react";
-import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent } from "../const";
+import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent, colorRare, colorStandard, colorTranscendent, colorUltimate } from "../const";
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
 import { getTranslation } from "../translations";
@@ -9,15 +9,15 @@ import { LocalizationContext } from "./LocalizationContext";
 export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel, onModuleDrop }) => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "module");
+  const translationsModules = getTranslation(language, "modules");
 
   const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
   const moduleDescription = useMemo(() => {
-    const stat = module.moduleStat[moduleLevel];
-    return stat[Object.keys(stat)[2]];
-  }, [module, moduleLevel]);
+    return [module.id, translations.classes[module.moduleClass], translations.socketTypes[module.moduleSocketType], module.moduleStat[moduleLevel]["value"]];
+  }, [module, moduleLevel, translations]);
 
   let moduleSocketType, moduleClass, moduleTier;
 
@@ -88,7 +88,46 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   };
 
   return (
-    <Tooltip title={<div style={{ fontSize: "16px" }}>{moduleDescription}</div>}>
+    <Tooltip
+      componentsProps={{
+        tooltip: {
+          sx: {
+            bgcolor: `${module.moduleTier === "Standard" ? colorStandard : module.moduleTier === "Rare" ? colorRare : module.moduleTier === "Ultimate" ? colorUltimate : colorTranscendent}ee`, // Slightly transparent background
+            border: "2px solid black",
+            borderRadius: "4px",
+            filter: "grayscale(25%)", // Apply grayscale to the background
+          },
+        },
+      }}
+      title={
+        <div id="module-description" style={{ fontSize: 16, color: "black" }}>
+          <div id="module-effect">{moduleDescription[3]}</div>
+
+          <hr color="black" />
+
+          <div id="module-id" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <p style={{ margin: 0 }}>{translationsModules.id}</p>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>{moduleDescription[0]}</div>
+          </div>
+
+          <div id="module-class" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <p style={{ margin: 0 }}>{translationsModules.class}</p>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+              {moduleDescription[1]}
+              <img width={16} height={16} src={moduleClass.replace("_Color", "")} style={{ filter: "brightness(0)", marginLeft: "4px" }} alt="" />
+            </div>
+          </div>
+
+          <div id="module-socket-type" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <p style={{ margin: 0 }}>{translationsModules.socketType}</p>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+              {moduleDescription[2]}
+              <img width={16} height={16} src={moduleSocketType} style={{ filter: "brightness(0)", marginLeft: "4px" }} alt="" />
+            </div>
+          </div>
+        </div>
+      }
+    >
       <div
         className="module"
         style={{
@@ -136,7 +175,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             height: 34,
             top: -10,
             pointerEvents: "none",
-            zIndex: -1
+            zIndex: -1,
           }}
         />
 
@@ -254,7 +293,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           {module.moduleName}
         </p>
 
-        <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none" }}>{module.moduleType}</p>
+        <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none", textAlign: "center" }}>{translations.types[module.moduleType]}</p>
       </div>
     </Tooltip>
   );
