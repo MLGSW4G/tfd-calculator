@@ -16,7 +16,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
   const moduleDescription = useMemo(() => {
-    return [module.id, translations.classes[module.moduleClass], translations.socketTypes[module.moduleSocketType], module.moduleStat[moduleLevel]["value"]];
+    return [module.id, translations.classes[module.moduleClass], translations.socketTypes[module.moduleSocketType], translations.moduleStat[module.moduleStat[moduleLevel].value]];
   }, [module, moduleLevel, translations]);
 
   let moduleSocketType, moduleClass, moduleTier;
@@ -290,7 +290,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         >
-          {module.moduleName}
+          {translations.moduleName[module.id]}
         </p>
 
         <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none", textAlign: "center" }}>{translations.types[module.moduleType]}</p>
