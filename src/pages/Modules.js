@@ -13,6 +13,7 @@ import { getTranslation } from "../translations";
 const Modules = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "modules");
+  const translationsModule = getTranslation(language, "module");
 
   const [moduleList, setModuleList] = useState(
     moduleData
@@ -392,7 +393,7 @@ const Modules = () => {
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
             <TextField className="search-bar" variant="outlined" placeholder={translations.searchBarPlaceholder} value={searchTerm} onChange={handleSearchChange} sx={{ margin: 1 }} />
 
-            <FormControl className="module-socket-type-filter" sx={{ margin: 1, minWidth: 180 }}>
+            <FormControl className="module-socket-type-filter" sx={{ margin: 1, minWidth: 200 }}>
               <InputLabel>{translations.socketType}</InputLabel>
               <Select
                 multiple
@@ -424,7 +425,7 @@ const Modules = () => {
                     <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
                       <Box sx={{ display: "flex", alignItems: "center" }}>
                         <img src={getSocketTypeIcon(type)} alt={`${type} icon`} style={{ width: "20px", height: "20px", marginRight: "8px", filter: "brightness(0)" }} />
-                        {type}
+                        {translationsModule.socketTypes[type]}
                       </Box>
                       <Box sx={{ textAlign: "right" }}>{getSocketTypeCounts()[type] || 0}</Box>
                     </Box>
@@ -433,7 +434,7 @@ const Modules = () => {
               </Select>
             </FormControl>
 
-            <FormControl className="module-tier-filter" sx={{ margin: 1, minWidth: 190 }}>
+            <FormControl className="module-tier-filter" sx={{ margin: 1, minWidth: 210 }}>
               <InputLabel>{translations.tier}</InputLabel>
               <Select
                 multiple
@@ -472,7 +473,7 @@ const Modules = () => {
                             borderRadius: "20px",
                           }}
                         />
-                        {tier}
+                        {translationsModule.tiers[tier]}
                       </Box>
                       <Box sx={{ textAlign: "right" }}>{getTierCounts()[tier] || 0}</Box>
                     </Box>
@@ -481,7 +482,7 @@ const Modules = () => {
               </Select>
             </FormControl>
 
-            <FormControl className="module-class-filter" sx={{ margin: 1, minWidth: 220 }}>
+            <FormControl className="module-class-filter" sx={{ margin: 1, minWidth: 250 }}>
               <InputLabel>{translations.class}</InputLabel>
               <Select
                 multiple
@@ -512,7 +513,7 @@ const Modules = () => {
                     <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
                       <Box sx={{ display: "flex", alignItems: "center" }}>
                         <img src={getClassIcon(cls)} alt={`${cls} icon`} style={{ width: "20px", height: "20px", marginRight: "8px" }} />
-                        {cls}
+                        {translationsModule.classes[cls]}
                       </Box>
                       <Box sx={{ textAlign: "right" }}>{getClassCounts()[cls] || 0}</Box>
                     </Box>
@@ -521,7 +522,7 @@ const Modules = () => {
               </Select>
             </FormControl>
 
-            <FormControl className="module-type-filter" sx={{ margin: 1, minWidth: 200 }}>
+            <FormControl className="module-type-filter" sx={{ margin: 1, minWidth: 240 }}>
               <InputLabel>{translations.type}</InputLabel>
               <Select
                 multiple
@@ -548,7 +549,7 @@ const Modules = () => {
                 {MODULE_TYPES.map((type) => (
                   <MenuItem key={type} value={type}>
                     <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
-                      <Box sx={{ display: "flex", alignItems: "center" }}>{type}</Box>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>{translationsModule.types[type]}</Box>
                       <Box sx={{ textAlign: "right" }}>{getTypeCounts()[type] || 0}</Box>
                     </Box>
                   </MenuItem>
