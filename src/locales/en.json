@@ -39,6 +39,48 @@
     "skillDamage4": "Skill damage 4",
     "modifier": "Modifier"
   },
+  "module": {
+    "socketTypes": {
+      "Cerulean": "Cerulean",
+      "Almandine": "Almandine",
+      "Malachite": "Malachite",
+      "Xantic": "Xantic",
+      "Rutile": "Rutile"
+    },
+    "classes": {
+      "Descendant": "Descendant",
+      "General Rounds": "General Rounds",
+      "Impact Rounds": "Impact Rounds",
+      "Special Rounds": "Special Rounds",
+      "High-Power Rounds": "High-Power Rounds"
+    },
+    "tiers": {
+      "Standard": "Standard",
+      "Rare": "Rare",
+      "Ultimate": "Ultimate",
+      "Transcendent": "Transcendent"
+    },
+    "types": {
+      "Attack": "Attack",
+      "Battle": "Battle",
+      "HP": "HP",
+      "Shield": "Shield",
+      "Defense": "Defense",
+      "MP": "MP",
+      "Control": "Control",
+      "Resource": "Resource",
+      "Guard": "Guard",
+      "Cooldown": "Cooldown",
+      "Range": "Range",
+      "Luck": "Luck",
+      "Medical": "Medical",
+      "Strike": "Strike",
+      "Fortitude": "Fortitude",
+      "Support Tech": "Support Tech",
+      "Arche Tech": "Arche Tech",
+      "Final Hand": "Final Hand"
+    }
+  },
   "modules": {
     "searchBarPlaceholder": "Search modules...",
     "sortBy": "Sort by...",

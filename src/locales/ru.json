@@ -39,6 +39,48 @@
     "skillDamage4": "Урон навыка 4",
     "modifier": "Множитель"
   },
+  "module": {
+    "socketTypes": {
+      "Cerulean": "Лазурный",
+      "Almandine": "Гранатовый",
+      "Malachite": "Малахитовый",
+      "Xantic": "Жёлтый",
+      "Rutile": "Рутиловый"
+    },
+    "classes": {
+      "Descendant": "Потомок",
+      "General Rounds": "Обычные патроны",
+      "Impact Rounds": "Ударные патроны",
+      "Special Rounds": "Специальные патроны",
+      "High-Power Rounds": "Мощные патроны"
+    },
+    "tiers": {
+      "Standard": "Стандартный",
+      "Rare": "Редкий",
+      "Ultimate": "Великолепный",
+      "Transcendent": "Превосходный"
+    },
+    "types": {
+      "Attack": "Атака",
+      "Battle": "Битва",
+      "HP": "ОЗ",
+      "Shield": "Щит",
+      "Defense": "Защита",
+      "MP": "МЭ",
+      "Control": "Контроль",
+      "Resource": "Ресурсы",
+      "Guard": "Оборона",
+      "Cooldown": "Перезарядка",
+      "Range": "Дальность",
+      "Luck": "Удача",
+      "Medical": "Медицина",
+      "Strike": "Удар",
+      "Fortitude": "Выдержка",
+      "Support Tech": "Технология Поддержки",
+      "Arche Tech": "Технология Архи",
+      "Final Hand": "Козыри"
+    }
+  },
   "modules": {
     "searchBarPlaceholder": "Искать модули...",
     "sortBy": "Отсортировать по...",
