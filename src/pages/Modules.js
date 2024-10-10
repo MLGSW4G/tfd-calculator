@@ -159,7 +159,7 @@ const Modules = () => {
   const filteredModules = moduleList
     .filter((module) => {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
-      const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm) + module.moduleStat[0]["value"].toLowerCase().includes(lowerCaseSearchTerm);
+      const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm) + module.moduleStat[0]["value"].toLowerCase().includes(lowerCaseSearchTerm) + module.id.includes(lowerCaseSearchTerm);
 
       const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
       const matchesTier = selectedTiers.length > 0 ? selectedTiers.includes(module.moduleTier) : true;
