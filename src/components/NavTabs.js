@@ -45,6 +45,9 @@ const NavTabs = () => {
   const translations = getTranslation(language, "navTabs");
   const location = useLocation();
   const [currentPageIndex, setCurrentPageIndex] = useState(() => {
+    if (location.pathname === "/") {
+      return navigationLinks.findIndex((link) => link.path === "/overview");
+    }
     return navigationLinks.findIndex((link) => link.path === location.pathname);
   });
 
