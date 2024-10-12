@@ -22,11 +22,8 @@ const DescendantStats = () => {
 
   useEffect(() => {
     localStorage.setItem("descendant", JSON.stringify(descendant));
-  }, [descendant]);
-
-  useEffect(() => {
     localStorage.setItem("descendantLevel", JSON.stringify(descendantLevel));
-  }, [descendantLevel]);
+  }, [descendant, descendantLevel]);
 
   const handleDescendantChange = (event, newValue) => {
     if (!newValue) {

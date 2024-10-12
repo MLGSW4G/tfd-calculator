@@ -212,23 +212,11 @@ export default function Overview() {
 
   useEffect(() => {
     localStorage.setItem("element", JSON.stringify(element));
-  }, [element]);
-
-  useEffect(() => {
     localStorage.setItem("skill", JSON.stringify(skill));
-  }, [skill]);
-
-  useEffect(() => {
     localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
-  }, [optimizationConditionMultiplier]);
-
-  useEffect(() => {
+    localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel);
     localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
-  }, [reactorLevel]);
-
-  useEffect(() => {
-    localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel.toString());
-  }, [reactorEnhancementLevel]);
+  }, [element, skill, optimizationConditionMultiplier, reactorEnhancementLevel, reactorLevel]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);
