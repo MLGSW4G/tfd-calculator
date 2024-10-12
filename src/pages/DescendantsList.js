@@ -25,6 +25,13 @@ const DescendantsList = () => {
     localStorage.setItem("descendantLevel", JSON.stringify(descendantLevel));
   }, [descendant, descendantLevel]);
 
+  useEffect(() => {
+    if (descendant) {
+      const initialStats = descendant.descendant_stat.find((stat) => stat.level === descendantLevel).stat_detail.reduce((acc, curr) => ({ ...acc, [curr.stat_type]: curr.stat_value }), {});
+      setStats(initialStats);
+    }
+  }, [descendant, descendantLevel]);
+
   const handleDescendantChange = (event, newValue) => {
     if (!newValue) {
       setDescendant(null);
@@ -45,7 +52,10 @@ const DescendantsList = () => {
       setDescendantLevel(newValue);
       const selectedStat = descendant.descendant_stat.find((stat) => stat.level === newValue);
       if (selectedStat) {
-        setStats(selectedStat.stat_detail.reduce((acc, curr) => ({ ...acc, [curr.stat_type]: curr.stat_value }), {}));
+        const updatedStats = selectedStat.stat_detail.reduce((acc, curr) => ({ ...acc, [curr.stat_type]: curr.stat_value }), {});
+        if (JSON.stringify(updatedStats) !== JSON.stringify(stats)) {
+          setStats(updatedStats);
+        }
       }
     }
   };

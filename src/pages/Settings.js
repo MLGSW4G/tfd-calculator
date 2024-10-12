@@ -12,7 +12,7 @@ const Settings = () => {
   return (
     <div style={{ position: "relative", marginTop: "3%", left: "10%", width: "80%" }}>
       <Grid container>
-        <Grid item sx={12}>
+        <Grid item>
           <Typography id="language-label">{translations.language}</Typography>
           <LanguageSwitcher />
         </Grid>

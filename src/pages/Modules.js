@@ -335,18 +335,18 @@ const Modules = () => {
 
   return (
     <>
-      <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="20%" marginTop="3%" position="relative">
+      <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="25%" marginTop="3%" position="relative">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
-          <Grid
-            container
-            item
-            style={{
-              marginRight: "10%",
-              flex: 1,
-            }}
-          >
-            {equippedModules.map((equippedModule, index) => (
-              <Grid item margin={"20px"} marginBottom={"0px"} key={equippedModule.module.id}>
+          {equippedModules.map((equippedModule, index) => (
+            <Grid
+              container
+              item
+              key={index}
+              style={{
+                flex: 0,
+              }}
+            >
+              <Grid item margin={"15px"} marginBottom={"0px"}>
                 <ModuleSlot
                   equippedModule={equippedModule}
                   onDrop={(e) => handleDrop(e, index)}
@@ -356,8 +356,8 @@ const Modules = () => {
                   onModuleDrop={handleModuleDrop} // Pass the onModuleDrop callback
                 />
               </Grid>
-            ))}
-          </Grid>
+            </Grid>
+          ))}
         </Grid>
       </Box>
 

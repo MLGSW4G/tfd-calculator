@@ -321,13 +321,13 @@ const Overview = () => {
 
             <MenuItem value={1}>
               <Tooltip enterDelay={0} title={translations.reactorUpgrade1Tooltip} placement="right">
-                {translations.reactorUpgrade1}
+                <div>{translations.reactorUpgrade1}</div>
               </Tooltip>
             </MenuItem>
 
             <MenuItem value={2}>
               <Tooltip enterDelay={0} title={translations.reactorUpgrade2Tooltip} placement="right">
-                {translations.reactorUpgrade2}
+                <div>{translations.reactorUpgrade2}</div>
               </Tooltip>
             </MenuItem>
           </Select>
