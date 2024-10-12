@@ -8,7 +8,7 @@ import "../styles/styles.css";
 
 const DescendantsList = () => {
   const { language } = useContext(LocalizationContext);
-  const translations = getTranslation(language, "descendantList");
+  const translations = getTranslation(language, "descendantsList");
 
   const [descendant, setDescendant] = useState(() => {
     const cachedDescendant = localStorage.getItem("descendant");
@@ -42,7 +42,6 @@ const DescendantsList = () => {
     const selectedDescendant = data.find((descendant) => descendant.descendant_name === newValue.descendant_name);
     if (selectedDescendant) {
       setDescendant(selectedDescendant);
-      setDescendantLevel(1);
       setStats(selectedDescendant.descendant_stat.find((stat) => stat.level === 1).stat_detail.reduce((acc, curr) => ({ ...acc, [curr.stat_type]: curr.stat_value }), {}));
     }
   };
@@ -77,7 +76,7 @@ const DescendantsList = () => {
             fullWidth
             id="selected-descendant"
             options={data}
-            getOptionLabel={(option) => option.descendant_name}
+            getOptionLabel={(option) => translations.descendants[option.descendant_name]}
             value={descendant || null} // Update to match the entire object
             onChange={handleDescendantChange}
             renderInput={(params) => <TextField {...params} label={translations.descendantLabel} />}
@@ -97,7 +96,7 @@ const DescendantsList = () => {
           <Grid item xs={12} key={statType}>
             <TextField
               fullWidth
-              label={statType}
+              label={translations[statType]} // Use localized label if available, otherwise use statType
               value={stats[statType]}
               InputProps={{
                 readOnly: true,

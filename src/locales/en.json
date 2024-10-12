@@ -3732,9 +3732,39 @@
     "class": "Class",
     "type": "Group"
   },
-  "descendantList": {
+  "descendantsList": {
     "descendantLabel": "Descendant name",
-    "descendantLevel": "Descendant level"
+    "descendantLevel": "Descendant level",
+    "Max HP": "Max HP",
+    "Max Shield": "Max Shield",
+    "Max MP": "Max MP",
+    "DEF": "DEF",
+    "Shield Recovery Out of Combat": "Shield Recovery Out of Combat",
+    "Shield Recovery In Combat": "Shield Recovery In Combat",
+    "descendants": {
+      "Ajax": "Ajax",
+      "Ultimate Lepic": "Ultimate Lepic",
+      "Freyna": "Freyna",
+      "Gley": "Gley",
+      "Sharen": "Sharen",
+      "Blair": "Blair",
+      "Valby": "Valby",
+      "Kyle": "Kyle",
+      "Esiemo": "Esiemo",
+      "Lepic": "Lepic",
+      "Viessa": "Viessa",
+      "Jayber": "Jayber",
+      "Bunny": "Bunny",
+      "Ultimate Ajax": "Ultimate Ajax",
+      "Ultimate Viessa": "Ultimate Viessa",
+      "Enzo": "Enzo",
+      "Yujin": "Yujin",
+      "Ultimate Bunny": "Ultimate Bunny",
+      "Ultimate Gley": "Ultimate Gley",
+      "Luna": "Luna",
+      "Ultimate Valby": "Ultimate Valby",
+      "Hailey": "Hailey"
+    }
   },
   "settings": {
     "language": "Language"

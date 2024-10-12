@@ -3732,9 +3732,39 @@
     "class": "Класс",
     "type": "Группа"
   },
-  "descendantList": {
+  "descendantsList": {
     "descendantLabel": "Имя потомка",
-    "descendantLevel": "Уровень потомка"
+    "descendantLevel": "Уровень потомка",
+    "Max HP": "Макс. ОЗ",
+    "Max Shield": "Макс. щит",
+    "Max MP": "Макс. МЭ",
+    "DEF": "ЗАЩ",
+    "Shield Recovery Out of Combat": "Восстановление щита вне боя",
+    "Shield Recovery In Combat": "Восстановление щита в бою",
+    "descendants": {
+      "Ajax": "Аякс",
+      "Ultimate Lepic": "Супер-Лепик",
+      "Freyna": "Фрейна",
+      "Gley": "Глей",
+      "Sharen": "Шарен",
+      "Blair": "Блейр",
+      "Valby": "Валби",
+      "Kyle": "Кайл",
+      "Esiemo": "Эсьемо",
+      "Lepic": "Лепик",
+      "Viessa": "Вьесса",
+      "Jayber": "Джейбер",
+      "Bunny": "Банни",
+      "Ultimate Ajax": "Супер-Аякс",
+      "Ultimate Viessa": "Супер-Вьесса",
+      "Enzo": "Энцо",
+      "Yujin": "Юджин",
+      "Ultimate Bunny": "Супер-Банни",
+      "Ultimate Gley": "Супер-Глей",
+      "Luna": "Луна",
+      "Ultimate Valby": "Супер-Валби",
+      "Hailey": "Хейли"
+    }
   },
   "settings": {
     "language": "Язык"
