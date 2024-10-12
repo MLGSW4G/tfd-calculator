@@ -132,30 +132,6 @@ const Modules = () => {
     });
   };
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleSocketTypeChange = (e) => {
-    const value = e.target.value;
-    setSelectedSocketTypes(typeof value === "string" ? value.split(",") : value);
-  };
-
-  const handleTierChange = (e) => {
-    const value = e.target.value;
-    setSelectedTiers(typeof value === "string" ? value.split(",") : value);
-  };
-
-  const handleClassChange = (e) => {
-    const value = e.target.value;
-    setSelectedClasses(typeof value === "string" ? value.split(",") : value);
-  };
-
-  const handleTypeChange = (e) => {
-    const value = e.target.value;
-    setSelectedTypes(typeof value === "string" ? value.split(",") : value);
-  };
-
   const filteredModules = moduleList
     .filter((module) => {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -390,14 +366,26 @@ const Modules = () => {
           }}
         >
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-            <TextField className="search-bar" variant="outlined" placeholder={translations.searchBarPlaceholder} value={searchTerm} onChange={handleSearchChange} sx={{ margin: 1 }} />
+            <TextField
+              className="search-bar"
+              variant="outlined"
+              placeholder={translations.searchBarPlaceholder}
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+              sx={{ margin: 1 }}
+            />
 
             <FormControl className="module-socket-type-filter" sx={{ margin: 1, minWidth: 200 }}>
               <InputLabel>{translations.socketType}</InputLabel>
               <Select
                 multiple
                 value={selectedSocketTypes}
-                onChange={handleSocketTypeChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedSocketTypes(typeof value === "string" ? value.split(",") : value);
+                }}
                 MenuProps={{ sx: { marginTop: "10px" } }}
                 renderValue={(selected) => (
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
@@ -438,7 +426,10 @@ const Modules = () => {
               <Select
                 multiple
                 value={selectedTiers}
-                onChange={handleTierChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedTiers(typeof value === "string" ? value.split(",") : value);
+                }}
                 MenuProps={{ sx: { marginTop: "10px" } }}
                 renderValue={(selected) => (
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
@@ -486,7 +477,10 @@ const Modules = () => {
               <Select
                 multiple
                 value={selectedClasses}
-                onChange={handleClassChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedClasses(typeof value === "string" ? value.split(",") : value);
+                }}
                 MenuProps={{ sx: { marginTop: "10px" } }}
                 renderValue={(selected) => (
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
@@ -526,7 +520,10 @@ const Modules = () => {
               <Select
                 multiple
                 value={selectedTypes}
-                onChange={handleTypeChange}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSelectedTypes(typeof value === "string" ? value.split(",") : value);
+                }}
                 MenuProps={{ sx: { marginTop: "10px" } }}
                 renderValue={(selected) => (
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
