@@ -19,7 +19,10 @@ const Overview = () => {
     subSkillPower: ReactorLevels[level].sub_skill_atk_power,
   }));
 
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState(() => {
+    const cachedSelectedSkill = localStorage.getItem("selectedSkill");
+    return cachedSelectedSkill ? JSON.parse(cachedSelectedSkill) : null;
+  });
   const [skillStats, setSkillStats] = useState(null);
   const [totalSkillPower, setTotalSkillPower] = useState("");
   const [skillStatsWithEffects, setSkillStatsWithEffects] = useState({});
@@ -118,12 +121,17 @@ const Overview = () => {
   }, [selectedSkill, totalEffects]);
 
   useEffect(() => {
+    localStorage.setItem("selectedSkill", JSON.stringify(selectedSkill));
+  }, [selectedSkill]);
+
+  useEffect(() => {
+    localStorage.setItem("selectedSkill", JSON.stringify(selectedSkill));
     localStorage.setItem("element", JSON.stringify(element));
     localStorage.setItem("skill", JSON.stringify(skill));
     localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
     localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel);
     localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
-  }, [element, skill, optimizationConditionMultiplier, reactorEnhancementLevel, reactorLevel]);
+  }, [selectedSkill, element, skill, optimizationConditionMultiplier, reactorEnhancementLevel, reactorLevel]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);
@@ -177,6 +185,7 @@ const Overview = () => {
             options={sortedRows}
             groupBy={(option) => option.descendant}
             getOptionLabel={(option) => `${option.skillNumber}. ${option.skillName}`}
+            value={selectedSkill}
             onChange={handleComboBoxChange}
             filterOptions={filterOptions}
             renderInput={(params) => <TextField {...params} label={translations.selectedSkillPlaceholder} />}
