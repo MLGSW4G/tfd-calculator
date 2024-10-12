@@ -135,7 +135,7 @@ const Modules = () => {
   const filteredModules = moduleList
     .filter((module) => {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
-      const matchesName = module.moduleName.toLowerCase().includes(lowerCaseSearchTerm) + module.moduleStat[0]["value"].toLowerCase().includes(lowerCaseSearchTerm) + module.id.includes(lowerCaseSearchTerm);
+      const matchesName = translationsModule.moduleName[module.id].toLowerCase().includes(lowerCaseSearchTerm) + translationsModule.moduleStat[module.moduleStat[0].value].toLowerCase().includes(lowerCaseSearchTerm) + module.id.includes(lowerCaseSearchTerm);
 
       const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
       const matchesTier = selectedTiers.length > 0 ? selectedTiers.includes(module.moduleTier) : true;
@@ -149,7 +149,7 @@ const Modules = () => {
         case "id":
           return a.id - b.id;
         case "name":
-          return a.moduleName.localeCompare(b.moduleName);
+          return translationsModule.moduleName[a.id].localeCompare(translationsModule.moduleName[b.id]);
         case "socketType":
           return MODULE_SOCKET_TYPES.indexOf(a.moduleSocketType) - MODULE_SOCKET_TYPES.indexOf(b.moduleSocketType);
         case "tier":

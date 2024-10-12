@@ -33,7 +33,7 @@ To start using the web app, simply follow the link to the deployed web applicati
   - [ ] Add a module capacity indicator with a logo and a graph visualizing module capacity.
   - [ ] Implement changes to equipped modules capacity based on slot socket type.
   - [ ] Introduce a mode for selecting slot socket types.
-  - [ ] Fix search functionality to search by displayed names and values, not just English names.
+  - [X] Fix search functionality to search by displayed names and values, not just English names.
   - [ ] Make the **module-zone** box height adjustable.
 - [X] Fix 404 error issues:
   - [X] Allow users to navigate to any page, not just the root page.
