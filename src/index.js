@@ -1,9 +1,9 @@
 // src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom"; // Import Router here
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import "./styles/styles.css"; // Adjust path according to your styles location
+import "./styles/styles.css";
 
 ReactDOM.render(
   <Router basename="/tfd-calculator">
