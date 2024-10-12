@@ -1,4 +1,4 @@
-// pages/skills/SpeedofLight.js
+// src/pages/skills/SpeedofLight.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Speed of Light");

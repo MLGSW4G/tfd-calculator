@@ -1,4 +1,4 @@
-// pages/skills/RabbitFoot.js
+// src/pages/skills/RabbitFoot.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Rabbit Foot");
