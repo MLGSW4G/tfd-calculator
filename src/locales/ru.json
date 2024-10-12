@@ -3764,6 +3764,18 @@
       "Luna": "Луна",
       "Ultimate Valby": "Супер-Валби",
       "Hailey": "Хейли"
+    },
+    "skills": {
+      "Rabbit Foot": "Быстроногий кролик",
+      "Thrill Bomb": "Электробомба",
+      "HV Thrill Bomb": "ВН Электробомба",
+      "Speed of Light": "Скорость света",
+      "Lightning Emission": "Грозовые разряды",
+      "HV Lightning Emission": "ВН Грозовые разряды",
+      "Maximum Power": "Максимальная мощность",
+      "Electric Charge": "Электрический заряд",
+      "Electric Condense": "Концентрация электричества",
+      "Cutoff Beam": "Режущий луч"
     }
   },
   "settings": {

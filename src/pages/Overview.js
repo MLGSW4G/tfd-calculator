@@ -12,6 +12,7 @@ import "../styles/styles.css";
 const Overview = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "overview");
+  const translationsDescendantsList = getTranslation(language, "descendantsList");
 
   const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
     value: parseInt(level),
@@ -183,8 +184,8 @@ const Overview = () => {
             fullWidth
             id="selected-skill"
             options={sortedRows}
-            groupBy={(option) => option.descendant}
-            getOptionLabel={(option) => `${option.skillNumber}. ${option.skillName}`}
+            groupBy={(option) => translationsDescendantsList.descendants[option.descendant]}
+            getOptionLabel={(option) => `${option.skillNumber}. ${translationsDescendantsList.skills[option.skillName]}`}
             value={selectedSkill}
             onChange={handleComboBoxChange}
             filterOptions={filterOptions}

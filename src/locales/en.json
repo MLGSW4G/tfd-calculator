@@ -3764,6 +3764,18 @@
       "Luna": "Luna",
       "Ultimate Valby": "Ultimate Valby",
       "Hailey": "Hailey"
+    },
+    "skills": {
+      "Rabbit Foot": "Rabbit Foot",
+      "Thrill Bomb": "Thrill Bomb",
+      "HV Thrill Bomb": "HV Thrill Bomb",
+      "Speed of Light": "Speed of Light",
+      "Lightning Emission": "Lightning Emission",
+      "HV Lightning Emission": "HV Lightning Emission",
+      "Maximum Power": "Maximum Power",
+      "Electric Charge": "Electric Charge",
+      "Electric Condense": "Electric Condense",
+      "Cutoff Beam": "Cutoff Beam"
     }
   },
   "settings": {
