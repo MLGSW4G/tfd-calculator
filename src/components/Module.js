@@ -197,14 +197,14 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           style={{
             position: "absolute",
             top: -42,
-            left: 78,
+            left: 76,
             fontFamily: "Teko",
             fontSize: 28,
             color: "white",
             pointerEvents: "none",
           }}
         >
-          {module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].module_capacity : ""}
+          {module.moduleStat[0].value.includes("Max Module Capacity") ? "+" : null}{module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].module_capacity : ""}
         </p>
 
         <img
