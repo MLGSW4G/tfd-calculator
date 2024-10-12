@@ -35,10 +35,10 @@ To start using the web app, simply follow the link to the deployed web applicati
   - [ ] Introduce a mode for selecting slot socket types.
   - [ ] Fix search functionality to search by displayed names and values, not just English names.
   - [ ] Make the **module-zone** box height adjustable.
-- [ ] Fix 404 error issues:
-  - [ ] Allow users to navigate to any page, not just the root page.
-  - [ ] Resolve 404 errors on page refresh.
-  - [ ] Ensure redirects maintain proper view of NavTabs on reload.
+- [X] Fix 404 error issues:
+  - [X] Allow users to navigate to any page, not just the root page.
+  - [X] Resolve 404 errors on page refresh.
+  - [X] Ensure redirects maintain proper view of NavTabs on reload.
 - [ ] Adjust scaling of the entire web app and modules.
 - [ ] Ensure mobile device compatibility:
   - [ ] Develop a mobile version of the web app that users are redirected to on mobile devices.
