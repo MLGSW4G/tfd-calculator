@@ -4,7 +4,7 @@
         "weapon_name": "Hungry Hound",
         "image_url": "https://open.api.nexon.com/static/tfd/img/5121f653612028a206f3131f81495b2f",
         "weapon_type": "Handgun",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "General Rounds",
         "base_stat": [
             {
@@ -9478,7 +9478,7 @@
         "weapon_name": "Gangster",
         "image_url": "https://open.api.nexon.com/static/tfd/img/b0c9584713f7c367cf707296bd0f055e",
         "weapon_type": "Shotgun",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "High-Power Rounds",
         "base_stat": [
             {
@@ -11098,11 +11098,11 @@
             },
             {
                 "stat_id": "105000006",
-                "stat_value": 22.22
+                "stat_value": 38.88
             },
             {
                 "stat_id": "105000036",
-                "stat_value": 38.88
+                "stat_value": 55.55
             },
             {
                 "stat_id": "105000051",
@@ -12636,7 +12636,7 @@
             }
         ],
         "weapon_perk_ability_name": "Impending Judgement",
-        "weapon_perk_ability_description": "On hitting the enemy with all fired bullets, grants the unique ability Executor's Exaltation.\nWhen hitting at the maximum level, the Weak Point Damage multiplier is increased and applied, and the target enemy is afflicted with the  Electrocuted effect.",
+        "weapon_perk_ability_description": "On hitting the enemy with all bullets, grants the unique ability Executor's Exaltation.\nAt the highest stage, increases Weak Point Damage on hit and inflicts Electrocution on the target enemy.",
         "weapon_perk_ability_image_url": "https://open.api.nexon.com/static/tfd/img/7a200ed97bc9b3559dfd5a4de11a0b69"
     },
     {
@@ -12644,7 +12644,7 @@
         "weapon_name": "Albinism",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4a421dec7ac3fa78c8c18fc8333a19b8",
         "weapon_type": "Submachine Gun",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "General Rounds",
         "base_stat": [
             {
@@ -26856,7 +26856,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/e8d6df58bebb6ba872ed95fb57b9747b",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -28439,7 +28439,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/a7d4522f4305acb1183381405cd36624",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -30022,7 +30022,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/e557c0bb7adaaa72ab0a8f0f4fa027f5",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -31605,7 +31605,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/6189e473cbb4181c2a7da06d48cb886d",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Ultimate",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -33188,7 +33188,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/628a4b24dc92c15e765a859935a42b4c",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Ultimate",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -34770,7 +34770,7 @@
         "weapon_name": "Nightmare Hound",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7a4c3e81ac44c7e936f4f969a591f577",
         "weapon_type": "Scout Rifle",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "Impact Rounds",
         "base_stat": [
             {
@@ -53555,7 +53555,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/e386f1953bc51608e13e50dad6d79a34",
         "weapon_type": "Beam Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -55102,7 +55102,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/6bd1dab4c7cc6b839a602a486266c3ca",
         "weapon_type": "Beam Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -56649,11 +56649,11 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/1b2c6549e87addec20642f852b0afcf4",
         "weapon_type": "Beam Rifle",
         "weapon_tier": "Ultimate",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
-                "stat_value": 545.0
+                "stat_value": 645.0
             },
             {
                 "stat_id": "105000035",
@@ -58187,7 +58187,7 @@
             }
         ],
         "weapon_perk_ability_name": "Guardian",
-        "weapon_perk_ability_description": "Aiming activates Preview Mode.\nWhen canceling the aim, deactivates Preview Mode.\nWhen firing while aiming, deploys up to 3 Guardian Lance on the terrain and consumes a set amount of ammo upon deployment.\nThe deployed Guardian Lance lasts for a set amount of time, and Guardian Lance deals damage periodically to nearby enemies.\nEach time the deployed Guardian Lance is hit, its duration and range are slightly increased.",
+        "weapon_perk_ability_description": "Aiming activates Preview Mode.\nCanceling aiming, deactivates Preview Mode.\nWhen firing while aiming, deploys up to 3 units of the unique ability Guardian Lance on the terrain and consumes a set amount of ammo upon deployment.\nThe deployed Guardian Lances last for a set amount of time, and each Guardian Lance deals damage to nearby enemies at fixed intervals.\nEach time a deployed Guardian Lance is hit, its duration and range are slightly increased.",
         "weapon_perk_ability_image_url": "https://open.api.nexon.com/static/tfd/img/bbc579a51eb8c5bd636032cd943ba90b"
     },
     {
@@ -58196,7 +58196,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/a3a8c7bacaa70f994559ddf58bbf2d2d",
         "weapon_type": "Beam Rifle",
         "weapon_tier": "Ultimate",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -66058,7 +66058,7 @@
         "weapon_name": "Burning Hound",
         "image_url": "https://open.api.nexon.com/static/tfd/img/0b064a49b5e559903919858e2af4a81b",
         "weapon_type": "Hand Cannon",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "Impact Rounds",
         "base_stat": [
             {
@@ -83447,7 +83447,7 @@
         "weapon_name": "Cygnus",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c4bd46e95cf93bf3c7ec7607bad632f7",
         "weapon_type": "Machine Gun",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "General Rounds",
         "base_stat": [
             {
@@ -91342,7 +91342,7 @@
         "weapon_name": "Ominous Hound",
         "image_url": "https://open.api.nexon.com/static/tfd/img/33d70ee26acd0c326890ce19016af4a7",
         "weapon_type": "Assault Rifle",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "General Rounds",
         "base_stat": [
             {
@@ -97658,8 +97658,8 @@
         "weapon_name": "Red Eye",
         "image_url": "https://open.api.nexon.com/static/tfd/img/df74e8a2a4aeb0672025f2f887858a1d",
         "weapon_type": "Tactical Rifle",
-        "weapon_tier": "Standard",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_tier": "Normal",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -99242,7 +99242,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/13fa1786c49743724139e4cd057a31da",
         "weapon_type": "Tactical Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -103966,7 +103966,7 @@
             }
         ],
         "weapon_perk_ability_name": "Splendor",
-        "weapon_perk_ability_description": "After reloading, it grants the unique ability  Solar Halo. When hitting an enemy while under the effect of  Solar Halo, Twilight is created at the target's location. Enemies hit by Twilight are afflicted with the  Lunar Halo effect.",
+        "weapon_perk_ability_description": "After reloading, grants the unique ability Solar Halo.\n While Solar Halo is active, hitting an enemy spawns Dusk at the spot. Inflicts Lunar Halo on the enemies hit by Dusk.",
         "weapon_perk_ability_image_url": "https://open.api.nexon.com/static/tfd/img/0002502f394f7b5c1d27da365d074788"
     },
     {
@@ -103974,7 +103974,7 @@
         "weapon_name": "Recipient Unknown",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a93622c81e64a228dc05c22ec98dc728",
         "weapon_type": "Sniper Rifle",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "High-Power Rounds",
         "base_stat": [
             {
@@ -110290,7 +110290,7 @@
         "weapon_name": "Tamed Beast",
         "image_url": "https://open.api.nexon.com/static/tfd/img/35fec495b03f8eb4f91da19eb802baf7",
         "weapon_type": "Launcher",
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": "High-Power Rounds",
         "base_stat": [
             {
@@ -114919,8 +114919,8 @@
         "weapon_name": "Moon Fragment",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7b8c230d8c415a412b87d4ea3c8aadef",
         "weapon_type": "Beam Rifle",
-        "weapon_tier": "Standard",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_tier": "Normal",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -116467,7 +116467,7 @@
         "image_url": "https://open.api.nexon.com/static/tfd/img/6a39c6748a0f0ba9d695407925ffb98d",
         "weapon_type": "Beam Rifle",
         "weapon_tier": "Rare",
-        "weapon_rounds_type": "Special Rounds",
+        "weapon_rounds_type": "Enhanced Ammo",
         "base_stat": [
             {
                 "stat_id": "105000023",
@@ -119584,7 +119584,7 @@
             }
         ],
         "weapon_perk_ability_name": "Surging Peace",
-        "weapon_perk_ability_description": "When using  Dimension and  Fusion skills, the unique ability  Single Reload for Peace is granted. While the  Single Reload for Peace effect is fully stacked, aiming and shooting will rapidly fire all loaded ammo",
+        "weapon_perk_ability_description": "When using a Dimension or Fusion skill, grants the unique ability Single Reload for Peace.\nWhen Single Reload for Peace is at Max Stacks, shooting while aiming rapidly fires all loaded rounds.",
         "weapon_perk_ability_image_url": "https://open.api.nexon.com/static/tfd/img/0bc3e83f3065ecfa1f0a6618024f69b1"
     },
     {
@@ -121171,12 +121171,12 @@
         "weapon_name": "Dogma 21",
         "image_url": null,
         "weapon_type": null,
-        "weapon_tier": "Standard",
+        "weapon_tier": "Normal",
         "weapon_rounds_type": null,
         "base_stat": [
             {
                 "stat_id": "105000023",
-                "stat_value": 60.0
+                "stat_value": 75.0
             },
             {
                 "stat_id": "105000035",
@@ -121192,7 +121192,7 @@
             },
             {
                 "stat_id": "105000005",
-                "stat_value": 30.0
+                "stat_value": 50.0
             },
             {
                 "stat_id": "105000006",
@@ -122708,5 +122708,1580 @@
         "weapon_perk_ability_name": null,
         "weapon_perk_ability_description": null,
         "weapon_perk_ability_image_url": null
+    },
+    {
+        "weapon_id": "211083004",
+        "weapon_name": "FrostWatcher",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/95dd69d2bb516b9e12b03176d453aea0",
+        "weapon_type": "Scout Rifle",
+        "weapon_tier": "Ultimate",
+        "weapon_rounds_type": "Impact Rounds",
+        "base_stat": [
+            {
+                "stat_id": "105000023",
+                "stat_value": 150.0
+            },
+            {
+                "stat_id": "105000035",
+                "stat_value": 1.35
+            },
+            {
+                "stat_id": "105000077",
+                "stat_value": 1.0
+            },
+            {
+                "stat_id": "105000054",
+                "stat_value": 40.0
+            },
+            {
+                "stat_id": "105000055",
+                "stat_value": 70.0
+            },
+            {
+                "stat_id": "105000056",
+                "stat_value": 0.6
+            },
+            {
+                "stat_id": "105000005",
+                "stat_value": 150.0
+            },
+            {
+                "stat_id": "105000006",
+                "stat_value": 80.0
+            },
+            {
+                "stat_id": "105000036",
+                "stat_value": 90.0
+            },
+            {
+                "stat_id": "105000007",
+                "stat_value": 55.0
+            },
+            {
+                "stat_id": "105000037",
+                "stat_value": 9.0
+            },
+            {
+                "stat_id": "105000132",
+                "stat_value": 10.0
+            },
+            {
+                "stat_id": "105000038",
+                "stat_value": 21.0
+            },
+            {
+                "stat_id": "105000039",
+                "stat_value": 21.0
+            },
+            {
+                "stat_id": "105000040",
+                "stat_value": 50.0
+            },
+            {
+                "stat_id": "105000041",
+                "stat_value": 145.0
+            },
+            {
+                "stat_id": "105000021",
+                "stat_value": 21.0
+            },
+            {
+                "stat_id": "105000022",
+                "stat_value": 21.0
+            },
+            {
+                "stat_id": "105000095",
+                "stat_value": 2.15
+            },
+            {
+                "stat_id": "105000033",
+                "stat_value": -1.0
+            },
+            {
+                "stat_id": "105000019",
+                "stat_value": 750.0
+            },
+            {
+                "stat_id": "105000018",
+                "stat_value": 485.0
+            },
+            {
+                "stat_id": "105000034",
+                "stat_value": 260.0
+            },
+            {
+                "stat_id": "105000020",
+                "stat_value": 170.0
+            },
+            {
+                "stat_id": "105000070",
+                "stat_value": 10.0
+            },
+            {
+                "stat_id": "105000008",
+                "stat_value": 100.0
+            },
+            {
+                "stat_id": "105000092",
+                "stat_value": 5.0
+            },
+            {
+                "stat_id": "105000030",
+                "stat_value": 6.0
+            },
+            {
+                "stat_id": "105000031",
+                "stat_value": 1.8
+            },
+            {
+                "stat_id": "105000170",
+                "stat_value": 8.33
+            }
+        ],
+        "firearm_atk": [
+            {
+                "level": 1,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 96.0
+                    }
+                ]
+            },
+            {
+                "level": 2,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 206.0
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 292.0
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 388.0
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 497.0
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 613.0
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 742.0
+                    }
+                ]
+            },
+            {
+                "level": 8,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 880.0
+                    }
+                ]
+            },
+            {
+                "level": 9,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1026.0
+                    }
+                ]
+            },
+            {
+                "level": 10,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1180.0
+                    }
+                ]
+            },
+            {
+                "level": 11,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1343.0
+                    }
+                ]
+            },
+            {
+                "level": 12,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1511.0
+                    }
+                ]
+            },
+            {
+                "level": 13,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1685.0
+                    }
+                ]
+            },
+            {
+                "level": 14,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 1847.0
+                    }
+                ]
+            },
+            {
+                "level": 15,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2009.0
+                    }
+                ]
+            },
+            {
+                "level": 16,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2160.0
+                    }
+                ]
+            },
+            {
+                "level": 17,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2305.0
+                    }
+                ]
+            },
+            {
+                "level": 18,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2444.0
+                    }
+                ]
+            },
+            {
+                "level": 19,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2621.0
+                    }
+                ]
+            },
+            {
+                "level": 20,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 2799.0
+                    }
+                ]
+            },
+            {
+                "level": 21,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 3011.0
+                    }
+                ]
+            },
+            {
+                "level": 22,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 3239.0
+                    }
+                ]
+            },
+            {
+                "level": 23,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 3476.0
+                    }
+                ]
+            },
+            {
+                "level": 24,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 3721.0
+                    }
+                ]
+            },
+            {
+                "level": 25,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 3974.0
+                    }
+                ]
+            },
+            {
+                "level": 26,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 4234.0
+                    }
+                ]
+            },
+            {
+                "level": 27,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 4503.0
+                    }
+                ]
+            },
+            {
+                "level": 28,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 4780.0
+                    }
+                ]
+            },
+            {
+                "level": 29,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 5065.0
+                    }
+                ]
+            },
+            {
+                "level": 30,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 5358.0
+                    }
+                ]
+            },
+            {
+                "level": 31,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 5658.0
+                    }
+                ]
+            },
+            {
+                "level": 32,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 5967.0
+                    }
+                ]
+            },
+            {
+                "level": 33,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 6284.0
+                    }
+                ]
+            },
+            {
+                "level": 34,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 6609.0
+                    }
+                ]
+            },
+            {
+                "level": 35,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 6942.0
+                    }
+                ]
+            },
+            {
+                "level": 36,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 7283.0
+                    }
+                ]
+            },
+            {
+                "level": 37,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 7632.0
+                    }
+                ]
+            },
+            {
+                "level": 38,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 7989.0
+                    }
+                ]
+            },
+            {
+                "level": 39,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 8354.0
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 8727.0
+                    }
+                ]
+            },
+            {
+                "level": 41,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 9108.0
+                    }
+                ]
+            },
+            {
+                "level": 42,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 9497.0
+                    }
+                ]
+            },
+            {
+                "level": 43,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 9894.0
+                    }
+                ]
+            },
+            {
+                "level": 44,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 10299.0
+                    }
+                ]
+            },
+            {
+                "level": 45,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 10712.0
+                    }
+                ]
+            },
+            {
+                "level": 46,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 11133.0
+                    }
+                ]
+            },
+            {
+                "level": 47,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 11562.0
+                    }
+                ]
+            },
+            {
+                "level": 48,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 11999.0
+                    }
+                ]
+            },
+            {
+                "level": 49,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 12444.0
+                    }
+                ]
+            },
+            {
+                "level": 50,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 12898.0
+                    }
+                ]
+            },
+            {
+                "level": 51,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 13359.0
+                    }
+                ]
+            },
+            {
+                "level": 52,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 13828.0
+                    }
+                ]
+            },
+            {
+                "level": 53,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 14305.0
+                    }
+                ]
+            },
+            {
+                "level": 54,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 14790.0
+                    }
+                ]
+            },
+            {
+                "level": 55,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 15284.0
+                    }
+                ]
+            },
+            {
+                "level": 56,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 15785.0
+                    }
+                ]
+            },
+            {
+                "level": 57,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 16294.0
+                    }
+                ]
+            },
+            {
+                "level": 58,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 16811.0
+                    }
+                ]
+            },
+            {
+                "level": 59,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 17337.0
+                    }
+                ]
+            },
+            {
+                "level": 60,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 17870.0
+                    }
+                ]
+            },
+            {
+                "level": 61,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 18411.0
+                    }
+                ]
+            },
+            {
+                "level": 62,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 18961.0
+                    }
+                ]
+            },
+            {
+                "level": 63,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 19518.0
+                    }
+                ]
+            },
+            {
+                "level": 64,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 20084.0
+                    }
+                ]
+            },
+            {
+                "level": 65,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 20657.0
+                    }
+                ]
+            },
+            {
+                "level": 66,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 21238.0
+                    }
+                ]
+            },
+            {
+                "level": 67,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 21828.0
+                    }
+                ]
+            },
+            {
+                "level": 68,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 22425.0
+                    }
+                ]
+            },
+            {
+                "level": 69,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 23031.0
+                    }
+                ]
+            },
+            {
+                "level": 70,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 23644.0
+                    }
+                ]
+            },
+            {
+                "level": 71,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 24266.0
+                    }
+                ]
+            },
+            {
+                "level": 72,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 24895.0
+                    }
+                ]
+            },
+            {
+                "level": 73,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 25533.0
+                    }
+                ]
+            },
+            {
+                "level": 74,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 26178.0
+                    }
+                ]
+            },
+            {
+                "level": 75,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 26832.0
+                    }
+                ]
+            },
+            {
+                "level": 76,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 27494.0
+                    }
+                ]
+            },
+            {
+                "level": 77,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 28163.0
+                    }
+                ]
+            },
+            {
+                "level": 78,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 28841.0
+                    }
+                ]
+            },
+            {
+                "level": 79,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 29526.0
+                    }
+                ]
+            },
+            {
+                "level": 80,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 30220.0
+                    }
+                ]
+            },
+            {
+                "level": 81,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 30922.0
+                    }
+                ]
+            },
+            {
+                "level": 82,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 31632.0
+                    }
+                ]
+            },
+            {
+                "level": 83,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 32349.0
+                    }
+                ]
+            },
+            {
+                "level": 84,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 33075.0
+                    }
+                ]
+            },
+            {
+                "level": 85,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 33809.0
+                    }
+                ]
+            },
+            {
+                "level": 86,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 34550.0
+                    }
+                ]
+            },
+            {
+                "level": 87,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 35300.0
+                    }
+                ]
+            },
+            {
+                "level": 88,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 36058.0
+                    }
+                ]
+            },
+            {
+                "level": 89,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 36824.0
+                    }
+                ]
+            },
+            {
+                "level": 90,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 37598.0
+                    }
+                ]
+            },
+            {
+                "level": 91,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 38379.0
+                    }
+                ]
+            },
+            {
+                "level": 92,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 39169.0
+                    }
+                ]
+            },
+            {
+                "level": 93,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 39967.0
+                    }
+                ]
+            },
+            {
+                "level": 94,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 40773.0
+                    }
+                ]
+            },
+            {
+                "level": 95,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 41587.0
+                    }
+                ]
+            },
+            {
+                "level": 96,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 42409.0
+                    }
+                ]
+            },
+            {
+                "level": 97,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 43239.0
+                    }
+                ]
+            },
+            {
+                "level": 98,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 44077.0
+                    }
+                ]
+            },
+            {
+                "level": 99,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 44923.0
+                    }
+                ]
+            },
+            {
+                "level": 100,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 45777.0
+                    }
+                ]
+            },
+            {
+                "level": 101,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 46639.0
+                    }
+                ]
+            },
+            {
+                "level": 102,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 47509.0
+                    }
+                ]
+            },
+            {
+                "level": 103,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 48387.0
+                    }
+                ]
+            },
+            {
+                "level": 104,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 49273.0
+                    }
+                ]
+            },
+            {
+                "level": 105,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 50167.0
+                    }
+                ]
+            },
+            {
+                "level": 106,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 51069.0
+                    }
+                ]
+            },
+            {
+                "level": 107,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 51979.0
+                    }
+                ]
+            },
+            {
+                "level": 108,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 52897.0
+                    }
+                ]
+            },
+            {
+                "level": 109,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 53823.0
+                    }
+                ]
+            },
+            {
+                "level": 110,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 54758.0
+                    }
+                ]
+            },
+            {
+                "level": 111,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 55700.0
+                    }
+                ]
+            },
+            {
+                "level": 112,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 56650.0
+                    }
+                ]
+            },
+            {
+                "level": 113,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 57608.0
+                    }
+                ]
+            },
+            {
+                "level": 114,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 58574.0
+                    }
+                ]
+            },
+            {
+                "level": 115,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 59549.0
+                    }
+                ]
+            },
+            {
+                "level": 116,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 60531.0
+                    }
+                ]
+            },
+            {
+                "level": 117,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 61521.0
+                    }
+                ]
+            },
+            {
+                "level": 118,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 62519.0
+                    }
+                ]
+            },
+            {
+                "level": 119,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 63526.0
+                    }
+                ]
+            },
+            {
+                "level": 120,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 64540.0
+                    }
+                ]
+            },
+            {
+                "level": 121,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 65562.0
+                    }
+                ]
+            },
+            {
+                "level": 122,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 66593.0
+                    }
+                ]
+            },
+            {
+                "level": 123,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 67631.0
+                    }
+                ]
+            },
+            {
+                "level": 124,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 68678.0
+                    }
+                ]
+            },
+            {
+                "level": 125,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 69732.0
+                    }
+                ]
+            },
+            {
+                "level": 126,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 70794.0
+                    }
+                ]
+            },
+            {
+                "level": 127,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 71865.0
+                    }
+                ]
+            },
+            {
+                "level": 128,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 72943.0
+                    }
+                ]
+            },
+            {
+                "level": 129,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 74030.0
+                    }
+                ]
+            },
+            {
+                "level": 130,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 75124.0
+                    }
+                ]
+            },
+            {
+                "level": 131,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 76227.0
+                    }
+                ]
+            },
+            {
+                "level": 132,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 77337.0
+                    }
+                ]
+            },
+            {
+                "level": 133,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 78456.0
+                    }
+                ]
+            },
+            {
+                "level": 134,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 79582.0
+                    }
+                ]
+            },
+            {
+                "level": 135,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 80717.0
+                    }
+                ]
+            },
+            {
+                "level": 136,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 81860.0
+                    }
+                ]
+            },
+            {
+                "level": 137,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 83010.0
+                    }
+                ]
+            },
+            {
+                "level": 138,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 84169.0
+                    }
+                ]
+            },
+            {
+                "level": 139,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 85335.0
+                    }
+                ]
+            },
+            {
+                "level": 140,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 86510.0
+                    }
+                ]
+            },
+            {
+                "level": 141,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 87693.0
+                    }
+                ]
+            },
+            {
+                "level": 142,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 88883.0
+                    }
+                ]
+            },
+            {
+                "level": 143,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 90082.0
+                    }
+                ]
+            },
+            {
+                "level": 144,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 91289.0
+                    }
+                ]
+            },
+            {
+                "level": 145,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 92504.0
+                    }
+                ]
+            },
+            {
+                "level": 146,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 93726.0
+                    }
+                ]
+            },
+            {
+                "level": 147,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 94957.0
+                    }
+                ]
+            },
+            {
+                "level": 148,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 96196.0
+                    }
+                ]
+            },
+            {
+                "level": 149,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 97443.0
+                    }
+                ]
+            },
+            {
+                "level": 150,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 98698.0
+                    }
+                ]
+            },
+            {
+                "level": 151,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 99960.0
+                    }
+                ]
+            },
+            {
+                "level": 152,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 101231.0
+                    }
+                ]
+            },
+            {
+                "level": 153,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 102510.0
+                    }
+                ]
+            },
+            {
+                "level": 154,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 103797.0
+                    }
+                ]
+            },
+            {
+                "level": 155,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 105092.0
+                    }
+                ]
+            },
+            {
+                "level": 156,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 106395.0
+                    }
+                ]
+            },
+            {
+                "level": 157,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 107706.0
+                    }
+                ]
+            },
+            {
+                "level": 158,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 109025.0
+                    }
+                ]
+            },
+            {
+                "level": 159,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 110352.0
+                    }
+                ]
+            },
+            {
+                "level": 160,
+                "firearm": [
+                    {
+                        "firearm_atk_type": "105000026",
+                        "firearm_atk_value": 111687.0
+                    }
+                ]
+            }
+        ],
+        "weapon_perk_ability_name": "Subzero Watcher",
+        "weapon_perk_ability_description": "On landing a Critical Hit on an enemy at a certain distance, the unique ability Cold Surveillance is applied to the target.\nHitting the Weak Point of an enemy at a certain distance grants self the unique effect Subzero Sensation.\nDefeating an enemy grants self the unique effect Chill Synchronization.\nWhile Chill Synchronization is active, ignores the Movement Speed reduction by Hailey's Cold Fury.",
+        "weapon_perk_ability_image_url": "https://open.api.nexon.com/static/tfd/img/fa88f8ccd647ffd88c03bdeaad544912"
     }
 ]

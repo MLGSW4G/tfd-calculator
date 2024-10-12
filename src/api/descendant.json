@@ -3590,7 +3590,7 @@
                 "element_type": "Toxic",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/334e101ed0854c677eed2ea84da3838d",
-                "skill_description": "Shoots a toxic bullet that deals damage to hit enemies.\nThe toxic bullet explodes, creating a Toxic Puddle and granting the Room 0 Trauma effect to affected enemies.\nRoom 0 Trauma inflicts damage over time and grants the Panic effect to nearby enemies."
+                "skill_description": "Fires a Toxic Bullet, dealing damage to hit enemies.\nThe Toxic Bullet explodes, creating a Toxic Puddle and inflicting Room 0 Trauma on those it hits.\nRoom 0 Trauma deals continuous damage and applies Panic to nearby enemies."
             },
             {
                 "skill_type": "Active Skill",
@@ -3598,7 +3598,7 @@
                 "element_type": "Toxic",
                 "arche_type": "Dimension",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/7c7ce7d84e999b1fe4b320aa640d1607",
-                "skill_description": "Gains the effect of Plague Bodyarmor. Grants the Room 0 Trauma effect to enemies that attack you.\nRoom 0 Trauma inflicts damage over time and grants the Despair effect to nearby enemies."
+                "skill_description": "Gains Plague Bodyarmor. Inflicts Room 0 Trauma on the attacking enemy.\nRoom 0 Trauma deals continuous damage and applies Despair to nearby enemies."
             },
             {
                 "skill_type": "Active Skill",
@@ -3606,7 +3606,7 @@
                 "element_type": "Toxic",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/180551122e3d66847c60ca735993ba7d",
-                "skill_description": "Throws a toxin to create a Toxic Swamp.\nEnemies affected by the Toxic Swamp receive the Room 0 Trauma and Venom-Injected effects.\nEnemies with the Venom-Injected effect leave Toxic Footprints in their path. The Toxic Footprints grant the Room 0 Trauma effect to affected enemies.\nRoom 0 Trauma inflicts damage over time and grants the Putrid effect to nearby enemies."
+                "skill_description": "Throw poison to create a Toxic Swamp.\nEnemies that touch the Toxic Swamp are inflicted with Room 0 Trauma and Venom-Soaked.\nVenom-Soaked enemies leave Toxic Footprints as they move.\nToxic Footprints apply Room 0 Trauma to enemies on contact.\nRoom 0 Trauma deals continuous damage and applies Decay to nearby enemies."
             },
             {
                 "skill_type": "Active Skill",
@@ -3614,7 +3614,7 @@
                 "element_type": "Toxic",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/fa5560f7606c13ba81059be963858671",
-                "skill_description": "Equips the Unique Weapon. It will be released when all bullets are consumed or after a certain amount of time. \nEnemies hit by the bullets of the Unique Weapon receive the Room 0 Trauma effect. Room 0 Trauma inflicts damage over time and grants the Nightmare effect to nearby enemies."
+                "skill_description": "Equips a Unique Weapon. Unequipped after all bullets are consumed or after a certain period of time has passed.\nEnemies hit by the Unique Weapon bullets are inflicted with Room 0 Trauma.\nRoom 0 Trauma deals continuous damage and applies Nightmare to nearby enemies."
             },
             {
                 "skill_type": "Passive Skill",
@@ -3622,7 +3622,7 @@
                 "element_type": "Toxic",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/a85d0fb171b15bf9c52f278e9abe09c3",
-                "skill_description": "When an enemy with Room 0 Trauma dies, it generates a Toxic Puddle. \nEnemies standing on the Toxic Puddle receive Room 0 Trauma. \nRoom 0 Trauma inflicts damage over time and grants the Toxic Reaction effect to nearby enemies."
+                "skill_description": "When an enemy inflicted with Room 0 Trauma is killed, it spawns a Toxic Puddle. Enemies that step in the Toxic Puddle are inflicted with Room 0 Trauma.\nRoom 0 Trauma deals continuous damage and applies Toxic Reaction to nearby enemies."
             }
         ]
     },
@@ -9475,7 +9475,7 @@
                 "element_type": "Non-Attribute",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/c4f4c305bdc858d4cd3f895acde9faf6",
-                "skill_description": "Charges forward to deal damage and inflict Knockback on colliding enemies.\nRecovers Magnetic Force in proportion to the max shield amount after use, and additionally recovers Magnetic Force based on the number of enemies hit.\nWhen the skill ends, grants DEF + to self."
+                "skill_description": "Charges forward to deal damage and inflict Knockback on colliding enemies.\nAfter using skill, recovers Magnetic Force proportional to Max Shield and recovers additional Magnetic Force based on the number of enemies hit.\nWhen the skill ends, grants DEF Increase to self."
             },
             {
                 "skill_type": "Active Skill",
@@ -9483,7 +9483,7 @@
                 "element_type": "Non-Attribute",
                 "arche_type": "Dimension",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/9009df12bc86c372d45d13737dcd499c",
-                "skill_description": "Extends both hands to create a Barrier in front that blocks enemy ranged attacks.\nWhile using Barrier, continuously recovers Magnetic Force, and additionally recovers Magnetic Force based on the amount of damage blocked each time an enemy attack is blocked."
+                "skill_description": "Extends both hands to create a Barrier in front that blocks enemy ranged attacks.\nUsing the Barrier continuously recovers Magnetic Force. Every time the Barrier blocks an attack, recovers additional Magnetic Force proportional to the damage blocked."
             },
             {
                 "skill_type": "Active Skill",
@@ -9491,7 +9491,7 @@
                 "element_type": "Non-Attribute",
                 "arche_type": "Dimension",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/71f43d556958655c6cec50912d683724",
-                "skill_description": "When hit by enemies in the Magnetism Spurt state, Magnetic Force is consumed instead of Shield and HP.\nWhen all Magnetic Force is consumed or by interacting with the skill button again, discharges Magnetic Force to deal damage.\nWhen the skill ends, restores shields to yourself and nearby allies based on your max shield amount."
+                "skill_description": "When hit by enemies in the Magnetism Spurt state, Magnetic Force is consumed instead of Shield and HP.\nWhen all Magnetic Force is consumed or the skill button pressed again, discharges Magnetic Force to deal damage.\nWhen the skill ends, restores Shields to nearby allies and self proportional to Max Shield."
             },
             {
                 "skill_type": "Active Skill",
@@ -9499,7 +9499,7 @@
                 "element_type": "Non-Attribute",
                 "arche_type": "Tech",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/e50c0ad1a58e014e5f41316e94ae6a89",
-                "skill_description": "Uses Superconductivity Thrusters to soar into the air. Descends, colliding with enemies and dealing damage upon impact. Damage increases proportionally to the amount of Magnetic Force consumed. \nWhen the skill ends, Magnetic Force is fully consumed.\nWhile using the skill, you are immune to Knockdown and Knockback effects."
+                "skill_description": "Uses Superconductivity Thrusters to soar into the air. Descends, colliding with enemies and dealing damage upon impact. Damage increases proportionally to the amount of Magnetic Force consumed.\nWhen the skill ends, Magnetic Force is fully consumed.\nWhile using skill, becomes immune to Knockdown and Knockback."
             },
             {
                 "skill_type": "Passive Skill",
@@ -10708,7 +10708,7 @@
                 "element_type": "Fire",
                 "arche_type": "Fusion",
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/1cbd90958a43399c0b2a71b04deda53f",
-                "skill_description": "Rushes forward. Deals damage to targets collided with during movement and grants Knockback.\nUpon reactivating the skill button or ending the movement, deals explosive damage to nearby enemies. Enemies hit by the explosive damage have beneficial effects removed.\nAt the end of the skill, grants the Madness effect to yourself.\nWhile using the skill, you are immune to Knockdown and Knockback effects."
+                "skill_description": "Dashes forward to deal DMG and inflict Knockback on colliding targets during movement.\nInteracting with the skill button again or ending movement deals Burst DMG to nearby enemies. Enemies hit by the explosion lose their buffs.\nWhen the skill ends, grants self Madness.\nWhile using skill, becomes immune to Knockdown and Knockback."
             },
             {
                 "skill_type": "Passive Skill",
@@ -26434,6 +26434,1215 @@
                 "arche_type": null,
                 "skill_image_url": "https://open.api.nexon.com/static/tfd/img/887fe7e474e6f978ffafbc8834e79c99",
                 "skill_description": "Proportional to the distance between the target and Hailey, the Weak Point Damage decreases the closer it is to the target and increases the further it is."
+            }
+        ]
+    },
+    {
+        "descendant_id": "101000023",
+        "descendant_name": "Ultimate Freyna",
+        "descendant_image_url": "https://open.api.nexon.com/static/tfd/img/133a00069f113afbdcd05b7bfc4c2cfa",
+        "descendant_stat": [
+            {
+                "level": 1,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 107.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 63.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 100.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 191.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.46
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.38
+                    }
+                ]
+            },
+            {
+                "level": 2,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 109.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 67.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 101.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 193.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.46
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.38
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 111.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 69.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 102.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 197.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.46
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.38
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 114.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 72.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 103.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 203.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.48
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.4
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 118.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 77.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 104.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 209.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.53
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.44
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 124.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 81.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 105.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 217.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.55
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.46
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 134.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 86.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 106.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 227.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.6
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.5
+                    }
+                ]
+            },
+            {
+                "level": 8,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 146.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 92.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 107.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 241.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.65
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.54
+                    }
+                ]
+            },
+            {
+                "level": 9,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 159.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 98.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 108.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 261.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.7
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.58
+                    }
+                ]
+            },
+            {
+                "level": 10,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 175.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 104.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 109.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 286.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.74
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.62
+                    }
+                ]
+            },
+            {
+                "level": 11,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 188.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 111.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 110.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 316.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.82
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.68
+                    }
+                ]
+            },
+            {
+                "level": 12,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 201.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 118.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 111.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 347.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.86
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.72
+                    }
+                ]
+            },
+            {
+                "level": 13,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 217.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 127.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 113.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 385.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 0.94
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.78
+                    }
+                ]
+            },
+            {
+                "level": 14,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 237.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 139.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 115.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 425.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.03
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.86
+                    }
+                ]
+            },
+            {
+                "level": 15,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 253.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 148.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 116.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 467.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.08
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.9
+                    }
+                ]
+            },
+            {
+                "level": 16,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 272.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 160.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 118.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 510.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.18
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 0.98
+                    }
+                ]
+            },
+            {
+                "level": 17,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 292.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 171.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 120.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 556.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.25
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.04
+                    }
+                ]
+            },
+            {
+                "level": 18,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 311.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 182.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 122.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 603.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.34
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.12
+                    }
+                ]
+            },
+            {
+                "level": 19,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 334.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 195.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 124.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 651.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.44
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.2
+                    }
+                ]
+            },
+            {
+                "level": 20,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 353.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 207.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 125.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 702.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.54
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.28
+                    }
+                ]
+            },
+            {
+                "level": 21,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 376.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 220.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 127.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 754.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.63
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.36
+                    }
+                ]
+            },
+            {
+                "level": 22,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 398.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 233.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 130.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 808.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.73
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.44
+                    }
+                ]
+            },
+            {
+                "level": 23,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 421.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 247.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 133.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 864.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.82
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.52
+                    }
+                ]
+            },
+            {
+                "level": 24,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 450.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 264.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 135.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 922.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 1.94
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.62
+                    }
+                ]
+            },
+            {
+                "level": 25,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 473.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 277.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 138.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 981.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.04
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.7
+                    }
+                ]
+            },
+            {
+                "level": 26,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 499.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 292.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 141.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1042.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.16
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.8
+                    }
+                ]
+            },
+            {
+                "level": 27,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 524.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 307.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 144.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1105.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.26
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 1.88
+                    }
+                ]
+            },
+            {
+                "level": 28,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 554.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 324.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 146.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1170.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.4
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.0
+                    }
+                ]
+            },
+            {
+                "level": 29,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 579.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 340.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 149.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1236.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.5
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.08
+                    }
+                ]
+            },
+            {
+                "level": 30,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 605.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 355.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 152.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1305.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.64
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.2
+                    }
+                ]
+            },
+            {
+                "level": 31,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 638.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 374.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 155.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1374.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.76
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.3
+                    }
+                ]
+            },
+            {
+                "level": 32,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 663.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 389.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 158.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1446.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 2.88
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.4
+                    }
+                ]
+            },
+            {
+                "level": 33,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 696.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 408.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 162.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1520.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.5
+                    }
+                ]
+            },
+            {
+                "level": 34,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 725.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 425.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 165.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1595.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.14
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.62
+                    }
+                ]
+            },
+            {
+                "level": 35,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 757.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 444.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 169.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1672.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.26
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.72
+                    }
+                ]
+            },
+            {
+                "level": 36,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 786.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 461.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 173.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1750.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.41
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.84
+                    }
+                ]
+            },
+            {
+                "level": 37,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 819.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 480.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 176.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1831.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.53
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 2.94
+                    }
+                ]
+            },
+            {
+                "level": 38,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 851.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 499.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 180.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1913.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.67
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 3.06
+                    }
+                ]
+            },
+            {
+                "level": 39,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 883.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 518.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 184.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 1997.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.82
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 3.18
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "stat_detail": [
+                    {
+                        "stat_type": "Max HP",
+                        "stat_value": 916.0
+                    },
+                    {
+                        "stat_type": "Max Shield",
+                        "stat_value": 537.0
+                    },
+                    {
+                        "stat_type": "Max MP",
+                        "stat_value": 187.0
+                    },
+                    {
+                        "stat_type": "DEF",
+                        "stat_value": 2083.0
+                    },
+                    {
+                        "stat_type": "Shield Recovery Out of Combat",
+                        "stat_value": 3.96
+                    },
+                    {
+                        "stat_type": "Shield Recovery In Combat",
+                        "stat_value": 3.3
+                    }
+                ]
+            }
+        ],
+        "descendant_skill": [
+            {
+                "skill_type": "Active Skill",
+                "skill_name": "Venom Trauma",
+                "element_type": "Toxic",
+                "arche_type": "Tech",
+                "skill_image_url": "https://open.api.nexon.com/static/tfd/img/466c2367c6d85801be4cc39a91f6d599",
+                "skill_description": "Fires a Toxic Bullet, dealing damage to hit enemies.\nThe Toxic Bullet explodes, creating a Toxic Puddle and inflicting Room 0 Trauma on those it hits.\nRoom 0 Trauma deals continuous damage and applies Panic to nearby enemies."
+            },
+            {
+                "skill_type": "Active Skill",
+                "skill_name": "Defense Mechanism",
+                "element_type": "Toxic",
+                "arche_type": "Dimension",
+                "skill_image_url": "https://open.api.nexon.com/static/tfd/img/53d764fc98f8bd3953e900446b40d2c3",
+                "skill_description": "Gains Plague Bodyarmor. Inflicts Room 0 Trauma on the attacking enemy.\nRoom 0 Trauma deals continuous damage and applies Despair to nearby enemies."
+            },
+            {
+                "skill_type": "Active Skill",
+                "skill_name": "Putrid Venom",
+                "element_type": "Toxic",
+                "arche_type": "Tech",
+                "skill_image_url": "https://open.api.nexon.com/static/tfd/img/be03d2e42df54f15989a19787150f198",
+                "skill_description": "Throw poison to create a Toxic Swamp.\nEnemies that touch the Toxic Swamp are inflicted with Room 0 Trauma and Venom-Soaked.\nVenom-Soaked enemies leave Toxic Footprints as they move.\nToxic Footprints apply Room 0 Trauma to enemies on contact.\nRoom 0 Trauma deals continuous damage and applies Decay to nearby enemies."
+            },
+            {
+                "skill_type": "Active Skill",
+                "skill_name": "Venom Baptism",
+                "element_type": "Toxic",
+                "arche_type": "Tech",
+                "skill_image_url": "https://open.api.nexon.com/static/tfd/img/eeba83ef4d37edad1137690808802479",
+                "skill_description": "Equips a Unique Weapon. Unequipped after all bullets are consumed or after a certain period of time has passed.\nEnemies hit by the Unique Weapon bullets are inflicted with Room 0 Trauma.\nRoom 0 Trauma deals continuous damage and applies Nightmare to nearby enemies."
+            },
+            {
+                "skill_type": "Passive Skill",
+                "skill_name": "Contagion Links",
+                "element_type": "Toxic",
+                "arche_type": "Tech",
+                "skill_image_url": "https://open.api.nexon.com/static/tfd/img/c027f17b71bff4047835d7edf0a76fb0",
+                "skill_description": "When an enemy inflicted with Room 0 Trauma is killed, it spawns a Toxic Puddle. Enemies that step in the Toxic Puddle are inflicted with Room 0 Trauma.\nRoom 0 Trauma deals continuous damage and applies Toxic Reaction to nearby enemies."
             }
         ]
     }

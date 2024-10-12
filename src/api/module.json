@@ -4,7 +4,7 @@
         "module_id": "251001001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/be622dc1cf8c4ecc72aa0745d03ecfbe",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -55,7 +55,7 @@
         "module_id": "251001002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/60ceffaa9b04d4f4b5d01977bd259124",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -106,7 +106,7 @@
         "module_id": "251001006",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a55486d41c78e593e3b808744db7740d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Descendant",
         "module_stat": [
@@ -172,7 +172,7 @@
         "module_id": "251001007",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a6edc306bc529aa5bfe28413696dc0dd",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -238,7 +238,7 @@
         "module_id": "251001008",
         "image_url": "https://open.api.nexon.com/static/tfd/img/855c768bcc041ab1a0ffbec5fc26fad5",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -289,7 +289,7 @@
         "module_id": "251001009",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a079271756007bddbf84a211a7403d0b",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Descendant",
         "module_stat": [
@@ -355,7 +355,7 @@
         "module_id": "251001015",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7721eedef87ad6fb392af98d2e927fcb",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -421,7 +421,7 @@
         "module_id": "251001020",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c3c0ddee4a94b89e6ae87b1194d7d025",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -487,7 +487,7 @@
         "module_id": "251001022",
         "image_url": "https://open.api.nexon.com/static/tfd/img/67dd008a3cdc1366f11f947759c226aa",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -553,7 +553,7 @@
         "module_id": "251001027",
         "image_url": "https://open.api.nexon.com/static/tfd/img/abc30d7b7ee386604cc5ded326ec1fb8",
         "module_type": "Attack",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -619,7 +619,7 @@
         "module_id": "251001031",
         "image_url": "https://open.api.nexon.com/static/tfd/img/aba418092af0808594f8bd501d2b8793",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -685,7 +685,7 @@
         "module_id": "251001034",
         "image_url": "https://open.api.nexon.com/static/tfd/img/20441f654b59bd56f4d4c27453542b27",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Descendant",
         "module_stat": [
@@ -736,7 +736,7 @@
         "module_id": "251001036",
         "image_url": "https://open.api.nexon.com/static/tfd/img/fd2a1fc2c7483916d24283bbef9fe446",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -3853,7 +3853,7 @@
         "module_id": "253001002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3abbdecc406856f017166f73ff96aaf7",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -4256,57 +4256,57 @@
             {
                 "level": 0,
                 "module_capacity": 15,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 1,
                 "module_capacity": 14,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 2,
                 "module_capacity": 13,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 3,
                 "module_capacity": 12,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 4,
                 "module_capacity": 11,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 5,
                 "module_capacity": 10,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 6,
                 "module_capacity": 9,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 7,
                 "module_capacity": 8,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 8,
                 "module_capacity": 7,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 9,
                 "module_capacity": 6,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             },
             {
                 "level": 10,
                 "module_capacity": 5,
-                "value": "Modifies Void Walk and Expulsion damage to increase proportionally to DEF.\nUsing an Enhanced Skill resets Void Charge to 1 stack."
+                "value": "Modifies Void Walk to be stackable, and Void Walk and Expulsion damage increases proportionally to DEF.\nWhen used as an Enhanced Skill, Cooldown resets."
             }
         ]
     },
@@ -4975,7 +4975,7 @@
         "module_id": "251001003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3170ba61ea8f99baa406ce78d73acb18",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -5016,7 +5016,7 @@
         "module_id": "251001004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3917b89742021e6044c347f226400fbb",
         "module_type": "Attack",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -5082,7 +5082,7 @@
         "module_id": "251001005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ff90e3e07be909547d83b4cc7505850b",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -5148,7 +5148,7 @@
         "module_id": "251001010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/e085bafd1d4fe65e172db0d426ebd39c",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Descendant",
         "module_stat": [
@@ -5214,7 +5214,7 @@
         "module_id": "251001011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a46b717d47c1ee9ae2f44e46f46e42d0",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -5280,7 +5280,7 @@
         "module_id": "251001016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/23e6fdc1f392daa52ee68d60eab7f959",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -5346,7 +5346,7 @@
         "module_id": "251001018",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4240dd12d60374a6d710fdcbfede94ea",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -5412,7 +5412,7 @@
         "module_id": "251001019",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6787288a9d9073cffb5debe1c52f57fa",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -5478,7 +5478,7 @@
         "module_id": "251001021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c9957e507f993b312aa2f2ed9afbf5ca",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Descendant",
         "module_stat": [
@@ -5544,7 +5544,7 @@
         "module_id": "251001023",
         "image_url": "https://open.api.nexon.com/static/tfd/img/63c57320489601534406e5829f4eafc3",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -5610,7 +5610,7 @@
         "module_id": "251001024",
         "image_url": "https://open.api.nexon.com/static/tfd/img/19d997f40d6eb60bc912bcac64c6b1e1",
         "module_type": "Attack",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -5676,7 +5676,7 @@
         "module_id": "251001025",
         "image_url": "https://open.api.nexon.com/static/tfd/img/eb0f7c40e25995edd7674a3e65bcf231",
         "module_type": "Attack",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Descendant",
         "module_stat": [
@@ -5742,7 +5742,7 @@
         "module_id": "251001026",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6edec95a19538729f414ad4f2677b61c",
         "module_type": "Attack",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -5808,7 +5808,7 @@
         "module_id": "251001028",
         "image_url": "https://open.api.nexon.com/static/tfd/img/fab4805513a6e3eb68d5c5cf9a411771",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -5874,7 +5874,7 @@
         "module_id": "251001029",
         "image_url": "https://open.api.nexon.com/static/tfd/img/02690cc7da8f286efc99b474596bd2fb",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Descendant",
         "module_stat": [
@@ -5940,7 +5940,7 @@
         "module_id": "251001032",
         "image_url": "https://open.api.nexon.com/static/tfd/img/30c94ca94356c4dc0e8bda753e41ee07",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Descendant",
         "module_stat": [
@@ -6006,7 +6006,7 @@
         "module_id": "251001033",
         "image_url": "https://open.api.nexon.com/static/tfd/img/9f8ce97434f7cb276e31dac25c7276c7",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -6047,7 +6047,7 @@
         "module_id": "251001035",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1dbcb186f415b19b716b0469b958be92",
         "module_type": "Battle",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -8769,7 +8769,7 @@
         "module_id": "252011004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/243f5aa4d482891a4b6f591b4655af21",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "General Rounds",
         "module_stat": [
@@ -8835,7 +8835,7 @@
         "module_id": "252011005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/9108a6f6d13f7f30580c9595cbddfd93",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "General Rounds",
         "module_stat": [
@@ -8901,7 +8901,7 @@
         "module_id": "252011006",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c4c3b62d44e04baa5c8073ce075ae68e",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "General Rounds",
         "module_stat": [
@@ -8967,7 +8967,7 @@
         "module_id": "252011008",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3baacb264b139a65edf7ed970bd6a725",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "General Rounds",
         "module_stat": [
@@ -9033,7 +9033,7 @@
         "module_id": "252011009",
         "image_url": "https://open.api.nexon.com/static/tfd/img/cbdace0535a91f037f1b72811da97041",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "General Rounds",
         "module_stat": [
@@ -9099,7 +9099,7 @@
         "module_id": "252011011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/b83a3f91b1620d6c8486712d25c02740",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "General Rounds",
         "module_stat": [
@@ -9282,7 +9282,7 @@
         "module_id": "252012011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1ed1405c5adb0faf986de563f3829429",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "General Rounds",
         "module_stat": [
@@ -9583,7 +9583,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252012047",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1e0c973359dab6d8cb48efb0d445a6dc",
         "module_type": "ATK",
@@ -10327,7 +10327,7 @@
         ]
     },
     {
-        "module_name": "Reload insight",
+        "module_name": "Reload Insight",
         "module_id": "252012078",
         "image_url": "https://open.api.nexon.com/static/tfd/img/be395f2650ab5f70538b0f71b86e9c67",
         "module_type": "Reload Time Modifier",
@@ -11225,7 +11225,7 @@
         "module_id": "252021002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/2fba247cd9942c0c1af28cbf618cd4d1",
         "module_type": "Fire Rate",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11276,7 +11276,7 @@
         "module_id": "252021003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1c197688429221e02df96207b350877d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11342,7 +11342,7 @@
         "module_id": "252021005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/09ad6bcc4c980be23077d5846c5216ff",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11408,7 +11408,7 @@
         "module_id": "252021006",
         "image_url": "https://open.api.nexon.com/static/tfd/img/5e1e80250f018dc00a6e0ca6997cd44d",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11474,7 +11474,7 @@
         "module_id": "252021007",
         "image_url": "https://open.api.nexon.com/static/tfd/img/e25a44c427bffadaffc8743a5f891971",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11540,7 +11540,7 @@
         "module_id": "252021009",
         "image_url": "https://open.api.nexon.com/static/tfd/img/79b7827fa861a01c76b80c7a082e2208",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11606,7 +11606,7 @@
         "module_id": "252021011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ce9ff7f4bbf47f601bcdd84b1a4c42d9",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11657,7 +11657,7 @@
         "module_id": "252021013",
         "image_url": "https://open.api.nexon.com/static/tfd/img/b48f9afb89e1d11964d9901361cfd700",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11718,7 +11718,7 @@
         "module_id": "252021014",
         "image_url": "https://open.api.nexon.com/static/tfd/img/28b5a1352177a3fd283a51ae014dccd6",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11784,7 +11784,7 @@
         "module_id": "252021016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/0977a087b3cd2b41229064b3d22a2746",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11825,7 +11825,7 @@
         "module_id": "252021020",
         "image_url": "https://open.api.nexon.com/static/tfd/img/bacd5729108a69abf82e8d464097adfa",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -11856,7 +11856,7 @@
         "module_id": "252021021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/57fadcd757addd1493e3e0f6a0275471",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -12340,7 +12340,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252022047",
         "image_url": "https://open.api.nexon.com/static/tfd/img/84f19f60258d338e79ed9dddb510c844",
         "module_type": "ATK",
@@ -14126,7 +14126,7 @@
         "module_id": "252031001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/f606ee817dd88add9d793a2e938aacac",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14192,7 +14192,7 @@
         "module_id": "252031002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/02a5cb0b6327f473c6842afe1d6d6a1e",
         "module_type": "Fire Rate",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14243,7 +14243,7 @@
         "module_id": "252031003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6074456c462de55b7e25d9d83380ef73",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14309,7 +14309,7 @@
         "module_id": "252031004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/d0aa3b5a2be5cbd3a27748141376916a",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14375,7 +14375,7 @@
         "module_id": "252031005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1b254a86baa3c1e51c0bb4979b87b3d6",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14441,7 +14441,7 @@
         "module_id": "252031007",
         "image_url": "https://open.api.nexon.com/static/tfd/img/e1dc6d90ad2261e8c119a4d21e753f2f",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14507,7 +14507,7 @@
         "module_id": "252031009",
         "image_url": "https://open.api.nexon.com/static/tfd/img/126bea90b836f8d03e549be9ebf39256",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14573,7 +14573,7 @@
         "module_id": "252031010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/03e64605a9d98d13f815d9beff6d9f2d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14639,7 +14639,7 @@
         "module_id": "252031016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c6ea17be67a231dd5db1b9119770baa4",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -14680,7 +14680,7 @@
         "module_id": "252031020",
         "image_url": "https://open.api.nexon.com/static/tfd/img/db6ebc72e9be1c5e1c71ae2866e2aa9e",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -15919,7 +15919,7 @@
         ]
     },
     {
-        "module_name": "Dopaminergic Activate",
+        "module_name": "Dopaminergic Activation",
         "module_id": "252033010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/8678f5fc37546b169a50e61d256cfba1",
         "module_type": "Special Mod",
@@ -16355,7 +16355,7 @@
         "module_id": "252041001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/f2fdaaa34bf189443a3dc4504d8dc9ad",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16421,7 +16421,7 @@
         "module_id": "252041003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c4e53f32102133f4b3ab9cfaa9224151",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16487,7 +16487,7 @@
         "module_id": "252041008",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4dfe3fea5ed20650082aa514ea05c29e",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16553,7 +16553,7 @@
         "module_id": "252041011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ea3a4ac963c631d82c0a8ba58369348b",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16619,7 +16619,7 @@
         "module_id": "252041012",
         "image_url": "https://open.api.nexon.com/static/tfd/img/cbad3cde4af33a01f340c285a6060cf9",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16685,7 +16685,7 @@
         "module_id": "252041019",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ca9d9d039313bd8a2dfdf0f8bcf453b1",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16751,7 +16751,7 @@
         "module_id": "252041020",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a28a90b0e8325a512c103fade15c9e38",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16817,7 +16817,7 @@
         "module_id": "252041022",
         "image_url": "https://open.api.nexon.com/static/tfd/img/90ee718dd0b73917ad61a6b9ae30adfc",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -16879,7 +16879,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252042016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/5626b3162ea2ceffbf55f33813388fb1",
         "module_type": "ATK",
@@ -17321,7 +17321,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252042026",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a9f57d6fe0c9af6243a33932cfbe1f56",
         "module_type": "ATK",
@@ -19096,7 +19096,7 @@
         "module_id": "253001001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/5eb64ac5d41e42ae61a95ccbf61f55c4",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -19162,7 +19162,7 @@
         "module_id": "253001003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/f6d96650c815e7a1f496608ac37ecb77",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -19228,7 +19228,7 @@
         "module_id": "253001004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/d36e9bd2982351fbcdaeab25e034560d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -19294,7 +19294,7 @@
         "module_id": "253001005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/a83d4d5d176a3874de13b1d42d9e11e5",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Descendant",
         "module_stat": [
@@ -20093,57 +20093,57 @@
             {
                 "level": 0,
                 "module_capacity": 17,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 1,
                 "module_capacity": 16,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 2,
                 "module_capacity": 15,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 3,
                 "module_capacity": 14,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 4,
                 "module_capacity": 13,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 5,
                 "module_capacity": 12,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 6,
                 "module_capacity": 11,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 7,
                 "module_capacity": 10,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 8,
                 "module_capacity": 9,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 9,
                 "module_capacity": 8,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             },
             {
                 "level": 10,
                 "module_capacity": 7,
-                "value": "When an enemy afflicted by Room 0 Trauma dies, it infects nearby enemies with Room 0 Trauma."
+                "value": "When an enemy inflicted with Room 0 Trauma is killed,\na contagion of Room 0 Trauma surrounds it."
             }
         ]
     },
@@ -20225,57 +20225,57 @@
             {
                 "level": 0,
                 "module_capacity": 14,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 1,
                 "module_capacity": 13,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 2,
                 "module_capacity": 12,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 3,
                 "module_capacity": 11,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 4,
                 "module_capacity": 10,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 5,
                 "module_capacity": 9,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 6,
                 "module_capacity": 8,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 7,
                 "module_capacity": 7,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 8,
                 "module_capacity": 6,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 9,
                 "module_capacity": 5,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             },
             {
                 "level": 10,
                 "module_capacity": 4,
-                "value": "Putrid Venom Skill Conversion.\nEach time you move, create toxic footprints in the area you traversed. Enemies that touch the toxic footprints are afflicted with Room 0 Trauma."
+                "value": "Putrid Venom skill conversion.\nLeaves behind a Toxic Footprint after every step.\nInflicts Room 0 Trauma on enemies coming in contact with Toxic Footprint."
             }
         ]
     },
@@ -20885,57 +20885,57 @@
             {
                 "level": 0,
                 "module_capacity": 16,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 1,
                 "module_capacity": 15,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 2,
                 "module_capacity": 14,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 3,
                 "module_capacity": 13,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 4,
                 "module_capacity": 12,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 5,
                 "module_capacity": 11,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 6,
                 "module_capacity": 10,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 7,
                 "module_capacity": 9,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 8,
                 "module_capacity": 8,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 9,
                 "module_capacity": 7,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             },
             {
                 "level": 10,
                 "module_capacity": 6,
-                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne time increases with Skill Duration UP, but the base airborne time is reduced."
+                "value": "While airborne, continuously consumes Magnetic Force to drop bombs.\nThe bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.\nAirborne duration increases as the Skill Duration increases, but the base airborne duration decreases."
             }
         ]
     },
@@ -21347,57 +21347,57 @@
             {
                 "level": 0,
                 "module_capacity": 16,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 1,
                 "module_capacity": 15,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 2,
                 "module_capacity": 14,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 3,
                 "module_capacity": 13,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 4,
                 "module_capacity": 12,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 5,
                 "module_capacity": 11,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 6,
                 "module_capacity": 10,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 7,
                 "module_capacity": 9,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 8,
                 "module_capacity": 8,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 9,
                 "module_capacity": 7,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             },
             {
                 "level": 10,
                 "module_capacity": 6,
-                "value": "Modifies the increase to Skill Critical Hit Rate to 5 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 4."
+                "value": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count.\nUsing Deadly Cuisine increases the number of Flame Zones created to 5."
             }
         ]
     },
@@ -21472,7 +21472,7 @@
         "module_id": "252011001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c33fa2c6ac6af48e7ba09d747250d1ba",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21538,7 +21538,7 @@
         "module_id": "252011002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c68f037038b03f1f28a668ef2eb55b85",
         "module_type": "Fire Rate",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21589,7 +21589,7 @@
         "module_id": "252011003",
         "image_url": "https://open.api.nexon.com/static/tfd/img/69e0a4fc460f049ebc18604331fa7d7f",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21655,7 +21655,7 @@
         "module_id": "252011007",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3f1d229eedff946891bbcab444af7ce0",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21721,7 +21721,7 @@
         "module_id": "252011010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/dfd7c01f85932a9ccc6e22be6690f63c",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21787,7 +21787,7 @@
         "module_id": "252011013",
         "image_url": "https://open.api.nexon.com/static/tfd/img/2c69b4c5646c2ede056212ea2057bac0",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21848,7 +21848,7 @@
         "module_id": "252011014",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c13be92fe6108c99e178e8473c355a6b",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21914,7 +21914,7 @@
         "module_id": "252011015",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6f45403d11f1fa8ce86a8957697d5365",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "General Rounds",
         "module_stat": [
@@ -21980,7 +21980,7 @@
         "module_id": "252011016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/87fe7e39780f541bef63d665054f3c0d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "General Rounds",
         "module_stat": [
@@ -22046,7 +22046,7 @@
         "module_id": "252011020",
         "image_url": "https://open.api.nexon.com/static/tfd/img/8c8ed01af65353b98f567a20c7608614",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "General Rounds",
         "module_stat": [
@@ -22077,7 +22077,7 @@
         "module_id": "252011021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/5c2bf2acf190b6b0ecb36d15ad3a9845",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "General Rounds",
         "module_stat": [
@@ -22368,7 +22368,7 @@
         ]
     },
     {
-        "module_name": "Magazine Compulsive",
+        "module_name": "Compulsive Magazine",
         "module_id": "252012029",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1213f9740650fbd9ce3cf1688dffd21c",
         "module_type": "Rounds per Magazine",
@@ -23758,7 +23758,7 @@
         "module_id": "252021001",
         "image_url": "https://open.api.nexon.com/static/tfd/img/84e5c890e6b780f702023465f5850d63",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -23824,7 +23824,7 @@
         "module_id": "252021004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ef46eaca6548e155f90a91e9f82f6133",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -23890,7 +23890,7 @@
         "module_id": "252021008",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c9ab0723b57872060eafa9b1523fbc19",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -23956,7 +23956,7 @@
         "module_id": "252021010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1b4ca6b4a11393dada4edcb5a4119894",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -24022,7 +24022,7 @@
         "module_id": "252021015",
         "image_url": "https://open.api.nexon.com/static/tfd/img/8f35d23e7a0292ba3652d6840ef85b94",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -24088,7 +24088,7 @@
         "module_id": "252021017",
         "image_url": "https://open.api.nexon.com/static/tfd/img/9f90b13e9ab16dc9cab718050e9a0791",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -24154,7 +24154,7 @@
         "module_id": "252021022",
         "image_url": "https://open.api.nexon.com/static/tfd/img/81bb478b04df93467ff5debaf3b4b20a",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Special Rounds",
         "module_stat": [
@@ -24414,7 +24414,7 @@
         ]
     },
     {
-        "module_name": "Magazine Compulsive",
+        "module_name": "Compulsive Magazine",
         "module_id": "252022029",
         "image_url": "https://open.api.nexon.com/static/tfd/img/55762a0475bc0abaecc12772d7c77920",
         "module_type": "Rounds per Magazine",
@@ -25128,7 +25128,7 @@
         ]
     },
     {
-        "module_name": "Reload insight",
+        "module_name": "Reload Insight",
         "module_id": "252022078",
         "image_url": "https://open.api.nexon.com/static/tfd/img/e49fc4bafe9db6b33f4e242ec0cc1fe5",
         "module_type": "Reload Time Modifier",
@@ -25676,7 +25676,7 @@
         "module_id": "252031006",
         "image_url": "https://open.api.nexon.com/static/tfd/img/24c44e89afa2a072e9c34b91c6f9a922",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -25742,7 +25742,7 @@
         "module_id": "252031008",
         "image_url": "https://open.api.nexon.com/static/tfd/img/1e4fc7197a37dfa3e7db2bfa6217f2c6",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -25808,7 +25808,7 @@
         "module_id": "252031011",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7bd95dd469df4a661d3258d22a26d4aa",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -25859,7 +25859,7 @@
         "module_id": "252031012",
         "image_url": "https://open.api.nexon.com/static/tfd/img/8041af6481ba8d8a304faf5dcd87d8f4",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -25920,7 +25920,7 @@
         "module_id": "252031014",
         "image_url": "https://open.api.nexon.com/static/tfd/img/83d6531c0574fd206b96ff38fc1f821f",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -25986,7 +25986,7 @@
         "module_id": "252031015",
         "image_url": "https://open.api.nexon.com/static/tfd/img/f9aa4a44d2a53d4fc50a7a07f1788ff9",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -26052,7 +26052,7 @@
         "module_id": "252031017",
         "image_url": "https://open.api.nexon.com/static/tfd/img/cdf213b67556614acab1bb276126513d",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -26118,7 +26118,7 @@
         "module_id": "252031021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/28f2a3c495f58a910e9755a9a708310b",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "Impact Rounds",
         "module_stat": [
@@ -26470,7 +26470,7 @@
         ]
     },
     {
-        "module_name": "Magazine Compulsive",
+        "module_name": "Compulsive Magazine",
         "module_id": "252032029",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4ea777fb9f6f2138bc6c1f3175114aa9",
         "module_type": "Rounds per Magazine",
@@ -26536,7 +26536,7 @@
         ]
     },
     {
-        "module_name": "Impact Rounds Compulsive",
+        "module_name": "Compulsive Impact Rounds",
         "module_id": "252032031",
         "image_url": "https://open.api.nexon.com/static/tfd/img/d0f0c01e9be3768760c308d84bcc2082",
         "module_type": null,
@@ -26790,7 +26790,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252032047",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c7381f29534c625af616681846945154",
         "module_type": "ATK",
@@ -27443,7 +27443,7 @@
         ]
     },
     {
-        "module_name": "Reload insight",
+        "module_name": "Reload Insight",
         "module_id": "252032078",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7bfba9355c03f0324d2ac0032035cd55",
         "module_type": "Reload Time Modifier",
@@ -28286,7 +28286,7 @@
         "module_id": "252041002",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3229c8667500f90b8abfa7f7730c697c",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28352,7 +28352,7 @@
         "module_id": "252041004",
         "image_url": "https://open.api.nexon.com/static/tfd/img/31869b4616a0a0515daaf775ca57cba4",
         "module_type": "Fire Rate",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28403,7 +28403,7 @@
         "module_id": "252041005",
         "image_url": "https://open.api.nexon.com/static/tfd/img/9e0537594f2386083f54b94287d62286",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28469,7 +28469,7 @@
         "module_id": "252041006",
         "image_url": "https://open.api.nexon.com/static/tfd/img/c84302b0cf3a44224e5ea76db4ef96f5",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28535,7 +28535,7 @@
         "module_id": "252041007",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6991fb430c9ee7503546dbe823f38683",
         "module_type": "Bullet Improvement",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28601,7 +28601,7 @@
         "module_id": "252041009",
         "image_url": "https://open.api.nexon.com/static/tfd/img/bad7ddf6549214604081fa2f1d1e2957",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28667,7 +28667,7 @@
         "module_id": "252041010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ca3b110a6120841930f22b13216ab54a",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28733,7 +28733,7 @@
         "module_id": "252041013",
         "image_url": "https://open.api.nexon.com/static/tfd/img/908c547b2d01485c5ab1a86dfb5e43b3",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28784,7 +28784,7 @@
         "module_id": "252041014",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4a21fce35309e1750dc62f4fd2393d95",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28845,7 +28845,7 @@
         "module_id": "252041015",
         "image_url": "https://open.api.nexon.com/static/tfd/img/2671320995fc94e93678a48bc7ce8f83",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Rutile",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28911,7 +28911,7 @@
         "module_id": "252041016",
         "image_url": "https://open.api.nexon.com/static/tfd/img/6f841bef492febc75914fbd26752dc51",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Cerulean",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -28977,7 +28977,7 @@
         "module_id": "252041017",
         "image_url": "https://open.api.nexon.com/static/tfd/img/7e8cc37882477dbf571dee1713847560",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Almandine",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -29043,7 +29043,7 @@
         "module_id": "252041018",
         "image_url": "https://open.api.nexon.com/static/tfd/img/969b919cde41f6fa37ceed1ae3a6e0ef",
         "module_type": null,
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Malachite",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -29084,7 +29084,7 @@
         "module_id": "252041021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/e216216f2938bd0f0d58b16bd1dc426a",
         "module_type": "Rounds Conversion",
-        "module_tier": "Standard",
+        "module_tier": "Normal",
         "module_socket_type": "Xantic",
         "module_class": "High-Power Rounds",
         "module_stat": [
@@ -29146,7 +29146,7 @@
         ]
     },
     {
-        "module_name": "High-Power Rounds Compulsive",
+        "module_name": "Compulsive High-Power Rounds",
         "module_id": "252042013",
         "image_url": "https://open.api.nexon.com/static/tfd/img/bfc12c9fbd38f643dc93a1b84fcb38e7",
         "module_type": null,
@@ -29334,7 +29334,7 @@
         ]
     },
     {
-        "module_name": "Anti-matter Round",
+        "module_name": "Anti-Matter Round",
         "module_id": "252042021",
         "image_url": "https://open.api.nexon.com/static/tfd/img/3cd2f5323bef7c0aec558345d696edea",
         "module_type": "ATK",
@@ -29940,7 +29940,7 @@
         ]
     },
     {
-        "module_name": "Magazine Compulsive",
+        "module_name": "Compulsive Magazine",
         "module_id": "252042048",
         "image_url": "https://open.api.nexon.com/static/tfd/img/ab3c4d7a552b5b7b2606122470460771",
         "module_type": "Rounds per Magazine",
@@ -30434,7 +30434,7 @@
         ]
     },
     {
-        "module_name": "Reload insight",
+        "module_name": "Reload Insight",
         "module_id": "252042071",
         "image_url": "https://open.api.nexon.com/static/tfd/img/463a1c77d7e94a03d961b7cb8b101eae",
         "module_type": "Reload Time Modifier",
@@ -30801,7 +30801,7 @@
         ]
     },
     {
-        "module_name": "Dopaminergic Activate",
+        "module_name": "Dopaminergic Activation",
         "module_id": "252043010",
         "image_url": "https://open.api.nexon.com/static/tfd/img/8f5f13707b9411572ac6a8dfa306eb10",
         "module_type": "Special Mod",
@@ -31904,57 +31904,57 @@
             {
                 "level": 0,
                 "module_capacity": 15,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 1,
                 "module_capacity": 14,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 2,
                 "module_capacity": 13,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 3,
                 "module_capacity": 12,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 4,
                 "module_capacity": 11,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 5,
                 "module_capacity": 10,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 6,
                 "module_capacity": 9,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 7,
                 "module_capacity": 8,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 8,
                 "module_capacity": 7,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 9,
                 "module_capacity": 6,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             },
             {
                 "level": 10,
                 "module_capacity": 5,
-                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nHowever, the effect of restoring allies' shields is removed."
+                "value": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle.\nDeals great damage to nearby enemies when the skill ends.\nBut removes the ally Shield recovery effect."
             }
         ]
     },
@@ -33066,7 +33066,7 @@
         ]
     },
     {
-        "module_name": "Bio-Sync Shield",
+        "module_name": "Bio Sync Shield",
         "module_id": "251003040",
         "image_url": "https://open.api.nexon.com/static/tfd/img/4132201d6180811f05081670f1af2860",
         "module_type": "Support Tech",
@@ -33077,27 +33077,27 @@
             {
                 "level": 0,
                 "module_capacity": 4,
-                "value": "Converts 17.5% of the health recovered from Health Orb acquisition into shield recovery."
+                "value": "Converts 17.5% of HP recovered upon acquiring an HP Orb to Shield recovery"
             },
             {
                 "level": 1,
                 "module_capacity": 5,
-                "value": "Converts 28.7% of the health recovered from Health Orb acquisition into shield recovery."
+                "value": "Converts 28.7% of HP recovered upon acquiring an HP Orb to Shield recovery"
             },
             {
                 "level": 2,
                 "module_capacity": 6,
-                "value": "Converts 45.7% of the health recovered from Health Orb acquisition into shield recovery."
+                "value": "Converts 45.7% of HP recovered upon acquiring an HP Orb to Shield recovery"
             },
             {
                 "level": 3,
                 "module_capacity": 7,
-                "value": "Converts 70% of the health recovered from Health Orb acquisition into shield recovery."
+                "value": "Converts 70% of HP recovered upon acquiring an HP Orb to Shield recovery"
             }
         ]
     },
     {
-        "module_name": "No Retreat",
+        "module_name": "Last Stand",
         "module_id": "251003041",
         "image_url": "https://open.api.nexon.com/static/tfd/img/9ee8136f94f5a5e1c77696aa96f69cb3",
         "module_type": "Arche Tech",
@@ -33108,32 +33108,2327 @@
             {
                 "level": 0,
                 "module_capacity": 6,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 4% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 4% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
             },
             {
                 "level": 1,
                 "module_capacity": 7,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 5.4% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 5.4% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
             },
             {
                 "level": 2,
                 "module_capacity": 8,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 7.3% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 7.3% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
             },
             {
                 "level": 3,
                 "module_capacity": 9,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 9.8% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 9.8% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
             },
             {
                 "level": 4,
                 "module_capacity": 10,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 12.9% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 12.9% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
             },
             {
                 "level": 5,
                 "module_capacity": 11,
-                "value": "When attacking an enemy with a skill, consumes all your shields to deal additional damage based on the amount of damage dealt.\nThe additional damage starts at a base of 8.5% and increases up to 17% based on the amount of shield consumed (Max Shield 10000).\nAfter activation, restores shield equal to 1.5% of the max shield per second for 30 seconds (Cooldown 30 seconds)."
+                "value": "On Skill Attack upon enemies, consumes all Shield to deal additional damage on top of damage dealt.\nDeals 8.5% additional damage, which can increase up to 17% based on the amount of Shield consumed (Max Shield 10000)\nOnce triggered, recovers Shield by 1.5% of Max Shield every second for 30s (Cooldown 30s)"
+            }
+        ]
+    },
+    {
+        "module_name": "Non-Attribute Amplification",
+        "module_id": "251002106",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/c1bdc9548c44c88e013f303263398384",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Non-Attribute Skill Power +16%, Skill Critical Hit Damage -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Non-Attribute Skill Power +18.3%, Skill Critical Hit Damage -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Non-Attribute Skill Power +20.9%, Skill Critical Hit Damage -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Non-Attribute Skill Power +24.2%, Skill Critical Hit Damage -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Non-Attribute Skill Power +28.1%, Skill Critical Hit Damage -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Non-Attribute Skill Power +32.4%, Skill Critical Hit Damage -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Non-Attribute Skill Power +37.7%, Skill Critical Hit Damage -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Non-Attribute Skill Power +43.2%, Skill Critical Hit Damage -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Non-Attribute Skill Power +49.5%, Skill Critical Hit Damage -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Non-Attribute Skill Power +56.8%, Skill Critical Hit Damage -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Non-Attribute Skill Power +65.4%, Skill Critical Hit Damage -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Electric Intensive",
+        "module_id": "251002123",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/5b725b97c86c4b864db710cef25b078a",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Electric Skill Power +2.6%, Skill Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Electric Skill Power +5.2%, Skill Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Electric Skill Power +7.8%, Skill Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Electric Skill Power +10.4%, Skill Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Electric Skill Power +13%, Skill Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Electric Skill Power +15.7%, Skill Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Electric Skill Power +18.3%, Skill Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Electric Skill Power +20.9%, Skill Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Electric Skill Power +23.5%, Skill Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Electric Skill Power +26.1%, Skill Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Electric Skill Power +28.7%, Skill Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Tech Intensive",
+        "module_id": "251002125",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/6695f95f1c6e654a22a047026d3b9d8b",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Almandine",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Tech Skill Power Modifier +2.4%, Skill Critical Hit Rate +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Tech Skill Power Modifier +4.9%, Skill Critical Hit Rate +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Tech Skill Power Modifier +7.3%, Skill Critical Hit Rate +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Tech Skill Power Modifier +9.8%, Skill Critical Hit Rate +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Tech Skill Power Modifier +12.2%, Skill Critical Hit Rate +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Tech Skill Power Modifier +14.7%, Skill Critical Hit Rate +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Tech Skill Power Modifier +17.1%, Skill Critical Hit Rate +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Tech Skill Power Modifier +19.6%, Skill Critical Hit Rate +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Tech Skill Power Modifier +22%, Skill Critical Hit Rate +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Tech Skill Power Modifier +24.5%, Skill Critical Hit Rate +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Tech Skill Power Modifier +26.9%, Skill Critical Hit Rate +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252032087",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/157b6d079a9f2c2c16af629825bbe014",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Impact Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +17%, Firearm Critical Hit Damage -9%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +19.4%, Firearm Critical Hit Damage -10.2%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +22%, Firearm Critical Hit Damage -11.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +25.3%, Firearm Critical Hit Damage -13.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +29.2%, Firearm Critical Hit Damage -15.3%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +33.6%, Firearm Critical Hit Damage -17.6%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +39%, Firearm Critical Hit Damage -20.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +44.6%, Firearm Critical Hit Damage -23.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +50.9%, Firearm Critical Hit Damage -26.6%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +58.4%, Firearm Critical Hit Damage -30.5%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +67%, Firearm Critical Hit Damage -35%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252042092",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/04ac6ed9cb6fe882b8f99c1cdd1ad5fa",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm Explosive ATK +1.2%, Firearm Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm Explosive ATK +2.4%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm Explosive ATK +3.5%, Firearm Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm Explosive ATK +4.7%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm Explosive ATK +5.8%, Firearm Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm Explosive ATK +7.1%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm Explosive ATK +8.3%, Firearm Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm Explosive ATK +9.5%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm Explosive ATK +10.6%, Firearm Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm Explosive ATK +11.7%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm Explosive ATK +13%, Firearm Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Chill Amplification",
+        "module_id": "251002108",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/ef22404b994cf72c44d31e254ed4560c",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Cerulean",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Chill Skill Power +16%, Skill Critical Hit Damage -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Chill Skill Power +18.3%, Skill Critical Hit Damage -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Chill Skill Power +20.9%, Skill Critical Hit Damage -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Chill Skill Power +24.2%, Skill Critical Hit Damage -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Chill Skill Power +28.1%, Skill Critical Hit Damage -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Chill Skill Power +32.4%, Skill Critical Hit Damage -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Chill Skill Power +37.7%, Skill Critical Hit Damage -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Chill Skill Power +43.2%, Skill Critical Hit Damage -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Chill Skill Power +49.5%, Skill Critical Hit Damage -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Chill Skill Power +56.8%, Skill Critical Hit Damage -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Chill Skill Power +65.4%, Skill Critical Hit Damage -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Fusion Amplification",
+        "module_id": "251002117",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/8391d226a7095974d4c40f4baaef8c11",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Fusion Skill Power Modifier +15%, Skill Critical Hit Rate -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Fusion Skill Power Modifier +17.2%, Skill Critical Hit Rate -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Fusion Skill Power Modifier +19.6%, Skill Critical Hit Rate -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Fusion Skill Power Modifier +22.6%, Skill Critical Hit Rate -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Fusion Skill Power Modifier +26.3%, Skill Critical Hit Rate -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Fusion Skill Power Modifier +30.4%, Skill Critical Hit Rate -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Fusion Skill Power Modifier +35.3%, Skill Critical Hit Rate -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Fusion Skill Power Modifier +40.5%, Skill Critical Hit Rate -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Fusion Skill Power Modifier +46.4%, Skill Critical Hit Rate -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Fusion Skill Power Modifier +53.3%, Skill Critical Hit Rate -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Fusion Skill Power Modifier +61.3%, Skill Critical Hit Rate -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Singular Amplification",
+        "module_id": "251002118",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/5bc1a561284c02e8491e8a914b748003",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Rutile",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Singular Skill Power Modifier +15%, Skill Critical Hit Rate -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Singular Skill Power Modifier +17.2%, Skill Critical Hit Rate -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Singular Skill Power Modifier +19.6%, Skill Critical Hit Rate -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Singular Skill Power Modifier +22.6%, Skill Critical Hit Rate -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Singular Skill Power Modifier +26.3%, Skill Critical Hit Rate -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Singular Skill Power Modifier +30.4%, Skill Critical Hit Rate -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Singular Skill Power Modifier +35.3%, Skill Critical Hit Rate -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Singular Skill Power Modifier +40.5%, Skill Critical Hit Rate -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Singular Skill Power Modifier +46.4%, Skill Critical Hit Rate -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Singular Skill Power Modifier +53.3%, Skill Critical Hit Rate -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Singular Skill Power Modifier +61.3%, Skill Critical Hit Rate -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Dimension Amplification",
+        "module_id": "251002119",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/9909f86f8214ab6352533efd22390d2d",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Dimension Skill Power Modifier +15%, Skill Critical Hit Rate -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Dimension Skill Power Modifier +17.2%, Skill Critical Hit Rate -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Dimension Skill Power Modifier +19.6%, Skill Critical Hit Rate -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Dimension Skill Power Modifier +22.6%, Skill Critical Hit Rate -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Dimension Skill Power Modifier +26.3%, Skill Critical Hit Rate -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Dimension Skill Power Modifier +30.4%, Skill Critical Hit Rate -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Dimension Skill Power Modifier +35.3%, Skill Critical Hit Rate -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Dimension Skill Power Modifier +40.5%, Skill Critical Hit Rate -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Dimension Skill Power Modifier +46.4%, Skill Critical Hit Rate -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Dimension Skill Power Modifier +53.3%, Skill Critical Hit Rate -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Dimension Skill Power Modifier +61.3%, Skill Critical Hit Rate -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Venom Injection",
+        "module_id": "254008005",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/b8fd8ee77748d90352a6ee3beacd63f0",
+        "module_type": null,
+        "module_tier": "Transcendent",
+        "module_socket_type": "Rutile",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 14,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 1,
+                "module_capacity": 13,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 2,
+                "module_capacity": 12,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 3,
+                "module_capacity": 11,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 5,
+                "module_capacity": 9,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 6,
+                "module_capacity": 8,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 7,
+                "module_capacity": 7,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 8,
+                "module_capacity": 6,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 9,
+                "module_capacity": 5,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            },
+            {
+                "level": 10,
+                "module_capacity": 4,
+                "value": "When using skill, continuously consumes resources to grant self Toxic Sense.\nWhile Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion."
+            }
+        ]
+    },
+    {
+        "module_name": "Supercooled Kuiper Round",
+        "module_id": "254021002",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/8f58e9176e8013b338e2403baac44c35",
+        "module_type": null,
+        "module_tier": "Transcendent",
+        "module_socket_type": "Malachite",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 13,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 1,
+                "module_capacity": 12,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 2,
+                "module_capacity": 11,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 3,
+                "module_capacity": 10,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 4,
+                "module_capacity": 9,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 5,
+                "module_capacity": 8,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 6,
+                "module_capacity": 7,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 7,
+                "module_capacity": 6,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 8,
+                "module_capacity": 5,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 9,
+                "module_capacity": 4,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            },
+            {
+                "level": 10,
+                "module_capacity": 3,
+                "value": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking a Weak Point recovers Shield instead of MP.\nThe increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point attack."
+            }
+        ]
+    },
+    {
+        "module_name": "Non-Attribute Intensive",
+        "module_id": "251002120",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/0910bc8ff7d33683c206ba4f866e4f22",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Non-Attribute Skill Power +2.6%, Skill Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Non-Attribute Skill Power +5.2%, Skill Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Non-Attribute Skill Power +7.8%, Skill Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Non-Attribute Skill Power +10.4%, Skill Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Non-Attribute Skill Power +13%, Skill Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Non-Attribute Skill Power +15.7%, Skill Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Non-Attribute Skill Power +18.3%, Skill Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Non-Attribute Skill Power +20.9%, Skill Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Non-Attribute Skill Power +23.5%, Skill Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Non-Attribute Skill Power +26.1%, Skill Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Non-Attribute Skill Power +28.7%, Skill Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Singular Intensive",
+        "module_id": "251002127",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/1e6d569b84218c4ba0547d9a84065422",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Rutile",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Singular Skill Power Modifier +2.4%, Skill Critical Hit Rate +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Singular Skill Power Modifier +4.9%, Skill Critical Hit Rate +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Singular Skill Power Modifier +7.3%, Skill Critical Hit Rate +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Singular Skill Power Modifier +9.8%, Skill Critical Hit Rate +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Singular Skill Power Modifier +12.2%, Skill Critical Hit Rate +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Singular Skill Power Modifier +14.7%, Skill Critical Hit Rate +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Singular Skill Power Modifier +17.1%, Skill Critical Hit Rate +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Singular Skill Power Modifier +19.6%, Skill Critical Hit Rate +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Singular Skill Power Modifier +22%, Skill Critical Hit Rate +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Singular Skill Power Modifier +24.5%, Skill Critical Hit Rate +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Singular Skill Power Modifier +26.9%, Skill Critical Hit Rate +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252042089",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/cc6045a59db77a8372b4d95fee49155d",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm Explosive ATK +10%, Firearm Critical Hit Damage -8%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm Explosive ATK +11.4%, Firearm Critical Hit Damage -9%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm Explosive ATK +13%, Firearm Critical Hit Damage -10.2%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm Explosive ATK +15%, Firearm Critical Hit Damage -11.7%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm Explosive ATK +17.2%, Firearm Critical Hit Damage -13.4%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm Explosive ATK +20%, Firearm Critical Hit Damage -15.3%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm Explosive ATK +23.2%, Firearm Critical Hit Damage -17.7%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm Explosive ATK +26.5%, Firearm Critical Hit Damage -20.1%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm Explosive ATK +30.3%, Firearm Critical Hit Damage -23%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm Explosive ATK +34.8%, Firearm Critical Hit Damage -26.2%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm Explosive ATK +40%, Firearm Critical Hit Damage -30%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252042090",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/14b7e27faa2bcca9f8736f06cac3bdfd",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +1.5%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +2.9%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +4.3%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +5.8%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +7.3%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +8.7%, Firearm Critical Hit Damage +10.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +10.2%, Firearm Critical Hit Damage +12.7%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +11.6%, Firearm Critical Hit Damage +14.4%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +13.1%, Firearm Critical Hit Damage +16.4%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +14.4%, Firearm Critical Hit Damage +18.2%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +16%, Firearm Critical Hit Damage +20%"
+            }
+        ]
+    },
+    {
+        "module_name": "Toxic Amplification",
+        "module_id": "251002110",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/73ed8011e2b82476fa11983b9aa4064b",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Rutile",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Toxic Skill Power +16%, Skill Critical Hit Damage -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Toxic Skill Power +18.3%, Skill Critical Hit Damage -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Toxic Skill Power +20.9%, Skill Critical Hit Damage -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Toxic Skill Power +24.2%, Skill Critical Hit Damage -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Toxic Skill Power +28.1%, Skill Critical Hit Damage -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Toxic Skill Power +32.4%, Skill Critical Hit Damage -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Toxic Skill Power +37.7%, Skill Critical Hit Damage -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Toxic Skill Power +43.2%, Skill Critical Hit Damage -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Toxic Skill Power +49.5%, Skill Critical Hit Damage -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Toxic Skill Power +56.8%, Skill Critical Hit Damage -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Toxic Skill Power +65.4%, Skill Critical Hit Damage -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Electric Amplification",
+        "module_id": "251002109",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/da7b4673e56e8f51c8e5716eab7b23ee",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Electric Skill Power +16%, Skill Critical Hit Damage -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Electric Skill Power +18.3%, Skill Critical Hit Damage -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Electric Skill Power +20.9%, Skill Critical Hit Damage -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Electric Skill Power +24.2%, Skill Critical Hit Damage -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Electric Skill Power +28.1%, Skill Critical Hit Damage -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Electric Skill Power +32.4%, Skill Critical Hit Damage -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Electric Skill Power +37.7%, Skill Critical Hit Damage -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Electric Skill Power +43.2%, Skill Critical Hit Damage -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Electric Skill Power +49.5%, Skill Critical Hit Damage -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Electric Skill Power +56.8%, Skill Critical Hit Damage -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Electric Skill Power +65.4%, Skill Critical Hit Damage -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Tech Amplification",
+        "module_id": "251002111",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/18e7ef979a50b9244e3ffb605a2fde13",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Almandine",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Tech Skill Power Modifier +15%, Skill Critical Hit Rate -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Tech Skill Power Modifier +17.2%, Skill Critical Hit Rate -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Tech Skill Power Modifier +19.6%, Skill Critical Hit Rate -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Tech Skill Power Modifier +22.6%, Skill Critical Hit Rate -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Tech Skill Power Modifier +26.3%, Skill Critical Hit Rate -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Tech Skill Power Modifier +30.4%, Skill Critical Hit Rate -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Tech Skill Power Modifier +35.3%, Skill Critical Hit Rate -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Tech Skill Power Modifier +40.5%, Skill Critical Hit Rate -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Tech Skill Power Modifier +46.4%, Skill Critical Hit Rate -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Tech Skill Power Modifier +53.3%, Skill Critical Hit Rate -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Tech Skill Power Modifier +61.3%, Skill Critical Hit Rate -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Fusion Intensive",
+        "module_id": "251002126",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/295c6c0da656c79c61893fa4e39efed6",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Fusion Skill Power Modifier +2.4%, Skill Critical Hit Rate +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Fusion Skill Power Modifier +4.9%, Skill Critical Hit Rate +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Fusion Skill Power Modifier +7.3%, Skill Critical Hit Rate +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Fusion Skill Power Modifier +9.8%, Skill Critical Hit Rate +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Fusion Skill Power Modifier +12.2%, Skill Critical Hit Rate +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Fusion Skill Power Modifier +14.7%, Skill Critical Hit Rate +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Fusion Skill Power Modifier +17.1%, Skill Critical Hit Rate +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Fusion Skill Power Modifier +19.6%, Skill Critical Hit Rate +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Fusion Skill Power Modifier +22%, Skill Critical Hit Rate +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Fusion Skill Power Modifier +24.5%, Skill Critical Hit Rate +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Fusion Skill Power Modifier +26.9%, Skill Critical Hit Rate +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Dimension Intensive",
+        "module_id": "251002128",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/4ea49916cc36d5ace8adc78f99245928",
+        "module_type": "Luck",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Dimension Skill Power Modifier +2.4%, Skill Critical Hit Rate +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Dimension Skill Power Modifier +4.9%, Skill Critical Hit Rate +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Dimension Skill Power Modifier +7.3%, Skill Critical Hit Rate +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Dimension Skill Power Modifier +9.8%, Skill Critical Hit Rate +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Dimension Skill Power Modifier +12.2%, Skill Critical Hit Rate +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Dimension Skill Power Modifier +14.7%, Skill Critical Hit Rate +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Dimension Skill Power Modifier +17.1%, Skill Critical Hit Rate +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Dimension Skill Power Modifier +19.6%, Skill Critical Hit Rate +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Dimension Skill Power Modifier +22%, Skill Critical Hit Rate +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Dimension Skill Power Modifier +24.5%, Skill Critical Hit Rate +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Dimension Skill Power Modifier +26.9%, Skill Critical Hit Rate +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252042088",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/7cfbc10a06d88a1a9fff653c61e5dec4",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +10%, Firearm Critical Hit Damage -8%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +11.4%, Firearm Critical Hit Damage -9%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +13%, Firearm Critical Hit Damage -10.2%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +15%, Firearm Critical Hit Damage -11.7%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +17.2%, Firearm Critical Hit Damage -13.4%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +20%, Firearm Critical Hit Damage -15.3%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +23.2%, Firearm Critical Hit Damage -17.7%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +26.5%, Firearm Critical Hit Damage -20.1%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +30.3%, Firearm Critical Hit Damage -23%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +34.8%, Firearm Critical Hit Damage -26.2%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +40%, Firearm Critical Hit Damage -30%"
+            }
+        ]
+    },
+    {
+        "module_name": "Fire Intensive",
+        "module_id": "251002121",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/52ce0aaef89f0b40d6b0b14322c7e80c",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Almandine",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Fire Skill Power +2.6%, Skill Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Fire Skill Power +5.2%, Skill Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Fire Skill Power +7.8%, Skill Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Fire Skill Power +10.4%, Skill Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Fire Skill Power +13%, Skill Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Fire Skill Power +15.7%, Skill Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Fire Skill Power +18.3%, Skill Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Fire Skill Power +20.9%, Skill Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Fire Skill Power +23.5%, Skill Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Fire Skill Power +26.1%, Skill Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Fire Skill Power +28.7%, Skill Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Hyperfocus",
+        "module_id": "251003042",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/97ef56b5d0fcd62ce3801209ad186ec4",
+        "module_type": "Arche Tech",
+        "module_tier": "Ultimate",
+        "module_socket_type": "Almandine",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +1.5% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +1.3% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +3.1% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +2.5% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +4.6% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +3.8% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +6.2% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +5.1% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +7.7% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +6.3% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +9.3% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +7.6% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +10.8% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +8.7% for 10s\nOnly one of the effects is applied"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "On landing a Skill Critical Hit on an enemy, grants Firearm Focus: Firearm Critical Hit Damage +12.4% for 10s\nOn landing a Firearm Critical Hit, grants Arche Focus: Skill Critical Hit Damage +10.1% for 10s\nOnly one of the effects is applied"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252012087",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/df367ff6f5a95430fc12d75ae4c9c2b9",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "General Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +17%, Firearm Critical Hit Damage -10%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +19.4%, Firearm Critical Hit Damage -11.4%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +22%, Firearm Critical Hit Damage -13%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +25.3%, Firearm Critical Hit Damage -15%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +29.2%, Firearm Critical Hit Damage -17.3%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +33.6%, Firearm Critical Hit Damage -20%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +39%, Firearm Critical Hit Damage -23.3%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +44.6%, Firearm Critical Hit Damage -26.5%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +50.9%, Firearm Critical Hit Damage -30.3%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +58.4%, Firearm Critical Hit Damage -34.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +67%, Firearm Critical Hit Damage -40%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252042091",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/35c3ad1803a38fb5933aacd2d3f3d699",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +1%, Firearm Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +1.8%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +2.7%, Firearm Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +3.6%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +4.5%, Firearm Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +5.5%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +6.4%, Firearm Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +7.3%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +8.2%, Firearm Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +9.1%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +10%, Firearm Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Cryogenic Cluster Shot",
+        "module_id": "254021001",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/811094c76ba270677e2c861081872c05",
+        "module_type": null,
+        "module_tier": "Transcendent",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 16,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 1,
+                "module_capacity": 15,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 2,
+                "module_capacity": 14,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 3,
+                "module_capacity": 13,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 4,
+                "module_capacity": 12,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 6,
+                "module_capacity": 10,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 7,
+                "module_capacity": 9,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 8,
+                "module_capacity": 8,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 9,
+                "module_capacity": 7,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            },
+            {
+                "level": 10,
+                "module_capacity": 6,
+                "value": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed."
+            }
+        ]
+    },
+    {
+        "module_name": "Fire Amplification",
+        "module_id": "251002107",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/f920c1b1bfc9c4bd60d7aca8963e940b",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Almandine",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Fire Skill Power +16%, Skill Critical Hit Damage -35%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Fire Skill Power +18.3%, Skill Critical Hit Damage -40%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Fire Skill Power +20.9%, Skill Critical Hit Damage -45.4%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Fire Skill Power +24.2%, Skill Critical Hit Damage -52.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Fire Skill Power +28.1%, Skill Critical Hit Damage -60.6%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Fire Skill Power +32.4%, Skill Critical Hit Damage -69.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Fire Skill Power +37.7%, Skill Critical Hit Damage -81.2%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Fire Skill Power +43.2%, Skill Critical Hit Damage -92.9%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Fire Skill Power +49.5%, Skill Critical Hit Damage -106.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Fire Skill Power +56.8%, Skill Critical Hit Damage -121.8%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Fire Skill Power +65.4%, Skill Critical Hit Damage -140%"
+            }
+        ]
+    },
+    {
+        "module_name": "Toxic Intensive",
+        "module_id": "251002124",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/26a77183bb80bfcd22dd68bdcce4f100",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Rutile",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Toxic Skill Power +2.6%, Skill Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Toxic Skill Power +5.2%, Skill Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Toxic Skill Power +7.8%, Skill Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Toxic Skill Power +10.4%, Skill Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Toxic Skill Power +13%, Skill Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Toxic Skill Power +15.7%, Skill Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Toxic Skill Power +18.3%, Skill Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Toxic Skill Power +20.9%, Skill Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Toxic Skill Power +23.5%, Skill Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Toxic Skill Power +26.1%, Skill Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Toxic Skill Power +28.7%, Skill Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252012088",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/f69863aa106f9612e9021839fb1308a1",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "General Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +3.3%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +6.5%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +9.8%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +13.1%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +16.4%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +19.6%, Firearm Critical Hit Damage +10.9%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +22.9%, Firearm Critical Hit Damage +12.7%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +26.2%, Firearm Critical Hit Damage +14.4%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +29.5%, Firearm Critical Hit Damage +16.4%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +32.7%, Firearm Critical Hit Damage +18.2%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +36%, Firearm Critical Hit Damage +20%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252022088",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/c2458ad4eb67016c71c4c9c04d102a75",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Special Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +2.5%, Firearm Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +4.9%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +7.4%, Firearm Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +9.8%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +12.3%, Firearm Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +14.7%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +17.2%, Firearm Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +19.6%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +22.1%, Firearm Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +24.5%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +27%, Firearm Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252042087",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/8408b7038c7a635ff958370bdedd5839",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "High-Power Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +17%, Firearm Critical Hit Damage -5%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +19.4%, Firearm Critical Hit Damage -5.7%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +22%, Firearm Critical Hit Damage -6.5%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +25.3%, Firearm Critical Hit Damage -7.5%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +29.2%, Firearm Critical Hit Damage -8.7%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +33.6%, Firearm Critical Hit Damage -10%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +39%, Firearm Critical Hit Damage -11.7%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +44.6%, Firearm Critical Hit Damage -13.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +50.9%, Firearm Critical Hit Damage -15.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +58.4%, Firearm Critical Hit Damage -17.4%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +67%, Firearm Critical Hit Damage -20%"
+            }
+        ]
+    },
+    {
+        "module_name": "Toxic Mixture",
+        "module_id": "254008006",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/f465b5e76a7e95fb6c543110e6641379",
+        "module_type": null,
+        "module_tier": "Transcendent",
+        "module_socket_type": "Xantic",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 16,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 1,
+                "module_capacity": 15,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 2,
+                "module_capacity": 14,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 3,
+                "module_capacity": 13,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 4,
+                "module_capacity": 12,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 6,
+                "module_capacity": 10,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 7,
+                "module_capacity": 9,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 8,
+                "module_capacity": 8,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 9,
+                "module_capacity": 7,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            },
+            {
+                "level": 10,
+                "module_capacity": 6,
+                "value": "Modifies the Room 0 Trauma effect to Necrosis.\nFirearm ATK increases with the number of Necrosis stacks."
+            }
+        ]
+    },
+    {
+        "module_name": "Chill Intensive",
+        "module_id": "251002122",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/d9decce3ffb52d883c15beaf6c2b807c",
+        "module_type": "Strike",
+        "module_tier": "Rare",
+        "module_socket_type": "Cerulean",
+        "module_class": "Descendant",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Chill Skill Power +2.6%, Skill Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Chill Skill Power +5.2%, Skill Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Chill Skill Power +7.8%, Skill Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Chill Skill Power +10.4%, Skill Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Chill Skill Power +13%, Skill Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Chill Skill Power +15.7%, Skill Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Chill Skill Power +18.3%, Skill Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Chill Skill Power +20.9%, Skill Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Chill Skill Power +23.5%, Skill Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Chill Skill Power +26.1%, Skill Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Chill Skill Power +28.7%, Skill Critical Hit Damage +10%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Amplification",
+        "module_id": "252022087",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/83005b2a395146238b0f7da492cf632e",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Special Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +17%, Firearm Critical Hit Damage -9%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +19.4%, Firearm Critical Hit Damage -10.2%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +22%, Firearm Critical Hit Damage -11.5%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +25.3%, Firearm Critical Hit Damage -13.1%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +29.2%, Firearm Critical Hit Damage -15.1%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +33.6%, Firearm Critical Hit Damage -17.3%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +39%, Firearm Critical Hit Damage -20%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +44.6%, Firearm Critical Hit Damage -22.8%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +50.9%, Firearm Critical Hit Damage -26%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +58.4%, Firearm Critical Hit Damage -29.7%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +67%, Firearm Critical Hit Damage -34%"
+            }
+        ]
+    },
+    {
+        "module_name": "Charge Intensive",
+        "module_id": "252032088",
+        "image_url": "https://open.api.nexon.com/static/tfd/img/4acb6310f2586f352487491ea94bd6fa",
+        "module_type": "Firearm Critical Hit Damage",
+        "module_tier": "Rare",
+        "module_socket_type": "Malachite",
+        "module_class": "Impact Rounds",
+        "module_stat": [
+            {
+                "level": 0,
+                "module_capacity": 6,
+                "value": "Firearm ATK +1.9%, Firearm Critical Hit Damage +1%"
+            },
+            {
+                "level": 1,
+                "module_capacity": 7,
+                "value": "Firearm ATK +3.8%, Firearm Critical Hit Damage +1.8%"
+            },
+            {
+                "level": 2,
+                "module_capacity": 8,
+                "value": "Firearm ATK +5.7%, Firearm Critical Hit Damage +2.7%"
+            },
+            {
+                "level": 3,
+                "module_capacity": 9,
+                "value": "Firearm ATK +7.6%, Firearm Critical Hit Damage +3.6%"
+            },
+            {
+                "level": 4,
+                "module_capacity": 10,
+                "value": "Firearm ATK +9.5%, Firearm Critical Hit Damage +4.5%"
+            },
+            {
+                "level": 5,
+                "module_capacity": 11,
+                "value": "Firearm ATK +11.5%, Firearm Critical Hit Damage +5.5%"
+            },
+            {
+                "level": 6,
+                "module_capacity": 12,
+                "value": "Firearm ATK +13.4%, Firearm Critical Hit Damage +6.4%"
+            },
+            {
+                "level": 7,
+                "module_capacity": 13,
+                "value": "Firearm ATK +15.3%, Firearm Critical Hit Damage +7.3%"
+            },
+            {
+                "level": 8,
+                "module_capacity": 14,
+                "value": "Firearm ATK +17.2%, Firearm Critical Hit Damage +8.2%"
+            },
+            {
+                "level": 9,
+                "module_capacity": 15,
+                "value": "Firearm ATK +19.1%, Firearm Critical Hit Damage +9.1%"
+            },
+            {
+                "level": 10,
+                "module_capacity": 16,
+                "value": "Firearm ATK +21%, Firearm Critical Hit Damage +10%"
             }
         ]
     }

@@ -188,7 +188,7 @@ const Modules = () => {
 
   const getTierColor = (tier) => {
     switch (tier) {
-      case "Standard":
+      case "Normal":
         return colorStandard;
       case "Rare":
         return colorRare;
