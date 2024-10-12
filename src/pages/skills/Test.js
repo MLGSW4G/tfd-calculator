@@ -1,4 +1,4 @@
-// pages/skills/Test.js
+// src/pages/skills/Test.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Test");

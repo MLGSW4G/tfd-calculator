@@ -1,4 +1,4 @@
-// pages/skills/CutoffBeam.js
+// src/pages/skills/CutoffBeam.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Cutoff Beam");

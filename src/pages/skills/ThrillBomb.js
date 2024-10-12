@@ -1,4 +1,4 @@
-// pages/skills/ThrillBomb.js
+// src/pages/skills/ThrillBomb.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Thrill Bomb");

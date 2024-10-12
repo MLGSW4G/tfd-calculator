@@ -1,4 +1,4 @@
-// pages/skills/ElectricCondense.js
+// src/pages/skills/ElectricCondense.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "Electric Condense");

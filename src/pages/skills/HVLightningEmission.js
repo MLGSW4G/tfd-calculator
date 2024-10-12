@@ -1,4 +1,4 @@
-// pages/skills/HvLightningEmission.js
+// src/pages/skills/HVLightningEmission.js
 import jsonData from "../SkillsList.json";
 
 const skillStats = jsonData.find((skill) => skill.skillName === "HV Lightning Emission");
