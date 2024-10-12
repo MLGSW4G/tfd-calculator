@@ -1,13 +1,22 @@
 // src/components/NavTabs.js
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
 import "../styles/NavTabs.css";
+
+// Define the navigation links
+const navigationLinks = [
+  { label: "overview", path: "/overview" },
+  { label: "skillsList", path: "/skillsList" },
+  { label: "descendantsList", path: "/descendantsList" },
+  { label: "modules", path: "/modules" },
+  { label: "settings", path: "/settings" },
+];
 
 function samePageLinkNavigation(event) {
   if (
@@ -34,24 +43,24 @@ LinkTab.propTypes = {
 const NavTabs = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "navTabs");
-
-  const [value, setValue] = React.useState(0);
+  const location = useLocation();
+  const [currentPageIndex, setCurrentPageIndex] = useState(() => {
+    return navigationLinks.findIndex((link) => link.path === location.pathname);
+  });
 
   const handleChange = (event, newValue) => {
     // event.type can be equal to focus with selectionFollowsFocus.
     if (event.type !== "click" || (event.type === "click" && samePageLinkNavigation(event))) {
-      setValue(newValue);
+      setCurrentPageIndex(newValue);
     }
   };
 
   return (
     <Box className="nav-tabs">
-      <Tabs value={value} onChange={handleChange} role="navigation" variant="fullWidth">
-        <LinkTab label={translations.overview} to="/overview" />
-        <LinkTab label={translations.skillsList} to="/skillsList" />
-        <LinkTab label={translations.descendantsList} to="/descendantsList" />
-        <LinkTab label={translations.modules} to="/modules" />
-        <LinkTab label={translations.settings} to="/settings" />
+      <Tabs value={currentPageIndex} onChange={handleChange} role="navigation" variant="fullWidth">
+        {navigationLinks.map((link, index) => (
+          <LinkTab key={index} label={translations[link.label]} to={link.path} />
+        ))}
       </Tabs>
     </Box>
   );
