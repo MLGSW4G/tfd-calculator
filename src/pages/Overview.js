@@ -38,14 +38,9 @@ export default function Overview() {
     return cachedSkill ? JSON.parse(cachedSkill) : false;
   });
 
-  const [optimizationCondition, setOptimizationCondition] = useState(() => {
-    const cachedOptimizationCondition = localStorage.getItem("optimizationCondition");
-    return cachedOptimizationCondition ? JSON.parse(cachedOptimizationCondition) : false;
-  });
-
   const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState(() => {
     const cachedOptimizationConditionMultiplier = localStorage.getItem("optimizationConditionMultiplier");
-    return cachedOptimizationConditionMultiplier ? cachedOptimizationConditionMultiplier : "140%";
+    return cachedOptimizationConditionMultiplier ? cachedOptimizationConditionMultiplier : 1;
   });
 
   const [reactorLevel, setReactorLevel] = useState(() => {
@@ -55,14 +50,9 @@ export default function Overview() {
   const [reactorSkillPower, setReactorSkillPower] = useState(reactorLevels[reactorLevel - 1].skillPower);
   const [subSkillPower, setSubSkillPower] = useState(reactorLevels[reactorLevel - 1].subSkillPower);
 
-  const [reactorEnhancement, setReactorEnhancement] = useState(() => {
-    const cachedReactorEnhancement = localStorage.getItem("reactorEnhancement");
-    return cachedReactorEnhancement ? JSON.parse(cachedReactorEnhancement) : false;
-  });
-
   const [reactorEnhancementLevel, setReactorEnhancementLevel] = useState(() => {
     const cachedReactorEnhancementLevel = localStorage.getItem("reactorEnhancementLevel");
-    return cachedReactorEnhancementLevel ? parseInt(cachedReactorEnhancementLevel) : 1;
+    return cachedReactorEnhancementLevel ? parseInt(cachedReactorEnhancementLevel) : 0;
   });
 
   const specialCases = {
@@ -159,12 +149,11 @@ export default function Overview() {
   };
 
   useEffect(() => {
-    const optimizationConditionMultiplierValue = optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1;
     const appliedElementSkillPower = element ? 1.2 : 1;
     const appliedTypeSkillPower = skill ? 1.2 : 1;
-    const reactorEnhancementMultiplier = reactorEnhancement ? [1.03, 1.06][reactorEnhancementLevel - 1] : 1;
+    const reactorEnhancementMultiplier = [1, 1.03, 1.06][reactorEnhancementLevel];
     const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
-    let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplierValue * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
+    let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
 
     // Calculate the total skill power with effects
     let elementSkillPowerEffect = 1;
@@ -202,7 +191,7 @@ export default function Overview() {
     totalSkillPowerValue *= elementSkillPowerEffect;
 
     setTotalSkillPower(totalSkillPowerValue);
-  }, [reactorSkillPower, reactorEnhancementLevel, reactorEnhancement, optimizationCondition, optimizationConditionMultiplier, element, skill, totalEffects, skillStats, selectedSkill]);
+  }, [reactorSkillPower, reactorEnhancementLevel, optimizationConditionMultiplier, element, skill, totalEffects, skillStats, selectedSkill]);
 
   useEffect(() => {
     if (selectedSkill) {
@@ -230,20 +219,12 @@ export default function Overview() {
   }, [skill]);
 
   useEffect(() => {
-    localStorage.setItem("optimizationCondition", JSON.stringify(optimizationCondition));
-  }, [optimizationCondition]);
-
-  useEffect(() => {
     localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
   }, [optimizationConditionMultiplier]);
 
   useEffect(() => {
     localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
   }, [reactorLevel]);
-
-  useEffect(() => {
-    localStorage.setItem("reactorEnhancement", JSON.stringify(reactorEnhancement));
-  }, [reactorEnhancement]);
 
   useEffect(() => {
     localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel.toString());
@@ -322,45 +303,46 @@ export default function Overview() {
         </Grid>
 
         <Grid item xs={6}>
-          <FormControlLabel control={<Checkbox checked={optimizationCondition} onChange={(event) => setOptimizationCondition(event.target.checked)} />} label={translations.optimizationCondition} />
-          {optimizationCondition && (
-            <Select
-              size="small"
-              value={optimizationConditionMultiplier}
-              onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
-              sx={{
-                "& .MuiSelect-select": {
-                  backgroundColor: optimizationConditionMultiplier === "140%" ? colorRare : optimizationConditionMultiplier === "160%" ? colorUltimate : null,
-                },
-              }}
-            >
-              <MenuItem value="140%" sx={{ color: colorRare }}>
-                140%
-              </MenuItem>
-              <MenuItem value="160%" sx={{ color: colorUltimate }}>
-                160%
-              </MenuItem>
-            </Select>
-          )}
+          <Typography>{translations.optimizationCondition}</Typography>
+          <Select
+            value={optimizationConditionMultiplier}
+            onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
+            sx={{
+              "& .MuiSelect-select": {
+                backgroundColor: optimizationConditionMultiplier === "1.4" ? colorRare : optimizationConditionMultiplier === "1.6" ? colorUltimate : null,
+              },
+            }}
+            style={{ minWidth: 200 }}
+          >
+            <MenuItem value="1">100%</MenuItem>
+
+            <MenuItem value="1.4" sx={{ color: colorRare }}>
+              140%
+            </MenuItem>
+
+            <MenuItem value="1.6" sx={{ color: colorUltimate }}>
+              160%
+            </MenuItem>
+          </Select>
         </Grid>
 
-        <Grid item xs={6} display="flex">
-          <FormControlLabel control={<Checkbox checked={reactorEnhancement} onChange={(event) => setReactorEnhancement(event.target.checked)} />} label={translations.reactorEnhancement} />
-          {reactorEnhancement && (
-            <Select size="small" value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)}>
-              <MenuItem value={1}>
-                <Tooltip enterDelay={0} title={translations.reactorUpgrade1Tooltip} placement="right">
-                  {translations.reactorUpgrade1}
-                </Tooltip>
-              </MenuItem>
+        <Grid item xs={6}>
+          <Typography>{translations.reactorEnhancement}</Typography>
+          <Select value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)} style={{ minWidth: 200 }}>
+            <MenuItem value={0}>{translations.reactorUpgrade0}</MenuItem>
 
-              <MenuItem value={2}>
-                <Tooltip enterDelay={0} title={translations.reactorUpgrade2Tooltip} placement="right">
-                  {translations.reactorUpgrade2}
-                </Tooltip>
-              </MenuItem>
-            </Select>
-          )}
+            <MenuItem value={1}>
+              <Tooltip enterDelay={0} title={translations.reactorUpgrade1Tooltip} placement="right">
+                {translations.reactorUpgrade1}
+              </Tooltip>
+            </MenuItem>
+
+            <MenuItem value={2}>
+              <Tooltip enterDelay={0} title={translations.reactorUpgrade2Tooltip} placement="right">
+                {translations.reactorUpgrade2}
+              </Tooltip>
+            </MenuItem>
+          </Select>
         </Grid>
 
         <Grid item xs={12} display="flex">
@@ -571,7 +553,7 @@ export default function Overview() {
                 id="skill-damage1"
                 label={translations.skillDamage1}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, element, skill, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -591,7 +573,7 @@ export default function Overview() {
                 id="skill-damage2"
                 label={translations.skillDamage2}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, element, skill, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -611,7 +593,7 @@ export default function Overview() {
                 id="skill-damage3"
                 label={translations.skillDamage3}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, element, skill, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -631,7 +613,7 @@ export default function Overview() {
                 id="skill-damage4"
                 label={translations.skillDamage4}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, element, skill, optimizationCondition ? parseFloat(optimizationConditionMultiplier) / 100 : 1))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, element, skill, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
