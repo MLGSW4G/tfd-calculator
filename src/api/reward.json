@@ -28,7 +28,7 @@
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -63,7 +63,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -91,7 +91,7 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -126,7 +126,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -154,7 +154,7 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -203,14 +203,14 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -238,7 +238,7 @@
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -300,14 +300,14 @@
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -321,7 +321,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -363,7 +363,7 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -440,14 +440,14 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -468,7 +468,7 @@
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -489,21 +489,21 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -572,7 +572,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -593,7 +593,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -628,7 +628,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -649,7 +649,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -663,7 +663,7 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -684,7 +684,7 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -740,7 +740,7 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -816,7 +816,7 @@
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -837,7 +837,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -879,7 +879,7 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -914,7 +914,7 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -956,7 +956,7 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -977,7 +977,7 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1095,14 +1095,14 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1123,14 +1123,14 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1151,7 +1151,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -1165,7 +1165,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1221,7 +1221,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -1263,14 +1263,14 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1331,7 +1331,7 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1352,7 +1352,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1380,7 +1380,7 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -1401,7 +1401,7 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1422,7 +1422,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1436,7 +1436,7 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -1450,7 +1450,7 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1492,7 +1492,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -1541,7 +1541,7 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -1659,7 +1659,7 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -1701,14 +1701,14 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -1764,14 +1764,14 @@
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -1799,7 +1799,7 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1813,14 +1813,14 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     }
                 ]
@@ -1833,7 +1833,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1868,7 +1868,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -1882,7 +1882,7 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1896,7 +1896,7 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -1931,7 +1931,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -1959,7 +1959,7 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2001,7 +2001,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2022,7 +2022,7 @@
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2097,14 +2097,14 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2132,7 +2132,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2153,7 +2153,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -2195,7 +2195,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2209,7 +2209,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2230,7 +2230,7 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2258,14 +2258,14 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2390,7 +2390,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -2467,14 +2467,14 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -2516,7 +2516,7 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2537,21 +2537,21 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -2586,14 +2586,14 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2613,7 +2613,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -2641,7 +2641,7 @@
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2676,7 +2676,7 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2718,7 +2718,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -2816,7 +2816,7 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2851,7 +2851,7 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2885,14 +2885,14 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -2920,14 +2920,14 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -2997,7 +2997,7 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3011,7 +3011,7 @@
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3046,7 +3046,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3067,7 +3067,7 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3116,7 +3116,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     }
                 ]
@@ -3157,7 +3157,7 @@
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3171,7 +3171,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3206,14 +3206,14 @@
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -3234,7 +3234,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3332,7 +3332,7 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -3407,7 +3407,7 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3484,7 +3484,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3568,7 +3568,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3610,7 +3610,7 @@
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3665,7 +3665,7 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3700,7 +3700,7 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3714,14 +3714,14 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -3770,7 +3770,7 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -3798,7 +3798,7 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -3826,7 +3826,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3847,7 +3847,7 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3882,14 +3882,14 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3923,14 +3923,14 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -3965,7 +3965,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4000,14 +4000,14 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -4035,7 +4035,7 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -4084,7 +4084,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4119,7 +4119,7 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4140,7 +4140,7 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4181,7 +4181,7 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4202,7 +4202,7 @@
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4244,7 +4244,7 @@
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4272,7 +4272,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4286,7 +4286,7 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4314,14 +4314,14 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4335,7 +4335,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -4405,14 +4405,14 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     }
                 ]
@@ -4480,7 +4480,7 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -4501,14 +4501,14 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4543,7 +4543,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4571,28 +4571,28 @@
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4627,7 +4627,7 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4662,7 +4662,7 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4745,7 +4745,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4759,7 +4759,7 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -4780,7 +4780,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -4822,14 +4822,14 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -4864,7 +4864,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4892,35 +4892,35 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -4954,14 +4954,14 @@
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5017,7 +5017,7 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5038,7 +5038,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5052,7 +5052,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -5101,7 +5101,7 @@
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -5115,7 +5115,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -5143,14 +5143,14 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5178,7 +5178,7 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5205,7 +5205,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5226,21 +5226,21 @@
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -5261,7 +5261,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5289,14 +5289,14 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -5338,7 +5338,7 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5491,7 +5491,7 @@
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5505,7 +5505,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5540,14 +5540,14 @@
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -5610,14 +5610,14 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5631,7 +5631,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5666,21 +5666,21 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -5701,14 +5701,14 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     }
                 ]
@@ -5727,7 +5727,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -5776,14 +5776,14 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5804,7 +5804,7 @@
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -5818,7 +5818,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -5895,7 +5895,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -5951,14 +5951,14 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -5992,7 +5992,7 @@
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6027,7 +6027,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -6055,7 +6055,7 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -6069,14 +6069,14 @@
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6146,7 +6146,7 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6167,14 +6167,14 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6243,14 +6243,14 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6285,7 +6285,7 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6341,7 +6341,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6376,21 +6376,21 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6418,7 +6418,7 @@
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6488,7 +6488,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     }
                 ]
@@ -6522,14 +6522,14 @@
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6564,14 +6564,14 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6613,14 +6613,14 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6655,14 +6655,14 @@
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6683,14 +6683,14 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6759,7 +6759,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6780,7 +6780,7 @@
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -6822,7 +6822,7 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -6857,7 +6857,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6885,7 +6885,7 @@
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -6913,7 +6913,7 @@
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -6941,7 +6941,7 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6955,7 +6955,7 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -6983,7 +6983,7 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7004,7 +7004,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     }
                 ]
@@ -7079,7 +7079,7 @@
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7121,7 +7121,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7135,7 +7135,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7212,14 +7212,14 @@
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -7233,7 +7233,7 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7254,21 +7254,21 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     }
                 ]
@@ -7281,7 +7281,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -7295,28 +7295,28 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 4,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 6,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -7351,7 +7351,7 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -7379,7 +7379,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7393,7 +7393,7 @@
                         "rotation": 17,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7435,7 +7435,7 @@
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7470,7 +7470,7 @@
                         "rotation": 28,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -7491,7 +7491,7 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -7512,7 +7512,7 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -7539,7 +7539,7 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -7581,14 +7581,14 @@
                         "rotation": 7,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7679,7 +7679,7 @@
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7756,7 +7756,7 @@
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -7916,7 +7916,7 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -7944,21 +7944,21 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -8007,7 +8007,7 @@
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8042,7 +8042,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     }
                 ]
@@ -8062,7 +8062,7 @@
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8083,7 +8083,7 @@
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -8118,7 +8118,7 @@
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8132,14 +8132,14 @@
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 13,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -8258,7 +8258,7 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -8410,7 +8410,7 @@
                         "rotation": 14,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8438,28 +8438,28 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -8480,7 +8480,7 @@
                         "rotation": 24,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8501,7 +8501,7 @@
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -8515,7 +8515,7 @@
                         "rotation": 29,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8550,7 +8550,7 @@
                         "rotation": 34,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -8564,7 +8564,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     }
                 ]
@@ -8577,21 +8577,21 @@
                         "rotation": 1,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8626,21 +8626,21 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 9,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 10,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8682,7 +8682,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -8724,7 +8724,7 @@
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8801,7 +8801,7 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -8815,7 +8815,7 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -8933,7 +8933,7 @@
                         "rotation": 15,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -8975,21 +8975,21 @@
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 22,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 23,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -9003,21 +9003,21 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
                         "rotation": 26,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
                         "rotation": 27,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -9038,7 +9038,7 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -9052,7 +9052,7 @@
                         "rotation": 32,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9073,7 +9073,7 @@
                         "rotation": 35,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9100,7 +9100,7 @@
                         "rotation": 2,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9142,7 +9142,7 @@
                         "rotation": 8,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9163,14 +9163,14 @@
                         "rotation": 11,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 12,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -9198,7 +9198,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -9226,7 +9226,7 @@
                         "rotation": 20,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -9338,7 +9338,7 @@
                         "rotation": 36,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     }
                 ]
@@ -9365,7 +9365,7 @@
                         "rotation": 3,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Fusion"
                     },
                     {
@@ -9379,7 +9379,7 @@
                         "rotation": 5,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9456,7 +9456,7 @@
                         "rotation": 16,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -9470,14 +9470,14 @@
                         "rotation": 18,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 19,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Chill",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -9491,7 +9491,7 @@
                         "rotation": 21,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
@@ -9519,7 +9519,7 @@
                         "rotation": 25,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Electric",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Singular"
                     },
                     {
@@ -9554,14 +9554,14 @@
                         "rotation": 30,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Non-Attribute",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Dimension"
                     },
                     {
                         "rotation": 31,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Toxic",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {
@@ -9575,7 +9575,7 @@
                         "rotation": 33,
                         "reward_type": "Reactor",
                         "reactor_element_type": "Fire",
-                        "weapon_rounds_type": "Special Rounds",
+                        "weapon_rounds_type": "Enhanced Ammo",
                         "arche_type": "Tech"
                     },
                     {

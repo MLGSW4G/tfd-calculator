@@ -46,7 +46,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     case "General Rounds":
       moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_A_Color.png";
       break;
-    case "Special Rounds":
+    case "Enhanced Ammo":
       moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_B_Color.png";
       break;
     case "Impact Rounds":
@@ -58,7 +58,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   }
 
   switch (module.moduleTier) {
-    case "Standard":
+    case "Normal":
       moduleTier = filterStandard;
       break;
     case "Rare":
@@ -92,7 +92,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
       componentsProps={{
         tooltip: {
           sx: {
-            bgcolor: `${module.moduleTier === "Standard" ? colorStandard : module.moduleTier === "Rare" ? colorRare : module.moduleTier === "Ultimate" ? colorUltimate : colorTranscendent}ee`, // Slightly transparent background
+            bgcolor: `${module.moduleTier === "Normal" ? colorStandard : module.moduleTier === "Rare" ? colorRare : module.moduleTier === "Ultimate" ? colorUltimate : colorTranscendent}ee`, // Slightly transparent background
             border: "2px solid black",
             borderRadius: "4px",
             filter: "grayscale(25%)", // Apply grayscale to the background
