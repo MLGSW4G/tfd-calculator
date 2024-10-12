@@ -1,16 +1,20 @@
 {
   "files": {
     "main.css": "/tfd-calculator/static/css/main.8eae28ca.css",
-    "main.js": "/tfd-calculator/static/js/main.945e6fb9.js",
+    "main.js": "/tfd-calculator/static/js/main.94890308.js",
     "static/js/82.4aec3683.chunk.js": "/tfd-calculator/static/js/82.4aec3683.chunk.js",
     "static/js/884.76107f1e.chunk.js": "/tfd-calculator/static/js/884.76107f1e.chunk.js",
+    "static/js/726.3b895cb9.chunk.js": "/tfd-calculator/static/js/726.3b895cb9.chunk.js",
     "static/js/833.0e20aea1.chunk.js": "/tfd-calculator/static/js/833.0e20aea1.chunk.js",
     "static/js/871.57160af0.chunk.js": "/tfd-calculator/static/js/871.57160af0.chunk.js",
     "static/js/599.f361b6c2.chunk.js": "/tfd-calculator/static/js/599.f361b6c2.chunk.js",
+    "static/js/194.485fe7a3.chunk.js": "/tfd-calculator/static/js/194.485fe7a3.chunk.js",
+    "static/js/398.4f194402.chunk.js": "/tfd-calculator/static/js/398.4f194402.chunk.js",
     "static/js/92.b55a7670.chunk.js": "/tfd-calculator/static/js/92.b55a7670.chunk.js",
     "static/js/418.a837b0a1.chunk.js": "/tfd-calculator/static/js/418.a837b0a1.chunk.js",
     "static/js/508.0015cd95.chunk.js": "/tfd-calculator/static/js/508.0015cd95.chunk.js",
     "static/js/265.fa1ca7ef.chunk.js": "/tfd-calculator/static/js/265.fa1ca7ef.chunk.js",
+    "static/js/788.328310d3.chunk.js": "/tfd-calculator/static/js/788.328310d3.chunk.js",
     "static/media/NotoSans-Regular.ttf": "/tfd-calculator/static/media/NotoSans-Regular.e49f7cc81283eef694a3.ttf",
     "static/media/NotoSans-Bold.ttf": "/tfd-calculator/static/media/NotoSans-Bold.5f7ac340604afb2500f1.ttf",
     "static/media/Teko-Bold.ttf": "/tfd-calculator/static/media/Teko-Bold.ab5742532000bad6973e.ttf",
@@ -18,19 +22,23 @@
     "static/media/octin-college-rg.otf": "/tfd-calculator/static/media/octin-college-rg.dca141742faaabcfb3b3.otf",
     "index.html": "/tfd-calculator/index.html",
     "main.8eae28ca.css.map": "/tfd-calculator/static/css/main.8eae28ca.css.map",
-    "main.945e6fb9.js.map": "/tfd-calculator/static/js/main.945e6fb9.js.map",
+    "main.94890308.js.map": "/tfd-calculator/static/js/main.94890308.js.map",
     "82.4aec3683.chunk.js.map": "/tfd-calculator/static/js/82.4aec3683.chunk.js.map",
     "884.76107f1e.chunk.js.map": "/tfd-calculator/static/js/884.76107f1e.chunk.js.map",
+    "726.3b895cb9.chunk.js.map": "/tfd-calculator/static/js/726.3b895cb9.chunk.js.map",
     "833.0e20aea1.chunk.js.map": "/tfd-calculator/static/js/833.0e20aea1.chunk.js.map",
     "871.57160af0.chunk.js.map": "/tfd-calculator/static/js/871.57160af0.chunk.js.map",
     "599.f361b6c2.chunk.js.map": "/tfd-calculator/static/js/599.f361b6c2.chunk.js.map",
+    "194.485fe7a3.chunk.js.map": "/tfd-calculator/static/js/194.485fe7a3.chunk.js.map",
+    "398.4f194402.chunk.js.map": "/tfd-calculator/static/js/398.4f194402.chunk.js.map",
     "92.b55a7670.chunk.js.map": "/tfd-calculator/static/js/92.b55a7670.chunk.js.map",
     "418.a837b0a1.chunk.js.map": "/tfd-calculator/static/js/418.a837b0a1.chunk.js.map",
     "508.0015cd95.chunk.js.map": "/tfd-calculator/static/js/508.0015cd95.chunk.js.map",
-    "265.fa1ca7ef.chunk.js.map": "/tfd-calculator/static/js/265.fa1ca7ef.chunk.js.map"
+    "265.fa1ca7ef.chunk.js.map": "/tfd-calculator/static/js/265.fa1ca7ef.chunk.js.map",
+    "788.328310d3.chunk.js.map": "/tfd-calculator/static/js/788.328310d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8eae28ca.css",
-    "static/js/main.945e6fb9.js"
+    "static/js/main.94890308.js"
   ]
 }
