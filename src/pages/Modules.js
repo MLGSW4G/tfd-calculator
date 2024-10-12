@@ -27,7 +27,6 @@ const Modules = () => {
         moduleClass: module.module_class,
         moduleSocketType: module.module_socket_type,
         moduleStat: module.module_stat,
-        moduleEffects: parseModuleEffect(module, module.moduleLevel),
       }))
   );
 
