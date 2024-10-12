@@ -3779,6 +3779,9 @@
     }
   },
   "settings": {
-    "language": "Language"
+    "language": "Language",
+    "clearCache": "Clear cache",
+    "clearCacheConfirm": "Are you sure you want to clear cache?",
+    "clearCacheAlert": "Cache was cleared"
   }
 }
