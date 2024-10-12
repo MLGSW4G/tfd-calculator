@@ -6,7 +6,7 @@ import data from "../api/descendant.json";
 import { getTranslation } from "../translations";
 import "../styles/styles.css";
 
-const DescendantStats = () => {
+const DescendantsList = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "descendantList");
 
@@ -100,4 +100,4 @@ const DescendantStats = () => {
   );
 };
 
-export default DescendantStats;
+export default DescendantsList;

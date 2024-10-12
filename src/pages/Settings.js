@@ -5,7 +5,7 @@ import { LocalizationContext } from "../components/LocalizationContext";
 import { Grid, Typography } from "@mui/material";
 import { getTranslation } from "../translations";
 
-function Settings() {
+const Settings = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "settings");
 
@@ -19,6 +19,6 @@ function Settings() {
       </Grid>
     </div>
   );
-}
+};
 
 export default Settings;

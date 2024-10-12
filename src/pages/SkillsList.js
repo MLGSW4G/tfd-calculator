@@ -51,7 +51,7 @@ export const sortedRows = rows.sort((a, b) => {
   return a.skillNumber - b.skillNumber; // Sort by skillNumber if descendants are the same
 });
 
-export default function DataTable() {
+const SkillsList = () => {
   return (
     <div style={{ width: "100%", margin: 0, padding: 0 }}>
       <DataGrid
@@ -66,4 +66,6 @@ export default function DataTable() {
       />
     </div>
   );
-}
+};
+
+export default SkillsList;

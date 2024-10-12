@@ -9,7 +9,7 @@ import ReactorLevels from "./ReactorLevels.json";
 import { getTranslation } from "../translations";
 import "../styles/styles.css";
 
-export default function Overview() {
+const Overview = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "overview");
 
@@ -615,4 +615,6 @@ export default function Overview() {
       </Grid>
     </Box>
   );
-}
+};
+
+export default Overview;
