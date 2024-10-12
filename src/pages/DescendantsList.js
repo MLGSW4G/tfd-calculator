@@ -77,9 +77,15 @@ const DescendantsList = () => {
             id="selected-descendant"
             options={data}
             getOptionLabel={(option) => translations.descendants[option.descendant_name]}
-            value={descendant || null} // Update to match the entire object
+            value={descendant || null}
             onChange={handleDescendantChange}
             renderInput={(params) => <TextField {...params} label={translations.descendantLabel} />}
+            renderOption={(props, option) => (
+              <Box component="li" sx={{ display: "flex", alignItems: "center" }} {...props}>
+                <img src={option.descendant_image_url} alt={option.descendant_name} style={{ width: 48, height: 48, marginRight: 24 }} />
+                <Typography sx={{ fontSize: 20, fontWeight: 500 }}>{translations.descendants[option.descendant_name]}</Typography>
+              </Box>
+            )}
           />
         </Grid>
         <Grid item xs={12}>
