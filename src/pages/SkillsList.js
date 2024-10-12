@@ -10,50 +10,15 @@ const columns = [
   { field: "skillNumber", headerName: "Skill №", width: 60 },
   { field: "skillElement", headerName: "Skill Element", width: 120 },
   { field: "skillType", headerName: "Skill Type", width: 120 },
-  {
-    field: "cooldown",
-    headerName: "cooldown",
-    width: 130,
-    valueFormatter: numberToSeconds,
-  },
+  { field: "cooldown", headerName: "cooldown", width: 130, valueFormatter: numberToSeconds },
   { field: "cost1", headerName: "cost1", width: 100 },
   { field: "cost2", headerName: "cost2", width: 100 },
-  {
-    field: "duration1",
-    headerName: "duration1",
-    width: 100,
-    valueFormatter: numberToSeconds,
-  },
-  {
-    field: "duration2",
-    headerName: "duration2",
-    width: 100,
-    valueFormatter: numberToSeconds,
-  },
-  {
-    field: "interval",
-    headerName: "interval",
-    width: 100,
-    valueFormatter: numberToSeconds,
-  },
-  {
-    field: "range1",
-    headerName: "range1",
-    width: 100,
-    valueFormatter: numberToMeters,
-  },
-  {
-    field: "range2",
-    headerName: "range2",
-    width: 100,
-    valueFormatter: numberToMeters,
-  },
-  {
-    field: "modifier1",
-    headerName: "modifier1",
-    width: 120,
-    valueFormatter: numberToPercents,
-  },
+  { field: "duration1", headerName: "duration1", width: 100, valueFormatter: numberToSeconds },
+  { field: "duration2", headerName: "duration2", width: 100, valueFormatter: numberToSeconds },
+  { field: "interval", headerName: "interval", width: 100, valueFormatter: numberToSeconds },
+  { field: "range1", headerName: "range1", width: 100, valueFormatter: numberToMeters },
+  { field: "range2", headerName: "range2", width: 100, valueFormatter: numberToMeters },
+  { field: "modifier1", headerName: "modifier1", width: 120, valueFormatter: numberToPercents },
   { field: "modifier2", headerName: "modifier2", width: 120, valueFormatter: numberToPercents },
   { field: "modifier3", headerName: "modifier3", width: 120, valueFormatter: numberToPercents },
   { field: "modifier4", headerName: "modifier4", width: 120, valueFormatter: numberToPercents },
@@ -80,8 +45,7 @@ const rows = jsonData.map((item) => ({
   modifier4: item.modifier4,
 }));
 
-// Sort the rows
-export const sortedRows = [...rows].sort((a, b) => {
+export const sortedRows = rows.sort((a, b) => {
   if (a.descendant < b.descendant) return -1;
   if (a.descendant > b.descendant) return 1;
   return a.skillNumber - b.skillNumber; // Sort by skillNumber if descendants are the same
@@ -93,7 +57,7 @@ export default function DataTable() {
       <DataGrid
         rows={sortedRows}
         columns={columns}
-        style={{margin: 0, padding: 0}}
+        style={{ margin: 0, padding: 0 }}
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 100 },
