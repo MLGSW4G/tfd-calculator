@@ -88,3 +88,12 @@ body {
 .MuiDataGrid-row {
   background-color: lightgrey;
 }
+
+.MuiAutocomplete-option {
+  border-radius: 4px;
+  transition: box-shadow 0.3s;
+}
+
+.MuiAutocomplete-option:hover {
+  box-shadow: inset 0px 0px 0px 2px black;
+}
