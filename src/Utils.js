@@ -1,5 +1,23 @@
 // src/Utils.js
 
+export const getSkillElementIcon = (element) => {
+  switch (element) {
+    case "Fire":
+      return "assets/Icons/Icon_Tag_Blazer.png";
+    case "Electric":
+      return "assets/Icons/Icon_Tag_Electricity.png";
+    case "Chill":
+      return "assets/Icons/Icon_Tag_Glacier.png";
+    case "Toxic":
+      return "assets/Icons/Icon_Tag_Demonic.png";
+    case "Non-Attribute":
+      return "assets/Icons/Icon_Tag_Plain.png";
+  }
+};
+export const getSkillArcheTypeIcon = (archeType) => {
+  return `assets/Icons/Icon_Tag_Arche${archeType}.png`;
+};
+
 export const numberToPercents = (value) => {
   if (value == null) {
     return null;
