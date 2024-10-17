@@ -3,8 +3,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
-import { colorRare, colorUltimate, effectsMapping } from "../const";
-import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs } from "../Utils";
+import data from "../api/descendant.json";
+import { colorRare, colorUltimate, colorChill, colorToxic, colorElectric, colorFire, effectsMapping } from "../const";
+import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs, getSkillArcheTypeIcon, getSkillElementIcon } from "../Utils";
 import ReactorLevels from "./ReactorLevels.json";
 import { getTranslation } from "../translations";
 import "../styles/styles.css";
@@ -13,6 +14,15 @@ const Overview = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "overview");
   const translationsDescendantsList = getTranslation(language, "descendantsList");
+
+  const descendantNames = data.map((item) => item.descendant_name);
+  const descendantImageUrls = data.map((item) => item.descendant_image_url);
+  const descendantSkills = data.map((item) => item.descendant_skill);
+
+  const groupedOptions = descendantNames.reduce((acc, name, index) => {
+    acc[name] = sortedRows.filter((option) => option.descendant === name);
+    return acc;
+  }, {});
 
   const reactorLevels = Object.keys(ReactorLevels).map((level) => ({
     value: parseInt(level),
@@ -123,10 +133,6 @@ const Overview = () => {
 
   useEffect(() => {
     localStorage.setItem("selectedSkill", JSON.stringify(selectedSkill));
-  }, [selectedSkill]);
-
-  useEffect(() => {
-    localStorage.setItem("selectedSkill", JSON.stringify(selectedSkill));
     localStorage.setItem("element", JSON.stringify(element));
     localStorage.setItem("skill", JSON.stringify(skill));
     localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
@@ -140,7 +146,16 @@ const Overview = () => {
 
   const filterOptions = (options, { inputValue }) => {
     const lowercasedInput = inputValue.toLowerCase();
-    return options.filter((option) => option.skillName.toLowerCase().includes(lowercasedInput) || option.descendant.toLowerCase().includes(lowercasedInput));
+    return options.filter((option) => {
+      const translatedDescendantName = translationsDescendantsList.descendants[option.descendant];
+      const translatedSkillName = translations.skillNames[option.skillName];
+      const skillImageUrl = descendantSkills.find((skill) => skill.descendant_name === option.descendant && skill.skill_name === option.skillName)?.skill_image_url;
+      return (
+        (translatedDescendantName && translatedDescendantName.toLowerCase().includes(lowercasedInput)) ||
+        (translatedSkillName && translatedSkillName.toLowerCase().includes(lowercasedInput)) ||
+        (skillImageUrl && skillImageUrl.toLowerCase().includes(lowercasedInput))
+      );
+    });
   };
 
   const calculateSkillDamage = (skillPower, modifier, elementChecked, typeChecked, optimizationConditionMultiplier) => {
@@ -183,9 +198,101 @@ const Overview = () => {
           <Autocomplete
             fullWidth
             id="selected-skill"
-            options={sortedRows}
-            groupBy={(option) => translationsDescendantsList.descendants[option.descendant]}
-            getOptionLabel={(option) => `${option.skillNumber}. ${translationsDescendantsList.skills[option.skillName]}`}
+            options={Object.values(groupedOptions).flat()}
+            groupBy={(option) => {
+              const descendantName = Object.keys(groupedOptions).find((key) => groupedOptions[key].includes(option));
+              return descendantName;
+            }}
+            getOptionLabel={(option) => `${option.skillNumber}. ${translations.skillNames[option.skillName] || option.skillName}`}
+            renderGroup={(params) => {
+              const descendantImageUrl = descendantImageUrls[descendantNames.indexOf(params.group)];
+              return (
+                <Box key={params.key}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginBottom: 0,
+                      boxShadow: "inset 0px 0px 0px 2px black",
+                      borderRadius: "4px",
+                      padding: "8px",
+                      fontWeight: "bold",
+                      pointerEvents: "none",
+                    }}
+                  >
+                    <img src={descendantImageUrl} style={{ width: 48, height: 48, padding: "0px", margin: "0px", marginLeft: "12px", marginRight: "24px" }} alt={params.group} />
+                    <Typography fontSize={24}>{translationsDescendantsList.descendants[params.group]}</Typography>
+                  </Box>
+                  {params.children}
+                </Box>
+              );
+            }}
+            renderOption={(props, option) => {
+              const descendantIndex = descendantNames.indexOf(option.descendant);
+              const skillImageUrl = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.skill_image_url;
+              const skillElement = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.element_type;
+              const skillArcheType = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.arche_type;
+
+              return (
+                <Tooltip
+                  componentsProps={{
+                    tooltip: {
+                      sx: {
+                        bgcolor: `${skillElement === "Fire" ? colorFire : skillElement === "Electric" ? colorElectric : skillElement === "Toxic" ? colorToxic : skillElement === "Chill" ? colorChill : "#404040"}`,
+                        border: "2px solid black",
+                        borderRadius: "4px",
+                        filter: "brightness(0.8) grayscale(30%)",
+                        color: "white",
+                      },
+                    },
+                  }}
+                  enterDelay={0}
+                  renderOption
+                  title={
+                    skillImageUrl && (
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <img src={skillImageUrl} style={{ width: 48, height: 48, border: "2px solid white", borderRadius: "4px" }} alt={option.skillName} />
+
+                        <Grid container spacing={1} alignItems="left">
+                          <Grid item>
+                            <Typography variant="body2">
+                              <img src={getSkillElementIcon(skillElement)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
+                              {translations.skillElements[skillElement]}
+                            </Typography>
+                          </Grid>
+
+                          {skillArcheType && (
+                            <Grid item>
+                              <Typography variant="body2">
+                                <img src={getSkillArcheTypeIcon(skillArcheType)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
+                                {translations.skillArcheTypes[skillArcheType]}
+                              </Typography>
+                            </Grid>
+                          )}
+                        </Grid>
+
+                        <Typography variant="body2" style={{ fontSize: 24, textAlign: "left", width: "100%" }}>
+                          {translations.skillNames[option.skillName]}
+                        </Typography>
+
+                        <hr style={{ width: "100%" }}></hr>
+
+                        <Typography variant="body2">{translations.skillDescriptions[option.skillName]}</Typography>
+                      </div>
+                    )
+                  }
+                  placement="top"
+                  followCursor
+                >
+                  <li {...props}>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <img src={skillImageUrl} style={{ width: 48, height: 48, marginRight: 24, filter: "brightness(0)" }} alt={option.skillName} />
+                      <div style={{ fontSize: 20 }}>{`${option.skillNumber}. ${translations.skillNames[option.skillName] || option.skillName}`}</div>
+                    </div>
+                  </li>
+                </Tooltip>
+              );
+            }}
             value={selectedSkill}
             onChange={handleComboBoxChange}
             filterOptions={filterOptions}
