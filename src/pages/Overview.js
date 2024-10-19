@@ -4,6 +4,7 @@ import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
 import { sortedRows } from "./SkillsList";
 import data from "../api/descendant.json";
+import jsonData from "./SkillsList.json";
 import { colorRare, colorUltimate, colorChill, colorToxic, colorElectric, colorFire, effectsMapping } from "../const";
 import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs, getSkillArcheTypeIcon, getSkillElementIcon } from "../Utils";
 import ReactorLevels from "./ReactorLevels.json";
@@ -116,15 +117,10 @@ const Overview = () => {
 
   useEffect(() => {
     if (selectedSkill) {
-      import(`../pages/skills/${selectedSkill.skillName.replaceAll(" ", "")}.js`)
-        .then((module) => {
-          const skillStatsWithEffects = calculateSkillStatsWithEffects(module.default, totalEffects);
-          setSkillStats(skillStatsWithEffects);
-          setSkillStatsWithEffects(skillStatsWithEffects);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      const skillStats = jsonData.find((skill) => skill.skillName === selectedSkill.skillName);
+      const skillStatsWithEffects = calculateSkillStatsWithEffects(skillStats, totalEffects);
+      setSkillStats(skillStatsWithEffects);
+      setSkillStatsWithEffects(skillStatsWithEffects);
     } else {
       setSkillStats({});
       setSkillStatsWithEffects({}); // Reset skillStatsWithEffects to an empty object when selectedSkill is null
