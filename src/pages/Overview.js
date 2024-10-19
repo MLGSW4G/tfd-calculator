@@ -1,7 +1,7 @@
 // src/pages/Overview.js
 import React, { useState, useEffect, useContext } from "react";
 import { LocalizationContext } from "../components/LocalizationContext";
-import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
+import { Box, TextField, Grid, Select, MenuItem, Autocomplete, Tooltip, Slider, Typography } from "@mui/material";
 import { rows } from "./SkillsList";
 import data from "../api/descendant.json";
 import jsonData from "./SkillsList.json";
@@ -15,6 +15,9 @@ const Overview = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "overview");
   const translationsDescendantsList = getTranslation(language, "descendantsList");
+
+  const skillElements = [...new Set(jsonData.map((skill) => skill.skillElement))];
+  const skillTypes = [...new Set(jsonData.map((skill) => skill.skillType).filter((type) => type !== null))]; // Exclude null types
 
   const descendantNames = data.map((item) => item.descendant_name);
   const descendantImageUrls = data.map((item) => item.descendant_image_url);
@@ -49,12 +52,15 @@ const Overview = () => {
 
   const [element, setElement] = useState(() => {
     const cachedElement = localStorage.getItem("element");
-    return cachedElement ? JSON.parse(cachedElement) : false;
+    return cachedElement ? JSON.parse(cachedElement) : "";
   });
   const [skill, setSkill] = useState(() => {
     const cachedSkill = localStorage.getItem("skill");
-    return cachedSkill ? JSON.parse(cachedSkill) : false;
+    return cachedSkill ? JSON.parse(cachedSkill) : "";
   });
+
+  const appliedElementSkillPower = selectedSkill && selectedSkill.skillElement === element;
+  const appliedTypeSkillPower = selectedSkill && selectedSkill.skillType === skill;
 
   const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState(() => {
     const cachedOptimizationConditionMultiplier = localStorage.getItem("optimizationConditionMultiplier");
@@ -74,8 +80,8 @@ const Overview = () => {
   });
 
   useEffect(() => {
-    const appliedElementSkillPower = element ? 1.2 : 1;
-    const appliedTypeSkillPower = skill ? 1.2 : 1;
+    const appliedElementSkillPower = selectedSkill && selectedSkill.skillElement === element ? 1.2 : 1;
+    const appliedTypeSkillPower = selectedSkill && selectedSkill.skillType === skill ? 1.2 : 1;
     const reactorEnhancementMultiplier = [1, 1.03, 1.06][reactorEnhancementLevel];
     const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
     let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
@@ -210,8 +216,12 @@ const Overview = () => {
                   title={
                     <div style={{ fontSize: 16 }}>
                       <div>{translationsDescendantsList.descendants[params.group]}</div>
-                      <div>{translations.descendantIndex}: {descendantNames.indexOf(params.group)}</div>
-                      <div>{translations.descendantId}: {data[descendantNames.indexOf(params.group)].descendant_id}</div>
+                      <div>
+                        {translations.descendantIndex}: {descendantNames.indexOf(params.group)}
+                      </div>
+                      <div>
+                        {translations.descendantId}: {data[descendantNames.indexOf(params.group)].descendant_id}
+                      </div>
                     </div>
                   }
                   enterDelay={0}
@@ -313,16 +323,66 @@ const Overview = () => {
         </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container spacing={1}>
         <Grid item xs={6}>
-          <Tooltip enterDelay={0} title={translations.elementTooltip} placement="top">
-            <FormControlLabel control={<Checkbox checked={element} onChange={(event) => setElement(event.target.checked)} />} label={translations.element} />
+          <Typography>{translations.element}</Typography>
+          <Tooltip title={appliedElementSkillPower ? translations.elementTooltip : ""} arrow>
+            <Select
+              value={element}
+              onChange={(event) => setElement(event.target.value)}
+              style={{
+                minWidth: 200,
+                border: element === selectedSkill?.skillElement ? "2px dashed lightblue" : "2px solid transparent",
+                transition: "border 0.3s ease", // Smooth transition for border
+              }}
+            >
+              <MenuItem value="">
+                <div style={{ marginLeft: "28px" }}>{translations.none}</div>
+              </MenuItem>
+              {skillElements.map((element) => (
+                <MenuItem
+                  key={element}
+                  value={element}
+                  style={{
+                    border: element === selectedSkill?.skillElement ? "2px solid lightblue" : "none",
+                  }}
+                >
+                  <img src={getSkillElementIcon(element)} alt={element} style={{ width: 24, height: 24, marginRight: 4, verticalAlign: "bottom" }} />
+                  {translations.skillElements[element] || element}
+                </MenuItem>
+              ))}
+            </Select>
           </Tooltip>
         </Grid>
 
         <Grid item xs={6}>
-          <Tooltip enterDelay={0} title={translations.typeTooltip} placement="top">
-            <FormControlLabel control={<Checkbox checked={skill} onChange={(event) => setSkill(event.target.checked)} />} label={translations.type} />
+          <Typography>{translations.type}</Typography>
+          <Tooltip title={appliedTypeSkillPower ? translations.typeTooltip : ""} arrow>
+            <Select
+              value={skill}
+              onChange={(event) => setSkill(event.target.value)}
+              style={{
+                minWidth: 200,
+                border: skill === selectedSkill?.skillType ? "2px dashed lightblue" : "2px solid transparent",
+                transition: "border 0.3s ease", // Smooth transition for border
+              }}
+            >
+              <MenuItem value="">
+                <div style={{ marginLeft: "28px" }}>{translations.none}</div>
+              </MenuItem>
+              {skillTypes.map((type) => (
+                <MenuItem
+                  key={type}
+                  value={type}
+                  style={{
+                    border: type === selectedSkill?.skillType ? "2px solid lightblue" : "none",
+                  }}
+                >
+                  <img src={getSkillArcheTypeIcon(type)} alt={type} style={{ width: 24, height: 24, marginRight: 4, verticalAlign: "bottom" }} />
+                  {translations.skillArcheTypes[type] || type}
+                </MenuItem>
+              ))}
+            </Select>
           </Tooltip>
         </Grid>
 
@@ -353,7 +413,7 @@ const Overview = () => {
         <Grid item xs={6}>
           <Typography>{translations.reactorEnhancement}</Typography>
           <Select value={reactorEnhancementLevel} onChange={(event) => setReactorEnhancementLevel(event.target.value)} style={{ minWidth: 200 }}>
-            <MenuItem value={0}>{translations.reactorUpgrade0}</MenuItem>
+            <MenuItem value={0}>{translations.none}</MenuItem>
 
             <MenuItem value={1}>
               <Tooltip enterDelay={0} title={translations.reactorUpgrade1Tooltip} placement="right">
