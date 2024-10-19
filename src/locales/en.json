@@ -11,6 +11,8 @@
     "subModuleString": "Sub Module"
   },
   "overview": {
+    "descendantIndex": "Descendant Index",
+    "descendantId": "Descendant ID",
     "selectedSkillPlaceholder": "Skill",
     "element": "Matching skill element",
     "skillElement": "Skill element",

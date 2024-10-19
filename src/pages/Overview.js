@@ -206,24 +206,37 @@ const Overview = () => {
             renderGroup={(params) => {
               const descendantImageUrl = descendantImageUrls[descendantNames.indexOf(params.group)];
               return (
-                <Box key={params.key}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      marginBottom: 0,
-                      boxShadow: "inset 0px 0px 0px 2px black",
-                      borderRadius: "4px",
-                      padding: "8px",
-                      fontWeight: "bold",
-                      pointerEvents: "none",
-                    }}
-                  >
-                    <img src={descendantImageUrl} style={{ width: 48, height: 48, padding: "0px", margin: "0px", marginLeft: "12px", marginRight: "24px" }} alt={params.group} />
-                    <Typography fontSize={24}>{translationsDescendantsList.descendants[params.group]}</Typography>
+                <Tooltip
+                  title={
+                    <div style={{ fontSize: 16 }}>
+                      <div>{translationsDescendantsList.descendants[params.group]}</div>
+                      <div>{translations.descendantIndex}: {descendantNames.indexOf(params.group)}</div>
+                      <div>{translations.descendantId}: {data[descendantNames.indexOf(params.group)].descendant_id}</div>
+                    </div>
+                  }
+                  enterDelay={0}
+                  placement="top"
+                  followCursor
+                >
+                  <Box key={params.key}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: 0,
+                        boxShadow: "inset 0px 0px 0px 2px black",
+                        borderRadius: "4px",
+                        padding: "8px",
+                        fontWeight: "bold",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      <img src={descendantImageUrl} style={{ width: 48, height: 48, padding: "0px", margin: "0px", marginLeft: "12px", marginRight: "24px" }} alt={params.group} />
+                      <Typography fontSize={24}>{translationsDescendantsList.descendants[params.group]}</Typography>
+                    </Box>
+                    {params.children}
                   </Box>
-                  {params.children}
-                </Box>
+                </Tooltip>
               );
             }}
             renderOption={(props, option) => {

@@ -11,6 +11,8 @@
     "subModuleString": "Дополнительный модуль"
   },
   "overview": {
+    "descendantIndex": "Индекс потомка",
+    "descendantId": "ИД потомка",
     "selectedSkillPlaceholder": "Навык",
     "element": "Соответствующий элемент навыка",
     "skillElement": "Элемент навыка",
