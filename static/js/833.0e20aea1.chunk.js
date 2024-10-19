@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktfd_calculator=self.webpackChunktfd_calculator||[]).push([[833],{9833:(a,e,l)=>{l.r(e),l.d(e,{default:()=>i});const t=l(1350).find((a=>"HV Lightning Emission"===a.skillName));t.cooldownLabel="Cooldown",t.cost1Label="Cost",t.duration1Label="Duration",t.duration2Label="Electrocution duration",t.intervalLabel="Electrocution interval",t.range1Label="Range",t.skillDamage1Label="0% electricity damage",t.skillDamage2Label="100% electricity damage",t.skillDamage3Label="Electrocution damage";const i=t}}]);
-//# sourceMappingURL=833.0e20aea1.chunk.js.map
