@@ -4286,6 +4286,26 @@
     "class": "Class",
     "type": "Group"
   },
+  "skillsList": {
+    "id": "ID",
+    "descendantName": "Descendant Name",
+    "skillName": "Skill Name",
+    "skillNumber": "Skill №",
+    "skillElement": "Skill Element",
+    "skillType": "Skill Type",
+    "cooldown": "Cooldown",
+    "cost1": "Cost 1",
+    "cost2": "Cost 2",
+    "duration1": "Duration 1",
+    "duration2": "Duration 2",
+    "interval": "Interval",
+    "range1": "Range 1",
+    "range2": "Range 2",
+    "modifier1": "Modifier 1",
+    "modifier2": "Modifier 2",
+    "modifier3": "Modifier 3",
+    "modifier4": "Modifier 4"
+  },
   "descendantsList": {
     "descendantLabel": "Descendant name",
     "descendantLevel": "Descendant level",

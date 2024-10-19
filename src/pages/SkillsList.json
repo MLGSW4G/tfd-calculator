@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Thrill Bomb",
     "skillNumber": 1,
     "skillElement": "Electric",
@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Speed of Light",
     "skillNumber": 2,
     "skillElement": "Electric",
@@ -33,7 +33,7 @@
   },
   {
     "id": 3,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Lightning Emission",
     "skillNumber": 3,
     "skillElement": "Electric",
@@ -52,7 +52,7 @@
   },
   {
     "id": 4,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Maximum Power",
     "skillNumber": 4,
     "skillElement": "Electric",
@@ -69,7 +69,7 @@
   },
   {
     "id": 5,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Electric Condense",
     "skillNumber": 4,
     "skillElement": "Electric",
@@ -87,7 +87,7 @@
   },
   {
     "id": 6,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "HV Thrill Bomb",
     "skillNumber": 1,
     "skillElement": "Electric",
@@ -106,7 +106,7 @@
   },
   {
     "id": 7,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "HV Lightning Emission",
     "skillNumber": 3,
     "skillElement": "Electric",
@@ -125,7 +125,7 @@
   },
   {
     "id": 8,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Rabbit Foot",
     "skillNumber": 0,
     "skillElement": "Electric",
@@ -137,7 +137,7 @@
   },
   {
     "id": 9,
-    "descendant": "Bunny",
+    "descendantName": "Bunny",
     "skillName": "Electric Charge",
     "skillNumber": 0,
     "skillElement": "Electric",
@@ -150,7 +150,7 @@
   },
   {
     "id": 10,
-    "descendant": "Sharen",
+    "descendantName": "Sharen",
     "skillName": "Cutoff Beam",
     "skillNumber": 1,
     "skillElement": "Electric",
@@ -166,7 +166,7 @@
   },
   {
     "id": 11,
-    "descendant": "Lepic",
+    "descendantName": "Lepic",
     "skillName": "Grenade Throw",
     "skillNumber": 1,
     "skillElement": "Fire",
@@ -180,7 +180,7 @@
   },
   {
     "id": 12,
-    "descendant": "Lepic",
+    "descendantName": "Lepic",
     "skillName": "Overclock",
     "skillNumber": 2,
     "skillElement": "Fire",
@@ -195,7 +195,7 @@
   },
   {
     "id": 13,
-    "descendant": "Lepic",
+    "descendantName": "Lepic",
     "skillName": "Traction Grenade",
     "skillNumber": 3,
     "skillElement": "Fire",
@@ -209,7 +209,7 @@
   },
   {
     "id": 14,
-    "descendant": "Lepic",
+    "descendantName": "Lepic",
     "skillName": "Overkill",
     "skillNumber": 4,
     "skillElement": "Fire",
@@ -228,7 +228,7 @@
   },
   {
     "id": 15,
-    "descendant": "Lepic",
+    "descendantName": "Lepic",
     "skillName": "Close Call",
     "skillNumber": 0,
     "skillElement": "Fire",
@@ -239,7 +239,7 @@
   },
   {
     "id": 17,
-    "descendant": "Sharen",
+    "descendantName": "Sharen",
     "skillName": "Active Camouflage",
     "skillNumber": 2,
     "skillElement": "Electric",
@@ -251,7 +251,7 @@
   },
   {
     "id": 18,
-    "descendant": "Viessa",
+    "descendantName": "Viessa",
     "skillName": "Frost Shards",
     "skillNumber": 1,
     "skillElement": "Chill",
@@ -263,7 +263,7 @@
   },
   {
     "id": 19,
-    "descendant": "Viessa",
+    "descendantName": "Viessa",
     "skillName": "Frost Road",
     "skillNumber": 2,
     "skillElement": "Chill",
@@ -278,7 +278,7 @@
   },
   {
     "id": 20,
-    "descendant": "Viessa",
+    "descendantName": "Viessa",
     "skillName": "Cold Snap",
     "skillNumber": 3,
     "skillElement": "Chill",
@@ -294,7 +294,7 @@
   },
   {
     "id": 21,
-    "descendant": "Viessa",
+    "descendantName": "Viessa",
     "skillName": "Blizzard",
     "skillNumber": 4,
     "skillElement": "Chill",
@@ -312,7 +312,7 @@
   },
   {
     "id": 22,
-    "descendant": "Viessa",
+    "descendantName": "Viessa",
     "skillName": "Ice Sphere",
     "skillNumber": 0,
     "skillElement": "Chill",
@@ -326,7 +326,7 @@
   },
   {
     "id": 23,
-    "descendant": "Sharen",
+    "descendantName": "Sharen",
     "skillName": "Shock Nuts",
     "skillNumber": 3,
     "skillElement": "Electric",
@@ -340,7 +340,7 @@
   },
   {
     "id": 24,
-    "descendant": "Sharen",
+    "descendantName": "Sharen",
     "skillName": "Flash Shortsword",
     "skillNumber": 4,
     "skillElement": "Electric",
@@ -359,7 +359,7 @@
   },
   {
     "id": 25,
-    "descendant": "Sharen",
+    "descendantName": "Sharen",
     "skillName": "Assassinator",
     "skillNumber": 0,
     "skillElement": "Electric",
@@ -369,7 +369,7 @@
   },
   {
     "id": 26,
-    "descendant": "Enzo",
+    "descendantName": "Enzo",
     "skillName": "Start Supply",
     "skillNumber": 1,
     "skillElement": "Non-Attribute",
@@ -381,7 +381,7 @@
   },
   {
     "id": 27,
-    "descendant": "Enzo",
+    "descendantName": "Enzo",
     "skillName": "Explosive Drone",
     "skillNumber": 2,
     "skillElement": "Non-Attribute",
@@ -396,7 +396,7 @@
   },
   {
     "id": 28,
-    "descendant": "Enzo",
+    "descendantName": "Enzo",
     "skillName": "Enhance Combat Suit",
     "skillNumber": 3,
     "skillElement": "Non-Attribute",
@@ -408,7 +408,7 @@
   },
   {
     "id": 29,
-    "descendant": "Enzo",
+    "descendantName": "Enzo",
     "skillName": "Perfect Support",
     "skillNumber": 4,
     "skillElement": "Non-Attribute",
@@ -427,7 +427,7 @@
   },
   {
     "id": 30,
-    "descendant": "Enzo",
+    "descendantName": "Enzo",
     "skillName": "Fire Supporter",
     "skillNumber": 0,
     "skillElement": "Non-Attribute",

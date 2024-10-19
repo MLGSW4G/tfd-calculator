@@ -4286,6 +4286,26 @@
     "class": "Класс",
     "type": "Группа"
   },
+  "skillsList": {
+    "id": "ID",
+    "descendantName": "Имя потомка",
+    "skillName": "Название навыка",
+    "skillNumber": "№ навыка",
+    "skillElement": "Элемент навыка",
+    "skillType": "Тип навыка",
+    "cooldown": "Перезарядка",
+    "cost1": "Стоимость 1",
+    "cost2": "Стоимость 2",
+    "duration1": "Длительность 1",
+    "duration2": "Длительность 2",
+    "interval": "Интервал",
+    "range1": "Дальность 1",
+    "range2": "Дальность 2",
+    "modifier1": "Множитель 1",
+    "modifier2": "Множитель 2",
+    "modifier3": "Множитель 3",
+    "modifier4": "Множитель 4"
+  },
   "descendantsList": {
     "descendantLabel": "Имя потомка",
     "descendantLevel": "Уровень потомка",

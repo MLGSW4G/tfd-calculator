@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { Box, TextField, Grid, Checkbox, Select, MenuItem, Autocomplete, Tooltip, FormControlLabel, Slider, Typography } from "@mui/material";
-import { sortedRows } from "./SkillsList";
+import { rows } from "./SkillsList";
 import data from "../api/descendant.json";
 import jsonData from "./SkillsList.json";
 import { colorRare, colorUltimate, colorChill, colorToxic, colorElectric, colorFire, effectsMapping } from "../const";
@@ -20,8 +20,11 @@ const Overview = () => {
   const descendantImageUrls = data.map((item) => item.descendant_image_url);
   const descendantSkills = data.map((item) => item.descendant_skill);
 
-  const groupedOptions = descendantNames.reduce((acc, name, index) => {
-    acc[name] = sortedRows.filter((option) => option.descendant === name);
+  const groupedOptions = descendantNames.reduce((acc, name) => {
+    const options = rows.filter((option) => option.descendantName === name);
+    options.sort((a, b) => a.skillNumber - b.skillNumber);
+
+    acc[name] = options;
     return acc;
   }, {});
 
@@ -143,9 +146,9 @@ const Overview = () => {
   const filterOptions = (options, { inputValue }) => {
     const lowercasedInput = inputValue.toLowerCase();
     return options.filter((option) => {
-      const translatedDescendantName = translationsDescendantsList.descendants[option.descendant];
+      const translatedDescendantName = translationsDescendantsList.descendants[option.descendantName];
       const translatedSkillName = translations.skillNames[option.skillName];
-      const skillImageUrl = descendantSkills.find((skill) => skill.descendant_name === option.descendant && skill.skill_name === option.skillName)?.skill_image_url;
+      const skillImageUrl = descendantSkills.find((skill) => skill.descendant_name === option.descendantName && skill.skill_name === option.skillName)?.skill_image_url;
       return (
         (translatedDescendantName && translatedDescendantName.toLowerCase().includes(lowercasedInput)) ||
         (translatedSkillName && translatedSkillName.toLowerCase().includes(lowercasedInput)) ||
@@ -224,7 +227,7 @@ const Overview = () => {
               );
             }}
             renderOption={(props, option) => {
-              const descendantIndex = descendantNames.indexOf(option.descendant);
+              const descendantIndex = descendantNames.indexOf(option.descendantName);
               const skillImageUrl = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.skill_image_url;
               const skillElement = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.element_type;
               const skillArcheType = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.arche_type;
