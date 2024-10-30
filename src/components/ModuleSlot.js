@@ -105,6 +105,8 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            zIndex: 2,
+            pointerEvents: "none"
           }}
         ></div>
       )}
