@@ -4,40 +4,17 @@ import { MODULE_WIDTH, MODULE_HEIGHT, SUB_MODULE_COLOR_HEX, SKILL_MODULE_COLOR_H
 import { getTranslation } from "../translations";
 import { LocalizationContext } from "./LocalizationContext";
 import { Module } from "./Module";
+import { getSocketTypeIcon } from "../Utils";
 import "../styles/ModuleSlot.css";
 
-export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevelChange, onModuleDrop }) => {
+export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevelChange, onModuleDrop, socketType }) => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "moduleSlot");
-  let backgroundImage, backgroundString, backgroundStringColor, moduleSlotSocketType;
 
-  switch (moduleSlotSocketType) {
-    case "Cerulean":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_001.png";
-      break;
-    case "Almandine":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_002.png";
-      break;
-    case "Malachite":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_003.png";
-      break;
-    case "Xantic":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_004.png";
-      break;
-    case "Rutile":
-      moduleSlotSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Big_005.png";
-      break;
-  }
-
-  if (index === 0) {
-    backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG01.png')`;
-    backgroundString = translations.skillModuleString;
-    backgroundStringColor = SKILL_MODULE_COLOR_HEX;
-  } else if (index === 6) {
-    backgroundImage = `url('assets/Modules/UI_RuneSlot_ChaBG02.png')`;
-    backgroundString = translations.subModuleString;
-    backgroundStringColor = SUB_MODULE_COLOR_HEX;
-  }
+  const backgroundImage = index === 0 ? `url('assets/Modules/UI_RuneSlot_ChaBG01.png')` : index === 6 ? `url('assets/Modules/UI_RuneSlot_ChaBG02.png')` : null,
+    backgroundString = index === 0 ? translations.skillModuleString : index === 6 ? translations.subModuleString : null,
+    backgroundStringColor = index === 0 ? SKILL_MODULE_COLOR_HEX : index === 6 ? SUB_MODULE_COLOR_HEX : null,
+    moduleSlotSocketType = getSocketTypeIcon(socketType);
 
   return (
     <div
@@ -61,16 +38,12 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
           className="module-slot-socket-type"
           src={moduleSlotSocketType}
           style={{
-            position: "relative",
+            position: "absolute",
             width: 48,
             height: 48,
-            bottom: "20%",
-            left: "37.5%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            bottom: 116,
           }}
-        ></img>
+        />
       )}
 
       {backgroundString && (
@@ -79,14 +52,15 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
           style={{
             position: "absolute",
             width: MODULE_WIDTH,
-            height: MODULE_HEIGHT * 0.15,
+            height: 27,
             color: backgroundStringColor,
-            bottom: "0",
+            bottom: 0,
             textAlign: "center",
             fontSize: 16,
             margin: 0,
             fontFamily: "NotoSans",
             filter: "saturate(10%) brightness(200%) contrast(100%)",
+            pointerEvents: "none",
           }}
         >
           {backgroundString}
@@ -106,12 +80,12 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
             justifyContent: "center",
             alignItems: "center",
             zIndex: 2,
-            pointerEvents: "none"
+            pointerEvents: "none",
           }}
-        ></div>
+        />
       )}
 
-      {Object.keys(equippedModule.module).length > 0 && equippedModule.module.moduleName ? (
+      {Object.keys(equippedModule.module).length !== 0 && (
         <Module
           module={equippedModule.module}
           onDragStart={onDragStart}
@@ -120,18 +94,6 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
           initialModuleLevel={equippedModule.moduleLevel} // Pass the initial module level
           onModuleDrop={onModuleDrop} // Pass the onModuleDrop callback
         />
-      ) : (
-        <div
-          className="module"
-          style={{
-            width: MODULE_WIDTH,
-            height: MODULE_HEIGHT,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          onDragStart={(e) => e.preventDefault()}
-        ></div>
       )}
     </div>
   );
