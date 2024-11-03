@@ -1,18 +1,18 @@
 // src/components/Module.js
 import { React, useState, useMemo, useContext } from "react";
-import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT, filterStandard, filterRare, filterUltimate, filterTranscendent, colorRare, colorStandard, colorTranscendent, colorUltimate } from "../const";
+import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT } from "../const";
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
 import { getTranslation } from "../translations";
 import { LocalizationContext } from "./LocalizationContext";
-import { getClassIcon, getSocketTypeIcon, getTierFilter } from "../Utils";
+import { getClassIcon, getSocketTypeIcon, getTierColor, getTierFilter } from "../Utils";
 
 export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel, onModuleDrop }) => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "module");
   const translationsModules = getTranslation(language, "modules");
 
-  const currentMaxLevel = module.moduleStat && module.moduleStat.length > 0 ? Math.max(...module.moduleStat.map((stat) => stat.level), 0) : 0;
+  const currentMaxLevel = Math.max(...module.moduleStat.map((stat) => stat.level), 0);
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
 
@@ -20,7 +20,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     return [module.id, translations.classes[module.moduleClass], translations.socketTypes[module.moduleSocketType], translations.moduleStat[module.moduleStat[moduleLevel].value]];
   }, [module, moduleLevel, translations]);
 
-  let moduleSocketType = getSocketTypeIcon(module.moduleSocketType),
+  const moduleSocketType = getSocketTypeIcon(module.moduleSocketType),
     moduleClass = getClassIcon(module.moduleClass),
     moduleTier = getTierFilter(module.moduleTier);
 
@@ -44,7 +44,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
       componentsProps={{
         tooltip: {
           sx: {
-            bgcolor: `${module.moduleTier === "Normal" ? colorStandard : module.moduleTier === "Rare" ? colorRare : module.moduleTier === "Ultimate" ? colorUltimate : colorTranscendent}ee`, // Slightly transparent background
+            bgcolor: `${getTierColor(module.moduleTier)}ee`, // Slightly transparent background
             border: "2px solid black",
             borderRadius: "4px",
             filter: "grayscale(25%)", // Apply grayscale to the background
@@ -156,7 +156,8 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             pointerEvents: "none",
           }}
         >
-          {module.moduleStat[0].value.includes("Max Module Capacity") ? "+" : null}{module.moduleStat && module.moduleStat[moduleLevel] ? module.moduleStat[moduleLevel].module_capacity : ""}
+          {module.moduleStat[0].value.includes("Max Module Capacity") ? "+" : null}
+          {module.moduleStat[moduleLevel].module_capacity}
         </p>
 
         <img
@@ -174,7 +175,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
 
         <img
           className="module-tier"
-          src={"assets/Modules/UI_RuneSlot_Tier.png"}
+          src="assets/Modules/UI_RuneSlot_Tier.png"
           alt={module.moduleName}
           style={{
             position: "absolute",
@@ -199,30 +200,26 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           }}
         />
 
-        {module.moduleStat && module.moduleStat.length > 0 ? (
-          <div style={{ display: "flex", flexDirection: "column", position: "absolute", bottom: 106, left: 20 }}>
-            {[...Array(currentMaxLevel)].map((_, index) => {
-              const effectiveIndex = currentMaxLevel - 1 - index;
-              return (
-                <div
-                  key={index}
-                  className="module-level-icon"
-                  style={{
-                    width: "12px",
-                    height: "4px",
-                    borderRadius: "1.5px",
-                    margin: "1px",
-                    backgroundColor: effectiveIndex < moduleLevel ? "#F4833C" : "gray",
-                    position: "relative",
-                    bottom: `${effectiveIndex}px`,
-                  }}
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div />
-        )}
+        <div style={{ display: "flex", flexDirection: "column", position: "absolute", bottom: 106, left: 20 }}>
+          {[...Array(currentMaxLevel)].map((_, index) => {
+            const effectiveIndex = currentMaxLevel - 1 - index;
+            return (
+              <div
+                key={index}
+                className="module-level-icon"
+                style={{
+                  width: "12px",
+                  height: "4px",
+                  borderRadius: "1.5px",
+                  margin: "1px",
+                  backgroundColor: effectiveIndex < moduleLevel ? "#F4833C" : "gray",
+                  position: "relative",
+                  bottom: `${effectiveIndex}px`,
+                }}
+              />
+            );
+          })}
+        </div>
 
         <p
           className="module-name"
