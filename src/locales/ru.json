@@ -4286,7 +4286,13 @@
     "socketType": "Гнездо",
     "tier": "Категория",
     "class": "Класс",
-    "type": "Группа"
+    "type": "Группа",
+    "copyEquippedModulesData": "Скопировать экипированные модули",
+    "pasteEquippedModulesData": "Вставить экипированные модули",
+    "equippedModulesDataPlaceholder": "Вставьте экипированные модули сюда",
+    "modulesCopied": "Экипированные модули были скопированы в буфер обмена",
+    "modulesPasted": "Экипированные модули были загружены",
+    "modulesPastedError": "Не удалось загрузить экипированные модули. Проверьте формат"
   },
   "skillsList": {
     "id": "ID",

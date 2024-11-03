@@ -1,7 +1,7 @@
 // src/pages/Modules.js
 import React, { useState, useEffect, useContext } from "react";
 import { LocalizationContext } from "../components/LocalizationContext";
-import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
+import { Box, Grid, TextField, MenuItem, Select, InputLabel, FormControl, Button, Snackbar } from "@mui/material";
 import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
@@ -41,6 +41,32 @@ const Modules = () => {
   const [selectedClasses, setSelectedClasses] = useState(["Descendant"]);
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [sortBy, setSortBy] = useState("id");
+
+  const [pasteData, setPasteData] = useState("");
+  const [snackbar, setSnackbar] = useState({ open: false, message: "" });
+
+  const handleCopyModules = () => {
+    const equippedModulesData = JSON.stringify(equippedModules);
+    console.log(`Copied modules: \n${equippedModulesData}`)
+    navigator.clipboard.writeText(equippedModulesData);
+    setSnackbar({ open: true, message: translations.modulesCopied });
+  };
+
+  const handlePasteModules = () => {
+    try {
+      const parsedModules = JSON.parse(pasteData);
+      console.log(`Pasted modules: \n${pasteData}`)
+      setEquippedModules(parsedModules);
+      localStorage.setItem("equippedModules", JSON.stringify(parsedModules));
+      setSnackbar({ open: true, message: translations.modulesPasted });
+    } catch (error) {
+      setSnackbar({ open: true, message: translations.modulesPastedError });
+    }
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   const handleDragStart = (e, module) => {
     e.dataTransfer.setData("module", JSON.stringify(module));
@@ -135,7 +161,8 @@ const Modules = () => {
   const filteredModules = moduleList
     .filter((module) => {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
-      const matchesName = translationsModule.moduleName[module.id].toLowerCase().includes(lowerCaseSearchTerm) + translationsModule.moduleStat[module.moduleStat[0].value].toLowerCase().includes(lowerCaseSearchTerm) + module.id.includes(lowerCaseSearchTerm);
+      const matchesName =
+        translationsModule.moduleName[module.id].toLowerCase().includes(lowerCaseSearchTerm) + translationsModule.moduleStat[module.moduleStat[0].value].toLowerCase().includes(lowerCaseSearchTerm) + module.id.includes(lowerCaseSearchTerm);
 
       const matchesSocketType = selectedSocketTypes.length > 0 ? selectedSocketTypes.includes(module.moduleSocketType) : true;
       const matchesTier = selectedTiers.length > 0 ? selectedTiers.includes(module.moduleTier) : true;
@@ -310,7 +337,7 @@ const Modules = () => {
 
   return (
     <>
-      <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="25%" marginTop="3%" position="relative">
+      <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="25%" marginTop="1%" position="relative">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           {equippedModules.map((equippedModule, index) => (
             <Grid
@@ -336,6 +363,20 @@ const Modules = () => {
         </Grid>
       </Box>
 
+      <Box sx={{ marginTop: "2%", display: "flex", justifyContent: "space-between", padding: "0 2% 0" }}>
+        <Button sx={{ color: "#333" }} className="button" onClick={handleCopyModules}>
+          {translations.copyEquippedModulesData}
+        </Button>
+
+        <TextField variant="outlined" placeholder={translations.equippedModulesDataPlaceholder} value={pasteData} onChange={(e) => setPasteData(e.target.value)} sx={{ width: "60%" }} />
+
+        <Button sx={{ color: "#333" }} className="button" onClick={handlePasteModules}>
+          {translations.pasteEquippedModulesData}
+        </Button>
+      </Box>
+
+      <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleSnackbarClose} message={snackbar.message} />
+
       <Box
         className="module-zone"
         width="100%"
@@ -343,7 +384,7 @@ const Modules = () => {
           background: "grey",
           position: "fixed",
           bottom: 0,
-          top: "65%",
+          top: "70%",
           zIndex: 1000,
           overflow: "auto",
           borderTop: "2px solid black",

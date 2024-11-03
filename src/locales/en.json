@@ -4286,7 +4286,13 @@
     "socketType": "Socket Type",
     "tier": "Tier",
     "class": "Class",
-    "type": "Group"
+    "type": "Group",
+    "copyEquippedModulesData": "Copy equipped modules data",
+    "pasteEquippedModulesData": "Paste equipped modules data",
+    "equippedModulesDataPlaceholder": "Enter equipped modules data here",
+    "modulesCopied": "Equipped modules have been copied to the clipboard",
+    "modulesPasted": "Equipped modules have been loaded from pasted data",
+    "modulesPastedError": "Failed to load equipped modules. Please check the format"
   },
   "skillsList": {
     "id": "ID",
