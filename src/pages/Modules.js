@@ -6,8 +6,8 @@ import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
 import moduleData from "../api/module.json";
-import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, MODULE_TYPES, colorStandard, colorRare, colorUltimate, colorTranscendent } from "../const";
-import { parseModuleEffect } from "../Utils";
+import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, MODULE_TYPES } from "../const";
+import { parseModuleEffect, getClassIcon, getSocketTypeIcon, getTierColor } from "../Utils";
 import { getTranslation } from "../translations";
 
 const Modules = () => {
@@ -196,49 +196,6 @@ const Modules = () => {
       const matchesType = selectedTypes.length === 0 || selectedTypes.includes(module.moduleType);
       return matchesSocketType && matchesTier && matchesClass && matchesType;
     });
-  };
-
-  const getSocketTypeIcon = (socketType) => {
-    switch (socketType) {
-      case "Cerulean":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_001.png";
-      case "Almandine":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_002.png";
-      case "Malachite":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_003.png";
-      case "Xantic":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
-      case "Rutile":
-        return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_005.png";
-    }
-  };
-
-  const getTierColor = (tier) => {
-    switch (tier) {
-      case "Normal":
-        return colorStandard;
-      case "Rare":
-        return colorRare;
-      case "Ultimate":
-        return colorUltimate;
-      case "Transcendent":
-        return colorTranscendent;
-    }
-  };
-
-  const getClassIcon = (moduleClass) => {
-    switch (moduleClass) {
-      case "Descendant":
-        return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_0_Color.png";
-      case "General Rounds":
-        return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_A_Color.png";
-      case "Special Rounds":
-        return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_B_Color.png";
-      case "Impact Rounds":
-        return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_C_Color.png";
-      case "High-Power Rounds":
-        return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
-    }
   };
 
   const getSocketTypeCounts = () => {

@@ -1,8 +1,7 @@
 // src/Utils.js
 import { useNumberFormatter } from "./components/NumberFormatter";
-import { useContext } from "react";
-import { LocalizationContext } from "./components/LocalizationContext"; // Adjust the import path as necessary
 import { getTranslation } from "./translations"; // Adjust the import path as necessary
+import { colorStandard, colorRare, colorUltimate, colorTranscendent } from "./const";
 
 export const getSkillElementTypeIcon = (element) => {
   switch (element) {
@@ -113,6 +112,49 @@ String.prototype.camelCase = function () {
   return this.toLowerCase()
     .replace(/\s(.)/g, (match) => match.toUpperCase())
     .replace(/\s/g, "");
+};
+
+export const getSocketTypeIcon = (socketType) => {
+  switch (socketType) {
+    case "Cerulean":
+      return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_001.png";
+    case "Almandine":
+      return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_002.png";
+    case "Malachite":
+      return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_003.png";
+    case "Xantic":
+      return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
+    case "Rutile":
+      return "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_005.png";
+  }
+};
+
+export const getTierColor = (tier) => {
+  switch (tier) {
+    case "Normal":
+      return colorStandard;
+    case "Rare":
+      return colorRare;
+    case "Ultimate":
+      return colorUltimate;
+    case "Transcendent":
+      return colorTranscendent;
+  }
+};
+
+export const getClassIcon = (moduleClass) => {
+  switch (moduleClass) {
+    case "Descendant":
+      return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_0_Color.png";
+    case "General Rounds":
+      return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_A_Color.png";
+    case "Special Rounds":
+      return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_B_Color.png";
+    case "Impact Rounds":
+      return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_C_Color.png";
+    case "High-Power Rounds":
+      return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
+  }
 };
 
 export const useNumberFormatters = (language) => {
