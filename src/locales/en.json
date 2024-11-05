@@ -4352,7 +4352,6 @@
   "settings": {
     "language": "Language",
     "clearCache": "Clear cache",
-    "clearCacheConfirm": "Are you sure you want to clear cache?",
-    "clearCacheAlert": "Cache was cleared"
+    "clearCacheAlert": "Cache has been cleared"
   }
 }

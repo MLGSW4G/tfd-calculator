@@ -4352,7 +4352,6 @@
   "settings": {
     "language": "Язык",
     "clearCache": "Очистить кэш",
-    "clearCacheConfirm": "Вы уверены, что хотите очистить кэш?",
     "clearCacheAlert": "Кэш был очищен"
   }
 }
