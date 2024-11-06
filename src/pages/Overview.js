@@ -163,9 +163,7 @@ const Overview = () => {
     });
   };
 
-  const calculateSkillDamage = (skillPower, modifier, elementChecked, typeChecked, optimizationConditionMultiplier) => {
-    let appliedElementSkillPower = elementChecked ? 1.2 : 1;
-    let appliedTypeSkillPower = typeChecked ? 1.2 : 1;
+  const calculateSkillDamage = (skillPower, modifier, optimizationConditionMultiplier) => {
     return skillPower * appliedElementSkillPower * appliedTypeSkillPower * (modifier || 0) * optimizationConditionMultiplier;
   };
 
@@ -637,7 +635,7 @@ const Overview = () => {
                 id="skill-damage1"
                 label={translations.skillDamage1}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, element, skill, optimizationConditionMultiplier))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -657,7 +655,7 @@ const Overview = () => {
                 id="skill-damage2"
                 label={translations.skillDamage2}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, element, skill, optimizationConditionMultiplier))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -677,7 +675,7 @@ const Overview = () => {
                 id="skill-damage3"
                 label={translations.skillDamage3}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, element, skill, optimizationConditionMultiplier))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -697,7 +695,7 @@ const Overview = () => {
                 id="skill-damage4"
                 label={translations.skillDamage4}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, element, skill, optimizationConditionMultiplier))}
+                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, optimizationConditionMultiplier))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
