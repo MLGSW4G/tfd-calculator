@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tfd-calculator/static/css/main.b3dbf6ff.css",
-    "main.js": "/tfd-calculator/static/js/main.4d653a76.js",
+    "main.js": "/tfd-calculator/static/js/main.cce039b6.js",
     "static/media/NotoSans-Regular.ttf": "/tfd-calculator/static/media/NotoSans-Regular.e49f7cc81283eef694a3.ttf",
     "static/media/NotoSans-Bold.ttf": "/tfd-calculator/static/media/NotoSans-Bold.5f7ac340604afb2500f1.ttf",
     "static/media/Teko-Bold.ttf": "/tfd-calculator/static/media/Teko-Bold.ab5742532000bad6973e.ttf",
@@ -9,10 +9,10 @@
     "static/media/octin-college-rg.otf": "/tfd-calculator/static/media/octin-college-rg.dca141742faaabcfb3b3.otf",
     "index.html": "/tfd-calculator/index.html",
     "main.b3dbf6ff.css.map": "/tfd-calculator/static/css/main.b3dbf6ff.css.map",
-    "main.4d653a76.js.map": "/tfd-calculator/static/js/main.4d653a76.js.map"
+    "main.cce039b6.js.map": "/tfd-calculator/static/js/main.cce039b6.js.map"
   },
   "entrypoints": [
     "static/css/main.b3dbf6ff.css",
-    "static/js/main.4d653a76.js"
+    "static/js/main.cce039b6.js"
   ]
 }
