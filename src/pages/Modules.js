@@ -363,7 +363,7 @@ const Modules = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ marginTop: "2%", display: "flex", justifyContent: "space-between", padding: "0 2% 0" }}>
+      <Box sx={{ marginTop: "1%", marginBottom: "1%", display: "flex", justifyContent: "space-between", padding: "0 2% 0" }}>
         <Button sx={{ color: "#333" }} className="button" onClick={handleCopyModules}>
           {translations.copyEquippedModulesData}
         </Button>
