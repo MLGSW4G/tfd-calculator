@@ -1,6 +1,10 @@
 // src/Utils.js
+import { useNumberFormatter } from "./components/NumberFormatter";
+import { useContext } from "react";
+import { LocalizationContext } from "./components/LocalizationContext"; // Adjust the import path as necessary
+import { getTranslation } from "./translations"; // Adjust the import path as necessary
 
-export const getSkillElementIcon = (element) => {
+export const getSkillElementTypeIcon = (element) => {
   switch (element) {
     case "Fire":
       return "assets/Icons/Icon_Tag_Blazer.png";
@@ -16,41 +20,6 @@ export const getSkillElementIcon = (element) => {
 };
 export const getSkillArcheTypeIcon = (archeType) => {
   return `assets/Icons/Icon_Tag_Arche${archeType}.png`;
-};
-
-export const numberToPercents = (value) => {
-  if (value == null) {
-    return null;
-  }
-  return `${(value * 100).toFixed(1)}%`;
-};
-
-export const numberToPlusPercents = (value) => {
-  if (value == null) {
-    return null;
-  }
-  return `+${(value * 100).toFixed(1)}%`;
-};
-
-export const numberToSeconds = (value) => {
-  if (value == null) {
-    return null;
-  }
-  return `${value.toFixed(1)} s.`;
-};
-
-export const numberToMeters = (value) => {
-  if (value == null) {
-    return null;
-  }
-  return `${value.toFixed(1)} m.`;
-};
-
-export const numberToMPs = (value) => {
-  if (value == null) {
-    return null;
-  }
-  return `${value.toFixed(1)} MP`;
 };
 
 export function percentageToFloat(value) {
@@ -144,4 +113,44 @@ String.prototype.camelCase = function () {
   return this.toLowerCase()
     .replace(/\s(.)/g, (match) => match.toUpperCase())
     .replace(/\s/g, "");
+};
+
+export const useNumberFormatters = (language) => {
+  const formatNumber = useNumberFormatter();
+  const translations = getTranslation(language, "units");
+
+  const numberToPercents = (value) => {
+    if (value == null) {
+      return null;
+    }
+    return `${formatNumber((value * 100).toFixed(1))}%`;
+  };
+
+  const numberToPlusPercents = (value) => {
+    if (value == null) {
+      return null;
+    }
+    return `+${formatNumber((value * 100).toFixed(1))}%`;
+  };
+
+  const numberToSeconds = (value) => {
+    if (value == null) {
+      return null;
+    }
+    return `${formatNumber(value)} ${translations.seconds}`;
+  };
+
+  const numberToMeters = (value) => {
+    if (value == null) {
+      return null;
+    }
+    return `${formatNumber(value)} ${translations.meters}`;
+  };
+
+  return {
+    numberToPercents,
+    numberToPlusPercents,
+    numberToSeconds,
+    numberToMeters,
+  };
 };

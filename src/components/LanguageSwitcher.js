@@ -4,17 +4,20 @@ import { LocalizationContext } from "./LocalizationContext";
 import { Select, MenuItem, FormControl } from "@mui/material";
 
 const LanguageSwitcher = () => {
-  const { language, switchLanguage } = useContext(LocalizationContext);
-  const [translations, setTranslations] = useState({});
+  const { language, updateLanguage: contextUpdateLanguage, decimalSeparator, thousandsSeparator, updateDecimalSeparator, updateThousandsSeparator } = useContext(LocalizationContext);
+  const [translations, setTranslations] = useState(new Map());
 
   useEffect(() => {
     import(`../locales/${language}.json`).then((data) => {
-      setTranslations(data.default);
+      setTranslations((prevTranslations) => {
+        prevTranslations.set(language, data.default);
+        return prevTranslations;
+      });
     });
   }, [language]);
 
   const handleLanguageChange = (event) => {
-    switchLanguage(event.target.value);
+    contextUpdateLanguage(event.target.value);
   };
 
   return (

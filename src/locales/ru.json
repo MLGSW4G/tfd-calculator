@@ -15,13 +15,13 @@
     "descendantIndex": "Индекс потомка",
     "descendantId": "ИД потомка",
     "selectedSkillPlaceholder": "Навык",
-    "element": "Элемент навыка реактора",
-    "skillElement": "Элемент навыка",
+    "reactorElementType": "Элемент навыка реактора",
+    "skillElementType": "Элемент навыка",
     "elementTooltip": "Элементальная сила навыков +20%",
-    "type": "Тип навыка реактора",
+    "reactorArcheType": "Тип навыка реактора",
     "skillArcheType": "Тип навыка",
     "typeTooltip": "Типовая сила навыков +20%",
-    "optimizationCondition": "Условия оптимизации",
+    "reactorOptimizationCondition": "Условия оптимизации",
     "reactorEnhancement": "Улучшение реактора",
     "reactorLevel": "Уровень реактора",
     "reactorUpgrade1": "Улучшение 1",
@@ -43,7 +43,7 @@
     "skillDamage3": "Урон навыка 3",
     "skillDamage4": "Урон навыка 4",
     "modifier": "Множитель",
-    "skillElements": {
+    "skillElementTypes": {
       "Electric": "Электричество",
       "Fire": "Огонь",
       "Chill": "Холод",
@@ -4299,8 +4299,8 @@
     "descendantName": "Имя потомка",
     "skillName": "Название навыка",
     "skillNumber": "№ навыка",
-    "skillElement": "Элемент навыка",
-    "skillType": "Тип навыка",
+    "skillElementType": "Элемент навыка",
+    "skillArcheType": "Тип навыка",
     "cooldown": "Перезарядка",
     "cost1": "Стоимость 1",
     "cost2": "Стоимость 2",
@@ -4352,6 +4352,16 @@
   "settings": {
     "language": "Язык",
     "clearCache": "Очистить кэш",
-    "clearCacheAlert": "Кэш был очищен"
+    "clearCacheAlert": "Кэш был очищен",
+    "decimalSeparator": "Десятичный разделитель",
+    "thousandsSeparator": "Разделитель тысяч",
+    "formatting": "Форматирование",
+    "whitespace": "Пробел",
+    "period": "Точка",
+    "comma": "Запятая"
+  },
+  "units": {
+    "meters": "м.",
+    "seconds": "сек."
   }
 }

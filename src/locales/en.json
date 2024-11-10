@@ -15,13 +15,13 @@
     "descendantIndex": "Descendant Index",
     "descendantId": "Descendant ID",
     "selectedSkillPlaceholder": "Skill",
-    "element": "Reactor skill element",
-    "skillElement": "Skill element",
+    "reactorElementType": "Reactor skill element",
+    "skillElementType": "Skill element",
     "elementTooltip": "Element skill power +20%",
-    "type": "Reactor skill type",
+    "reactorArcheType": "Reactor skill type",
     "skillArcheType": "Skill type",
     "typeTooltip": "Type skill power +20%",
-    "optimizationCondition": "Optimization Condition",
+    "reactorOptimizationCondition": "Optimization Condition",
     "reactorEnhancement": "Reactor enhancement",
     "reactorLevel": "Reactor level",
     "reactorUpgrade1": "Upgrade 1",
@@ -43,7 +43,7 @@
     "skillDamage3": "Skill damage 3",
     "skillDamage4": "Skill damage 4",
     "modifier": "Modifier",
-    "skillElements": {
+    "skillElementTypes": {
       "Electric": "Electric",
       "Fire": "Fire",
       "Chill": "Chill",
@@ -4299,8 +4299,8 @@
     "descendantName": "Descendant Name",
     "skillName": "Skill Name",
     "skillNumber": "Skill №",
-    "skillElement": "Skill Element",
-    "skillType": "Skill Type",
+    "skillElementType": "Skill Element",
+    "skillArcheType": "Skill Type",
     "cooldown": "Cooldown",
     "cost1": "Cost 1",
     "cost2": "Cost 2",
@@ -4352,6 +4352,16 @@
   "settings": {
     "language": "Language",
     "clearCache": "Clear cache",
-    "clearCacheAlert": "Cache has been cleared"
+    "clearCacheAlert": "Cache has been cleared",
+    "decimalSeparator": "Decimal separator",
+    "thousandsSeparator": "Thousands separator",
+    "formatting": "Formatting",
+    "whitespace": "Whitespace",
+    "period": "Period",
+    "comma": "Comma"
+  },
+  "units": {
+    "meters": "m.",
+    "seconds": "s."
   }
 }

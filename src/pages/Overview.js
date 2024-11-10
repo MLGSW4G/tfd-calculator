@@ -6,18 +6,24 @@ import { rows } from "./SkillsList";
 import data from "../api/descendant.json";
 import jsonData from "./SkillsList.json";
 import { colorRare, colorUltimate, colorChill, colorToxic, colorElectric, colorFire, effectsMapping } from "../const";
-import { numberToPercents, numberToMeters, numberToSeconds, numberToMPs, getSkillArcheTypeIcon, getSkillElementIcon } from "../Utils";
+import { useNumberFormatters, getSkillArcheTypeIcon, getSkillElementTypeIcon } from "../Utils";
+import { useNumberFormatter } from "../components/NumberFormatter";
 import ReactorLevels from "./ReactorLevels.json";
 import { getTranslation } from "../translations";
 import "../styles/styles.css";
 
 const Overview = () => {
   const { language } = useContext(LocalizationContext);
+  const { numberToPercents, numberToSeconds, numberToMeters } = useNumberFormatters(language);
+  const formatNumber = useNumberFormatter();
+
   const translations = getTranslation(language, "overview");
   const translationsDescendantsList = getTranslation(language, "descendantsList");
 
-  const skillElements = [...new Set(jsonData.map((skill) => skill.skillElement))];
-  const skillTypes = [...new Set(jsonData.map((skill) => skill.skillType).filter((type) => type !== null))]; // Exclude null types
+  const statFormatters = { cooldown: numberToSeconds, duration1: numberToSeconds, duration2: numberToSeconds, interval: numberToSeconds, range1: numberToMeters, range2: numberToMeters };
+
+  const skillElementTypes = [...new Set(jsonData.map((skill) => skill.skillElementType))];
+  const skillArcheTypes = [...new Set(jsonData.map((skill) => skill.skillArcheType).filter((type) => type !== null))];
 
   const descendantNames = data.map((item) => item.descendant_name);
   const descendantImageUrls = data.map((item) => item.descendant_image_url);
@@ -50,17 +56,17 @@ const Overview = () => {
     return cachedtotalEffects ? JSON.parse(cachedtotalEffects) : {};
   });
 
-  const [element, setElement] = useState(() => {
-    const cachedElement = localStorage.getItem("element");
+  const [selectedElementType, setSelectedElementType] = useState(() => {
+    const cachedElement = localStorage.getItem("selectedElementType");
     return cachedElement ? JSON.parse(cachedElement) : "";
   });
-  const [skill, setSkill] = useState(() => {
-    const cachedSkill = localStorage.getItem("skill");
-    return cachedSkill ? JSON.parse(cachedSkill) : "";
+  const [selectedArcheType, setSelectedArcheType] = useState(() => {
+    const cachedSelectedArcheType = localStorage.getItem("selectedArcheType");
+    return cachedSelectedArcheType ? JSON.parse(cachedSelectedArcheType) : "";
   });
 
-  const appliedElementSkillPower = selectedSkill && selectedSkill.skillElement === element;
-  const appliedTypeSkillPower = selectedSkill && selectedSkill.skillType === skill;
+  const appliedElementSkillPower = selectedSkill && selectedSkill.skillElementType === selectedElementType;
+  const appliedTypeSkillPower = selectedSkill && selectedSkill.skillArcheType === selectedArcheType;
 
   const [optimizationConditionMultiplier, setOptimizationConditionMultiplier] = useState(() => {
     const cachedOptimizationConditionMultiplier = localStorage.getItem("optimizationConditionMultiplier");
@@ -80,8 +86,8 @@ const Overview = () => {
   });
 
   useEffect(() => {
-    const appliedElementSkillPower = selectedSkill && selectedSkill.skillElement === element ? 1.2 : 1;
-    const appliedTypeSkillPower = selectedSkill && selectedSkill.skillType === skill ? 1.2 : 1;
+    const appliedElementSkillPower = selectedSkill && selectedSkill.skillElementType === selectedElementType ? 1.2 : 1;
+    const appliedTypeSkillPower = selectedSkill && selectedSkill.skillArcheType === selectedArcheType ? 1.2 : 1;
     const reactorEnhancementMultiplier = [1, 1.03, 1.06][reactorEnhancementLevel];
     const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
     let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
@@ -122,7 +128,7 @@ const Overview = () => {
     totalSkillPowerValue *= elementSkillPowerEffect;
 
     setTotalSkillPower(totalSkillPowerValue);
-  }, [reactorSkillPower, reactorEnhancementLevel, optimizationConditionMultiplier, element, skill, totalEffects, skillStats, selectedSkill]);
+  }, [reactorSkillPower, reactorEnhancementLevel, optimizationConditionMultiplier, selectedElementType, selectedArcheType, totalEffects, skillStats, selectedSkill]);
 
   useEffect(() => {
     if (selectedSkill) {
@@ -138,12 +144,12 @@ const Overview = () => {
 
   useEffect(() => {
     localStorage.setItem("selectedSkill", JSON.stringify(selectedSkill));
-    localStorage.setItem("element", JSON.stringify(element));
-    localStorage.setItem("skill", JSON.stringify(skill));
+    localStorage.setItem("selectedElementType", JSON.stringify(selectedElementType));
+    localStorage.setItem("selectedArcheType", JSON.stringify(selectedArcheType));
     localStorage.setItem("optimizationConditionMultiplier", optimizationConditionMultiplier);
     localStorage.setItem("reactorEnhancementLevel", reactorEnhancementLevel);
     localStorage.setItem("reactorLevel", JSON.stringify(reactorLevel));
-  }, [selectedSkill, element, skill, optimizationConditionMultiplier, reactorEnhancementLevel, reactorLevel]);
+  }, [selectedSkill, selectedElementType, selectedArcheType, optimizationConditionMultiplier, reactorEnhancementLevel, reactorLevel]);
 
   const handleComboBoxChange = (event, value) => {
     setSelectedSkill(value);
@@ -163,8 +169,8 @@ const Overview = () => {
     });
   };
 
-  const calculateSkillDamage = (skillPower, modifier, optimizationConditionMultiplier) => {
-    return skillPower * appliedElementSkillPower * appliedTypeSkillPower * (modifier || 0) * optimizationConditionMultiplier;
+  const calculateSkillDamage = (skillPower, modifier) => {
+    return skillPower * (modifier || 0);
   };
 
   const calculateSkillStatsWithEffects = (skillStats, totalEffects) => {
@@ -276,8 +282,8 @@ const Overview = () => {
                         <Grid container spacing={1} alignItems="left">
                           <Grid item>
                             <Typography variant="body2">
-                              <img src={getSkillElementIcon(skillElement)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
-                              {translations.skillElements[skillElement]}
+                              <img src={getSkillElementTypeIcon(skillElement)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
+                              {translations.skillElementTypes[skillElement]}
                             </Typography>
                           </Grid>
 
@@ -323,30 +329,30 @@ const Overview = () => {
 
       <Grid container spacing={1}>
         <Grid item xs={6}>
-          <Typography>{translations.element}</Typography>
+          <Typography>{translations.skillElementType}</Typography>
           <Tooltip title={appliedElementSkillPower ? translations.elementTooltip : ""} arrow>
             <Select
-              value={element}
-              onChange={(event) => setElement(event.target.value)}
+              value={selectedElementType}
+              onChange={(event) => setSelectedElementType(event.target.value)}
               style={{
                 minWidth: 200,
-                border: element === selectedSkill?.skillElement ? "2px dashed lightblue" : "2px solid transparent",
+                border: selectedElementType === selectedSkill?.skillElementType ? "2px dashed lightblue" : "2px solid transparent",
                 transition: "border 0.3s ease", // Smooth transition for border
               }}
             >
               <MenuItem value="">
                 <div style={{ marginLeft: "28px" }}>{translations.none}</div>
               </MenuItem>
-              {skillElements.map((element) => (
+              {skillElementTypes.map((element) => (
                 <MenuItem
                   key={element}
                   value={element}
                   style={{
-                    border: element === selectedSkill?.skillElement ? "2px solid lightblue" : "none",
+                    border: element === selectedSkill?.skillElementType ? "2px solid lightblue" : "none",
                   }}
                 >
-                  <img src={getSkillElementIcon(element)} alt={element} style={{ width: 24, height: 24, marginRight: 4, verticalAlign: "bottom" }} />
-                  {translations.skillElements[element] || element}
+                  <img src={getSkillElementTypeIcon(element)} alt={element} style={{ width: 24, height: 24, marginRight: 4, verticalAlign: "bottom" }} />
+                  {translations.skillElementTypes[element] || element}
                 </MenuItem>
               ))}
             </Select>
@@ -354,26 +360,26 @@ const Overview = () => {
         </Grid>
 
         <Grid item xs={6}>
-          <Typography>{translations.type}</Typography>
+          <Typography>{translations.skillArcheType}</Typography>
           <Tooltip title={appliedTypeSkillPower ? translations.typeTooltip : ""} arrow>
             <Select
-              value={skill}
-              onChange={(event) => setSkill(event.target.value)}
+              value={selectedArcheType}
+              onChange={(event) => setSelectedArcheType(event.target.value)}
               style={{
                 minWidth: 200,
-                border: skill === selectedSkill?.skillType ? "2px dashed lightblue" : "2px solid transparent",
+                border: selectedArcheType === selectedSkill?.skillArcheType ? "2px dashed lightblue" : "2px solid transparent",
                 transition: "border 0.3s ease", // Smooth transition for border
               }}
             >
               <MenuItem value="">
                 <div style={{ marginLeft: "28px" }}>{translations.none}</div>
               </MenuItem>
-              {skillTypes.map((type) => (
+              {skillArcheTypes.map((type) => (
                 <MenuItem
                   key={type}
                   value={type}
                   style={{
-                    border: type === selectedSkill?.skillType ? "2px solid lightblue" : "none",
+                    border: type === selectedSkill?.skillArcheType ? "2px solid lightblue" : "none",
                   }}
                 >
                   <img src={getSkillArcheTypeIcon(type)} alt={type} style={{ width: 24, height: 24, marginRight: 4, verticalAlign: "bottom" }} />
@@ -385,7 +391,7 @@ const Overview = () => {
         </Grid>
 
         <Grid item xs={6}>
-          <Typography>{translations.optimizationCondition}</Typography>
+          <Typography>{translations.reactorOptimizationCondition}</Typography>
           <Select
             value={optimizationConditionMultiplier}
             onChange={(event) => setOptimizationConditionMultiplier(event.target.value)}
@@ -454,9 +460,8 @@ const Overview = () => {
             id="total-skill-power"
             label={translations.totalSkillPower}
             variant="standard"
-            value={totalSkillPower != null ? Number(totalSkillPower).toFixed(2) : null}
+            value={formatNumber((totalSkillPower || 0).toFixed(2))}
             InputProps={{
-              readOnly: true,
               inputProps: {
                 style: { textAlign: "right" },
               },
@@ -490,7 +495,7 @@ const Overview = () => {
               id="cooldown"
               label={translations.cooldown}
               variant="standard"
-              value={numberToSeconds(skillStatsWithEffects.cooldown)}
+              value={numberToSeconds(formatNumber(parseFloat(skillStatsWithEffects.cooldown.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -508,7 +513,7 @@ const Overview = () => {
               id="cost1"
               label={translations.cost1}
               variant="standard"
-              value={numberToMPs(skillStatsWithEffects.cost1)}
+              value={formatNumber(parseFloat(skillStatsWithEffects.cost1.toFixed(2)))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -526,7 +531,7 @@ const Overview = () => {
               id="cost2"
               label={translations.cost2}
               variant="standard"
-              value={numberToMPs(skillStatsWithEffects.cost2)}
+              value={formatNumber(parseFloat(skillStatsWithEffects.cost2.toFixed(2)))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -544,7 +549,7 @@ const Overview = () => {
               id="duration1"
               label={translations.duration1}
               variant="standard"
-              value={numberToSeconds(skillStatsWithEffects.duration1)}
+              value={numberToSeconds(formatNumber(parseFloat(skillStatsWithEffects.duration1.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -562,7 +567,7 @@ const Overview = () => {
               id="duration2"
               label={translations.duration2}
               variant="standard"
-              value={numberToSeconds(skillStatsWithEffects.duration2)}
+              value={numberToSeconds(formatNumber(parseFloat(skillStatsWithEffects.duration2.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -580,7 +585,7 @@ const Overview = () => {
               id="interval"
               label={translations.interval}
               variant="standard"
-              value={numberToSeconds(skillStatsWithEffects.interval)}
+              value={numberToSeconds(formatNumber(parseFloat(skillStatsWithEffects.interval.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -598,7 +603,7 @@ const Overview = () => {
               id="range1"
               label={translations.range1}
               variant="standard"
-              value={numberToMeters(skillStatsWithEffects.range1)}
+              value={numberToMeters(formatNumber(parseFloat(skillStatsWithEffects.range1.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -616,7 +621,7 @@ const Overview = () => {
               id="range2"
               label={translations.range2}
               variant="standard"
-              value={numberToMeters(skillStatsWithEffects.range2)}
+              value={numberToMeters(formatNumber(parseFloat(skillStatsWithEffects.range2.toFixed(2))))}
               InputProps={{
                 readOnly: true,
                 inputProps: {
@@ -635,7 +640,7 @@ const Overview = () => {
                 id="skill-damage1"
                 label={translations.skillDamage1}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1, optimizationConditionMultiplier))}
+                value={formatNumber(Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier1)))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -655,7 +660,7 @@ const Overview = () => {
                 id="skill-damage2"
                 label={translations.skillDamage2}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2, optimizationConditionMultiplier))}
+                value={formatNumber(Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier2)))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -675,7 +680,7 @@ const Overview = () => {
                 id="skill-damage3"
                 label={translations.skillDamage3}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3, optimizationConditionMultiplier))}
+                value={formatNumber(Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier3)))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {
@@ -695,7 +700,7 @@ const Overview = () => {
                 id="skill-damage4"
                 label={translations.skillDamage4}
                 variant="standard"
-                value={Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4, optimizationConditionMultiplier))}
+                value={formatNumber(Math.floor(calculateSkillDamage(totalSkillPower, skillStatsWithEffects.modifier4)))}
                 InputProps={{
                   readOnly: true,
                   inputProps: {

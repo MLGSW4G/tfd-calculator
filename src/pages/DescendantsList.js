@@ -4,10 +4,12 @@ import { LocalizationContext } from "../components/LocalizationContext";
 import { Grid, TextField, Autocomplete, Slider, Typography, Box } from "@mui/material";
 import data from "../api/descendant.json";
 import { getTranslation } from "../translations";
+import { useNumberFormatter } from "../components/NumberFormatter";
 import "../styles/styles.css";
 
 const DescendantsList = () => {
   const { language } = useContext(LocalizationContext);
+  const formatNumber = useNumberFormatter();
   const translations = getTranslation(language, "descendantsList");
 
   const [descendant, setDescendant] = useState(() => {
@@ -103,10 +105,7 @@ const DescendantsList = () => {
             <TextField
               fullWidth
               label={translations[statType]} // Use localized label if available, otherwise use statType
-              value={stats[statType]}
-              InputProps={{
-                readOnly: true,
-              }}
+              value={formatNumber(stats[statType])}
             />
           </Grid>
         ))}

@@ -2,7 +2,7 @@
 import { React, useContext } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import jsonData from "./SkillsList.json";
-import { numberToMeters, numberToPercents, numberToSeconds } from "../Utils";
+import { useNumberFormatters } from "../Utils";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
 
@@ -11,8 +11,8 @@ export const rows = jsonData.map((item) => ({
   descendantName: item.descendantName,
   skillName: item.skillName,
   skillNumber: item.skillNumber,
-  skillElement: item.skillElement,
-  skillType: item.skillType,
+  skillElementType: item.skillElementType,
+  skillArcheType: item.skillArcheType,
   cooldown: item.cooldown,
   cost1: item.cost1,
   cost2: item.cost2,
@@ -29,6 +29,7 @@ export const rows = jsonData.map((item) => ({
 
 const SkillsList = () => {
   const { language } = useContext(LocalizationContext);
+  const { numberToPercents, numberToSeconds, numberToMeters } = useNumberFormatters(language);
   const translations = getTranslation(language, "skillsList");
   const translationsOverview = getTranslation(language, "overview");
   const translationsDescendantsList = getTranslation(language, "descendantsList");
@@ -53,16 +54,16 @@ const SkillsList = () => {
       },
     },
     {
-      field: "skillElement",
-      headerName: translations.skillElement,
+      field: "skillElementType",
+      headerName: translations.skillElementType,
       width: 120,
       valueFormatter: (value) => {
-        return translationsOverview.skillElements[value];
+        return translationsOverview.skillElementTypes[value];
       },
     },
     {
-      field: "skillType",
-      headerName: translations.skillType,
+      field: "skillArcheType",
+      headerName: translations.skillArcheType,
       width: 120,
       valueFormatter: (value) => {
         return translationsOverview.skillArcheTypes[value];

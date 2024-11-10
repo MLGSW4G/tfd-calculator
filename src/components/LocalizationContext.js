@@ -5,20 +5,54 @@ const LocalizationContext = createContext();
 
 const LocalizationProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    const storedLanguage = localStorage.getItem('language');
-    return storedLanguage || 'en';
+    const storedLanguage = localStorage.getItem("language");
+    return storedLanguage || "en";
   });
+  const [decimalSeparator, setDecimalSeparator] = useState(".");
+  const [thousandsSeparator, setThousandsSeparator] = useState(",");
 
   useEffect(() => {
-    localStorage.setItem('language', language);
-  }, [language]);
+    const savedDecimalSeparator = localStorage.getItem("decimalSeparator");
+    const savedThousandsSeparator = localStorage.getItem("thousandsSeparator");
+    const storedLanguage = localStorage.getItem("language");
 
-  const switchLanguage = (lang) => {
-    setLanguage(lang);
+    if (savedDecimalSeparator) {
+      setDecimalSeparator(savedDecimalSeparator);
+    }
+    if (savedThousandsSeparator) {
+      setThousandsSeparator(savedThousandsSeparator);
+    }
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("decimalSeparator", decimalSeparator);
+    localStorage.setItem("thousandsSeparator", thousandsSeparator);
+    localStorage.setItem("language", language);
+  }, [decimalSeparator, thousandsSeparator, language]);
+
+  const updateLanguage = (lang) => {
+    if (lang !== language) {
+      setLanguage(lang);
+    }
   };
 
+  const updateDecimalSeparator = (separator) => setDecimalSeparator(separator);
+  const updateThousandsSeparator = (separator) => setThousandsSeparator(separator);
+
   return (
-    <LocalizationContext.Provider value={{ language, switchLanguage }}>
+    <LocalizationContext.Provider
+      value={{
+        language,
+        updateLanguage,
+        decimalSeparator,
+        thousandsSeparator,
+        updateDecimalSeparator,
+        updateThousandsSeparator,
+      }}
+    >
       {children}
     </LocalizationContext.Provider>
   );
