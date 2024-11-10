@@ -16,18 +16,16 @@ const Modules = () => {
   const translationsModule = getTranslation(language, "module");
 
   const [moduleList, setModuleList] = useState(
-    moduleData
-      .sort((a, b) => a.module_id - b.module_id)
-      .map((module) => ({
-        id: module.module_id,
-        moduleName: module.module_name,
-        moduleIcon: module.image_url,
-        moduleType: module.module_type,
-        moduleTier: module.module_tier,
-        moduleClass: module.module_class,
-        moduleSocketType: module.module_socket_type,
-        moduleStat: module.module_stat,
-      }))
+    moduleData.map((module) => ({
+      id: module.module_id,
+      moduleName: module.module_name,
+      moduleIcon: module.image_url,
+      moduleType: module.module_type,
+      moduleTier: module.module_tier,
+      moduleClass: module.module_class,
+      moduleSocketType: module.module_socket_type,
+      moduleStat: module.module_stat,
+    }))
   );
 
   const [equippedModules, setEquippedModules] = useState(() => {
@@ -47,7 +45,7 @@ const Modules = () => {
 
   const handleCopyModules = () => {
     const equippedModulesData = JSON.stringify(equippedModules);
-    console.log(`Copied modules: \n${equippedModulesData}`)
+    console.log(`Copied modules: \n${equippedModulesData}`);
     navigator.clipboard.writeText(equippedModulesData);
     setSnackbar({ open: true, message: translations.modulesCopied });
   };
@@ -55,17 +53,13 @@ const Modules = () => {
   const handlePasteModules = () => {
     try {
       const parsedModules = JSON.parse(pasteData);
-      console.log(`Pasted modules: \n${pasteData}`)
+      console.log(`Pasted modules: \n${pasteData}`);
       setEquippedModules(parsedModules);
       localStorage.setItem("equippedModules", JSON.stringify(parsedModules));
       setSnackbar({ open: true, message: translations.modulesPasted });
     } catch (error) {
       setSnackbar({ open: true, message: translations.modulesPastedError });
     }
-  };
-
-  const handleSnackbarClose = () => {
-    setSnackbar({ ...snackbar, open: false });
   };
 
   const handleDragStart = (e, module) => {
@@ -85,9 +79,9 @@ const Modules = () => {
     ) {
       setEquippedModules((prevEquippedModules) => {
         const newEquippedModules = [...prevEquippedModules];
-        newEquippedModules[index] = { module, moduleLevel: 0 };
         // Remove the module from its previous slot if it exists
         const previousIndex = prevEquippedModules.findIndex((m) => m.module.id === module.id);
+        newEquippedModules[index] = { module: module, moduleLevel: prevEquippedModules[previousIndex || 0]?.moduleLevel || 0 };
         if (previousIndex !== -1 && previousIndex !== index) {
           newEquippedModules[previousIndex] = { module: {}, moduleLevel: 0 };
         }
@@ -104,8 +98,7 @@ const Modules = () => {
           } else {
             newModuleList.splice(currentIndex, 0, currentModule.module);
           }
-          // Sort the newModuleList
-          newModuleList.sort((a, b) => a.id - b.id);
+
           return newModuleList;
         });
       }
@@ -277,11 +270,10 @@ const Modules = () => {
     return totalEffects;
   };
 
-  const totalEffects = calculateTotalEffects(equippedModules);
-
   useEffect(() => {
+    const totalEffects = calculateTotalEffects(equippedModules);
     localStorage.setItem("totalEffects", JSON.stringify(totalEffects));
-  }, [totalEffects]);
+  }, [equippedModules]);
 
   useEffect(() => {
     const cachedEquippedModules = localStorage.getItem("equippedModules");
@@ -298,14 +290,13 @@ const Modules = () => {
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           {equippedModules.map((equippedModule, index) => (
             <Grid
-              container
               item
-              key={index}
+              key={equippedModule.module.id}
               style={{
                 flex: 0,
               }}
             >
-              <Grid item margin={"15px"} marginBottom={"0px"}>
+              <Grid item margin="15px" marginBottom="0px">
                 <ModuleSlot
                   equippedModule={equippedModule}
                   onDrop={(e) => handleDrop(e, index)}
@@ -332,7 +323,14 @@ const Modules = () => {
         </Button>
       </Box>
 
-      <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleSnackbarClose} message={snackbar.message} />
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={() => {
+          setSnackbar({ ...snackbar, open: false });
+        }}
+        message={snackbar.message}
+      />
 
       <Box
         className="module-zone"
@@ -379,6 +377,7 @@ const Modules = () => {
               <InputLabel>{translations.socketType}</InputLabel>
               <Select
                 multiple
+                label={translations.socketType}
                 value={selectedSocketTypes}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -423,6 +422,7 @@ const Modules = () => {
               <InputLabel>{translations.tier}</InputLabel>
               <Select
                 multiple
+                label={translations.tier}
                 value={selectedTiers}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -474,6 +474,7 @@ const Modules = () => {
               <InputLabel>{translations.class}</InputLabel>
               <Select
                 multiple
+                label={translations.class}
                 value={selectedClasses}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -517,6 +518,7 @@ const Modules = () => {
               <InputLabel>{translations.type}</InputLabel>
               <Select
                 multiple
+                label={translations.type}
                 value={selectedTypes}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -555,7 +557,7 @@ const Modules = () => {
           <Box sx={{ display: "flex", alignItems: "center", marginRight: 1 }}>
             <FormControl sx={{ margin: 1, minWidth: 200 }}>
               <InputLabel>{translations.sortBy}</InputLabel>
-              <Select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+              <Select label={translations.sortBy} value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                 <MenuItem value="id">{translations.id}</MenuItem>
                 <MenuItem value="name">{translations.name}</MenuItem>
                 <MenuItem value="socketType">{translations.socketType}</MenuItem>
