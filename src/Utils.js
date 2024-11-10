@@ -1,7 +1,7 @@
 // src/Utils.js
 import { useNumberFormatter } from "./components/NumberFormatter";
 import { getTranslation } from "./translations"; // Adjust the import path as necessary
-import { colorStandard, colorRare, colorUltimate, colorTranscendent } from "./const";
+import { colorStandard, colorRare, colorUltimate, colorTranscendent, filterStandard, filterRare, filterUltimate, filterTranscendent } from "./const";
 
 export const getSkillElementTypeIcon = (element) => {
   switch (element) {
@@ -139,6 +139,19 @@ export const getTierColor = (tier) => {
       return colorUltimate;
     case "Transcendent":
       return colorTranscendent;
+  }
+};
+
+export const getTierFilter = (tier) => {
+  switch (tier) {
+    case "Normal":
+      return filterStandard;
+    case "Rare":
+      return filterRare;
+    case "Ultimate":
+      return filterUltimate;
+    case "Transcendent":
+      return filterTranscendent;
   }
 };
 

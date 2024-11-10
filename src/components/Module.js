@@ -5,6 +5,7 @@ import "../styles/Module.css";
 import { Tooltip } from "@mui/material";
 import { getTranslation } from "../translations";
 import { LocalizationContext } from "./LocalizationContext";
+import { getClassIcon, getSocketTypeIcon, getTierFilter } from "../Utils";
 
 export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, initialModuleLevel, onModuleDrop }) => {
   const { language } = useContext(LocalizationContext);
@@ -19,58 +20,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     return [module.id, translations.classes[module.moduleClass], translations.socketTypes[module.moduleSocketType], translations.moduleStat[module.moduleStat[moduleLevel].value]];
   }, [module, moduleLevel, translations]);
 
-  let moduleSocketType, moduleClass, moduleTier;
-
-  switch (module.moduleSocketType) {
-    case "Cerulean":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_001.png";
-      break;
-    case "Almandine":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_002.png";
-      break;
-    case "Malachite":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_003.png";
-      break;
-    case "Xantic":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_004.png";
-      break;
-    case "Rutile":
-      moduleSocketType = "assets/Modules/Icon_Runes/Icon_RunesCapacity_Mini_005.png";
-      break;
-  }
-
-  switch (module.moduleClass) {
-    case "Descendant":
-      moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_0_Color.png";
-      break;
-    case "General Rounds":
-      moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_A_Color.png";
-      break;
-    case "Enhanced Ammo":
-      moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_B_Color.png";
-      break;
-    case "Impact Rounds":
-      moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_C_Color.png";
-      break;
-    case "High-Power Rounds":
-      moduleClass = "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
-      break;
-  }
-
-  switch (module.moduleTier) {
-    case "Normal":
-      moduleTier = filterStandard;
-      break;
-    case "Rare":
-      moduleTier = filterRare;
-      break;
-    case "Ultimate":
-      moduleTier = filterUltimate;
-      break;
-    case "Transcendent":
-      moduleTier = filterTranscendent;
-      break;
-  }
+  let moduleSocketType = getSocketTypeIcon(module.moduleSocketType),
+    moduleClass = getClassIcon(module.moduleClass),
+    moduleTier = getTierFilter(module.moduleTier);
 
   const incrementLevel = (e) => {
     if (moduleLevel < currentMaxLevel) {
