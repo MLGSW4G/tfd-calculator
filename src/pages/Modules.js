@@ -28,10 +28,7 @@ const Modules = () => {
     }))
   );
 
-  const [equippedModules, setEquippedModules] = useState(() => {
-    const cachedEquippedModules = localStorage.getItem("equippedModules");
-    return cachedEquippedModules ? JSON.parse(cachedEquippedModules) : Array(12).fill({ module: {}, moduleLevel: 0 });
-  });
+  const [equippedModules, setEquippedModules] = useState(Array(12).fill({ module: {}, moduleLevel: 0 }));
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSocketTypes, setSelectedSocketTypes] = useState([]);
