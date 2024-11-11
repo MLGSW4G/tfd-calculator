@@ -181,19 +181,8 @@ const Modules = () => {
       }
     });
 
-  const getFilteredModules = () => {
-    return moduleList.filter((module) => {
-      const matchesSocketType = selectedSocketTypes.length === 0 || selectedSocketTypes.includes(module.moduleSocketType);
-      const matchesTier = selectedTiers.length === 0 || selectedTiers.includes(module.moduleTier);
-      const matchesClass = selectedClasses.length === 0 || selectedClasses.includes(module.moduleClass);
-      const matchesType = selectedTypes.length === 0 || selectedTypes.includes(module.moduleType);
-      return matchesSocketType && matchesTier && matchesClass && matchesType;
-    });
-  };
-
   const getSocketTypeCounts = () => {
     const counts = {};
-    const filteredModules = getFilteredModules();
 
     filteredModules.forEach((module) => {
       if (counts[module.moduleSocketType]) {
@@ -208,7 +197,6 @@ const Modules = () => {
 
   const getTierCounts = () => {
     const counts = {};
-    const filteredModules = getFilteredModules();
 
     filteredModules.forEach((module) => {
       if (counts[module.moduleTier]) {
@@ -223,7 +211,6 @@ const Modules = () => {
 
   const getClassCounts = () => {
     const counts = {};
-    const filteredModules = getFilteredModules();
 
     filteredModules.forEach((module) => {
       if (counts[module.moduleClass]) {
@@ -238,7 +225,6 @@ const Modules = () => {
 
   const getTypeCounts = () => {
     const counts = {};
-    const filteredModules = getFilteredModules();
 
     filteredModules.forEach((module) => {
       if (counts[module.moduleType]) {
