@@ -4445,8 +4445,6 @@
   },
   "units": {
     "meters": "m.",
-    "seconds": "s.",
-    "hours": "h",
-    "days": "d"
+    "seconds": "s."
   }
 }

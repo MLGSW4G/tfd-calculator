@@ -4366,15 +4366,15 @@
     "map": "Карта",
     "rotation": "Ротация",
     "currentRotation": "Текущая ротация",
-    "selectedBattleZones": "Выбранные поля битвы",
-    "battleZonesLabel": "Поля битвы",
+    "selectedBattleZones": "Выбранные поля боя",
+    "battleZonesLabel": "Поля боя",
     "rewardTypesLabel": "Типы награды",
     "reactorElements": "Элементы реактора",
     "weaponRounds": "Типы патронов",
     "archeTypes": "Типы архи",
     "sortBy": "Сортировать по",
     "type": "Типу",
-    "battleZone": "Полю битвы",
+    "battleZone": "Полю боя",
     "countdownLabel": "Время до следующей ротации",
     "hours": "Часы",
     "minutes": "Минуты",
@@ -4445,8 +4445,6 @@
   },
   "units": {
     "meters": "м.",
-    "seconds": "сек.",
-    "hours": "ч.",
-    "days": "д."
+    "seconds": "сек."
   }
 }
