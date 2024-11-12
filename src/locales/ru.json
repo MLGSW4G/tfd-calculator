@@ -4,6 +4,7 @@
     "skillsList": "Список навыков",
     "descendantsList": "Список потомков",
     "modules": "Модули",
+    "rotations": "Ротации",
     "settings": "Настройки"
   },
   "moduleSlot": {
@@ -47,7 +48,7 @@
       "Electric": "Электричество",
       "Fire": "Огонь",
       "Chill": "Холод",
-      "Poison": "Яд",
+      "Toxic": "Яд",
       "Non-Attribute": "Нестихийный"
     },
     "skillArcheTypes": {
@@ -233,7 +234,7 @@
       "Descendant": "Потомок",
       "General Rounds": "Обычные патроны",
       "Impact Rounds": "Ударные патроны",
-      "Special Rounds": "Специальные патроны",
+      "Enhanced Ammo": "Спец. патроны",
       "High-Power Rounds": "Мощные патроны"
     },
     "tiers": {
@@ -4360,8 +4361,92 @@
     "period": "Точка",
     "comma": "Запятая"
   },
+  "rotations": {
+    "all": "Все",
+    "map": "Карта",
+    "rotation": "Ротация",
+    "currentRotation": "Текущая ротация",
+    "selectedBattleZones": "Выбранные поля битвы",
+    "battleZonesLabel": "Поля битвы",
+    "rewardTypesLabel": "Типы награды",
+    "reactorElements": "Элементы реактора",
+    "weaponRounds": "Типы патронов",
+    "archeTypes": "Типы архи",
+    "sortBy": "Сортировать по",
+    "type": "Типу",
+    "battleZone": "Полю битвы",
+    "countdownLabel": "Время до следующей ротации",
+    "hours": "Часы",
+    "minutes": "Минуты",
+    "seconds": "Секунды",
+    "selectedRotation": "Выбранная ротация",
+    "viewRotationDates": "Даты всех ротаций",
+    "maps": {
+      "Albion": "Альбион",
+      "Outskirts of Kingston": "Окраины Кингстона",
+      "Vespers": "Сумеречье",
+      "Kingston": "Кингстон",
+      "Agna Desert": "Пустыня Агна",
+      "Echo Swamp": "Топи эха",
+      "Fortress": "Крепость",
+      "Sterile Land": "Пустоши",
+      "Hagios": "Агиос",
+      "White-night Gulch": "Лощина белых ночей",
+      "Undecided Zone": "Неопределенная зона",
+      "Void Intercept Battle Location": "Место перехвата в Бездне",
+      "Laboratory": "Лаборатория"
+    },
+    "battleZones": {
+      "The Lumber Yard": "Лесопилка",
+      "The Ruins": "Развалины",
+      "Lost Supply Depot": "Брошенный склад снабжения",
+      "Moonlight Lake": "Лунное озеро",
+      "Timberfall": "Бурелом",
+      "The Destruction": "Область разгрома",
+      "The Fallen Theater": "Разрушенный театр",
+      "Grand Square": "Большая площадь",
+      "Vermilion Waste": "Багряная пустошь",
+      "Remnant": "Останки",
+      "The Storage": "Хранилище",
+      "The Mining Site": "Место добычи",
+      "Miragestone": "Пристанище бога",
+      "Misty Woods": "Туманный лес",
+      "Abandoned Zone": "Покинутая зона",
+      "Muskeg Swamp": "Торфяное болото",
+      "Derelict Covert": "Обитель древних",
+      "The Aurora Forest": "Лес Авроры",
+      "Frozen Valley": "Ледяная долина",
+      "Fallen Ark": "Упавший ковчег",
+      "Convertor Facility": "Станция преобразователя",
+      "Defense Line": "Линия обороны",
+      "Rockfall": "Камнепад",
+      "Repository": "Склад",
+      "Restricted Zone": "Запретная зона",
+      "Ironworks": "Металлургический завод",
+      "Classified Area": "Засекреченная зона",
+      "Dune Base": "Дюнная база",
+      "The Corrupted Zone": "Оскверненная зона",
+      "Fractured Monolith": "Треснувший монолит",
+      "Forward Base": "Фронтовая база",
+      "Starfall Road": "Дорога звездопада",
+      "The Mountaintops": "Вершины",
+      "Moongrave Basin": "Котловина мертвой луны",
+      "Observatory": "Станция наблюдения",
+      "Shipment Base": "Погрузочная база",
+      "Hatchery": "Инкубатор"
+    },
+    "rewardTypes": {
+      "Reactor": "Реактор",
+      "Auxiliary Power": "Дополнительный источник энергии",
+      "Sensor": "Датчик",
+      "Memory": "Память",
+      "Processor": "Процессор"
+    }
+  },
   "units": {
     "meters": "м.",
-    "seconds": "сек."
+    "seconds": "сек.",
+    "hours": "ч.",
+    "days": "д."
   }
 }

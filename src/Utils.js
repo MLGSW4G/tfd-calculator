@@ -1,7 +1,21 @@
 // src/Utils.js
 import { useNumberFormatter } from "./components/NumberFormatter";
 import { getTranslation } from "./translations"; // Adjust the import path as necessary
-import { colorStandard, colorRare, colorUltimate, colorTranscendent, filterStandard, filterRare, filterUltimate, filterTranscendent } from "./const";
+import {
+  colorStandard,
+  colorRare,
+  colorUltimate,
+  colorTranscendent,
+  filterStandard,
+  filterRare,
+  filterUltimate,
+  filterTranscendent,
+  reactorElementTypeOrder,
+  rewardTypeOrder,
+  archeTypeOrder,
+  weaponRoundsTypeOrder,
+  battleZoneOrder,
+} from "./const";
 
 export const getSkillElementTypeIcon = (element) => {
   switch (element) {
@@ -168,6 +182,54 @@ export const getClassIcon = (moduleClass) => {
     case "High-Power Rounds":
       return "assets/Modules/Icon_Runes/Icon_RunesClass_Mini_D_Color.png";
   }
+};
+
+export const getClassIcon2 = (className) => {
+  switch (className) {
+    case "General Rounds":
+      return "assets/Icons/Icon_MagnumPicto_001.png";
+    case "Enhanced Ammo":
+      return "assets/Icons/Icon_MagnumPicto_002.png";
+    case "Impact Rounds":
+      return "assets/Icons/Icon_MagnumPicto_003.png";
+    case "High-Power Rounds":
+      return "assets/Icons/Icon_MagnumPicto_004.png";
+  }
+};
+
+// Function to sort rewards based on the selected option
+export const sortRewards = (rewards, sortOption) => {
+  if (sortOption === "type") {
+    return rewards.sort((a, b) => {
+      // Sort by reward_type
+      const aRewardTypeIndex = rewardTypeOrder.indexOf(a.reward_type);
+      const bRewardTypeIndex = rewardTypeOrder.indexOf(b.reward_type);
+      if (aRewardTypeIndex !== bRewardTypeIndex) return aRewardTypeIndex - bRewardTypeIndex;
+
+      // Sort by weapon_rounds_type
+      const aWeaponRoundsIndex = weaponRoundsTypeOrder.indexOf(a.weapon_rounds_type);
+      const bWeaponRoundsIndex = weaponRoundsTypeOrder.indexOf(b.weapon_rounds_type);
+      if (aWeaponRoundsIndex !== bWeaponRoundsIndex) return aWeaponRoundsIndex - bWeaponRoundsIndex;
+
+      // Sort by reactor_element_type
+      const aElementTypeIndex = reactorElementTypeOrder.indexOf(a.reactor_element_type);
+      const bElementTypeIndex = reactorElementTypeOrder.indexOf(b.reactor_element_type);
+      if (aElementTypeIndex !== bElementTypeIndex) return aElementTypeIndex - bElementTypeIndex;
+
+      // Sort by arche_type
+      const aArcheTypeIndex = archeTypeOrder.indexOf(a.arche_type);
+      const bArcheTypeIndex = archeTypeOrder.indexOf(b.arche_type);
+      return aArcheTypeIndex - bArcheTypeIndex;
+    });
+  } else if (sortOption === "battlezone") {
+    return rewards.sort((a, b) => {
+      const aBattleZoneIndex = battleZoneOrder.indexOf(a.battle_zone_name);
+      const bBattleZoneIndex = battleZoneOrder.indexOf(b.battle_zone_name);
+      return aBattleZoneIndex - bBattleZoneIndex;
+    });
+  }
+  // If no sorting option is selected, return the rewards as is (no sorting)
+  return rewards;
 };
 
 export const useNumberFormatters = (language) => {

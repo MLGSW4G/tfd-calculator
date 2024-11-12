@@ -15,6 +15,7 @@ const navigationLinks = [
   { label: "skillsList", path: "/skillsList" },
   { label: "descendantsList", path: "/descendantsList" },
   { label: "modules", path: "/modules" },
+  { label: "rotations", path: "/rotations" },
   { label: "settings", path: "/settings" },
 ];
 

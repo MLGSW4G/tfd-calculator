@@ -6,6 +6,7 @@ import Overview from "./pages/Overview";
 import Modules from "./pages/Modules";
 import SkillsList from "./pages/SkillsList";
 import DescendantsList from "./pages/DescendantsList";
+import Rotations from "./pages/Rotations";
 import Settings from "./pages/Settings";
 import { LocalizationProvider } from "./components/LocalizationContext";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/skillsList" element={<SkillsList />} />
           <Route path="/descendantsList" element={<DescendantsList />} />
           <Route path="/modules" element={<Modules />} />
+          <Route path="/rotations" element={<Rotations />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>
