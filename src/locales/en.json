@@ -4356,10 +4356,12 @@
     "clearCacheAlert": "Cache has been cleared",
     "decimalSeparator": "Decimal separator",
     "thousandsSeparator": "Thousands separator",
-    "formatting": "Formatting",
+    "numbersFormat": "Numbers format",
     "whitespace": "Whitespace",
     "period": "Period",
-    "comma": "Comma"
+    "comma": "Comma",
+    "pageTitleFormat": "Page title format",
+    "pageTitleFormatTooltip": "Use {name} to insert current page name"
   },
   "rotations": {
     "all": "All",

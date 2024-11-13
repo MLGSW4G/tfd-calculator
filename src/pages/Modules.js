@@ -6,14 +6,18 @@ import "../styles/styles.css";
 import { Module } from "../components/Module";
 import { ModuleSlot } from "../components/ModuleSlot";
 import moduleData from "../api/module.json";
-import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, MODULE_TYPES } from "../const";
+import { MODULE_SOCKET_TYPES, MODULE_TIERS, MODULE_CLASSES, MODULE_TYPES, PAGE_TITLE_FORMAT } from "../const";
 import { parseModuleEffect, getClassIcon, getSocketTypeIcon, getTierColor } from "../Utils";
 import { getTranslation } from "../translations";
+import { Helmet } from "react-helmet";
 
 const Modules = () => {
   const { language } = useContext(LocalizationContext);
   const translations = getTranslation(language, "modules");
   const translationsModule = getTranslation(language, "module");
+
+  const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
+  const pageTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").modules);
 
   const [moduleList, setModuleList] = useState(
     moduleData.map((module) => ({
@@ -269,6 +273,9 @@ const Modules = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <Box className="equipped-modules" margin="0" marginLeft="10%" marginRight="25%" marginTop="1%" position="relative">
         <Grid container style={{ display: "flex", alignItems: "flex-start" }}>
           {equippedModules.map((equippedModule, index) => (
@@ -293,7 +300,6 @@ const Modules = () => {
           ))}
         </Grid>
       </Box>
-
       <Box sx={{ marginTop: "1%", marginBottom: "1%", display: "flex", justifyContent: "space-between", padding: "0 2% 0" }}>
         <Button sx={{ color: "#333" }} className="button" onClick={handleCopyModules}>
           {translations.copyEquippedModulesData}
@@ -305,7 +311,6 @@ const Modules = () => {
           {translations.pasteEquippedModulesData}
         </Button>
       </Box>
-
       <Snackbar
         open={snackbar.open}
         autoHideDuration={6000}
@@ -314,7 +319,6 @@ const Modules = () => {
         }}
         message={snackbar.message}
       />
-
       <Box
         className="module-zone"
         width="100%"

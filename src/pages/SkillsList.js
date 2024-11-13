@@ -5,6 +5,8 @@ import jsonData from "./SkillsList.json";
 import { useNumberFormatters } from "../Utils";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
+import { PAGE_TITLE_FORMAT } from "../const";
+import { Helmet } from "react-helmet";
 
 export const rows = jsonData.map((item) => ({
   id: item.id,
@@ -33,6 +35,9 @@ const SkillsList = () => {
   const translations = getTranslation(language, "skillsList");
   const translationsOverview = getTranslation(language, "overview");
   const translationsDescendantsList = getTranslation(language, "descendantsList");
+
+  const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
+  const pageTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").skillsList);
 
   const columns = [
     { field: "id", headerName: translations.id, width: 60 },
@@ -84,25 +89,27 @@ const SkillsList = () => {
   ];
 
   return (
-    <div style={{ width: "100%", margin: 0, padding: 0 }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          sorting: {
-            sortModel: [
-              { field: "descendantName", sort: "asc" },
-              { field: "skillNumber", sort: "asc" },
-            ],
-          },
-          columns: {
-            columnVisibilityModel: {
-              id: false,
+    <><Helmet><title>{pageTitle}</title></Helmet>
+      <div style={{ width: "100%", margin: 0, padding: 0 }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            sorting: {
+              sortModel: [
+                { field: "descendantName", sort: "asc" },
+                { field: "skillNumber", sort: "asc" },
+              ],
             },
-          },
-        }}
-      />
-    </div>
+            columns: {
+              columnVisibilityModel: {
+                id: false,
+              },
+            },
+          }}
+        />
+      </div>
+    </>
   );
 };
 

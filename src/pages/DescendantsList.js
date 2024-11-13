@@ -6,11 +6,16 @@ import data from "../api/descendant.json";
 import { getTranslation } from "../translations";
 import { useNumberFormatter } from "../components/NumberFormatter";
 import "../styles/styles.css";
+import { PAGE_TITLE_FORMAT } from "../const";
+import { Helmet } from "react-helmet";
 
 const DescendantsList = () => {
   const { language } = useContext(LocalizationContext);
   const formatNumber = useNumberFormatter();
   const translations = getTranslation(language, "descendantsList");
+
+  const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
+  const pageTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").descendantsList);
 
   const [descendant, setDescendant] = useState(() => {
     const cachedDescendant = localStorage.getItem("descendant");
@@ -62,55 +67,60 @@ const DescendantsList = () => {
   };
 
   return (
-    <Box
-      sx={{
-        position: "absolute",
-        left: "10%",
-        width: "80%",
-        backgroundColor: "inherit",
-        justifyItems: "left",
-        marginTop: "3%",
-      }}
-    >
-      <Grid container spacing={1}>
-        <Grid item xs={12}>
-          <Autocomplete
-            fullWidth
-            id="selected-descendant"
-            options={data}
-            getOptionLabel={(option) => translations.descendants[option.descendant_name]}
-            value={descendant || null}
-            onChange={handleDescendantChange}
-            renderInput={(params) => <TextField {...params} label={translations.descendantLabel} />}
-            renderOption={(props, option) => (
-              <Box component="li" sx={{ display: "flex", alignItems: "center" }} {...props}>
-                <img src={option.descendant_image_url} alt={option.descendant_name} style={{ width: 48, height: 48, marginRight: 24 }} />
-                <Typography sx={{ fontSize: 20, fontWeight: 500 }}>{translations.descendants[option.descendant_name]}</Typography>
-              </Box>
-            )}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          {descendant && (
-            <>
-              <Typography id="descendant-level-label" style={{ width: "100%" }}>
-                {translations.descendantLevel}
-              </Typography>
-              <Slider fullWidth valueLabelDisplay="auto" value={descendantLevel} min={1} max={Math.max(...(descendant?.descendant_stat.map((stat) => stat.level) || [1]))} onChange={handleDescendantLevelChange} />
-            </>
-          )}
-        </Grid>
-        {Object.keys(stats).map((statType) => (
-          <Grid item xs={12} key={statType}>
-            <TextField
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <Box
+        sx={{
+          position: "absolute",
+          left: "10%",
+          width: "80%",
+          backgroundColor: "inherit",
+          justifyItems: "left",
+          marginTop: "3%",
+        }}
+      >
+        <Grid container spacing={1}>
+          <Grid item xs={12}>
+            <Autocomplete
               fullWidth
-              label={translations[statType]} // Use localized label if available, otherwise use statType
-              value={formatNumber(stats[statType])}
+              id="selected-descendant"
+              options={data}
+              getOptionLabel={(option) => translations.descendants[option.descendant_name]}
+              value={descendant || null}
+              onChange={handleDescendantChange}
+              renderInput={(params) => <TextField {...params} label={translations.descendantLabel} />}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ display: "flex", alignItems: "center" }} {...props}>
+                  <img src={option.descendant_image_url} alt={option.descendant_name} style={{ width: 48, height: 48, marginRight: 24 }} />
+                  <Typography sx={{ fontSize: 20, fontWeight: 500 }}>{translations.descendants[option.descendant_name]}</Typography>
+                </Box>
+              )}
             />
           </Grid>
-        ))}
-      </Grid>
-    </Box>
+          <Grid item xs={12}>
+            {descendant && (
+              <>
+                <Typography id="descendant-level-label" style={{ width: "100%" }}>
+                  {translations.descendantLevel}
+                </Typography>
+                <Slider fullWidth valueLabelDisplay="auto" value={descendantLevel} min={1} max={Math.max(...(descendant?.descendant_stat.map((stat) => stat.level) || [1]))} onChange={handleDescendantLevelChange} />
+              </>
+            )}
+          </Grid>
+          {Object.keys(stats).map((statType) => (
+            <Grid item xs={12} key={statType}>
+              <TextField
+                fullWidth
+                label={translations[statType]} // Use localized label if available, otherwise use statType
+                value={formatNumber(stats[statType])}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </>
   );
 };
 

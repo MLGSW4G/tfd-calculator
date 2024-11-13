@@ -4,9 +4,10 @@ import jsonRotations from "../api/reward.json";
 import "../styles/styles.css";
 import { Grid, Select, MenuItem, FormControl, InputLabel, Box, Button, Slider, Typography, Checkbox, ListItemText, Tooltip, Paper, Modal } from "@mui/material";
 import { getSkillElementTypeIcon, getSkillArcheTypeIcon, getClassIcon2, sortRewards } from "../Utils";
-import { imageMapping, typeMapping } from "../const";
+import { imageMapping, typeMapping, PAGE_TITLE_FORMAT } from "../const";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
+import { Helmet } from "react-helmet";
 
 const SelectableButton = ({ key, selected, onClick, tooltipTitle, imgSrc, imgAlt, disabled }) => (
   <Tooltip title={tooltipTitle} key={key}>
@@ -183,6 +184,9 @@ const Rotations = () => {
   const translationsModule = getTranslation(language, "module");
   const translationsUnits = getTranslation(language, "units");
 
+  const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
+  const pageTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").rotations);
+
   const [selectedRewardTypes, setSelectedRewardTypes] = useState([]);
   const [selectedReactorElements, setSelectedReactorElements] = useState([]);
   const [selectedWeaponRounds, setSelectedWeaponRounds] = useState([]);
@@ -271,6 +275,9 @@ const Rotations = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <div
         className="sidebar"
         style={{

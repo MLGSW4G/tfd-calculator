@@ -4356,10 +4356,12 @@
     "clearCacheAlert": "Кэш был очищен",
     "decimalSeparator": "Десятичный разделитель",
     "thousandsSeparator": "Разделитель тысяч",
-    "formatting": "Форматирование",
+    "numbersFormat": "Формат чисел",
     "whitespace": "Пробел",
     "period": "Точка",
-    "comma": "Запятая"
+    "comma": "Запятая",
+    "pageTitleFormat": "Формат названия страницы",
+    "pageTitleFormatTooltip": "Используйте {name} для отображения названия текущей страницы"
   },
   "rotations": {
     "all": "Все",

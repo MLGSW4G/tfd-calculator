@@ -174,4 +174,5 @@ export const MODULE_WIDTH = 149,
     "Grand Square",
     "The Fallen Theater",
     "The Destruction",
-  ];
+  ],
+  PAGE_TITLE_FORMAT = "{name} - TFD Calculator";

@@ -1,14 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { LocalizationContext } from "../components/LocalizationContext";
-import { Grid, Typography, Select, MenuItem, FormControl, InputLabel, TextField, Snackbar } from "@mui/material";
+import { Grid, Typography, Select, MenuItem, FormControl, InputLabel, TextField, Snackbar, Tooltip } from "@mui/material";
 import { getTranslation } from "../translations";
 import "../styles/styles.css";
+import { PAGE_TITLE_FORMAT } from "../const";
+import { Helmet } from "react-helmet";
 
 const Settings = () => {
   const { language, updateLanguage, decimalSeparator, thousandsSeparator, updateDecimalSeparator, updateThousandsSeparator } = useContext(LocalizationContext);
   const translations = getTranslation(language, "settings");
   const translationsOverview = getTranslation(language, "overview");
+
+  const [pageTitleFormat, setPageTitleFormat] = useState(localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT);
+  const [pageTitle, setPageTitle] = useState(pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").settings));
 
   const separatorsLabels = {
     "": translationsOverview.none,
@@ -29,15 +34,26 @@ const Settings = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
 
+  useEffect(() => {
+    const newTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").settings);
+    setPageTitle(newTitle);
+    localStorage.setItem("pageTitleFormat", pageTitleFormat);
+  }, [pageTitleFormat, language]);
+
   return (
-    <div style={{ position: "relative", marginTop: "3%", left: "10%", width: "80%" }}>
-      <Grid container>
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <div style={{ position: "relative", marginTop: "3%", left: "10%", width: "80%" }}>
         <Grid item xs={12}>
-          <Typography id="language-label">{translations.language}</Typography>
+          <Typography variant="h5" id="language-label">
+            {translations.language}
+          </Typography>
           <LanguageSwitcher />
         </Grid>
 
-        <div style={{ fontSize: 24 }}>{translations.formatting}</div>
+        <Typography variant="h5">{translations.numbersFormat}</Typography>
         <Grid container style={{ display: "flex", justifyContent: "space-between" }}>
           <Grid item xs={12}>
             <FormControl sx={{ minWidth: 200 }}>
@@ -70,6 +86,18 @@ const Settings = () => {
           </Grid>
         </Grid>
 
+        <Typography variant="h5">{translations.pageTitleFormat}</Typography>
+        <Grid item xs={12}>
+          <Tooltip title={<Typography variant="body2">{translations.pageTitleFormatTooltip}</Typography>} disableHoverListener arrow placement="top">
+            <TextField
+              value={pageTitleFormat}
+              onChange={(e) => {
+                setPageTitleFormat(e.target.value);
+              }}
+            />
+          </Tooltip>
+        </Grid>
+
         <Grid item xs={12}>
           <button
             className="button"
@@ -79,15 +107,16 @@ const Settings = () => {
               updateLanguage("en");
               setSnackbarMessage(translations.clearCacheAlert);
               setSnackbarOpen(true);
+              setPageTitleFormat(PAGE_TITLE_FORMAT);
             }}
           >
             {translations.clearCache}
           </button>
         </Grid>
-      </Grid>
 
-      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={() => setSnackbarOpen(false)} message={snackbarMessage} />
-    </div>
+        <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={() => setSnackbarOpen(false)} message={snackbarMessage} />
+      </div>
+    </>
   );
 };
 
