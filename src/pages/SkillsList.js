@@ -1,7 +1,7 @@
 // src/pages/SkillsList.js
 import { React, useContext } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import jsonData from "./SkillsList.json";
+import jsonData from "../data/SkillsList.json";
 import { useNumberFormatters } from "../Utils";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
