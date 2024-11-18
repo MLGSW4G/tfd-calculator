@@ -4,8 +4,8 @@ import { LocalizationContext } from "./LocalizationContext";
 import { Select, MenuItem } from "@mui/material";
 
 const LanguageSwitcher = () => {
-  const { language, updateLanguage, decimalSeparator, thousandsSeparator, updateDecimalSeparator, updateThousandsSeparator } = useContext(LocalizationContext);
-  const [translations, setTranslations] = useState(new Map());
+  const { language, updateLanguage } = useContext(LocalizationContext);
+  const [, setTranslations] = useState(new Map());
 
   useEffect(() => {
     import(`../locales/${language}.json`).then((data) => {
