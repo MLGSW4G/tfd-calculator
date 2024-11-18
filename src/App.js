@@ -9,6 +9,9 @@ import DescendantsList from "./pages/DescendantsList";
 import Rotations from "./pages/Rotations";
 import Settings from "./pages/Settings";
 import { LocalizationProvider } from "./components/LocalizationContext";
+import { LicenseInfo } from "@mui/x-license";
+
+LicenseInfo.setLicenseKey(process.env.REACT_APP_LICENSE_KEY); // borrowed a license key from https://gist.github.com/EastArctica/54605b82342634eddcab36bd40891ba9
 
 function App() {
   return (

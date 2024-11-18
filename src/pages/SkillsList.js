@@ -1,6 +1,6 @@
 // src/pages/SkillsList.js
 import { React, useContext } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGridPro } from "@mui/x-data-grid-pro";
 import jsonData from "../data/SkillsList.json";
 import { useNumberFormatters } from "../Utils";
 import { LocalizationContext } from "../components/LocalizationContext";
@@ -89,26 +89,25 @@ const SkillsList = () => {
   ];
 
   return (
-    <><Helmet><title>{pageTitle}</title></Helmet>
-      <div style={{ width: "100%", margin: 0, padding: 0 }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            sorting: {
-              sortModel: [
-                { field: "descendantName", sort: "asc" },
-                { field: "skillNumber", sort: "asc" },
-              ],
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <DataGridPro
+        rows={rows}
+        columns={columns}
+        initialState={{
+          columns: {
+            columnVisibilityModel: {
+              id: false,
             },
-            columns: {
-              columnVisibilityModel: {
-                id: false,
-              },
-            },
-          }}
-        />
-      </div>
+          },
+          sorting: {
+            sortModel: [{ field: "descendantName", sort: "asc" }],
+          },
+        }}
+        hideFooter
+      />
     </>
   );
 };
