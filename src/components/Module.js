@@ -12,6 +12,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   const translations = getTranslation(language, "module");
   const translationsModules = getTranslation(language, "modules");
 
+  const backgroundImage =
+    module.moduleTier === "Transcendent" ? `url('assets/Modules/UI_RuneSlot_ChaBG01_mini.png')` : module.moduleStat[0].value.includes("Max Module Capacity") ? `url('assets/Modules/UI_RuneSlot_ChaBG02_mini.png')` : null;
+
   const currentMaxLevel = Math.max(...module.moduleStat.map((stat) => stat.level), 0);
 
   const [moduleLevel, setModuleLevel] = useState(initialModuleLevel || 0);
@@ -92,7 +95,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           flexDirection: "column",
           alignItems: "center",
           pointerEvents: "auto",
-          zIndex: 1,
+          zIndex: 1000,
         }}
         draggable={module !== null && module !== undefined}
         onDragStart={(e) => onDragStart(e, module)}
@@ -107,6 +110,23 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           }
         }}
       >
+        {backgroundImage && (
+          <div
+            className="background-image"
+            style={{
+              position: "absolute",
+              width: MODULE_WIDTH,
+              height: MODULE_HEIGHT,
+              backgroundImage: backgroundImage,
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              pointerEvents: "none",
+              zIndex: 1001,
+            }}
+          />
+        )}
         {isInModuleSlot && (
           <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>
             <button className="button" onClick={incrementLevel}>
