@@ -1,5 +1,5 @@
 // src/pages/DescendantsList.js
-import { React, useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { Grid, TextField, Autocomplete, Slider, Typography, Box } from "@mui/material";
 import data from "../api/descendant.json";

@@ -1,5 +1,5 @@
 // src/components/Module.js
-import { React, useState, useMemo, useContext } from "react";
+import React, { useState, useMemo, useContext } from "react";
 import { MODULE_WIDTH, MODULE_HEIGHT, MODULE_ICON_WIDTH, MODULE_ICON_HEIGHT } from "../const";
 import "../styles/Module.css";
 import { Tooltip } from "@mui/material";

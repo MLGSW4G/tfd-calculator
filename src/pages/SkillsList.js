@@ -1,5 +1,5 @@
 // src/pages/SkillsList.js
-import { React, useContext } from "react";
+import React, { useContext } from "react";
 import { DataGridPro } from "@mui/x-data-grid-pro";
 import jsonData from "../data/SkillsList.json";
 import { useNumberFormatters } from "../Utils";
