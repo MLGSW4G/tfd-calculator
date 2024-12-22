@@ -280,8 +280,25 @@ const Rotations = () => {
     const uniqueRewardTypes = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.reward_type))))];
     const uniqueReactorElements = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.reactor_element_type))))].filter(Boolean);
     const uniqueArcheTypes = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.arche_type))))].filter(Boolean);
-    const uniqueMaps = [...new Set(jsonRotations.map((map) => (map.battle_zone.length !== 0 ? map.map_name : null)).filter((name) => name !== null))]; // only show maps with rewards
-    const uniqueBattleZones = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.map((bz) => bz.battle_zone_name)))];
+    const uniqueMaps = [
+        ...new Set(
+            jsonRotations
+                .filter(
+                    (map) => map.battle_zone.some((bz) => bz.reward.length > 0) // Include only maps with at least one battle zone that has rewards
+                )
+                .map((map) => map.map_name)
+        ),
+    ];
+    const uniqueBattleZones = [
+        ...new Set(
+            jsonRotations.flatMap(
+                (map) =>
+                    map.battle_zone
+                        .filter((bz) => bz.reward.length > 0) // Include only battle zones with rewards
+                        .map((bz) => bz.battle_zone_name) // Map to get the battle zone names
+            )
+        ),
+    ];
 
     const filteredBattleZones = uniqueBattleZones.filter((bz) => selectedMaps.length === 0 || jsonRotations.some((map) => selectedMaps.includes(map.map_name) && map.battle_zone.some((b) => b.battle_zone_name === bz)));
 
@@ -301,6 +318,11 @@ const Rotations = () => {
 
         map.battle_zone.forEach((bz) => {
             const battleZoneName = bz.battle_zone_name;
+
+            if (bz.reward.length === 0) {
+                // Skip this battle zone if there are no rewards
+                return;
+            }
 
             for (let rotation = 1; rotation <= maxRotation; rotation++) {
                 const reward = bz.reward.find((r) => r.rotation === rotation);
