@@ -6,14 +6,9 @@ folder = r"C:\Users\User\Documents\tfd-calculator\scripts\data"
 language_code = "en"
 filenames = [
     "descendant",
-    "weapon",
     "module",
     "reactor",
-    "external-component",
     "reward",
-    "stat",
-    "void-battle",
-    "title",
 ]
 
 if not os.path.isdir(folder):
