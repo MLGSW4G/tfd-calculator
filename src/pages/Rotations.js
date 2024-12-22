@@ -251,7 +251,6 @@ const Rotations = () => {
     const { language } = useContext(LocalizationContext);
     const translations = getTranslation(language, "rotations");
     const translationsOverview = getTranslation(language, "overview");
-    const translationsModule = getTranslation(language, "module");
     const translationsUnits = getTranslation(language, "units");
 
     const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
@@ -315,34 +314,37 @@ const Rotations = () => {
 
     jsonRotations.forEach((map) => {
         const mapName = map.map_name;
-
+    
         map.battle_zone.forEach((bz) => {
             const battleZoneName = bz.battle_zone_name;
-
+    
             if (bz.reward.length === 0) {
                 return; // Skip if no rewards
             }
-
+    
             for (let rotation = 1; rotation <= maxRotation; rotation++) {
                 const reward = bz.reward.find((r) => r.rotation === rotation);
                 const missionDetails = missions[mapName][battleZoneName];
-
+    
                 if (reward && missionDetails) {
-                    dataGridRows.push({
-                        id: `${mapName}-${battleZoneName}-${rotation}`,
-                        mapName: translations.maps[mapName] || mapName,
-                        battleZone: translations.battleZones[battleZoneName] || battleZoneName,
-                        missionName: translations.missions[missionDetails.missionName],
-                        rotation,
-                        reactorPerMin: missionDetails.reactorPerMin,
-                        staticReactorPerMin: missionDetails.staticReactorPerMin,
-                        totalReactorPerMin: missionDetails.reactorPerMin + missionDetails.staticReactorPerMin,
-                        rewardType: translations.rewardTypes[reward.reward_type],
-                        reactorElementType: translationsOverview.skillElementTypes[reward.reactor_element_type],
-                        archeType: translationsOverview.skillArcheTypes[reward.arche_type],
-                        staticElementType: translationsOverview.skillElementTypes[missionDetails.staticElementType],
-                        staticArcheType: translationsOverview.skillArcheTypes[missionDetails.staticArcheType],
-                    });
+                    // Only include rows that match the selectedRotation
+                    if (selectedRotation === 0 || reward.rotation === selectedRotation) {
+                        dataGridRows.push({
+                            id: `${mapName}-${battleZoneName}-${rotation}`,
+                            mapName: translations.maps[mapName] || mapName,
+                            battleZone: translations.battleZones[battleZoneName] || battleZoneName,
+                            missionName: translations.missions[missionDetails.missionName],
+                            rotation,
+                            reactorPerMin: missionDetails.reactorPerMin,
+                            staticReactorPerMin: missionDetails.staticReactorPerMin,
+                            totalReactorPerMin: (Math.round((missionDetails.reactorPerMin + missionDetails.staticReactorPerMin) * 100) / 100),
+                            rewardType: translations.rewardTypes[reward.reward_type],
+                            reactorElementType: translationsOverview.skillElementTypes[reward.reactor_element_type],
+                            archeType: translationsOverview.skillArcheTypes[reward.arche_type],
+                            staticElementType: translationsOverview.skillElementTypes[missionDetails.staticElementType],
+                            staticArcheType: translationsOverview.skillArcheTypes[missionDetails.staticArcheType],
+                        });
+                    }
                 }
             }
         });
