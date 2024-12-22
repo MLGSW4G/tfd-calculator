@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 export const rows = jsonData.map((item) => ({
   id: item.id,
   descendantName: item.descendantName,
+  skillIcon: item.skillIcon,
   skillName: item.skillName,
   skillNumber: item.skillNumber,
   skillElementType: item.skillElementType,
@@ -41,6 +42,12 @@ const SkillsList = () => {
 
   const columns = [
     { field: "id", headerName: translations.id, width: 60 },
+    {
+        field: "skillIcon",
+        headerName: translations.skillIcon,
+        width: 62,
+        renderCell: (params) => <img src={params.row.skillIcon} alt={params.row.skillName} style={{ width: 52, height: 52, filter: "drop-shadow(0 0 2px rgb(0, 0, 0))" }} />,
+    },
     {
       field: "descendantName",
       headerName: translations.descendantName,
