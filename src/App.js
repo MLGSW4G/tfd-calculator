@@ -14,22 +14,22 @@ import { LicenseInfo } from "@mui/x-license";
 LicenseInfo.setLicenseKey(process.env.REACT_APP_LICENSE_KEY); // borrowed a license key from https://gist.github.com/EastArctica/54605b82342634eddcab36bd40891ba9
 
 function App() {
-  return (
-    <LocalizationProvider>
-      <div className="App">
-        <NavTabs />
-        <Routes>
-          <Route path="/" element={<Navigate to="/overview" replace />} />
-          <Route path="/overview" element={<Overview />} />
-          <Route path="/skillsList" element={<SkillsList />} />
-          <Route path="/descendantsList" element={<DescendantsList />} />
-          <Route path="/modules" element={<Modules />} />
-          <Route path="/rotations" element={<Rotations />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </div>
-    </LocalizationProvider>
-  );
+    return (
+        <LocalizationProvider>
+            <div className="App">
+                <NavTabs />
+                <Routes>
+                    <Route path="/" element={<Navigate to="/overview" replace />} />
+                    <Route path="/overview" element={<Overview />} />
+                    <Route path="/skillsList" element={<SkillsList />} />
+                    <Route path="/descendantsList" element={<DescendantsList />} />
+                    <Route path="/modules" element={<Modules />} />
+                    <Route path="/rotations" element={<Rotations />} />
+                    <Route path="/settings" element={<Settings />} />
+                </Routes>
+            </div>
+        </LocalizationProvider>
+    );
 }
 
 export default App;
