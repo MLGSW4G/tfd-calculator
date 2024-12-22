@@ -19,7 +19,7 @@ const SelectableButton = React.memo(({ key, selected, onClick, tooltipTitle, img
     </Tooltip>
 ));
 
-const RotationCard = ({ reward, displayRotation, advancedView, translations, translationsModule, translationsOverview }) => {
+const RotationCard = ({ reward, displayRotation, advancedView, translations, translationsOverview }) => {
     const battleZone = missions[reward.map_name][reward.battle_zone_name];
     return advancedView ? (
         <Box
@@ -70,8 +70,8 @@ const RotationCard = ({ reward, displayRotation, advancedView, translations, tra
                 )}
             </div>
             <div style={{ background: "#00000077", color: "white", height: "100%", display: "flex", flexDirection: "column", padding: "0 5% 0 5%", justifyContent: "center" }}>
-                <div style={{ textAlign: "center", width: "100%" }}>
-                    {battleZone.missionName} ({secsToTime(battleZone.duration)}) <br /> {Math.round((battleZone.reactorPerMin + battleZone.staticReactorPerMin) * 100) / 100} {/* round to 2 decimals */}
+                <div style={{ textAlign: "center", width: "100%", fontSize: 12 }}>
+                    {translations.missions[battleZone.missionName]} ({secsToTime(battleZone.duration)}) <br /> {Math.round((battleZone.reactorPerMin + battleZone.staticReactorPerMin) * 100) / 100} {/* round to 2 decimals */}
                 </div>
                 <div style={{ display: "flex", padding: "5%" }}>
                     <div style={{ flex: 1, className: "rotation-info" }}>
@@ -90,7 +90,7 @@ const RotationCard = ({ reward, displayRotation, advancedView, translations, tra
                         ) : (
                             <>
                                 <img src={typeMapping[reward.reward_type]} style={{ height: 16, width: 16, filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 1))" }} alt={reward.reward_type} />
-                                <div>{translations.rewardTypes[reward.reward_type]}</div>
+                                <div style={{ fontSize: 12 }}>{translations.rewardTypes[reward.reward_type]}</div>
                             </>
                         )}
                     </div>
@@ -320,8 +320,7 @@ const Rotations = () => {
             const battleZoneName = bz.battle_zone_name;
 
             if (bz.reward.length === 0) {
-                // Skip this battle zone if there are no rewards
-                return;
+                return; // Skip if no rewards
             }
 
             for (let rotation = 1; rotation <= maxRotation; rotation++) {
@@ -330,19 +329,19 @@ const Rotations = () => {
 
                 if (reward && missionDetails) {
                     dataGridRows.push({
-                        id: `${mapName}-${battleZoneName}-${rotation}`, // Unique ID for each row
-                        mapName,
-                        battleZone: battleZoneName,
-                        missionName: missionDetails.missionName,
+                        id: `${mapName}-${battleZoneName}-${rotation}`,
+                        mapName: translations.maps[mapName] || mapName,
+                        battleZone: translations.battleZones[battleZoneName] || battleZoneName,
+                        missionName: translations.missions[missionDetails.missionName],
                         rotation,
                         reactorPerMin: missionDetails.reactorPerMin,
                         staticReactorPerMin: missionDetails.staticReactorPerMin,
                         totalReactorPerMin: missionDetails.reactorPerMin + missionDetails.staticReactorPerMin,
-                        rewardType: reward.reward_type,
-                        reactorElementType: reward.reactor_element_type,
-                        archeType: reward.arche_type,
-                        staticElementType: missionDetails.staticElementType,
-                        staticArcheType: missionDetails.staticArcheType,
+                        rewardType: translations.rewardTypes[reward.reward_type],
+                        reactorElementType: translationsOverview.skillElementTypes[reward.reactor_element_type],
+                        archeType: translationsOverview.skillArcheTypes[reward.arche_type],
+                        staticElementType: translationsOverview.skillElementTypes[missionDetails.staticElementType],
+                        staticArcheType: translationsOverview.skillArcheTypes[missionDetails.staticArcheType],
                     });
                 }
             }
@@ -716,7 +715,6 @@ const Rotations = () => {
                                     displayRotation={selectedRotation === 0}
                                     advancedView={advancedView}
                                     translations={translations}
-                                    translationsModule={translationsModule}
                                     translationsOverview={translationsOverview}
                                     translationsUnits={translationsUnits}
                                 />
