@@ -43,28 +43,28 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
             height: 48,
             bottom: 116,
           }}
+          alt=""
         />
       )}
 
       {backgroundString && (
-        <p
+        <div
           className="background-string"
           style={{
             position: "absolute",
-            width: MODULE_WIDTH,
-            height: 27,
+            width: "100%",
+            height: "15%",
             color: backgroundStringColor,
             bottom: 0,
             textAlign: "center",
-            fontSize: 16,
-            margin: 0,
+            fontSize: 18,
             fontFamily: "NotoSans",
             filter: "saturate(10%) brightness(200%) contrast(100%)",
             pointerEvents: "none",
           }}
         >
           {backgroundString}
-        </p>
+        </div>
       )}
 
       {backgroundImage && (
@@ -72,8 +72,8 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
           className="background-image"
           style={{
             position: "absolute",
-            width: MODULE_WIDTH,
-            height: MODULE_HEIGHT,
+            width: "100%",
+            height: "100%",
             backgroundImage: backgroundImage,
             backgroundSize: "cover",
             display: "flex",
@@ -90,9 +90,9 @@ export const ModuleSlot = ({ equippedModule, onDrop, index, onDragStart, onLevel
           module={equippedModule.module}
           onDragStart={onDragStart}
           isInModuleSlot={true}
-          onLevelChange={(module, level) => onLevelChange(index, module, level)} // Pass the onLevelChange callback
-          initialModuleLevel={equippedModule.moduleLevel} // Pass the initial module level
-          onModuleDrop={onModuleDrop} // Pass the onModuleDrop callback
+          onLevelChange={(module, level) => onLevelChange(index, module, level)}
+          initialModuleLevel={equippedModule.moduleLevel}
+          onModuleDrop={onModuleDrop}
         />
       )}
     </div>
