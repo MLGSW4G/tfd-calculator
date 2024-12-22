@@ -264,7 +264,7 @@ const Overview = () => {
                             renderOption={(props, option) => {
                                 const descendantIndex = descendantNames.indexOf(option.descendantName);
                                 const skillImageUrl = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.skill_image_url;
-                                const skillElement = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.element_type;
+                                const skillElementType = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.element_type;
                                 const skillArcheType = descendantSkills[descendantIndex].find((skill) => skill.skill_name === option.skillName)?.arche_type;
 
                                 return (
@@ -272,7 +272,17 @@ const Overview = () => {
                                         componentsProps={{
                                             tooltip: {
                                                 sx: {
-                                                    bgcolor: `${skillElement === "Fire" ? colorFire : skillElement === "Electric" ? colorElectric : skillElement === "Toxic" ? colorToxic : skillElement === "Chill" ? colorChill : "#404040"}`,
+                                                    bgcolor: `${
+                                                        skillElementType === "Fire"
+                                                            ? colorFire
+                                                            : skillElementType === "Electric"
+                                                            ? colorElectric
+                                                            : skillElementType === "Toxic"
+                                                            ? colorToxic
+                                                            : skillElementType === "Chill"
+                                                            ? colorChill
+                                                            : "#404040"
+                                                    }`,
                                                     border: "2px solid black",
                                                     borderRadius: "4px",
                                                     filter: "brightness(0.8) grayscale(30%)",
@@ -290,15 +300,15 @@ const Overview = () => {
                                                     <Grid container spacing={1} alignItems="left">
                                                         <Grid item>
                                                             <Typography variant="body2">
-                                                                <img src={getSkillElementTypeIcon(skillElement)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
-                                                                {translations.skillElementTypes[skillElement]}
+                                                                <img src={getSkillElementTypeIcon(skillElementType)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} alt={skillElementType} />
+                                                                {translations.skillElementTypes[skillElementType]}
                                                             </Typography>
                                                         </Grid>
 
                                                         {skillArcheType && (
                                                             <Grid item>
                                                                 <Typography variant="body2">
-                                                                    <img src={getSkillArcheTypeIcon(skillArcheType)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} />
+                                                                    <img src={getSkillArcheTypeIcon(skillArcheType)} style={{ verticalAlign: "bottom", width: 24, height: 24, marginRight: 0 }} alt={skillArcheType} />
                                                                     {translations.skillArcheTypes[skillArcheType]}
                                                                 </Typography>
                                                             </Grid>
