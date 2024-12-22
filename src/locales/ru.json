@@ -4366,6 +4366,7 @@
     "pageTitleFormatTooltip": "Используйте {name} для отображения названия текущей страницы"
   },
   "rotations": {
+    "dataGridView": "Таблица",
     "all": "Все",
     "map": "Карта",
     "rotation": "Ротация",

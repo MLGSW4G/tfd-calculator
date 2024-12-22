@@ -1,0 +1,314 @@
+{
+  "Agna Desert": {
+    "Miragestone": {
+      "missionName": "Commanding Ground",
+      "duration": 48,
+      "reactorPerMin": 3.28,
+      "staticElementType": "Chill",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 1.8
+    },
+    "Remnant": {
+      "missionName": "Abandoned Reconstruction Site",
+      "duration": 98,
+      "reactorPerMin": 2.79,
+      "staticElementType": "Electric",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.73
+    },
+    "The Mining Site": {
+      "missionName": "Mining Beacon",
+      "duration": 46,
+      "reactorPerMin": 2.62,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.17
+    },
+    "The Storage": {
+      "missionName": "Previous Construct Team Quarters",
+      "duration": 58,
+      "reactorPerMin": 3.25,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 2.5
+    },
+    "Vermilion Waste": {
+      "missionName": "Rock Cave Base",
+      "duration": 60,
+      "reactorPerMin": 3.42,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 2.09
+    }
+  },
+  "Echo Swamp": {
+    "Abandoned Zone": {
+      "missionName": "Environment contamination Zone",
+      "duration": 34,
+      "reactorPerMin": 7.42,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 4.6
+    },
+    "Derelict Covert": {
+      "missionName": "Verdant Greenery",
+      "duration": 60,
+      "reactorPerMin": 1.24,
+      "staticElementType": "Fire",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 1.52
+    },
+    "Misty Woods": {
+      "missionName": "Hazy Swamp",
+      "duration": 43,
+      "reactorPerMin": 4.02,
+      "staticElementType": "Chill",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 2.23
+    },
+    "Muskeg Swamp": {
+      "missionName": "The Tree of Truth",
+      "duration": 140,
+      "reactorPerMin": 2.46,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.67
+    }
+  },
+  "Fortress": {
+    "Convertor Facility": {
+      "missionName": "Central Control Unit",
+      "duration": 163,
+      "reactorPerMin": 3.22,
+      "staticElementType": "Chill",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 1.91
+    },
+    "Defense Line": {
+      "missionName": "Fortress Command Entrance",
+      "duration": 114,
+      "reactorPerMin": 3.32,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 2.4
+    },
+    "Fallen Ark": {
+      "missionName": "Frozen Shipyard",
+      "duration": 62,
+      "reactorPerMin": 2.71,
+      "staticElementType": "Fire",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 2.0
+    },
+    "Frozen Valley": {
+      "missionName": "Command Relay",
+      "duration": 95,
+      "reactorPerMin": 3.41,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 1.99
+    },
+    "The Aurora Forest": {
+      "missionName": "Snowy Heights",
+      "duration": 116,
+      "reactorPerMin": 1.13,
+      "staticElementType": "Chill",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 0.83
+    }
+  },
+  "Hagios": {
+    "Dune Base": {
+      "missionName": "Vulgus Blockade",
+      "duration": 160,
+      "reactorPerMin": 2.05,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.58
+    },
+    "Forward Base": {
+      "missionName": "Antiaircraft Defensive Position",
+      "duration": 206,
+      "reactorPerMin": 2.73,
+      "staticElementType": "Electric",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 1.42
+    },
+    "Fractured Monolith": {
+      "missionName": "Ruins Modification Base",
+      "duration": 132,
+      "reactorPerMin": 2.32,
+      "staticElementType": "Fire",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.66
+    },
+    "Starfall Road": {
+      "missionName": "Ruins Guard Facility",
+      "duration": 237,
+      "reactorPerMin": 2.39,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.61
+    },
+    "The Corrupted Zone": {
+      "missionName": "Deep Digger",
+      "duration": 161,
+      "reactorPerMin": 2.4,
+      "staticElementType": "Fire",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 1.83
+    }
+  },
+  "Kingston": {
+    "Grand Square": {
+      "missionName": "Kingston Surveillance Radar",
+      "duration": 56,
+      "reactorPerMin": 2.97,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 2.19
+    },
+    "The Destruction": {
+      "missionName": "The Last Emergency Communicator",
+      "duration": 64,
+      "reactorPerMin": 2.89,
+      "staticElementType": "Chill",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.9
+    },
+    "The Fallen Theater": {
+      "missionName": "Vulgus Occupied Buildings",
+      "duration": 26,
+      "reactorPerMin": 5.41,
+      "staticElementType": "Fire",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 3.44
+    }
+  },
+  "Sterile Land": {
+    "Classified Area": {
+      "missionName": "Biological Research Facility",
+      "duration": 75,
+      "reactorPerMin": 2.91,
+      "staticElementType": "Fire",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 1.38
+    },
+    "Ironworks": {
+      "missionName": "Weapon Processing Facility",
+      "duration": 51,
+      "reactorPerMin": 2.96,
+      "staticElementType": "Chill",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 2.0
+    },
+    "Repository": {
+      "missionName": "Kuiper Mine",
+      "duration": 325,
+      "reactorPerMin": 3.68,
+      "staticElementType": "Electric",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 2.43
+    },
+    "Restricted Zone": {
+      "missionName": "The Barracks",
+      "duration": 130,
+      "reactorPerMin": 1.83,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.32
+    },
+    "Rockfall": {
+      "missionName": "Anticipated Ambush Point",
+      "duration": 30,
+      "reactorPerMin": 5.31,
+      "staticElementType": "Electric",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 3.46
+    }
+  },
+  "Vespers": {
+    "Lost Supply Depot": {
+      "missionName": "Mossy Colossus",
+      "duration": 106,
+      "reactorPerMin": 2.79,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 1.43
+    },
+    "Moonlight Lake": {
+      "missionName": "Lakeside",
+      "duration": 102,
+      "reactorPerMin": 2.97,
+      "staticElementType": "Electric",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.77
+    },
+    "The Lumber Yard": {
+      "missionName": "Frontline Base",
+      "duration": 75,
+      "reactorPerMin": 1.99,
+      "staticElementType": "Fire",
+      "staticArcheType": "Fusion",
+      "staticReactorPerMin": 1.89
+    },
+    "The Ruins": {
+      "missionName": "Ruins Courtyard",
+      "duration": 69,
+      "reactorPerMin": 2.69,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 1.76
+    },
+    "Timberfall": {
+      "missionName": "Timberfall Power Facility",
+      "duration": 95,
+      "reactorPerMin": 2.29,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Tech",
+      "staticReactorPerMin": 1.58
+    }
+  },
+  "White-night Gulch": {
+    "Hatchery": {
+      "missionName": "Lower Hatchery",
+      "duration": 77,
+      "reactorPerMin": 2.26,
+      "staticElementType": "Chill",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.2
+    },
+    "Moongrave Basin": {
+      "missionName": "Water-cooling Recording Device",
+      "duration": 257,
+      "reactorPerMin": 4.0,
+      "staticElementType": "Toxic",
+      "staticArcheType": "Singular",
+      "staticReactorPerMin": 2.49
+    },
+    "Observatory": {
+      "missionName": "Order Supply Warehouse",
+      "duration": 80,
+      "reactorPerMin": 2.74,
+      "staticElementType": "Electric",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.83
+    },
+    "Shipment Base": {
+      "missionName": "Fortress Outskirts",
+      "duration": 153,
+      "reactorPerMin": 5.36,
+      "staticElementType": "Non-Attribute",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 3.06
+    },
+    "The Mountaintops": {
+      "missionName": "Triumphal Arch",
+      "duration": 58,
+      "reactorPerMin": 2.11,
+      "staticElementType": "Fire",
+      "staticArcheType": "Dimension",
+      "staticReactorPerMin": 1.75
+    }
+  }
+}

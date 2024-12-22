@@ -1,120 +1,113 @@
 // src/pages/Rotations.js
 import React, { useState, useContext, useEffect } from "react";
 import jsonRotations from "../api/reward.json";
+import missions from "../data/Missions.json";
 import "../styles/styles.css";
-import { Grid, Select, MenuItem, FormControl, InputLabel, Box, Button, Slider, Typography, Checkbox, ListItemText, Tooltip, Paper, Modal } from "@mui/material";
-import { getSkillElementTypeIcon, getSkillArcheTypeIcon, getClassIcon2, sortRewards } from "../Utils";
+import { Grid2, Select, MenuItem, FormControl, InputLabel, Box, Button, Slider, Typography, Checkbox, ListItemText, Tooltip, Paper, Modal } from "@mui/material";
+import { getSkillElementTypeIcon, getSkillArcheTypeIcon, sortRewards } from "../Utils";
 import { imageMapping, typeMapping, PAGE_TITLE_FORMAT } from "../const";
 import { LocalizationContext } from "../components/LocalizationContext";
 import { getTranslation } from "../translations";
 import { Helmet } from "react-helmet";
+import { DataGridPro } from "@mui/x-data-grid-pro";
 
-const SelectableButton = ({ key, selected, onClick, tooltipTitle, imgSrc, imgAlt, disabled }) => (
+const SelectableButton = React.memo(({ key, selected, onClick, tooltipTitle, imgSrc, imgAlt, disabled }) => (
   <Tooltip title={tooltipTitle} key={key}>
     <Button variant={selected ? "contained" : "outlined"} onClick={onClick} sx={{ margin: "1%" }} disabled={disabled}>
       <img src={imgSrc} style={{ height: 40, width: 40, filter: "drop-shadow(0 0 1px rgba(0, 0, 0, 1))" }} alt={imgAlt} />
     </Button>
   </Tooltip>
-);
+));
 
-const RotationContent = ({ type, elementType, ammoType, archeType, size, translations, translationsOverview, translationsModule }) => {
-  if (type === "Reactor") {
-    return (
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          height: "100%",
-          textShadow: "1px 1px 0px #000",
-          fontFamily: "Falling Sky, NotoSans",
-          color: "white",
-          background: "#00000077",
-        }}
-      >
+const RotationCard = ({ reward, displayRotation, advancedView, translations, translationsModule, translationsOverview }) => {
+  const battleZone = missions[reward.map_name][reward.battle_zone_name];
+  return advancedView ? (
+    <Box
+    sx={{
+        background: imageMapping[reward.map_name],
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        height: "190px",
+        width: "403px",
+        boxShadow: "0 0 0 1px #000, 0 0 0 2px #999, 0 0 0 3px #000",
+        display: "flex",
+        fontFamily: "Falling Sky, NotoSans",
+        flexDirection: "column",
+        transition: "box-shadow 0.2s",
+        "&:hover": {
+        boxShadow: "0 0 0 1px #000, 0 0 0 2px #999, 0 0 0 3px #000, 0 0 0 4px rgb(161, 161, 161), 0 0 0 6px rgba(255, 255, 255, 0.8)",
+        },
+    }}
+    >
         <div
-          style={{
-            flex: "0 0 35%",
+            style={{
+            background: "#000000bb",
+            height: "48px",
+            color: "white",
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+            }}
         >
-          <img src="assets/Icons/Icon_Tab_Reactor_Big.png" alt="Reactor Icon" style={{ height: size * 3, width: size * 3, margin: 0, padding: 0, filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 1))" }} />
-          <p style={{ fontSize: 20, margin: 0 }}>{translations.rewardTypes[type]}</p>
+            <div
+            style={{
+                fontSize: 24,
+                textShadow: "1px 1px 0px #000",
+                padding: 8,
+            }}
+            >
+            {translations.battleZones[reward.battle_zone_name]}
+            </div>
+            {displayRotation && (
+            <div
+                style={{
+                fontSize: 24,
+                textShadow: "1px 1px 0px #000",
+                padding: 8,
+                marginLeft: "auto",
+                }}
+            >
+                {reward.rotation}
+            </div>
+            )}
         </div>
-
-        <div
-          style={{
-            position: "absolute",
-            width: 2,
-            backgroundColor: "#999999aa",
-            height: "100px",
-            margin: "16px 0px 16px",
-            left: "35%",
-          }}
-        />
-
-        <div
-          style={{
-            flex: "0 0 65%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "5px",
-            marginTop: -16,
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", paddingLeft: "5%" }}>
-            <img src={getSkillElementTypeIcon(elementType)} style={{ height: size, width: size }} alt="Element Type Icon" />
-            <p style={{ margin: 0, marginLeft: "4px" }}>{translationsOverview.skillElementTypes[elementType]}</p>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", paddingLeft: "5%" }}>
-            <img src={getClassIcon2(ammoType)} style={{ height: size, width: size }} alt="Ammo Type Icon" />
-            <p style={{ margin: 0, marginLeft: "4px" }}>{translationsModule.classes[ammoType]}</p>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", paddingLeft: "5%" }}>
-            <img src={getSkillArcheTypeIcon(archeType)} style={{ height: size, width: size }} alt="Arche Type Icon" />
-            <p style={{ margin: 0, marginLeft: "4px" }}>{translationsOverview.skillArcheTypes[archeType]}</p>
-          </div>
+        <div style={{ background: "#00000077", color: "white", height: "100%", display: "flex", flexDirection: "column", padding: "0 5% 0 5%", justifyContent: "center" }}>
+            <div style={{ textAlign: "center", width: "100%" }}>
+            {battleZone.missionName} ({secsToTime(battleZone.duration)}) <br /> {Math.round(((battleZone.reactorPerMin + battleZone.staticReactorPerMin) * 100)) / 100} {/* round to 2 decimals */}
+            </div>
+            <div style={{ display: "flex", padding: "5%" }}>
+            <div style={{ flex: 1, className: "rotation-info" }}>
+                <div style={{ display: "flex" }}>{battleZone.reactorPerMin}</div>
+                {reward.reward_type === "Reactor" ? (
+                <>
+                    <div style={{ display: "flex" }}>
+                    <img src={getSkillElementTypeIcon(reward.reactor_element_type)} style={{ height: 20, width: 20 }} alt={reward.reactor_element_type} />
+                    <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillElementTypes[reward.reactor_element_type]}</p>
+                    </div>
+                    <div style={{ display: "flex" }}>
+                    <img src={getSkillArcheTypeIcon(reward.arche_type)} style={{ height: 20, width: 20 }} alt={reward.arche_type} />
+                    <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillArcheTypes[reward.arche_type]}</p>
+                    </div>
+                </>
+                ) : (
+                <>
+                <img src={typeMapping[reward.reward_type]} style={{ height: 16, width: 16, filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 1))" }} alt={reward.reward_type} />
+                <div>{translations.rewardTypes[reward.reward_type]}</div>
+                </>)}
+            </div>
+            <div style={{ flex: 1, className: "static-info" }}>
+                <div style={{ display: "flex" }}>{battleZone.staticReactorPerMin}</div>
+                <div style={{ display: "flex" }}>
+                <img src={getSkillElementTypeIcon(battleZone.staticElementType)} style={{ height: 20, width: 20 }} alt="Element Type Icon" />
+                <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillElementTypes[battleZone.staticElementType]}</p>
+                </div>
+                <div style={{ display: "flex" }}>
+                <img src={getSkillArcheTypeIcon(battleZone.staticArcheType)} style={{ height: 20, width: 20 }} alt="Arche Type Icon" />
+                <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillArcheTypes[battleZone.staticArcheType]}</p>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-    );
-  } else {
-    return (
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          width: "100%",
-          height: "100%",
-          margin: 0,
-          padding: 0,
-          textShadow: "1px 1px 0px #000",
-          fontFamily: "Falling Sky, NotoSans",
-          color: "white",
-          background: "#00000066",
-          justifyContent: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img src={typeMapping[type]} style={{ height: size * 3, width: size * 3, margin: 0, padding: 0, filter: "drop-shadow(0 0 2px rgba(255, 255, 255, 1))" }} alt="Default Icon" />
-          <p style={{ fontSize: 20, margin: 0 }}>{translations.rewardTypes[type]}</p>
-        </div>
-      </div>
-    );
-  }
-};
-
-const RotationCard = ({ reward, displayRotation, translations, translationsModule, translationsOverview, translationsUnits }) => {
-  return (
+    </Box>
+  ) : (
     <Box
       sx={{
         background: imageMapping[reward.map_name],
@@ -162,19 +155,95 @@ const RotationCard = ({ reward, displayRotation, translations, translationsModul
           </div>
         )}
       </div>
-      <RotationContent
-        type={reward.reward_type}
-        elementType={reward.reactor_element_type}
-        ammoType={reward.weapon_rounds_type}
-        archeType={reward.arche_type}
-        size={27}
-        translations={translations}
-        translationsModule={translationsModule}
-        translationsOverview={translationsOverview}
-        translationsUnits={translationsUnits}
-      />
+      {reward.reward_type === "Reactor" ? (
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            height: "100%",
+            textShadow: "1px 1px 0px #000",
+            fontFamily: "Falling Sky, NotoSans",
+            color: "white",
+            background: "#00000077",
+          }}
+        >
+          <div
+            style={{
+              flex: "0 0 35%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src="assets/Icons/Icon_Tab_Reactor_Big.png" alt="Reactor Icon" style={{ height: 78, width: 78, margin: 0, padding: 0, filter: "drop-shadow(0 0 1px rgba(255, 255, 255, 1))" }} />
+            <p style={{ fontSize: 20, margin: 0 }}>{translations.rewardTypes[reward.reward_type]}</p>
+          </div>
+
+          <div
+            style={{
+              position: "absolute",
+              width: 2,
+              backgroundColor: "#999999aa",
+              height: "100px",
+              margin: "16px 0px 16px",
+              left: "35%",
+            }}
+          />
+
+          <div
+            style={{
+              flex: "0 0 65%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              gap: 5,
+              marginTop: -48,
+              paddingLeft: "2.5%",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <img src={getSkillElementTypeIcon(reward.reactor_element_type)} style={{ height: 26, width: 26 }} alt="Element Type Icon" />
+              <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillElementTypes[reward.reactor_element_type]}</p>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <img src={getSkillArcheTypeIcon(reward.arche_type)} style={{ height: 26, width: 26 }} alt="Arche Type Icon" />
+              <p style={{ margin: "0 0 0 4px" }}>{translationsOverview.skillArcheTypes[reward.arche_type]}</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            height: "100%",
+            textShadow: "1px 1px 0px #000",
+            fontFamily: "Falling Sky, NotoSans",
+            color: "white",
+            background: "#00000077",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={typeMapping[reward.reward_type]} style={{ height: 78, width: 78, filter: "drop-shadow(0 0 2px rgba(255, 255, 255, 1))" }} alt={reward.reward_type} />
+            <p style={{ fontSize: 20, margin: 0 }}>{translations.rewardTypes[reward.reward_type]}</p>
+          </div>
+        </div>
+      )}
     </Box>
   );
+};
+
+const secsToTime = (seconds) => {
+  return `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
 };
 
 const Rotations = () => {
@@ -187,9 +256,17 @@ const Rotations = () => {
   const pageTitleFormat = localStorage.getItem("pageTitleFormat") || PAGE_TITLE_FORMAT;
   const pageTitle = pageTitleFormat.replaceAll("{name}", getTranslation(language, "navTabs").rotations);
 
+  const [advancedView, setAdvancedView] = useState(() => {
+    const saved = localStorage.getItem("advancedView");
+    return saved !== null ? JSON.parse(saved) : false; // Parse the saved value or default to false
+  });
+  const [dataGridView, setDataGridView] = useState(() => {
+    const saved = localStorage.getItem("dataGridView");
+    return saved !== null ? JSON.parse(saved) : false; // Parse the saved value or default to false
+  });
+  
   const [selectedRewardTypes, setSelectedRewardTypes] = useState([]);
   const [selectedReactorElements, setSelectedReactorElements] = useState([]);
-  const [selectedWeaponRounds, setSelectedWeaponRounds] = useState([]);
   const [selectedArcheTypes, setSelectedArcheTypes] = useState([]);
   const [selectedMaps, setSelectedMaps] = useState([]);
   const [selectedBattleZones, setSelectedBattleZones] = useState([]);
@@ -201,7 +278,6 @@ const Rotations = () => {
 
   const uniqueRewardTypes = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.reward_type))))];
   const uniqueReactorElements = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.reactor_element_type))))].filter(Boolean);
-  const uniqueWeaponRounds = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.weapon_rounds_type))))].filter(Boolean);
   const uniqueArcheTypes = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.arche_type))))].filter(Boolean);
   const uniqueMaps = [...new Set(jsonRotations.map((map) => (map.battle_zone.length !== 0 ? map.map_name : null)).filter((name) => name !== null))]; // only show maps with rewards
   const uniqueBattleZones = [...new Set(jsonRotations.flatMap((map) => map.battle_zone.map((bz) => bz.battle_zone_name)))];
@@ -210,12 +286,62 @@ const Rotations = () => {
 
   const maxRotation = Math.max(...jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.rotation))));
 
-  // Define the base start and end dates for rotation 1// Define the base start date for rotation 1 in UTC
+  // Define the base start date for rotation 1 in UTC
   const baseStartDate = new Date(Date.UTC(2024, 6, 30, 7, 0)); // July is month 6 (0-indexed), set to 07:00 UTC
   const rotationDuration = 7; // 7 days for each rotation
 
   const daysSinceStart = Math.floor((Date.now() - baseStartDate) / (1000 * 60 * 60 * 24));
   const currentRotation = Math.min(Math.floor(daysSinceStart / rotationDuration) + 1, maxRotation);
+
+  const dataGridRows = [];
+
+  jsonRotations.forEach((map) => {
+    const mapName = map.map_name;
+
+    map.battle_zone.forEach((bz) => {
+      const battleZoneName = bz.battle_zone_name;
+
+      for (let rotation = 1; rotation <= maxRotation; rotation++) {
+        const reward = bz.reward.find((r) => r.rotation === rotation);
+        const missionDetails = missions[mapName][battleZoneName];
+
+        if (reward && missionDetails) {
+          dataGridRows.push({
+            id: `${mapName}-${battleZoneName}-${rotation}`, // Unique ID for each row
+            mapName,
+            battleZone: battleZoneName,
+            missionName: missionDetails.missionName,
+            rotation,
+            reactorPerMin: missionDetails.reactorPerMin,
+            staticReactorPerMin: missionDetails.staticReactorPerMin,
+            totalReactorPerMin: missionDetails.reactorPerMin + missionDetails.staticReactorPerMin,
+            rewardType: reward.reward_type,
+            reactorElementType: reward.reactor_element_type,
+            archeType: reward.arche_type,
+            staticElementType: missionDetails.staticElementType,
+            staticArcheType: missionDetails.staticArcheType,
+          });
+        }
+      }
+    });
+  });
+
+  // Define columns for the DataGrid
+  const columns = [
+    { field: "id", headerName: "ID", width: 50 },
+    { field: "mapName", headerName: "Map Name", width: 150 },
+    { field: "battleZone", headerName: "Battle Zone", width: 150 },
+    { field: "missionName", headerName: "Mission Name", width: 150 },
+    { field: "rotation", headerName: "Rotation", width: 50 },
+    { field: "totalReactorPerMin", headerName: "Total Reactor Per Min", width: 200 },
+    { field: "reactorPerMin", headerName: "Reactor Per Min", width: 200 },
+    { field: "staticReactorPerMin", headerName: "Static Reactor Per Min", width: 200 },
+    { field: "rewardType", headerName: "Reward Type", width: 150 },
+    { field: "reactorElementType", headerName: "Reactor Element Type", width: 200 },
+    { field: "archeType", headerName: "Arche Type", width: 150 },
+    { field: "staticElementType", headerName: "Static Element Type", width: 150 },
+    { field: "staticArcheType", headerName: "Static Arche Type", width: 150 },
+  ];
 
   // Filter the rewards based on selected filters and rotation
   const filteredRewards = jsonRotations.flatMap((map) =>
@@ -225,7 +351,6 @@ const Rotations = () => {
           (r) =>
             (selectedRewardTypes.length ? selectedRewardTypes.includes(r.reward_type) : true) &&
             (selectedReactorElements.length ? selectedReactorElements.includes(r.reactor_element_type) : true) &&
-            (selectedWeaponRounds.length ? selectedWeaponRounds.includes(r.weapon_rounds_type) : true) &&
             (selectedArcheTypes.length ? selectedArcheTypes.includes(r.arche_type) : true) &&
             (selectedMaps.length ? selectedMaps.includes(map.map_name) : true) &&
             (selectedBattleZones.length ? selectedBattleZones.includes(bz.battle_zone_name) : true) &&
@@ -272,6 +397,11 @@ const Rotations = () => {
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("advancedView", JSON.stringify(advancedView));
+    localStorage.setItem("dataGridView", JSON.stringify(dataGridView));
+  }, [advancedView, dataGridView]);
 
   return (
     <>
@@ -377,22 +507,6 @@ const Rotations = () => {
             ))}
           </Box>
           <Box>
-            <Typography>{translations.weaponRounds}:</Typography>
-            {uniqueWeaponRounds.map((round) => (
-              <SelectableButton
-                key={round}
-                selected={selectedWeaponRounds.includes(round)}
-                onClick={() => {
-                  setSelectedWeaponRounds((prev) => (prev.includes(round) ? prev.filter((r) => r !== round) : [...prev, round]));
-                }}
-                tooltipTitle={translationsModule.classes[round]}
-                imgSrc={getClassIcon2(round)}
-                imgAlt={round}
-                disabled={!selectedRewardTypes.includes("Reactor") && selectedRewardTypes.length > 0}
-              />
-            ))}
-          </Box>
-          <Box>
             <Typography>{translations.archeTypes}:</Typography>
             {uniqueArcheTypes.map((arche) => (
               <SelectableButton
@@ -413,12 +527,20 @@ const Rotations = () => {
             <MenuItem value="type">{translations.type}</MenuItem>
             <MenuItem value="battlezone">{translations.battleZone}</MenuItem>
           </Select>
+          <Box display="flex" alignItems="center">
+            <Checkbox checked={dataGridView} onChange={(e) => setDataGridView(!dataGridView)} />
+            <Typography>{translations.dataGridView}</Typography>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Checkbox checked={advancedView} onChange={(e) => setAdvancedView(e.target.checked)} disabled={dataGridView}/>
+            <Typography>{translations.showMissionCards}</Typography>
+          </Box>
           <Button
             variant="outlined"
             onClick={() => {
               setOpenModal(true);
             }}
-            sx={{ marginTop: "8px" }}
+            sx={{ marginTop: 8 }}
           >
             {translations.viewRotationDates}
           </Button>
@@ -438,7 +560,7 @@ const Rotations = () => {
           )}
         </Box>
       </div>
-      <Box sx={{ marginLeft: "25%", paddingX: "5%", marginTop: "-100vh" }}>
+      <Box sx={{ marginLeft: "25%", paddingX: 8, marginTop: "-100vh" }}>
         <Box
           sx={{
             display: "flex",
@@ -545,13 +667,40 @@ const Rotations = () => {
             </Paper>
           </Box>
         </Box>
-        <Grid container sx={{ border: "2px solid black", padding: 0, margin: "1% 0 0" }}>
-          {sortedRewards.map((reward, index) => (
-            <Grid item xs={4} key={index} sx={{ display: "flex", justifyContent: "center", paddingX: 1, paddingY: 1 }}>
-              <RotationCard reward={reward} displayRotation={selectedRotation === 0} translations={translations} translationsModule={translationsModule} translationsOverview={translationsOverview} translationsUnits={translationsUnits} />
-            </Grid>
-          ))}
-        </Grid>
+        {dataGridView ? (
+          <DataGridPro
+            rows={dataGridRows}
+            columns={columns}
+            initialState={{
+              columns: {
+                columnVisibilityModel: {
+                  id: false,
+                },
+              },
+              sorting: {
+                sortModel: [{ field: "mapName", sort: "asc" }],
+              },
+            }}
+            hideFooter
+            sx={{ padding: 1 }}
+          />
+        ) : (
+          <Grid2 container sx={{ border: "2px solid black", padding: 0, margin: "1% 0 0", justifyContent: "center" }}>
+            {sortedRewards.map((reward, index) => (
+              <Grid2 item xs={4} key={index} sx={{ justifyContent: "center", padding: 1 }}>
+                <RotationCard
+                  reward={reward}
+                  displayRotation={selectedRotation === 0}
+                  advancedView={advancedView}
+                  translations={translations}
+                  translationsModule={translationsModule}
+                  translationsOverview={translationsOverview}
+                  translationsUnits={translationsUnits}
+                />
+              </Grid2>
+            ))}
+          </Grid2>
+        )}
       </Box>
     </>
   );
