@@ -41,7 +41,7 @@ for en_descendant, ru_descendant in zip(en_descendants, ru_descendants):
 
 # Save the updated translations
 with codecs.open(en_translations_path, "w", "utf-8") as f:
-    json.dump(en_translations, f, indent=2, ensure_ascii=False)
+    json.dump(en_translations, f, indent=4, ensure_ascii=False)
 
 with codecs.open(ru_translations_path, "w", "utf-8") as f:
-    json.dump(ru_translations, f, indent=2, ensure_ascii=False)
+    json.dump(ru_translations, f, indent=4, ensure_ascii=False)

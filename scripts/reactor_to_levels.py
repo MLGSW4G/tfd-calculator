@@ -25,5 +25,5 @@ def process_json_file(json_file_path):
     with open("ReactorLevels.json", 'w') as file:
         json.dump(tier_data, file, indent=4)
 
-# Example usage:
+
 process_json_file(r'C:\Users\User\Documents\tfd-calculator\src\api\reactor.json')

@@ -22,7 +22,7 @@ if not os.path.isdir(folder):
 
 for filename in filenames:
     try:
-        url = f"https://open.api.nexon.com/static/tfd/meta/{language_code}/{filename}.json"  # Corrected URL
+        url = f"https://open.api.nexon.com/static/tfd/meta/{language_code}/{filename}.json"
 
         response = requests.get(url)
 

@@ -1,10 +1,10 @@
 /*todo: Make the border get rendered before the middledeco */
 
 .module {
-  transition: box-shadow 0.2s ease-in-out;
-  border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
 }
 
 .module:hover {
-  box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px #fff;
 }
