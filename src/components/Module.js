@@ -12,8 +12,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   const translations = getTranslation(language, "module");
   const translationsModules = getTranslation(language, "modules");
 
-  const backgroundImage =
-    module.moduleTier === "Transcendent" ? `url('assets/Modules/UI_RuneSlot_ChaBG01_mini.png')` : module.moduleStat[0].value.includes("Max Module Capacity") ? `url('assets/Modules/UI_RuneSlot_ChaBG02_mini.png')` : null;
+  const [isHovered, setIsHovered] = useState(false);
+
+  const backgroundImage = module.moduleTier === "Transcendent" ? "url(assets/Modules/UI_RuneSlot_ChaBG01_mini.png)" : module.moduleStat[0].value.includes("Max Module Capacity") ? "url(assets/Modules/UI_RuneSlot_ChaBG02_mini.png)" : null;
 
   const currentMaxLevel = Math.max(...module.moduleStat.map((stat) => stat.level), 0);
 
@@ -30,27 +31,26 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
   const incrementLevel = (e) => {
     if (moduleLevel < currentMaxLevel) {
       setModuleLevel((prevLevel) => prevLevel + 1);
-      onLevelChange(module, moduleLevel + 1); // Call the onLevelChange callback
+      onLevelChange(module, moduleLevel + 1);
     }
   };
 
   const decrementLevel = (e) => {
-    e.stopPropagation(); // Prevent event from bubbling up
     if (moduleLevel > 0) {
       setModuleLevel((prevLevel) => prevLevel - 1);
-      onLevelChange(module, moduleLevel - 1); // Call the onLevelChange callback
+      onLevelChange(module, moduleLevel - 1);
     }
   };
 
   return (
     <Tooltip
-      componentsProps={{
+      slotProps={{
         tooltip: {
           sx: {
             bgcolor: `${getTierColor(module.moduleTier)}ee`, // Slightly transparent background
             border: "2px solid black",
-            borderRadius: "4px",
-            filter: "grayscale(25%)", // Apply grayscale to the background
+            borderRadius: 4,
+            filter: "grayscale(25%)",
           },
         },
       }}
@@ -61,23 +61,23 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           <hr color="black" />
 
           <div id="module-id" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <p style={{ margin: 0 }}>{translationsModules.id}</p>
-            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>{moduleDescription[0]}</div>
+            <div>{translationsModules.id}</div>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: 8 }}>{moduleDescription[0]}</div>
           </div>
 
           <div id="module-class" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <p style={{ margin: 0 }}>{translationsModules.class}</p>
-            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+            <div>{translationsModules.class}</div>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: 8 }}>
               {moduleDescription[1]}
-              <img width={16} height={16} src={moduleClass.replace("_Color", "")} style={{ filter: "brightness(0)", marginLeft: "4px" }} alt="" />
+              <img width={16} height={16} src={moduleClass.replace("_Color", "")} style={{ filter: "brightness(0)", marginLeft: 4 }} alt="" />
             </div>
           </div>
 
           <div id="module-socket-type" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <p style={{ margin: 0 }}>{translationsModules.socketType}</p>
-            <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+            <div>{translationsModules.socketType}</div>
+            <div style={{ display: "flex", alignItems: "center", marginLeft: 8 }}>
               {moduleDescription[2]}
-              <img width={16} height={16} src={moduleSocketType} style={{ filter: "brightness(0)", marginLeft: "4px" }} alt="" />
+              <img width={16} height={16} src={moduleSocketType} style={{ filter: "brightness(0)", marginLeft: 4 }} alt="" />
             </div>
           </div>
         </div>
@@ -85,11 +85,13 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
     >
       <div
         className="module"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         style={{
           position: "relative",
           width: MODULE_WIDTH,
           height: MODULE_HEIGHT,
-          backgroundImage: `url('assets/Modules/UI_RuneSlot_Bg.png')`,
+          backgroundImage: `url(assets/Modules/UI_RuneSlot_Bg.png)`,
           backgroundSize: "cover",
           display: "flex",
           flexDirection: "column",
@@ -101,7 +103,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         onDragStart={(e) => onDragStart(e, module)}
         onContextMenu={(e) => e.preventDefault()}
         onDoubleClick={(e) => {
-          if (e.target.tagName === "BUTTON") return; // Check if the event target is a button
+          if (e.target.tagName === "BUTTON") return;
           if (module !== null && module !== undefined) {
             const moduleData = JSON.stringify(module);
             const event = new DataTransfer();
@@ -115,8 +117,8 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             className="background-image"
             style={{
               position: "absolute",
-              width: MODULE_WIDTH,
-              height: MODULE_HEIGHT,
+              width: "100%",
+              height: "100%",
               backgroundImage: backgroundImage,
               backgroundSize: "cover",
               display: "flex",
@@ -127,8 +129,8 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
             }}
           />
         )}
-        {isInModuleSlot && (
-          <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: "5px", flexDirection: "column" }}>
+        {isInModuleSlot && isHovered && (
+          <div style={{ position: "absolute", right: "5%", bottom: "55%", display: "flex", rowGap: 12, flexDirection: "column" }}>
             <button className="button" onClick={incrementLevel}>
               +
             </button>
@@ -138,57 +140,59 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           </div>
         )}
 
-        <img
+        <div
           className="module-middle-deco"
-          src="assets/Modules/UI_Rune_Slot_MiddleDeco.png"
           style={{
-            position: "absolute",
+            backgroundImage: "url(assets/Modules/UI_Rune_Slot_MiddleDeco.png)",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            position: "relative",
+            display: "flex",
+            justifyContent: "center",
             width: 78,
             height: 34,
-            top: -10,
+            top: "-5%",
             pointerEvents: "none",
-            zIndex: -1,
-          }}
-        />
-
-        <img
-          className="module-socket-type"
-          src={moduleSocketType}
-          style={{
-            position: "absolute",
-            width: 20,
-            height: 20,
-            top: -6,
-            left: 55,
-            pointerEvents: "none",
-          }}
-        />
-
-        <p
-          className="module-capacity"
-          style={{
-            position: "absolute",
-            top: -42,
-            left: 76,
-            fontFamily: "Teko",
-            fontSize: 28,
             color: "white",
-            pointerEvents: "none",
+            zIndex: 10000,
           }}
         >
-          {module.moduleStat[0].value.includes("Max Module Capacity") ? "+" : null}
-          {module.moduleStat[moduleLevel].module_capacity}
-        </p>
+          <img
+            className="module-socket-type"
+            src={moduleSocketType}
+            alt={module.moduleSocketType}
+            style={{
+              position: "relative",
+              width: "27.2%",
+              height: "62.4%",
+              top: "10%",
+            }}
+          />
+
+          <div
+            className="module-capacity"
+            style={{
+              position: "relative",
+              top: "-15%",
+              fontFamily: "Teko",
+              fontSize: 30,
+            }}
+          >
+            {module.moduleStat[0].value.includes("Max Module Capacity") ? "+" : null}
+            {module.moduleStat[moduleLevel].module_capacity}
+          </div>
+        </div>
 
         <img
           className="module-class"
           src={moduleClass}
+          alt={module.moduleClass}
           style={{
             position: "absolute",
             width: 30,
             height: 30,
-            top: -2,
-            left: 120,
+            top: "-1%",
+            right: "-1%",
             pointerEvents: "none",
           }}
         />
@@ -196,7 +200,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
         <img
           className="module-tier"
           src="assets/Modules/UI_RuneSlot_Tier.png"
-          alt={module.moduleName}
+          alt={module.moduleTier}
           style={{
             position: "absolute",
             width: 74,
@@ -220,7 +224,7 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", position: "absolute", bottom: 106, left: 20 }}>
+        <div style={{ display: "flex", flexDirection: "column", position: "absolute", bottom: "52.5%", left: "15%" }}>
           {[...Array(currentMaxLevel)].map((_, index) => {
             const effectiveIndex = currentMaxLevel - 1 - index;
             return (
@@ -228,31 +232,29 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
                 key={index}
                 className="module-level-icon"
                 style={{
-                  width: "12px",
-                  height: "4px",
-                  borderRadius: "1.5px",
-                  margin: "1px",
+                  width: 10,
+                  height: 4,
+                  borderRadius: 1,
+                  margin: 1,
                   backgroundColor: effectiveIndex < moduleLevel ? "#F4833C" : "gray",
                   position: "relative",
-                  bottom: `${effectiveIndex}px`,
+                  bottom: effectiveIndex,
                 }}
               />
             );
           })}
         </div>
 
-        <p
+        <div
           className="module-name"
           style={{
             position: "absolute",
-            fontSize: 16,
             fontFamily: "NotoSans",
             color: "white",
-            top: 100,
-            width: MODULE_WIDTH - 30,
+            bottom: "12.5%",
+            width: MODULE_WIDTH * 0.8,
             textAlign: "center",
-            lineHeight: "normal",
-            height: "40px",
+            height: 80,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -260,9 +262,9 @@ export const Module = ({ module, onDragStart, isInModuleSlot, onLevelChange, ini
           }}
         >
           {translations.moduleName[module.id]}
-        </p>
+        </div>
 
-        <p style={{ position: "absolute", top: 164, color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none", textAlign: "center" }}>{translations.types[module.moduleType]}</p>
+        <div style={{ position: "absolute", bottom: "3%", color: "lightgrey", fontFamily: "NotoSans", fontSize: 14, pointerEvents: "none", textAlign: "center" }}>{translations.types[module.moduleType]}</div>
       </div>
     </Tooltip>
   );
