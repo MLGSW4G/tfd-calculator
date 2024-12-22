@@ -4297,6 +4297,7 @@
   },
   "skillsList": {
     "id": "ID",
+    "skillIcon": "Icon",
     "descendantName": "Descendant Name",
     "skillName": "Skill Name",
     "skillNumber": "Skill №",

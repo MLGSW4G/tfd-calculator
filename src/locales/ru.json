@@ -4297,6 +4297,7 @@
   },
   "skillsList": {
     "id": "ID",
+    "skillIcon": "Иконка",
     "descendantName": "Имя потомка",
     "skillName": "Название навыка",
     "skillNumber": "№ навыка",

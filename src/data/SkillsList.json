@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "skillIcon": "assets/Skills/Icon_Skill_004_A01_00.png",
     "descendantName": "Bunny",
     "skillName": "Rabbit Foot",
     "skillNumber": 0,
@@ -13,6 +14,7 @@
   },
   {
     "id": 2,
+    "skillIcon": "assets/Skills/Icon_Skill_004_A01_01.png",
     "descendantName": "Bunny",
     "skillName": "Thrill Bomb",
     "skillNumber": 1,
@@ -32,6 +34,7 @@
   },
   {
     "id": 3,
+    "skillIcon": "assets/Skills/Icon_Skill_004_A01_02.png",
     "descendantName": "Bunny",
     "skillName": "Speed of Light",
     "skillNumber": 2,
@@ -45,6 +48,7 @@
   },
   {
     "id": 4,
+    "skillIcon": "assets/Skills/Icon_Skill_004_A01_03.png",
     "descendantName": "Bunny",
     "skillName": "Lightning Emission",
     "skillNumber": 3,
@@ -64,6 +68,7 @@
   },
   {
     "id": 5,
+    "skillIcon": "assets/Skills/Icon_Skill_004_A01_04.png",
     "descendantName": "Bunny",
     "skillName": "Maximum Power",
     "skillNumber": 4,
@@ -81,6 +86,7 @@
   },
   {
     "id": 6,
+    "skillIcon": "assets/Skills/Icon_Skill_004_R05_Rune.png",
     "descendantName": "Bunny",
     "skillName": "Electric Charge",
     "skillNumber": 0,
@@ -94,6 +100,7 @@
   },
   {
     "id": 7,
+    "skillIcon": "assets/Skills/Icon_Skill_004_R06_01.png",
     "descendantName": "Bunny",
     "skillName": "HV Thrill Bomb",
     "skillNumber": 1,
@@ -113,6 +120,7 @@
   },
   {
     "id": 8,
+    "skillIcon": "assets/Skills/Icon_Skill_004_R06_03.png",
     "descendantName": "Bunny",
     "skillName": "HV Lightning Emission",
     "skillNumber": 3,
@@ -132,6 +140,7 @@
   },
   {
     "id": 9,
+    "skillIcon": "assets/Skills/Icon_Skill_004_R01_Rune.png",
     "descendantName": "Bunny",
     "skillName": "Electric Condense",
     "skillNumber": 4,
@@ -150,6 +159,7 @@
   },
   {
     "id": 10,
+    "skillIcon": "assets/Skills/Icon_Skill_013_A01_00.png",
     "descendantName": "Enzo",
     "skillName": "Fire Supporter",
     "skillNumber": 0,
@@ -159,6 +169,7 @@
   },
   {
     "id": 11,
+    "skillIcon": "assets/Skills/Icon_Skill_013_A01_01.png",
     "descendantName": "Enzo",
     "skillName": "Start Supply",
     "skillNumber": 1,
@@ -171,6 +182,7 @@
   },
   {
     "id": 12,
+    "skillIcon": "assets/Skills/Icon_Skill_013_A01_02.png",
     "descendantName": "Enzo",
     "skillName": "Explosive Drone",
     "skillNumber": 2,
@@ -186,6 +198,7 @@
   },
   {
     "id": 13,
+    "skillIcon": "assets/Skills/Icon_Skill_013_A01_03.png",
     "descendantName": "Enzo",
     "skillName": "Enhance Combat Suit",
     "skillNumber": 3,
@@ -198,6 +211,7 @@
   },
   {
     "id": 14,
+    "skillIcon": "assets/Skills/Icon_Skill_013_A01_04.png",
     "descendantName": "Enzo",
     "skillName": "Perfect Support",
     "skillNumber": 4,
@@ -217,6 +231,7 @@
   },
   {
     "id": 15,
+    "skillIcon": "assets/Skills/Icon_Skill_001_A01_00.png",
     "descendantName": "Lepic",
     "skillName": "Close Call",
     "skillNumber": 0,
@@ -228,6 +243,7 @@
   },
   {
     "id": 16,
+    "skillIcon": "assets/Skills/Icon_Skill_001_A01_01.png",
     "descendantName": "Lepic",
     "skillName": "Grenade Throw",
     "skillNumber": 1,
@@ -242,6 +258,7 @@
   },
   {
     "id": 17,
+    "skillIcon": "assets/Skills/Icon_Skill_001_A01_02.png",
     "descendantName": "Lepic",
     "skillName": "Overclock",
     "skillNumber": 2,
@@ -257,6 +274,7 @@
   },
   {
     "id": 18,
+    "skillIcon": "assets/Skills/Icon_Skill_001_A01_03.png",
     "descendantName": "Lepic",
     "skillName": "Traction Grenade",
     "skillNumber": 3,
@@ -271,6 +289,7 @@
   },
   {
     "id": 19,
+    "skillIcon": "assets/Skills/Icon_Skill_001_A01_04.png",
     "descendantName": "Lepic",
     "skillName": "Overkill",
     "skillNumber": 4,
@@ -290,6 +309,7 @@
   },
   {
     "id": 20,
+    "skillIcon": "assets/Skills/Icon_Skill_008_A01_00.png",
     "descendantName": "Sharen",
     "skillName": "Assassinator",
     "skillNumber": 0,
@@ -300,6 +320,7 @@
   },
   {
     "id": 21,
+    "skillIcon": "assets/Skills/Icon_Skill_008_A01_01.png",
     "descendantName": "Sharen",
     "skillName": "Cutoff Beam",
     "skillNumber": 1,
@@ -316,6 +337,7 @@
   },
   {
     "id": 22,
+    "skillIcon": "assets/Skills/Icon_Skill_008_A01_02.png",
     "descendantName": "Sharen",
     "skillName": "Active Camouflage",
     "skillNumber": 2,
@@ -328,6 +350,7 @@
   },
   {
     "id": 23,
+    "skillIcon": "assets/Skills/Icon_Skill_008_A01_03.png",
     "descendantName": "Sharen",
     "skillName": "Shock Nuts",
     "skillNumber": 3,
@@ -342,6 +365,7 @@
   },
   {
     "id": 24,
+    "skillIcon": "assets/Skills/Icon_Skill_008_A01_04.png",
     "descendantName": "Sharen",
     "skillName": "Flash Shortsword",
     "skillNumber": 4,
@@ -361,6 +385,7 @@
   },
   {
     "id": 25,
+    "skillIcon": "assets/Skills/Icon_Skill_003_A01_00.png",
     "descendantName": "Viessa",
     "skillName": "Ice Sphere",
     "skillNumber": 0,
@@ -375,6 +400,7 @@
   },
   {
     "id": 26,
+    "skillIcon": "assets/Skills/Icon_Skill_003_A01_01.png",
     "descendantName": "Viessa",
     "skillName": "Frost Shards",
     "skillNumber": 1,
@@ -387,6 +413,7 @@
   },
   {
     "id": 27,
+    "skillIcon": "assets/Skills/Icon_Skill_003_A01_02.png",
     "descendantName": "Viessa",
     "skillName": "Frost Road",
     "skillNumber": 2,
@@ -402,6 +429,7 @@
   },
   {
     "id": 28,
+    "skillIcon": "assets/Skills/Icon_Skill_003_A01_03.png",
     "descendantName": "Viessa",
     "skillName": "Cold Snap",
     "skillNumber": 3,
@@ -418,6 +446,7 @@
   },
   {
     "id": 29,
+    "skillIcon": "assets/Skills/Icon_Skill_003_A01_04.png",
     "descendantName": "Viessa",
     "skillName": "Blizzard",
     "skillNumber": 4,
@@ -436,6 +465,7 @@
   },
   {
     "id": 30,
+    "skillIcon": "assets/Skills/Icon_Skill_006_A01_00.png",
     "descendantName": "Freyna",
     "skillName": "Contagion Links",
     "skillNumber": 0,
@@ -456,6 +486,7 @@
   },
   {
     "id": 31,
+    "skillIcon": "assets/Skills/Icon_Skill_006_A01_01.png",
     "descendantName": "Freyna",
     "skillName": "Venom Trauma",
     "skillNumber": 1,
@@ -479,6 +510,7 @@
   },
   {
     "id": 32,
+    "skillIcon": "assets/Skills/Icon_Skill_006_A01_02.png",
     "descendantName": "Freyna",
     "skillName": "Defense Mechanism",
     "skillNumber": 2,
@@ -500,6 +532,7 @@
   },
   {
     "id": 33,
+    "skillIcon": "assets/Skills/Icon_Skill_006_A01_03.png",
     "descendantName": "Freyna",
     "skillName": "Putrid Venom",
     "skillNumber": 3,
@@ -524,6 +557,7 @@
   },
   {
     "id": 34,
+    "skillIcon": "assets/Skills/Icon_Skill_006_A01_04.png",
     "descendantName": "Freyna",
     "skillName": "Venom Baptism",
     "skillNumber": 4,
