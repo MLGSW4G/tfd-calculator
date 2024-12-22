@@ -92,7 +92,7 @@ const Overview = () => {
     useEffect(() => {
         const appliedElementSkillPower = selectedSkill && selectedSkill.skillElementType === selectedElementType ? 1.2 : 1;
         const appliedTypeSkillPower = selectedSkill && selectedSkill.skillArcheType === selectedArcheType ? 1.2 : 1;
-        const reactorEnhancementMultiplier = [1, 1.03, 1.06][reactorEnhancementLevel];
+        const reactorEnhancementMultiplier = [1, 1.03, 1.06, 1.09, 1.12, 1.15][reactorEnhancementLevel];
         const skillPower = skillStats ? (skillStats.skillPower ? skillStats.skillPower : 1) : 1;
         let totalSkillPowerValue = reactorSkillPower * reactorEnhancementMultiplier * optimizationConditionMultiplier * appliedElementSkillPower * appliedTypeSkillPower * skillPower;
 
@@ -446,6 +446,24 @@ const Overview = () => {
                             <MenuItem value={2}>
                                 <Tooltip enterDelay={0} title={translations.reactorUpgrade2Tooltip} placement="right">
                                     <div>{translations.reactorUpgrade2}</div>
+                                </Tooltip>
+                            </MenuItem>
+
+                            <MenuItem value={3}>
+                                <Tooltip enterDelay={0} title={translations.reactorUpgrade3Tooltip} placement="right">
+                                    <div>{translations.reactorUpgrade3}</div>
+                                </Tooltip>
+                            </MenuItem>
+
+                            <MenuItem value={4}>
+                                <Tooltip enterDelay={0} title={translations.reactorUpgrade4Tooltip} placement="right">
+                                    <div>{translations.reactorUpgrade4}</div>
+                                </Tooltip>
+                            </MenuItem>
+
+                            <MenuItem value={5}>
+                                <Tooltip enterDelay={0} title={translations.reactorUpgrade5Tooltip} placement="right">
+                                    <div>{translations.reactorUpgrade5}</div>
                                 </Tooltip>
                             </MenuItem>
                         </Select>
