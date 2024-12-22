@@ -4366,6 +4366,7 @@
     "pageTitleFormatTooltip": "Use {name} to insert current page name"
   },
   "rotations": {
+    "dataGridView": "Data Grid View",
     "all": "All",
     "map": "Map",
     "rotation": "Rotation",
