@@ -305,7 +305,7 @@ const Rotations = () => {
     const maxRotation = Math.max(...jsonRotations.flatMap((map) => map.battle_zone.flatMap((bz) => bz.reward.map((r) => r.rotation))));
 
     // Define the base start date for rotation 1 in UTC
-    const baseStartDate = new Date(Date.UTC(2024, 6, 30, 7, 0)); // July is month 6 (0-indexed), set to 07:00 UTC
+    const baseStartDate = new Date(Date.UTC(2024, 11, 3, 7, 0)); // 11.03 fits current rotation, so I'll just leave it like this ¯\_(ツ)_/¯
     const rotationDuration = 7; // 7 days for each rotation
 
     const daysSinceStart = Math.floor((Date.now() - baseStartDate) / (1000 * 60 * 60 * 24));
