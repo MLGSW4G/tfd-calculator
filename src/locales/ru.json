@@ -4316,6 +4316,7 @@
     "modifier4": "Множитель 4"
   },
   "descendantsList": {
+    "descendantIcon": "Иконка потомка",
     "descendantLabel": "Имя потомка",
     "descendantLevel": "Уровень потомка",
     "Max HP": "Макс. ОЗ",
@@ -4324,6 +4325,7 @@
     "DEF": "ЗАЩ",
     "Shield Recovery Out of Combat": "Восстановление щита вне боя",
     "Shield Recovery In Combat": "Восстановление щита в бою",
+    "stats": "Статы потомков",
     "descendants": {
       "Ajax": "Аякс",
       "Ultimate Lepic": "Супер-Лепик",
@@ -4383,6 +4385,7 @@
     "seconds": "Секунды",
     "selectedRotation": "Выбранная ротация",
     "viewRotationDates": "Даты всех ротаций",
+    "showMissionCards": "Показать время выполнения миссий",
     "maps": {
       "Albion": "Альбион",
       "Outskirts of Kingston": "Окраины Кингстона",

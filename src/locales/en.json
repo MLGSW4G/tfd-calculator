@@ -4316,7 +4316,8 @@
     "modifier4": "Modifier 4"
   },
   "descendantsList": {
-    "descendantLabel": "Descendant name",
+    "descendantIcon": "Icon",
+    "descendantLabel": "Name",
     "descendantLevel": "Descendant level",
     "Max HP": "Max HP",
     "Max Shield": "Max Shield",
@@ -4324,6 +4325,7 @@
     "DEF": "DEF",
     "Shield Recovery Out of Combat": "Shield Recovery Out of Combat",
     "Shield Recovery In Combat": "Shield Recovery In Combat",
+    "stats": "Descendant stats",
     "descendants": {
       "Ajax": "Ajax",
       "Ultimate Lepic": "Ultimate Lepic",
@@ -4383,6 +4385,7 @@
     "seconds": "Seconds",
     "selectedRotation": "Selected rotation",
     "viewRotationDates": "All rotations dates",
+    "showMissionCards": "Show mission completion times",
     "maps": {
       "Albion": "Albion",
       "Outskirts of Kingston": "Outskirts of Kingston",
