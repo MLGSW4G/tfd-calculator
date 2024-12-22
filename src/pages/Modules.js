@@ -181,6 +181,8 @@ const Modules = () => {
                     return MODULE_CLASSES.indexOf(a.moduleClass) - MODULE_CLASSES.indexOf(b.moduleClass);
                 case "type":
                     return MODULE_TYPES.indexOf(a.moduleType) - MODULE_TYPES.indexOf(b.moduleType);
+                default:
+                    return null;
             }
         });
 
