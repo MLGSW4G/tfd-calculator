@@ -4533,6 +4533,7 @@
         "mapName": "Карта",
         "battleZone": "Поле боя",
         "missionName": "Миссия",
+        "completionTime": "Время выполнения",
         "totalReactorPerMin": "Всего реакторов/мин",
         "reactorPerMin": "Реакторов/мин",
         "staticReactorPerMin": "Статических реакторов/мин",

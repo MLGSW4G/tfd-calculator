@@ -4533,6 +4533,7 @@
         "mapName": "Map",
         "battleZone": "Battle Zone",
         "missionName": "Mission",
+        "completionTime": "Completion Time",
         "totalReactorPerMin": "Total Reactor/Min",
         "reactorPerMin": "Reactor/Min",
         "staticReactorPerMin": "Static Reactor/Min",
