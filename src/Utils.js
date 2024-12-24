@@ -13,7 +13,6 @@ import {
     reactorElementTypeOrder,
     rewardTypeOrder,
     archeTypeOrder,
-    weaponRoundsTypeOrder,
     battleZoneOrder,
 } from "./const";
 
@@ -205,11 +204,6 @@ export const sortRewards = (rewards, sortOption) => {
             const aRewardTypeIndex = rewardTypeOrder.indexOf(a.reward_type);
             const bRewardTypeIndex = rewardTypeOrder.indexOf(b.reward_type);
             if (aRewardTypeIndex !== bRewardTypeIndex) return aRewardTypeIndex - bRewardTypeIndex;
-
-            // Sort by weapon_rounds_type
-            const aWeaponRoundsIndex = weaponRoundsTypeOrder.indexOf(a.weapon_rounds_type);
-            const bWeaponRoundsIndex = weaponRoundsTypeOrder.indexOf(b.weapon_rounds_type);
-            if (aWeaponRoundsIndex !== bWeaponRoundsIndex) return aWeaponRoundsIndex - bWeaponRoundsIndex;
 
             // Sort by reactor_element_type
             const aElementTypeIndex = reactorElementTypeOrder.indexOf(a.reactor_element_type);
