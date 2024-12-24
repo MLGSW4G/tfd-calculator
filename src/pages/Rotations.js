@@ -352,19 +352,19 @@ const Rotations = () => {
 
     // Define columns for the DataGrid
     const columns = [
-        { field: "id", headerName: "ID", width: 50 },
-        { field: "mapName", headerName: "Map Name", width: 150 },
-        { field: "battleZone", headerName: "Battle Zone", width: 150 },
-        { field: "missionName", headerName: "Mission Name", width: 150 },
-        { field: "rotation", headerName: "Rotation", width: 50 },
-        { field: "totalReactorPerMin", headerName: "Total Reactor Per Min", width: 200 },
-        { field: "reactorPerMin", headerName: "Reactor Per Min", width: 200 },
-        { field: "staticReactorPerMin", headerName: "Static Reactor Per Min", width: 200 },
-        { field: "rewardType", headerName: "Reward Type", width: 150 },
-        { field: "reactorElementType", headerName: "Reactor Element Type", width: 200 },
-        { field: "archeType", headerName: "Arche Type", width: 150 },
-        { field: "staticElementType", headerName: "Static Element Type", width: 150 },
-        { field: "staticArcheType", headerName: "Static Arche Type", width: 150 },
+        { field: "id", headerName: translations.id, width: 50 },
+        { field: "mapName", headerName: translations.mapName, width: 150 },
+        { field: "battleZone", headerName: translations.battleZone, width: 150 },
+        { field: "missionName", headerName: translations.missionName, width: 150 },
+        { field: "rotation", headerName: translations.rotation, width: 50 },
+        { field: "totalReactorPerMin", headerName: translations.totalReactorPerMin, width: 200 },
+        { field: "reactorPerMin", headerName: translations.reactorPerMin, width: 200 },
+        { field: "staticReactorPerMin", headerName: translations.staticReactorPerMin, width: 200 },
+        { field: "rewardType", headerName: translations.rewardType, width: 150 },
+        { field: "reactorElementType", headerName: translations.reactorElementType, width: 200 },
+        { field: "archeType", headerName: translations.archeType, width: 150 },
+        { field: "staticElementType", headerName: translations.staticElementType, width: 150 },
+        { field: "staticArcheType", headerName: translations.staticArcheType, width: 150 },
     ];
 
     // Filter the rewards based on selected filters and rotation
@@ -548,8 +548,8 @@ const Rotations = () => {
                     </Box>
                     <Typography>{translations.sortBy}</Typography>
                     <Select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
-                        <MenuItem value="type">{translations.type}</MenuItem>
-                        <MenuItem value="battlezone">{translations.battleZone}</MenuItem>
+                        <MenuItem value="type">{translations.sortByType}</MenuItem>
+                        <MenuItem value="battlezone">{translations.sortByBattleZone}</MenuItem>
                     </Select>
                     <Box display="flex" alignItems="center">
                         <Checkbox checked={dataGridView} onChange={(e) => setDataGridView(!dataGridView)} />
