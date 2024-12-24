@@ -3,7 +3,7 @@ import React, { useState, useContext, useEffect } from "react";
 import jsonRotations from "../api/reward.json";
 import missions from "../data/Missions.json";
 import "../styles/styles.css";
-import { Grid2, Select, MenuItem, FormControl, InputLabel, Box, Button, Slider, Typography, Checkbox, ListItemText, Tooltip, Paper, Modal } from "@mui/material";
+import { Grid2, Select, MenuItem, FormControl, FormControlLabel, InputLabel, Box, Button, Slider, Typography, Checkbox, ListItemText, Tooltip, Paper, Modal } from "@mui/material";
 import { getSkillElementTypeIcon, getSkillArcheTypeIcon, sortRewards } from "../Utils";
 import { imageMapping, typeMapping, PAGE_TITLE_FORMAT } from "../const";
 import { LocalizationContext } from "../components/LocalizationContext";
@@ -314,18 +314,18 @@ const Rotations = () => {
 
     jsonRotations.forEach((map) => {
         const mapName = map.map_name;
-    
+
         map.battle_zone.forEach((bz) => {
             const battleZoneName = bz.battle_zone_name;
-    
+
             if (bz.reward.length === 0) {
                 return; // Skip if no rewards
             }
-    
+
             for (let rotation = 1; rotation <= maxRotation; rotation++) {
                 const reward = bz.reward.find((r) => r.rotation === rotation);
                 const missionDetails = missions[mapName][battleZoneName];
-    
+
                 if (reward && missionDetails) {
                     // Only include rows that match the selectedRotation
                     if (selectedRotation === 0 || reward.rotation === selectedRotation) {
@@ -338,7 +338,7 @@ const Rotations = () => {
                             rotation,
                             reactorPerMin: missionDetails.reactorPerMin,
                             staticReactorPerMin: missionDetails.staticReactorPerMin,
-                            totalReactorPerMin: (Math.round((missionDetails.reactorPerMin + missionDetails.staticReactorPerMin) * 100) / 100),
+                            totalReactorPerMin: Math.round((missionDetails.reactorPerMin + missionDetails.staticReactorPerMin) * 100) / 100,
                             rewardType: translations.rewardTypes[reward.reward_type],
                             reactorElementType: translationsOverview.skillElementTypes[reward.reactor_element_type],
                             archeType: translationsOverview.skillArcheTypes[reward.arche_type],
@@ -467,19 +467,22 @@ const Rotations = () => {
                             return value || translations.all;
                         }}
                     />
-                    <Box display="flex" alignItems="center">
-                        <Checkbox
-                            checked={selectedRotation === currentRotation}
-                            onChange={(e) => {
-                                if (e.target.checked) {
-                                    setSelectedRotation(currentRotation);
-                                } else {
-                                    setSelectedRotation(0); // Reset to show all rotations when unchecked
-                                }
-                            }}
-                        />
-                        <Typography>{translations.currentRotation}</Typography>
-                    </Box>
+                    <FormControlLabel
+                        control={
+                            <Checkbox
+                                checked={selectedRotation === currentRotation}
+                                onChange={(e) => {
+                                    if (e.target.checked) {
+                                        setSelectedRotation(currentRotation);
+                                    } else {
+                                        setSelectedRotation(0); // Reset to show all rotations when unchecked
+                                    }
+                                }}
+                            />
+                        }
+                        label={translations.currentRotation}
+                        sx={{ width: "fit-content" }}
+                    />
                     <Typography>{translations.selectedBattleZones}:</Typography>
                     <FormControl>
                         <InputLabel>{translations.battleZonesLabel}</InputLabel>
@@ -553,14 +556,8 @@ const Rotations = () => {
                         <MenuItem value="type">{translations.sortByType}</MenuItem>
                         <MenuItem value="battlezone">{translations.sortByBattleZone}</MenuItem>
                     </Select>
-                    <Box display="flex" alignItems="center">
-                        <Checkbox checked={dataGridView} onChange={(e) => setDataGridView(!dataGridView)} />
-                        <Typography>{translations.dataGridView}</Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center">
-                        <Checkbox checked={advancedView} onChange={(e) => setAdvancedView(e.target.checked)} disabled={dataGridView} />
-                        <Typography>{translations.showMissionCards}</Typography>
-                    </Box>
+                    <FormControlLabel control={<Checkbox checked={dataGridView} onChange={(e) => setDataGridView(!dataGridView)} />} label={translations.dataGridView} sx={{ width: "fit-content" }} />
+                    <FormControlLabel control={<Checkbox checked={advancedView} onChange={(e) => setAdvancedView(e.target.checked)} disabled={dataGridView} />} label={translations.showMissionCards} sx={{ width: "fit-content" }} />
                     <Button
                         variant="outlined"
                         onClick={() => {
