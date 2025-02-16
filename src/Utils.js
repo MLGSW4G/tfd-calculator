@@ -1,6 +1,6 @@
 // src/Utils.js
 import { useNumberFormatter } from "./components/NumberFormatter";
-import { getTranslation } from "./translations"; // Adjust the import path as necessary
+import { getTranslation } from "./translations";
 import {
     colorStandard,
     colorRare,
@@ -196,7 +196,6 @@ export const getClassIcon2 = (className) => {
     }
 };
 
-// Function to sort rewards based on the selected option
 export const sortRewards = (rewards, sortOption) => {
     if (sortOption === "type") {
         return rewards.sort((a, b) => {

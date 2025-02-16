@@ -11,7 +11,7 @@ import Settings from "./pages/Settings";
 import { LocalizationProvider } from "./components/LocalizationContext";
 import { LicenseInfo } from "@mui/x-license";
 
-LicenseInfo.setLicenseKey(process.env.REACT_APP_LICENSE_KEY); // borrowed a license key from https://gist.github.com/EastArctica/54605b82342634eddcab36bd40891ba9
+LicenseInfo.setLicenseKey(process.env.REACT_APP_LICENSE_KEY); // borrowed a license key from https://gist.github.com/EastArctica/85767460bd4e0d47ee5940d4e2c1e007
 
 function App() {
     return (
