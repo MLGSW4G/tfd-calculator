@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/tfd-calculator/static/css/main.de97e348.css",
+    "main.js": "/tfd-calculator/static/js/main.8bdcead2.js",
+    "static/media/NotoSans-Regular.ttf": "/tfd-calculator/static/media/NotoSans-Regular.e49f7cc81283eef694a3.ttf",
+    "static/media/NotoSans-Bold.ttf": "/tfd-calculator/static/media/NotoSans-Bold.5f7ac340604afb2500f1.ttf",
+    "static/media/Teko-Bold.ttf": "/tfd-calculator/static/media/Teko-Bold.ab5742532000bad6973e.ttf",
+    "static/media/Teko-Regular.ttf": "/tfd-calculator/static/media/Teko-Regular.f7f091c5d5372c407f69.ttf",
+    "static/media/fallingsky.otf": "/tfd-calculator/static/media/fallingsky.c36977b07febccf2818f.otf",
+    "static/media/octin-college-rg.otf": "/tfd-calculator/static/media/octin-college-rg.dca141742faaabcfb3b3.otf",
+    "index.html": "/tfd-calculator/index.html",
+    "main.de97e348.css.map": "/tfd-calculator/static/css/main.de97e348.css.map",
+    "main.8bdcead2.js.map": "/tfd-calculator/static/js/main.8bdcead2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de97e348.css",
+    "static/js/main.8bdcead2.js"
+  ]
+}
